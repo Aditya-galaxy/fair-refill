@@ -1,0 +1,7075 @@
+{
+ "01bb60b7347144cb0fe34767": {
+  "json": {
+   "count": 14,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00185441605",
+       "00378035205",
+       "00615828928",
+       "00615828939",
+       "00781550301",
+       "10135082305",
+       "10135082330",
+       "10135082332",
+       "10135082333",
+       "10135082360",
+       "10135082362",
+       "10135082390",
+       "17224031128",
+       "25000010103",
+       "25000010112",
+       "25000010114",
+       "25000010197",
+       "25000010198",
+       "29033005501",
+       "29300038901",
+       "29300038905",
+       "29300038910",
+       "29300038919",
+       "33342023911",
+       "33342023944",
+       "42291049701",
+       "42291049705",
+       "42291049710",
+       "42291049718",
+       "42291049736",
+       "42291049750",
+       "42291049790",
+       "42291082510",
+       "42291082512",
+       "42291082518",
+       "42291082530",
+       "42291082536",
+       "42291082560",
+       "42291082590",
+       "42385097701",
+       "42385097705",
+       "42385097711",
+       "42385097718",
+       "42385097730",
+       "42385097772",
+       "42385097790",
+       "42708020160",
+       "42806063201",
+       "42806063205",
+       "42806063210",
+       "48433032601",
+       "49483062301",
+       "49483062309",
+       "49483062310",
+       "49483062350",
+       "50090149400",
+       "50090149401",
+       "50090149402",
+       "50090149403",
+       "50090149404",
+       "50090371900",
+       "50090371901",
+       "50090371902",
+       "50090371903",
+       "50090488400",
+       "50090539600",
+       "50090539601",
+       "50090539602",
+       "50090539603",
+       "50090539604",
+       "50090539700",
+       "50090651500",
+       "50090651501",
+       "50090651502",
+       "50090651503",
+       "50090651504",
+       "50090651600",
+       "50090711600",
+       "50090757600",
+       "50090757601",
+       "50090757602",
+       "50090757603",
+       "50090757604",
+       "50090757700",
+       "50090757900",
+       "50090791800",
+       "50268055011",
+       "50268055015",
+       "51224000750",
+       "51224000760",
+       "51224000770",
+       "51655055025",
+       "51655055082",
+       "51655055596",
+       "51655055925",
+       "51655055926",
+       "51655055952",
+       "51655055982",
+       "51655085325",
+       "51655085326",
+       "51655085352",
+       "51655085382",
+       "53746017805",
+       "55700032060",
+       "55700061830",
+       "55700061860",
+       "55700061890",
+       "59651054801",
+       "59651054805",
+       "59651054899",
+       "60505026001",
+       "60505026007",
+       "60687064001",
+       "60687064011",
+       "61919045030",
+       "61919045060",
+       "61919045090",
+       "61919076960",
+       "61919099260",
+       "62207049131",
+       "62207049135",
+       "62207049143",
+       "62207049147",
+       "62207049149",
+       "62207049154",
+       "62756014201",
+       "62756014202",
+       "63187077930",
+       "63187077960",
+       "63187077978",
+       "63187077990",
+       "63304086001",
+       "63304086030",
+       "63629288301",
+       "63629288302",
+       "63629288303",
+       "63629288306",
+       "63629914601",
+       "65162017803",
+       "65162017809",
+       "65162017810",
+       "65162017811",
+       "65162017850",
+       "65162017889",
+       "65841002701",
+       "65841002705",
+       "65841080901",
+       "65841080905",
+       "65841080910",
+       "65841080916"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "29300038901",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "29300038905",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "42385097701",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "42385097705",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "42385097711",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "42385097790",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "42806063201",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "42806063205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "49483062301",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "49483062309",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "49483062310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "49483062350",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "50268055011",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "50268055015",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "0b66aebbee969d4ee6fb0c2f": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00185441605",
+      "00378035205",
+      "00615828928",
+      "00615828939",
+      "00781550301",
+      "10135082305",
+      "10135082330",
+      "10135082332",
+      "10135082333",
+      "10135082360",
+      "10135082362",
+      "10135082390",
+      "17224031128",
+      "25000010103",
+      "25000010112",
+      "25000010114",
+      "25000010197",
+      "25000010198",
+      "29033005501",
+      "29300038901",
+      "29300038905",
+      "29300038910",
+      "29300038919",
+      "33342023911",
+      "33342023944",
+      "42291049701",
+      "42291049705",
+      "42291049710",
+      "42291049718",
+      "42291049736",
+      "42291049750",
+      "42291049790",
+      "42291082510",
+      "42291082512",
+      "42291082518",
+      "42291082530",
+      "42291082536",
+      "42291082560",
+      "42291082590",
+      "42385097701",
+      "42385097705",
+      "42385097711",
+      "42385097718",
+      "42385097730",
+      "42385097772",
+      "42385097790",
+      "42708020160",
+      "42806063201",
+      "42806063205",
+      "42806063210",
+      "48433032601",
+      "49483062301",
+      "49483062309",
+      "49483062310",
+      "49483062350",
+      "50090149400",
+      "50090149401",
+      "50090149402",
+      "50090149403",
+      "50090149404",
+      "50090371900",
+      "50090371901",
+      "50090371902",
+      "50090371903",
+      "50090488400",
+      "50090539600",
+      "50090539601",
+      "50090539602",
+      "50090539603",
+      "50090539604",
+      "50090539700",
+      "50090651500",
+      "50090651501",
+      "50090651502",
+      "50090651503",
+      "50090651504",
+      "50090651600",
+      "50090711600",
+      "50090757600",
+      "50090757601",
+      "50090757602",
+      "50090757603",
+      "50090757604",
+      "50090757700",
+      "50090757900",
+      "50090791800",
+      "50268055011",
+      "50268055015",
+      "51224000750",
+      "51224000760",
+      "51224000770",
+      "51655055025",
+      "51655055082",
+      "51655055596",
+      "51655055925",
+      "51655055926",
+      "51655055952",
+      "51655055982",
+      "51655085325",
+      "51655085326",
+      "51655085352",
+      "51655085382",
+      "53746017805",
+      "55700032060",
+      "55700061830",
+      "55700061860",
+      "55700061890",
+      "59651054801",
+      "59651054805",
+      "59651054899",
+      "60505026001",
+      "60505026007",
+      "60687064001",
+      "60687064011",
+      "61919045030",
+      "61919045060",
+      "61919045090",
+      "61919076960",
+      "61919099260",
+      "62207049131",
+      "62207049135",
+      "62207049143",
+      "62207049147",
+      "62207049149",
+      "62207049154",
+      "62756014201",
+      "62756014202",
+      "63187077930",
+      "63187077960",
+      "63187077978",
+      "63187077990",
+      "63304086001",
+      "63304086030",
+      "63629288301",
+      "63629288302",
+      "63629288303",
+      "63629288306",
+      "63629914601",
+      "65162017803",
+      "65162017809",
+      "65162017810",
+      "65162017811",
+      "65162017850",
+      "65162017889",
+      "65841002701",
+      "65841002705",
+      "65841080901",
+      "65841080905",
+      "65841080910",
+      "65841080916",
+      "65841080930",
+      "65841080977",
+      "65862029101",
+      "65862029105",
+      "67046043703",
+      "67296170106",
+      "67296230509",
+      "67877015901",
+      "67877015905",
+      "67877015910",
+      "67877041301",
+      "67877041305",
+      "67877041310",
+      "67877041333",
+      "67877041390",
+      "68071311102",
+      "68071311103",
+      "68071311106",
+      "68071311108",
+      "68071311109",
+      "68094090450",
+      "68094090460",
+      "68645012059",
+      "68645059559",
+      "68788849501",
+      "68788849503",
+      "68788849506",
+      "68788849508",
+      "68788849509",
+      "68788881401",
+      "68788881403",
+      "68788881406",
+      "68788881408",
+      "68788881409",
+      "68788886601",
+      "68788886603",
+      "68788886606",
+      "68788886608",
+      "68788886609",
+      "68788890301",
+      "68788890303",
+      "68788890306",
+      "68788890308",
+      "68788890309",
+      "69238212501",
+      "69238212503",
+      "69238212505",
+      "69238212507",
+      "69238212509",
+      "69315041001",
+      "69315041005",
+      "69948000105",
+      "69948000112",
+      "70010049101",
+      "70010049105",
+      "70010049109",
+      "70010049110",
+      "70010049118",
+      "70010049119",
+      "70518437000",
+      "70518437001",
+      "70518437002",
+      "70518437003",
+      "70518437004",
+      "70934013430",
+      "70934013490",
+      "70934013498",
+      "70934078890",
+      "70934078898",
+      "71205014778",
+      "71205018620",
+      "71205018630",
+      "71205018660",
+      "71205018672",
+      "71205018690",
+      "71205068630",
+      "71205068660",
+      "71205068672",
+      "71205068690",
+      "71335029301",
+      "71335029302",
+      "71335029303",
+      "71335029304",
+      "71335029305",
+      "71335029306",
+      "71335029307",
+      "71335029308",
+      "71335029309",
+      "71335072001",
+      "71335072002",
+      "71335072003",
+      "71335072004",
+      "71335072005",
+      "71335072006",
+      "71335072007",
+      "71335072008",
+      "71335072009",
+      "71335088601",
+      "71335088602",
+      "71335088603",
+      "71335088604",
+      "71335088605",
+      "71335088606",
+      "71335088607",
+      "71335088608",
+      "71335088609",
+      "71335235401",
+      "71335235402",
+      "71335235403",
+      "71335235404",
+      "71335235405",
+      "71335235406",
+      "71335235407",
+      "71335235408",
+      "71335235409",
+      "71335256801",
+      "71335256802",
+      "71335256803",
+      "71335256804",
+      "71335256805",
+      "71335256806",
+      "71335256807",
+      "71335256808",
+      "71335256809",
+      "71335316601",
+      "71335316602",
+      "71335316603",
+      "71335316604",
+      "71335316605",
+      "71335316606",
+      "71335316607",
+      "71335316608",
+      "71335316609",
+      "71335968301",
+      "71335968302",
+      "71335968303",
+      "71335968304",
+      "71335968305",
+      "71335968306",
+      "71335968307",
+      "71335968308",
+      "71335968309",
+      "71610044730",
+      "71610044753",
+      "71610044760",
+      "71610044770",
+      "71610044780",
+      "71610044794",
+      "71610045430",
+      "71610045453",
+      "71610045460",
+      "71610045470",
+      "71610045480",
+      "71610045492",
+      "71610045494",
+      "71610045730",
+      "71610045753",
+      "71610045760",
+      "71610045770",
+      "71610045780",
+      "71610045792",
+      "71610045794",
+      "71610053330",
+      "71610053353",
+      "71610053360",
+      "71610053370",
+      "71610053380",
+      "71610055430",
+      "71610055453",
+      "71610055460",
+      "71610055470",
+      "71610055480",
+      "71610055492",
+      "71610055494",
+      "71610057860",
+      "71610057870",
+      "71610057880",
+      "71610057894",
+      "71610058730",
+      "71610058760",
+      "71610058770",
+      "71610058780",
+      "71610058792",
+      "71610058794",
+      "71610061330",
+      "71610061353",
+      "71610061360",
+      "71610061370",
+      "71610061380",
+      "71610061394",
+      "71610065230",
+      "71610065253",
+      "71610065260",
+      "71610065270",
+      "71610065280",
+      "71610065294",
+      "71610083730",
+      "71610083753",
+      "71610083760",
+      "71610083770",
+      "71610083780",
+      "71610083794",
+      "71610085830",
+      "71610085853",
+      "71610085860",
+      "71610085870",
+      "71610085880",
+      "71610085894",
+      "72162242400",
+      "72162242401",
+      "72162242402",
+      "72162242404",
+      "72162242405",
+      "72162242407",
+      "72162242409",
+      "72189006430",
+      "72189006490",
+      "72189015030",
+      "72189015090",
+      "72578003501",
+      "72578003505",
+      "72664022701",
+      "72789000930",
+      "72789000960",
+      "72789000990",
+      "72789000993",
+      "72789005930",
+      "72789005960",
+      "72789005990",
+      "72789005993",
+      "72789005998",
+      "72789010501",
+      "72789010560",
+      "72789010582",
+      "72789010590",
+      "72789010593",
+      "72789010595",
+      "72789040001",
+      "72789040060",
+      "72789040082",
+      "72789040086",
+      "72789040090",
+      "72789040093",
+      "72789045460",
+      "72789045490",
+      "72789045493",
+      "72789045530",
+      "75834050001",
+      "75834050005",
+      "76385012801",
+      "76385012810",
+      "76385012850",
+      "82009011710",
+      "82009018005",
+      "82804014730",
+      "82804014760",
+      "82804014778",
+      "82804014790",
+      "82804019560"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/860975/ndcs.json"
+ },
+ "0ddbcd1a0fa8c5cf5ba01934": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "tty": "GPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "atorvastatin 80 MG Oral Tablet [Lipitor]",
+        "rxcui": "262095",
+        "suppress": "N",
+        "synonym": "Lipitor 80 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 4 MG/ML Oral Suspension [Atorvaliq]",
+        "rxcui": "2631867",
+        "suppress": "N",
+        "synonym": "Atorvaliq 4 MG/ML Oral Suspension",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 10 MG Oral Tablet [Lipitor]",
+        "rxcui": "617314",
+        "suppress": "N",
+        "synonym": "Lipitor 10 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 20 MG Oral Tablet [Lipitor]",
+        "rxcui": "617318",
+        "suppress": "N",
+        "synonym": "Lipitor 20 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 40 MG Oral Tablet [Lipitor]",
+        "rxcui": "617320",
+        "suppress": "N",
+        "synonym": "Lipitor 40 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 10 MG Oral Tablet [Caduet]",
+        "rxcui": "750199",
+        "suppress": "N",
+        "synonym": "Caduet 10/10 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 20 MG Oral Tablet [Caduet]",
+        "rxcui": "750203",
+        "suppress": "N",
+        "synonym": "Caduet 10/20 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 40 MG Oral Tablet [Caduet]",
+        "rxcui": "750207",
+        "suppress": "N",
+        "synonym": "Caduet 10/40 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 80 MG Oral Tablet [Caduet]",
+        "rxcui": "750211",
+        "suppress": "N",
+        "synonym": "Caduet 10/80 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 10 MG Oral Tablet [Caduet]",
+        "rxcui": "750227",
+        "suppress": "N",
+        "synonym": "Caduet 5/10 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 20 MG Oral Tablet [Caduet]",
+        "rxcui": "750231",
+        "suppress": "N",
+        "synonym": "Caduet 5/20 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 40 MG Oral Tablet [Caduet]",
+        "rxcui": "750235",
+        "suppress": "N",
+        "synonym": "Caduet 5/40 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 80 MG Oral Tablet [Caduet]",
+        "rxcui": "750239",
+        "suppress": "N",
+        "synonym": "Caduet 5/80 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "atorvastatin 20 MG / ezetimibe 10 MG Oral Tablet",
+        "rxcui": "1422093",
+        "suppress": "N",
+        "synonym": "atorvastatin 20 MG (as atorvastatin calcium 20.68 MG) / ezetimibe 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 40 MG / ezetimibe 10 MG Oral Tablet",
+        "rxcui": "1422096",
+        "suppress": "N",
+        "synonym": "atorvastatin 40 MG (as atorvastatin calcium 41.37 MG) / ezetimibe 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 80 MG / ezetimibe 10 MG Oral Tablet",
+        "rxcui": "1422099",
+        "suppress": "N",
+        "synonym": "atorvastatin 80 MG (as atorvastatin calcium 82.73 MG) / ezetimibe 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 80 MG Oral Tablet",
+        "rxcui": "259255",
+        "suppress": "N",
+        "synonym": "atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 4 MG/ML Oral Suspension",
+        "rxcui": "2630760",
+        "suppress": "N",
+        "synonym": "atorvastatin (as atorvastatin calcium) 20 MG per 5 ML Oral Suspension",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 80 MG Oral Tablet",
+        "rxcui": "404011",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 80 MG Oral Tablet",
+        "rxcui": "404013",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 20 MG Oral Tablet",
+        "rxcui": "597967",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 2.5 MG / atorvastatin 10 MG Oral Tablet",
+        "rxcui": "597971",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 2.5 MG / atorvastatin 20 MG Oral Tablet",
+        "rxcui": "597974",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 10 MG Oral Tablet",
+        "rxcui": "597977",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 20 MG Oral Tablet",
+        "rxcui": "597980",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 5 MG / atorvastatin 40 MG Oral Tablet",
+        "rxcui": "597984",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 5 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 10 MG Oral Tablet",
+        "rxcui": "597987",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 10 MG / atorvastatin 40 MG Oral Tablet",
+        "rxcui": "597990",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 10 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "amlodipine 2.5 MG / atorvastatin 40 MG Oral Tablet",
+        "rxcui": "597993",
+        "suppress": "N",
+        "synonym": "amlodipine (as amlodipine besylate) 2.5 MG / atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 20 MG Oral Tablet",
+        "rxcui": "617310",
+        "suppress": "N",
+        "synonym": "atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 40 MG Oral Tablet",
+        "rxcui": "617311",
+        "suppress": "N",
+        "synonym": "atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 10 MG Oral Tablet",
+        "rxcui": "617312",
+        "suppress": "N",
+        "synonym": "atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=atorvastatin"
+ },
+ "162511a92d6a743e906d55a7": {
+  "json": {
+   "count": 3,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00003089421",
+       "00003089431",
+       "00003089470",
+       "00003089491",
+       "50090143700",
+       "50090645400",
+       "55154061300",
+       "55154061308",
+       "70518446200",
+       "71610066209",
+       "71610066218",
+       "71610066242",
+       "71610066280",
+       "82804008530",
+       "82804008531"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "5.52114",
+     "ndc": "00003089421",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "5.52114",
+     "ndc": "00003089431",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "5.52114",
+     "ndc": "00003089470",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "199e08c05aae7c7c28c5d040": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00003089421",
+      "00003089431",
+      "00003089470",
+      "00003089491",
+      "50090143700",
+      "50090645400",
+      "55154061300",
+      "55154061308",
+      "70518446200",
+      "71610066209",
+      "71610066218",
+      "71610066242",
+      "71610066280",
+      "82804008530",
+      "82804008531"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1364447/ndcs.json"
+ },
+ "224f0917d327e02f531a8338": {
+  "json": {
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051210",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.41",
+     "requested_quote_units": "30",
+     "slug": "atorvastatin-20mg-tablet",
+     "special_handling": "",
+     "strength": "20mg",
+     "unit_billing_price": "$0.0137",
+     "unit_price": "$0.0119",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-20mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=20mg"
+ },
+ "2a376d4039bb9549d0e1e8e9": {
+  "json": {
+   "count": 3,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "71610045460",
+       "71610045470",
+       "71610045480",
+       "71610045492",
+       "71610045494",
+       "71610045730",
+       "71610045753",
+       "71610045760",
+       "71610045770",
+       "71610045780",
+       "71610045792",
+       "71610045794",
+       "71610053330",
+       "71610053353",
+       "71610053360",
+       "71610053370",
+       "71610053380",
+       "71610055430",
+       "71610055453",
+       "71610055460",
+       "71610055470",
+       "71610055480",
+       "71610055492",
+       "71610055494",
+       "71610057860",
+       "71610057870",
+       "71610057880",
+       "71610057894",
+       "71610058730",
+       "71610058760",
+       "71610058770",
+       "71610058780",
+       "71610058792",
+       "71610058794",
+       "71610061330",
+       "71610061353",
+       "71610061360",
+       "71610061370",
+       "71610061380",
+       "71610061394",
+       "71610065230",
+       "71610065253",
+       "71610065260",
+       "71610065270",
+       "71610065280",
+       "71610065294",
+       "71610083730",
+       "71610083753",
+       "71610083760",
+       "71610083770",
+       "71610083780",
+       "71610083794",
+       "71610085830",
+       "71610085853",
+       "71610085860",
+       "71610085870",
+       "71610085880",
+       "71610085894",
+       "72162242400",
+       "72162242401",
+       "72162242402",
+       "72162242404",
+       "72162242405",
+       "72162242407",
+       "72162242409",
+       "72189006430",
+       "72189006490",
+       "72189015030",
+       "72189015090",
+       "72578003501",
+       "72578003505",
+       "72664022701",
+       "72789000930",
+       "72789000960",
+       "72789000990",
+       "72789000993",
+       "72789005930",
+       "72789005960",
+       "72789005990",
+       "72789005993",
+       "72789005998",
+       "72789010501",
+       "72789010560",
+       "72789010582",
+       "72789010590",
+       "72789010593",
+       "72789010595",
+       "72789040001",
+       "72789040060",
+       "72789040082",
+       "72789040086",
+       "72789040090",
+       "72789040093",
+       "72789045460",
+       "72789045490",
+       "72789045493",
+       "72789045530",
+       "75834050001",
+       "75834050005",
+       "76385012801",
+       "76385012810",
+       "76385012850",
+       "82009011710",
+       "82009018005",
+       "82804014730",
+       "82804014760",
+       "82804014778",
+       "82804014790",
+       "82804019560"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "76385012810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "82009011710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "82009018005",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "31e5a9f0f68d0a27aedcd160": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00093111310",
+      "00143971401",
+      "00143971410",
+      "00185061001",
+      "00185061010",
+      "00378207401",
+      "00378207410",
+      "00591040701",
+      "00591040710",
+      "00615825405",
+      "00615825430",
+      "00615825439",
+      "00781166692",
+      "00904679861",
+      "23155087801",
+      "23155087810",
+      "24658024210",
+      "24658024215",
+      "24658024218",
+      "24658024230",
+      "24658024245",
+      "24658024290",
+      "31722017701",
+      "31722017710",
+      "31722017731",
+      "31722041901",
+      "31722041910",
+      "33358021230",
+      "42708003130",
+      "42708009430",
+      "42708015430",
+      "43063076901",
+      "43063076912",
+      "43063076914",
+      "43063076930",
+      "43063076960",
+      "43063076990",
+      "43063076993",
+      "43063076998",
+      "43063081201",
+      "43063081212",
+      "43063081214",
+      "43063081230",
+      "43063081260",
+      "43063081290",
+      "43063081293",
+      "43063081298",
+      "43353011345",
+      "43353016960",
+      "43353030130",
+      "43353030145",
+      "43353030160",
+      "43547035303",
+      "43547035310",
+      "43547035311",
+      "43547041604",
+      "43547041609",
+      "43547041610",
+      "43547041611",
+      "43547041615",
+      "43547041650",
+      "49999018230",
+      "50090298800",
+      "50090298801",
+      "50090298803",
+      "50090298804",
+      "50090298805",
+      "50090377400",
+      "50090377401",
+      "50090377403",
+      "50090377404",
+      "50090377405",
+      "50090488500",
+      "50090512000",
+      "50090512001",
+      "50090512003",
+      "50090512004",
+      "50090512005",
+      "50090512100",
+      "50090512200",
+      "50090702200",
+      "50090722100",
+      "51655039926",
+      "51655039952",
+      "51655040130",
+      "51655040226",
+      "51655099526",
+      "51655099552",
+      "52959072820",
+      "54458087410",
+      "55045292900",
+      "55154807800",
+      "55289063860",
+      "55700047900",
+      "55700047930",
+      "55700047960",
+      "55700047990",
+      "55700051318",
+      "55700051330",
+      "55700051360",
+      "55700051390",
+      "55887059110",
+      "58864060315",
+      "58864060330",
+      "58864060390",
+      "60505018601",
+      "60505018607",
+      "60505018609",
+      "60505268501",
+      "60505268508",
+      "60505268509",
+      "60687032501",
+      "60687032511",
+      "60760035830",
+      "60760035890",
+      "61919030630",
+      "61919030660",
+      "61919030690",
+      "61919074630",
+      "61919074690",
+      "62135064231",
+      "62135064290",
+      "63187009830",
+      "63187009860",
+      "63187009890",
+      "63187082130",
+      "63187082160",
+      "63187082190",
+      "63629538201",
+      "63629538202",
+      "65862003900",
+      "65862003901",
+      "65862003905",
+      "65862003930",
+      "65862003999",
+      "66685070301",
+      "66685070302",
+      "66685070303",
+      "67046042203",
+      "67544015915",
+      "67544021915",
+      "68001021000",
+      "68001021008",
+      "68001026800",
+      "68001026808",
+      "68001033400",
+      "68001033408",
+      "68071167201",
+      "68071312203",
+      "68071312205",
+      "68071312206",
+      "68071312209",
+      "68071341102",
+      "68071341109",
+      "68180051402",
+      "68180051405",
+      "68180051409",
+      "68180051430",
+      "68180098001",
+      "68180098002",
+      "68180098003",
+      "68180098005",
+      "68180098009",
+      "68180098030",
+      "68387054330",
+      "68645055254",
+      "68645058754",
+      "68645061090",
+      "68788640701",
+      "68788640703",
+      "68788640706",
+      "68788640709",
+      "68788831001",
+      "68788831003",
+      "68788831006",
+      "68788831009",
+      "70518046800",
+      "70518046801",
+      "70518046802",
+      "70518115200",
+      "70518115201",
+      "70518115202",
+      "70518115203",
+      "70518115204",
+      "70518439700",
+      "70518450900",
+      "70882010430",
+      "70934012030",
+      "70934012090",
+      "70934015590",
+      "70934020090",
+      "71205074230",
+      "71205074260",
+      "71205074290",
+      "71335053600",
+      "71335053601",
+      "71335053602",
+      "71335053603",
+      "71335053604",
+      "71335053605",
+      "71335053606",
+      "71335053607",
+      "71335053608",
+      "71335053609",
+      "71335268001",
+      "71610061245",
+      "71610061260",
+      "71610063815",
+      "71610063830",
+      "71610063845",
+      "71610063860",
+      "71610063880",
+      "71610073115",
+      "71610073130",
+      "71610073145",
+      "71610073160",
+      "71610073180",
+      "72865021001",
+      "72865021010",
+      "72865021045",
+      "72865021050",
+      "72865021090",
+      "76282041901",
+      "76282041905",
+      "76282041910",
+      "76282041918",
+      "76282041930",
+      "76282041945",
+      "76282041950",
+      "76282041990",
+      "76282073001",
+      "76282073005",
+      "76282073010",
+      "76282073018",
+      "76282073030",
+      "76282073045",
+      "76282073050",
+      "76282073090",
+      "76420034200",
+      "76420034201",
+      "76420034230",
+      "76420034260",
+      "76420034290",
+      "82009006410",
+      "87441004701"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/314076/ndcs.json"
+ },
+ "3683ef71ed1a72042b0f3f13": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00115172201",
+      "00115172203",
+      "00115172213",
+      "00115172215",
+      "14445015005",
+      "14445015010",
+      "14445015018",
+      "14445015060",
+      "33342033809",
+      "33342033812",
+      "33342033815"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1364445/ndcs.json"
+ },
+ "37ef12bda2e35350fb297c66": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "NDA020503 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Proventil]",
+        "rxcui": "746763",
+        "suppress": "N",
+        "synonym": "Proventil HFA 90 MCG/ACTUAT Metered Dose Inhaler, 200 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2123111/related.json?tty=SBD"
+ },
+ "404b11f6384f6d6d59b191c4": {
+  "json": {
+   "count": 0,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00115172201",
+       "00115172203",
+       "00115172213",
+       "00115172215",
+       "14445015005",
+       "14445015010",
+       "14445015018",
+       "14445015060",
+       "33342033809",
+       "33342033812",
+       "33342033815"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "414449f8a4055917e680d838": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "atorvastatin 80 MG Oral Tablet [Lipitor]",
+        "rxcui": "262095",
+        "suppress": "N",
+        "synonym": "Lipitor 80 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 10 MG Oral Tablet [Lipitor]",
+        "rxcui": "617314",
+        "suppress": "N",
+        "synonym": "Lipitor 10 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 20 MG Oral Tablet [Lipitor]",
+        "rxcui": "617318",
+        "suppress": "N",
+        "synonym": "Lipitor 20 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 40 MG Oral Tablet [Lipitor]",
+        "rxcui": "617320",
+        "suppress": "N",
+        "synonym": "Lipitor 40 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lipitor"
+ },
+ "45172f5edabb662fbe7f765b": {
+  "json": {
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Glucophage",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Metformin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877093010",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.31",
+     "requested_quote_units": "30",
+     "slug": "metformin-500mg-tablet",
+     "special_handling": "",
+     "strength": "500mg",
+     "unit_billing_price": "$0.0106",
+     "unit_price": "$0.009",
+     "url": "https://www.costplusdrugs.com/medications/metformin-500mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=metformin&quantity_units=30&strength=500mg"
+ },
+ "46c05357888683e3c5fdd77c": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "tty": "GPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / saxagliptin 2.5 MG Extended Release Oral Tablet [Kombiglyze]",
+        "rxcui": "1043567",
+        "suppress": "N",
+        "synonym": "Kombiglyze 2.5/1000 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / saxagliptin 5 MG Extended Release Oral Tablet [Kombiglyze]",
+        "rxcui": "1043574",
+        "suppress": "N",
+        "synonym": "Kombiglyze 5/1000 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG / saxagliptin 5 MG Extended Release Oral Tablet [Kombiglyze]",
+        "rxcui": "1043582",
+        "suppress": "N",
+        "synonym": "Kombiglyze 5/500 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linagliptin 2.5 MG / metformin hydrochloride 1000 MG Oral Tablet [Jentadueto]",
+        "rxcui": "1243026",
+        "suppress": "N",
+        "synonym": "Jentadueto 2.5/1000 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linagliptin 2.5 MG / metformin hydrochloride 500 MG Oral Tablet [Jentadueto]",
+        "rxcui": "1243033",
+        "suppress": "N",
+        "synonym": "Jentadueto 2.5/500 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linagliptin 2.5 MG / metformin hydrochloride 850 MG Oral Tablet [Jentadueto]",
+        "rxcui": "1243040",
+        "suppress": "N",
+        "synonym": "Jentadueto 2.5/850 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 100 MG Extended Release Oral Tablet [Janumet]",
+        "rxcui": "1243833",
+        "suppress": "N",
+        "synonym": "Janumet XR 100/1000 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet [Janumet]",
+        "rxcui": "1243843",
+        "suppress": "N",
+        "synonym": "Janumet XR 50/1000 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet [Janumet]",
+        "rxcui": "1243848",
+        "suppress": "N",
+        "synonym": "Janumet XR 50/500 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "alogliptin 12.5 MG / metformin hydrochloride 1000 MG Oral Tablet [Kazano]",
+        "rxcui": "1368391",
+        "suppress": "N",
+        "synonym": "Kazano 12.5/1000 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "alogliptin 12.5 MG / metformin hydrochloride 500 MG Oral Tablet [Kazano]",
+        "rxcui": "1368398",
+        "suppress": "N",
+        "synonym": "Kazano 12.5/500 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 150 MG / metformin hydrochloride 1000 MG Oral Tablet [Invokamet]",
+        "rxcui": "1545156",
+        "suppress": "N",
+        "synonym": "Invokamet (canagliflozin 150 MG / metformin hydrochloride 1000 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 150 MG / metformin hydrochloride 500 MG Oral Tablet [Invokamet]",
+        "rxcui": "1545159",
+        "suppress": "N",
+        "synonym": "Invokamet (canagliflozin 150 MG / metformin hydrochloride 500 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 50 MG / metformin hydrochloride 1000 MG Oral Tablet [Invokamet]",
+        "rxcui": "1545163",
+        "suppress": "N",
+        "synonym": "Invokamet (canagliflozin 50 MG / metformin hydrochloride 1000 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 50 MG / metformin hydrochloride 500 MG Oral Tablet [Invokamet]",
+        "rxcui": "1545166",
+        "suppress": "N",
+        "synonym": "Invokamet (canagliflozin 50 MG / metformin hydrochloride 500 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 10 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Xigduo]",
+        "rxcui": "1593775",
+        "suppress": "N",
+        "synonym": "Xigduo XR 10/1000 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 5 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet [Xigduo]",
+        "rxcui": "1593831",
+        "suppress": "N",
+        "synonym": "Xigduo XR 5/500 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Xigduo]",
+        "rxcui": "1593833",
+        "suppress": "N",
+        "synonym": "Xigduo XR 5/1000 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 10 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet [Xigduo]",
+        "rxcui": "1593835",
+        "suppress": "N",
+        "synonym": "Xigduo XR 10/500 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 5 MG / metformin hydrochloride 500 MG Oral Tablet [Synjardy]",
+        "rxcui": "1664321",
+        "suppress": "N",
+        "synonym": "Synjardy (empagliflozin 5 MG / metformin hydrochloride 500 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 12.5 MG / metformin hydrochloride 500 MG Oral Tablet [Synjardy]",
+        "rxcui": "1664325",
+        "suppress": "N",
+        "synonym": "Synjardy (empagliflozin 12.5 MG / metformin hydrochloride 500 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 5 MG / metformin hydrochloride 1000 MG Oral Tablet [Synjardy]",
+        "rxcui": "1664328",
+        "suppress": "N",
+        "synonym": "Synjardy (empagliflozin 5 MG / metformin hydrochloride 1000 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 12.5 MG / metformin hydrochloride 1000 MG Oral Tablet [Synjardy]",
+        "rxcui": "1665369",
+        "suppress": "N",
+        "synonym": "Synjardy (empagliflozin 12.5 MG / metformin hydrochloride 1000 MG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR linagliptin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Jentadueto]",
+        "rxcui": "1796091",
+        "suppress": "N",
+        "synonym": "Jentadueto XR (linagliptin 2.5 MG / metformin HCl 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR linagliptin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Jentadueto]",
+        "rxcui": "1796096",
+        "suppress": "N",
+        "synonym": "Jentadueto XR (linagliptin 5 MG / metformin HCl 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 150 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Invokamet]",
+        "rxcui": "1810999",
+        "suppress": "N",
+        "synonym": "Invokamet (canagliflozin 150 MG / metformin hydrochloride 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 150 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet [Invokamet]",
+        "rxcui": "1811003",
+        "suppress": "N",
+        "synonym": "Invokamet (canagliflozin 150 MG / metformin hydrochloride 500 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 50 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Invokamet]",
+        "rxcui": "1811007",
+        "suppress": "N",
+        "synonym": "IInvokamet (canagliflozin 50 MG / metformin hydrochloride 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 50 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet [Invokamet]",
+        "rxcui": "1811011",
+        "suppress": "N",
+        "synonym": "IInvokamet (canagliflozin 50 MG / metformin hydrochloride 500 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 10 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Synjardy]",
+        "rxcui": "1862688",
+        "suppress": "N",
+        "synonym": "Synjardy XR 10 MG / 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 12.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Synjardy]",
+        "rxcui": "1862692",
+        "suppress": "N",
+        "synonym": "Synjardy XR 12.5 MG / 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 25 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Synjardy]",
+        "rxcui": "1862697",
+        "suppress": "N",
+        "synonym": "Synjardy XR 25 MG / 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Synjardy]",
+        "rxcui": "1862701",
+        "suppress": "N",
+        "synonym": "Synjardy XR 5 MG / 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Xigduo]",
+        "rxcui": "1940498",
+        "suppress": "N",
+        "synonym": "Xigduo XR 2.5/1000 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 2.5 MG / metformin hydrochloride 1000 MG Oral Tablet [Segluromet]",
+        "rxcui": "1992691",
+        "suppress": "N",
+        "synonym": "Segluromet 2.5/1000 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 2.5 MG / metformin hydrochloride 500 MG Oral Tablet [Segluromet]",
+        "rxcui": "1992695",
+        "suppress": "N",
+        "synonym": "Segluromet 2.5/500 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 7.5 MG / metformin hydrochloride 1000 MG Oral Tablet [Segluromet]",
+        "rxcui": "1992700",
+        "suppress": "N",
+        "synonym": "Segluromet 7.5/1000 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 7.5 MG / metformin hydrochloride 500 MG Oral Tablet [Segluromet]",
+        "rxcui": "1992703",
+        "suppress": "N",
+        "synonym": "Segluromet 7.5/500 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 10 MG / linagliptin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Trijardy]",
+        "rxcui": "2359285",
+        "suppress": "N",
+        "synonym": "Trijardy XR (empagliflozin 10 MG / linagliptin 5 MG / metformin HCl 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 12.5 MG / linagliptin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Trijardy]",
+        "rxcui": "2359290",
+        "suppress": "N",
+        "synonym": "Trijardy XR (empagliflozin 12.5 MG / linagliptin 2.5 MG / metformin HCl 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 25 MG / linagliptin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Trijardy]",
+        "rxcui": "2359353",
+        "suppress": "N",
+        "synonym": "Trijardy XR (empagliflozin 25 MG / linagliptin 5 MG / metformin HCl 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 5 MG / linagliptin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet [Trijardy]",
+        "rxcui": "2359358",
+        "suppress": "N",
+        "synonym": "Trijardy XR (empagliflozin 5 MG / linagliptin 2.5 MG / metformin hydrochloride 1000 MG) 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG / sitagliptin 50 MG Oral Tablet [Zituvimet]",
+        "rxcui": "2677162",
+        "suppress": "N",
+        "synonym": "Zituvimet 50 MG / 1000 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / sitagliptin 50 MG Oral Tablet [Zituvimet]",
+        "rxcui": "2677164",
+        "suppress": "N",
+        "synonym": "Zituvimet 50 MG / 500 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 50 MG Extended Release Oral Tablet [Zituvimet]",
+        "rxcui": "2696282",
+        "suppress": "N",
+        "synonym": "Zituvimet XR 50/1000 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG / sitagliptin 50 MG Extended Release Oral Tablet [Zituvimet]",
+        "rxcui": "2696284",
+        "suppress": "N",
+        "synonym": "Zituvimet XR 50/500 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 100 MG Extended Release Oral Tablet [Zituvimet]",
+        "rxcui": "2696287",
+        "suppress": "N",
+        "synonym": "Zituvimet XR 100/1000 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG Extended Release Oral Tablet [Glucophage]",
+        "rxcui": "860977",
+        "suppress": "N",
+        "synonym": "24 HR Glucophage 500 MG Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 750 MG Extended Release Oral Tablet [Glucophage]",
+        "rxcui": "860983",
+        "suppress": "N",
+        "synonym": "24 HR Glucophage 750 MG Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG Oral Tablet [Glucophage]",
+        "rxcui": "861006",
+        "suppress": "N",
+        "synonym": "Glucophage 1000 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 850 MG Oral Tablet [Glucophage]",
+        "rxcui": "861012",
+        "suppress": "N",
+        "synonym": "Glucophage 850 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Modified 24 HR metformin hydrochloride 1000 MG Extended Release Oral Tablet [Glumetza]",
+        "rxcui": "861015",
+        "suppress": "N",
+        "synonym": "Glumetza 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Modified 24 HR metformin hydrochloride 500 MG Extended Release Oral Tablet [Glumetza]",
+        "rxcui": "861018",
+        "suppress": "N",
+        "synonym": "Glumetza 500 MG Modified 24 HR Extended Release Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 100 MG/ML Oral Solution [Riomet]",
+        "rxcui": "861027",
+        "suppress": "N",
+        "synonym": "Riomet 100 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Oral Tablet [Janumet]",
+        "rxcui": "861771",
+        "suppress": "N",
+        "synonym": "Janumet 50 mg/1000 mg Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / pioglitazone 15 MG Oral Tablet [Actoplus Met]",
+        "rxcui": "861785",
+        "suppress": "N",
+        "synonym": "Actoplus Met 15/500 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Oral Tablet [Janumet]",
+        "rxcui": "861821",
+        "suppress": "N",
+        "synonym": "Janumet 50 mg/500 mg Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 850 MG / pioglitazone 15 MG Oral Tablet [Actoplus Met]",
+        "rxcui": "861824",
+        "suppress": "N",
+        "synonym": "Actoplus Met 15/850 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / saxagliptin 2.5 MG Extended Release Oral Tablet",
+        "rxcui": "1043563",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / saxagliptin (as saxagliptin hydrochloride) 2.5 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / saxagliptin 5 MG Extended Release Oral Tablet",
+        "rxcui": "1043570",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / saxagliptin (as saxagliptin hydrochloride) 5 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG / saxagliptin 5 MG Extended Release Oral Tablet",
+        "rxcui": "1043578",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / saxagliptin (as saxagliptin hydrochloride) 5 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linagliptin 2.5 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1243020",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linagliptin 2.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1243027",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linagliptin 2.5 MG / metformin hydrochloride 850 MG Oral Tablet",
+        "rxcui": "1243034",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 100 MG Extended Release Oral Tablet",
+        "rxcui": "1243827",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / sitagliptin 100 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin 50 MG Extended Release Oral Tablet",
+        "rxcui": "1243842",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / sitagliptin 50 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG / sitagliptin 50 MG Extended Release Oral Tablet",
+        "rxcui": "1243846",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / sitagliptin (as sitagliptin phosphate) 50 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "alogliptin 12.5 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1368385",
+        "suppress": "N",
+        "synonym": "alogliptin 12.5 MG (as alogliptin benzoate 17 MG) / metformin hydrochloride 1000 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "alogliptin 12.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1368392",
+        "suppress": "N",
+        "synonym": "alogliptin 12.5 MG (as alogliptin benzoate 17 MG / metformin hydrochloride 500 MG) Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 150 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1545150",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 150 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1545157",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 50 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1545161",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "canagliflozin 50 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1545164",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 10 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1593058",
+        "suppress": "N",
+        "synonym": "dapagliflozin (as dapagliflozin propanediol) 10 MG / metformin hydrochloride 1000 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 10 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "1593068",
+        "suppress": "N",
+        "synonym": "dapagliflozin 10 MG / metformin HCl 500 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1593070",
+        "suppress": "N",
+        "synonym": "dapagliflozin (as dapagliflozin propanediol) 5 MG / metformin hydrochloride 1000 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 5 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "1593072",
+        "suppress": "N",
+        "synonym": "dapagliflozin 5 MG / metformin HCl 500 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1664315",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 12.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1664323",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 5 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1664326",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "empagliflozin 12.5 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1665367",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR linagliptin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1796089",
+        "suppress": "N",
+        "synonym": "linagliptin 2.5 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR linagliptin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1796094",
+        "suppress": "N",
+        "synonym": "linagliptin 5 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Modified 24 HR metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1807888",
+        "suppress": "N",
+        "synonym": "metformin HCl 1000 MG Modified 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Osmotic 24 HR metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1807894",
+        "suppress": "N",
+        "synonym": "metformin HCl 1000 MG Osmotic 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Modified 24 HR metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "1807915",
+        "suppress": "N",
+        "synonym": "metformin HCl 500 MG Modified 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Osmotic 24 HR metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "1807917",
+        "suppress": "N",
+        "synonym": "metformin HCl 500 MG Osmotic 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 150 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1810997",
+        "suppress": "N",
+        "synonym": "canagliflozin 150 MG / metformin hydrochloride 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 150 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "1811002",
+        "suppress": "N",
+        "synonym": "canagliflozin 150 MG / metformin hydrochloride 500 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 50 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1811006",
+        "suppress": "N",
+        "synonym": "canagliflozin 50 MG / metformin hydrochloride 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR canagliflozin 50 MG / metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "1811010",
+        "suppress": "N",
+        "synonym": "canagliflozin 50 MG / metformin hydrochloride 500 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 10 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1862685",
+        "suppress": "N",
+        "synonym": "empagliflozin 10 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 12.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1862691",
+        "suppress": "N",
+        "synonym": "empagliflozin 12.5 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 25 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1862695",
+        "suppress": "N",
+        "synonym": "empagliflozin 25 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1862700",
+        "suppress": "N",
+        "synonym": "empagliflozin 5 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR dapagliflozin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "1940496",
+        "suppress": "N",
+        "synonym": "dapagliflozin 2.5 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 2.5 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1992685",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 2.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1992693",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 7.5 MG / metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "1992698",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "ertugliflozin 7.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "1992701",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 10 MG / linagliptin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "2359279",
+        "suppress": "N",
+        "synonym": "24 HR empagliflozin 10 MG / linagliptin 5 MG / metformin hydrochloride 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 12.5 MG / linagliptin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "2359288",
+        "suppress": "N",
+        "synonym": "empagliflozin 12.5 MG / linagliptin 2.5 MG / metformin HCl 1000 MG 24HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 25 MG / linagliptin 5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "2359351",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR empagliflozin 5 MG / linagliptin 2.5 MG / metformin hydrochloride 1000 MG Extended Release Oral Tablet",
+        "rxcui": "2359356",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 750 MG Oral Tablet",
+        "rxcui": "2703582",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 100 MG Extended Release Oral Tablet",
+        "rxcui": "2709470",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / sitagliptin phosphate 100 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet",
+        "rxcui": "2709477",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Extended Release Oral Tablet",
+        "rxcui": "2709482",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG / sitagliptin phosphate 50 MG Oral Tablet",
+        "rxcui": "2709488",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / sitagliptin phosphate 50 MG Oral Tablet",
+        "rxcui": "2709491",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 500 MG Extended Release Oral Tablet",
+        "rxcui": "860975",
+        "suppress": "N",
+        "synonym": "metformin HCl 500 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "24 HR metformin hydrochloride 750 MG Extended Release Oral Tablet",
+        "rxcui": "860981",
+        "suppress": "N",
+        "synonym": "metformin HCl 750 MG 24 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG Oral Tablet",
+        "rxcui": "861004",
+        "suppress": "N",
+        "synonym": "metformin HCl 1 GM Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "861007",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 850 MG Oral Tablet",
+        "rxcui": "861010",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 625 MG Oral Tablet",
+        "rxcui": "861021",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 100 MG/ML Oral Solution",
+        "rxcui": "861025",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG per 5 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "glipizide 2.5 MG / metformin hydrochloride 250 MG Oral Tablet",
+        "rxcui": "861731",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "glipizide 2.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "861736",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "glipizide 5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "861740",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "glyburide 1.25 MG / metformin hydrochloride 250 MG Oral Tablet",
+        "rxcui": "861743",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "glyburide 2.5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "861748",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "glyburide 5 MG / metformin hydrochloride 500 MG Oral Tablet",
+        "rxcui": "861753",
+        "suppress": "N",
+        "synonym": "glyburide 5 MG / metformin HCl 500 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG / rosiglitazone 2 MG Oral Tablet",
+        "rxcui": "861760",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / rosiglitazone (as rosiglitazone maleate) 2 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG / rosiglitazone 4 MG Oral Tablet",
+        "rxcui": "861763",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / rosiglitazone (as rosiglitazone maleate) 4 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 1000 MG / sitagliptin 50 MG Oral Tablet",
+        "rxcui": "861769",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 1000 MG / sitagliptin 50 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / pioglitazone 15 MG Oral Tablet",
+        "rxcui": "861783",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / repaglinide 1 MG Oral Tablet",
+        "rxcui": "861787",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / repaglinide 2 MG Oral Tablet",
+        "rxcui": "861790",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / rosiglitazone 1 MG Oral Tablet",
+        "rxcui": "861795",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / rosiglitazone (as rosiglitazone maleate) 1 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / rosiglitazone 2 MG Oral Tablet",
+        "rxcui": "861806",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / rosiglitazone (as rosiglitazone maleate) 2 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / rosiglitazone 4 MG Oral Tablet",
+        "rxcui": "861816",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / rosiglitazone (as rosiglitazone maleate) 4 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 500 MG / sitagliptin 50 MG Oral Tablet",
+        "rxcui": "861819",
+        "suppress": "N",
+        "synonym": "metformin hydrochloride 500 MG / sitagliptin 50 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "metformin hydrochloride 850 MG / pioglitazone 15 MG Oral Tablet",
+        "rxcui": "861822",
+        "suppress": "N",
+        "synonym": "metformin HCl 850 mg and pioglitazone (as pioglitazone hydrochloride) 15 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=metformin"
+ },
+ "4f51b51b9a8a736b81b474fd": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00071015623",
+      "00071015694",
+      "13411011401",
+      "13411011403",
+      "13411011406",
+      "13411011409",
+      "13411011415",
+      "58151015677",
+      "58864068530",
+      "63629144701",
+      "66105011409",
+      "68071015430"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617318/ndcs.json"
+ },
+ "5ba19ef6ea1ff77f5c820f5e": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "{74 (apixaban 5 MG Oral Tablet [Eliquis]) } Pack [Eliquis 30-Day Starter Pack]",
+        "rxcui": "1992428",
+        "suppress": "N",
+        "synonym": "Eliquis 30-Day Starter Pack",
+        "tty": "BPCK",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "{84 (apixaban 0.5 MG Tablet for Oral Suspension [Eliquis]) } Pack [Eliquis 1.5 MG Dose Pack]",
+        "rxcui": "2749695",
+        "suppress": "N",
+        "synonym": "Eliquis 1.5 MG Dose Pack, 0.5 MG (84) Tablet for Oral Suspension",
+        "tty": "BPCK",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "{112 (apixaban 0.5 MG Tablet for Oral Suspension [Eliquis]) } Pack [Eliquis 2 MG Dose Pack]",
+        "rxcui": "2749698",
+        "suppress": "N",
+        "synonym": "Eliquis 2 MG Dose Pack, 0.5 MG (112) Tablet for Oral Suspension",
+        "tty": "BPCK",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "{28 (apixaban 0.5 MG Tablet for Oral Suspension [Eliquis]) } Pack [Eliquis 0.5 MG Dose Pack]",
+        "rxcui": "2749700",
+        "suppress": "N",
+        "synonym": "Eliquis 0.5 MG Dose Pack, 0.5 MG (28) Tablet for Oral Suspension",
+        "tty": "BPCK",
+        "umlscui": ""
+       }
+      ],
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "apixaban 2.5 MG Oral Tablet [Eliquis]",
+        "rxcui": "1364441",
+        "suppress": "N",
+        "synonym": "Eliquis 2.5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "apixaban 5 MG Oral Tablet [Eliquis]",
+        "rxcui": "1364447",
+        "suppress": "N",
+        "synonym": "Eliquis 5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "apixaban 0.15 MG Powder for Oral Suspension [Eliquis]",
+        "rxcui": "2749583",
+        "suppress": "N",
+        "synonym": "Eliquis 0.15 MG Powder for Oral Suspension",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "apixaban 0.5 MG Tablet for Oral Suspension [Eliquis]",
+        "rxcui": "2749689",
+        "suppress": "N",
+        "synonym": "Eliquis 0.5 MG Tablet for Oral Suspension",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=eliquis"
+ },
+ "5c1e6b97da2bbd49c0ed75e7": {
+  "json": {
+   "suggestionGroup": {
+    "name": null,
+    "suggestionList": {
+     "suggestion": [
+      "lipitor"
+     ]
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=lipiter"
+ },
+ "607a88656df22b6a74ffc0fc": {
+  "json": {
+   "drugGroup": {
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lipiter"
+ },
+ "6eda1562cab7bf0f92f7770e": {
+  "json": {
+   "suggestionGroup": {
+    "name": null,
+    "suggestionList": {}
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=xyzzy"
+ },
+ "7f44fcbf0f6c61e808c21780": {
+  "json": {
+   "count": 16,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "63629803201",
+       "63629803202",
+       "63629847001",
+       "63629847101",
+       "63739002010",
+       "67046140303",
+       "67046145303",
+       "67046150503",
+       "67046152603",
+       "67046164303",
+       "67877051205",
+       "67877051210",
+       "67877051233",
+       "67877051238",
+       "67877051244",
+       "67877051290",
+       "68071091530",
+       "68071282409",
+       "68071296703",
+       "68071296706",
+       "68071296709",
+       "68071347006",
+       "68071358009",
+       "68071365909",
+       "68071371403",
+       "68071371406",
+       "68071371409",
+       "68071389103",
+       "68071484009",
+       "68071516803",
+       "68071529209",
+       "68084009801",
+       "68084009811",
+       "68180063602",
+       "68180063606",
+       "68180063609",
+       "68382025010",
+       "68382025016",
+       "68645045954",
+       "68645045970",
+       "68645048154",
+       "68645048170",
+       "68645048254",
+       "68645059154",
+       "68788409603",
+       "68788409606",
+       "68788409609",
+       "68788841601",
+       "68788841603",
+       "68788841606",
+       "68788841609",
+       "68788861301",
+       "68788861303",
+       "68788861306",
+       "68788861309",
+       "68788862501",
+       "68788862503",
+       "68788862506",
+       "68788862509",
+       "68788868301",
+       "68788868303",
+       "68788868306",
+       "68788868309",
+       "68788869301",
+       "68788869303",
+       "68788869306",
+       "68788869309",
+       "69097089805",
+       "69097089812",
+       "69097094505",
+       "69097094512",
+       "70377002811",
+       "70377002813",
+       "70377007811",
+       "70377007812",
+       "70377007813",
+       "70518018600",
+       "70518018601",
+       "70518018602",
+       "70518303700",
+       "70518303701",
+       "70518303702",
+       "70518333900",
+       "70518333901",
+       "70518378300",
+       "70518378301",
+       "70518378302",
+       "70518378303",
+       "70518442300",
+       "70518442301",
+       "70518442302",
+       "70518458700",
+       "70710177500",
+       "70710177505",
+       "70710177509",
+       "70756024812",
+       "70756024830",
+       "70756024851",
+       "70756024890",
+       "70771187600",
+       "70771187605",
+       "70771187609",
+       "70882012030",
+       "70934006930",
+       "70934006990",
+       "70934020190",
+       "70934061430",
+       "70934061490",
+       "71205024730",
+       "71205024760",
+       "71205024790",
+       "71205079130",
+       "71205079190",
+       "71209009104",
+       "71335000401",
+       "71335000402",
+       "71335000403",
+       "71335000404",
+       "71335000405",
+       "71335101001",
+       "71335101002",
+       "71335101003",
+       "71335101004",
+       "71335101005",
+       "71335101006",
+       "71335101007",
+       "71335101008",
+       "71335101009",
+       "71335105101",
+       "71335105102",
+       "71335105103",
+       "71335105104",
+       "71335105105",
+       "71335105106",
+       "71335105107",
+       "71335105108",
+       "71335105109",
+       "71335150701",
+       "71335150702",
+       "71335150703",
+       "71335150704",
+       "71335150705",
+       "71335150706",
+       "71335150707",
+       "71335150708",
+       "71335150709",
+       "71335192901",
+       "71335192902",
+       "71335192903",
+       "71335192904"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "67877051205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "67877051210",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "67877051290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "68084009801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "68084009811",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "68382025010",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "68382025016",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70377002811",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70377002813",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70377007811",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70377007813",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70710177500",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70710177509",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70756024812",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70756024851",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "70756024890",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "81258bb1db0cacc291f183ec": {
+  "json": {
+   "count": 1,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00071015623",
+       "00071015694",
+       "13411011401",
+       "13411011403",
+       "13411011406",
+       "13411011409",
+       "13411011415",
+       "58151015677",
+       "58864068530",
+       "63629144701",
+       "66105011409",
+       "68071015430"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "0.02792",
+     "nadac_per_unit": "19.07256",
+     "ndc": "58151015677",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "88167a6c5e5a1d1f58556195": {
+  "json": {
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Prinivil",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Lisinopril",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "68180098003",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.38",
+     "requested_quote_units": "30",
+     "slug": "lisinopril-10mg-tablet",
+     "special_handling": "",
+     "strength": "10mg",
+     "unit_billing_price": "$0.0131",
+     "unit_price": "$0.011",
+     "url": "https://www.costplusdrugs.com/medications/lisinopril-10mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=lisinopril&quantity_units=30&strength=10mg"
+ },
+ "8f2451541e859d1fc1f9b9db": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+        "rxcui": "859088",
+        "suppress": "N",
+        "synonym": "Ventolin HFA 0.09 MG/ACTUAT Metered Dose Inhaler, 200 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2123076/related.json?tty=SBD"
+ },
+ "90b345ba03d01e6482ac5b9c": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "NDA020983 60 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+        "rxcui": "801095",
+        "suppress": "N",
+        "synonym": "Ventolin HFA 0.09 MG/ACTUAT Metered Dose Inhaler, 60 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/801092/related.json?tty=SBD"
+ },
+ "939020bb21ee926b0fa4f291": {
+  "json": {
+   "count": 1148056,
+   "query": {
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 1,
+    "offset": 0,
+    "properties": [
+     "as_of_date"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true,
+    "sorts": [
+     {
+      "order": "desc",
+      "property": "as_of_date"
+     }
+    ]
+   },
+   "results": [
+    {
+     "as_of_date": "2026-09-23"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "ab01e9ce04d0104034156984": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]",
+        "rxcui": "745752",
+        "suppress": "N",
+        "synonym": "200 ACTUAT ProAir 0.09 MG/ACTUAT Metered Dose Inhaler",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2123072/related.json?tty=SBD"
+ },
+ "b38670ad331877a4ecfef8f0": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "tty": "GPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "120 ACTUAT albuterol 0.1 MG/ACTUAT / ipratropium bromide 0.02 MG/ACTUAT Inhalation Spray [Combivent]",
+        "rxcui": "1190225",
+        "suppress": "N",
+        "synonym": "Combivent 20/100 (ipratropium bromide / albuterol) Metered Dose Inhalation Spray, 120 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "200 ACTUAT albuterol 0.09 MG/ACTUAT Dry Powder Inhaler [ProAir]",
+        "rxcui": "1649961",
+        "suppress": "N",
+        "synonym": "200 ACTUAT ProAir 0.09 MG/ACTUAT Dry Powder Inhaler",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Sensor 200 ACTUAT albuterol 0.09 MG/ACTUAT Dry Powder Inhaler [ProAir]",
+        "rxcui": "2166797",
+        "suppress": "N",
+        "synonym": "Sensor 200 ACTUAT ProAir 0.09 MG/ACTUAT Dry Powder Inhaler",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "120 ACTUAT albuterol 0.09 MG/ACTUAT / budesonide 0.08 MG/ACTUAT Metered Dose Inhaler [Airsupra]",
+        "rxcui": "2665912",
+        "suppress": "N",
+        "synonym": "Airsupra (albuterol 90 MCG/INHAL / budesonide 80 MCG/INHAL) Metered Dose Inhaler, 120 Actuations",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "28 ACTUAT albuterol 0.09 MG/ACTUAT / budesonide 0.08 MG/ACTUAT Metered Dose Inhaler [Airsupra]",
+        "rxcui": "2678392",
+        "suppress": "N",
+        "synonym": "Airsupra (albuterol 90 MCG/ACTUAT / budesonide 80 MCG/ACTUAT) Metered Dose Inhaler, 28 Actuations",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]",
+        "rxcui": "745752",
+        "suppress": "N",
+        "synonym": "200 ACTUAT ProAir 0.09 MG/ACTUAT Metered Dose Inhaler",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA020503 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Proventil]",
+        "rxcui": "746763",
+        "suppress": "N",
+        "synonym": "Proventil HFA 90 MCG/ACTUAT Metered Dose Inhaler, 200 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA020983 60 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+        "rxcui": "801095",
+        "suppress": "N",
+        "synonym": "Ventolin HFA 0.09 MG/ACTUAT Metered Dose Inhaler, 60 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+        "rxcui": "859088",
+        "suppress": "N",
+        "synonym": "Ventolin HFA 0.09 MG/ACTUAT Metered Dose Inhaler, 200 ACTUAT",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "albuterol 0.4 MG Inhalation Powder",
+        "rxcui": "104514",
+        "suppress": "N",
+        "synonym": "albuterol 400 MCG/ACTUAT Inhalation Powder",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "120 ACTUAT albuterol 0.1 MG/ACTUAT / ipratropium bromide 0.02 MG/ACTUAT Inhalation Spray",
+        "rxcui": "1190220",
+        "suppress": "N",
+        "synonym": "albuterol 0.1 MG/ACTUAT / ipratropium bromide 0.02 MG/ACTUAT Metered Dose Inhalation Spray, 120 ACTUAT",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 1 MG/ML / ipratropium bromide 0.2 MG/ML Inhalation Solution",
+        "rxcui": "1362214",
+        "suppress": "N",
+        "synonym": "albuterol 2.5 MG / ipratropium bromide 0.5 MG per 2.5 ML Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.833 MG/ML / ipratropium bromide 0.167 MG/ML Inhalation Solution",
+        "rxcui": "1437702",
+        "suppress": "N",
+        "synonym": "albuterol 2.5 MG (as albuterol sulfate 3 MG) / ipratropium bromide 0.5 MG per 3 ML Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 4 MG Extended Release Oral Capsule",
+        "rxcui": "153741",
+        "suppress": "N",
+        "synonym": "albuterol (as albuterol sulfate) 4 MG Extended Release Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 8 MG Extended Release Oral Capsule",
+        "rxcui": "153742",
+        "suppress": "N",
+        "synonym": "albuterol 8 MG (as albuterol sulfate) Extended Release Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "200 ACTUAT albuterol 0.09 MG/ACTUAT Dry Powder Inhaler",
+        "rxcui": "1649560",
+        "suppress": "N",
+        "synonym": "albuterol 90 MCG/ACTUAT Dry Powder Inhaler, 200 ACTUAT",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 2 MG Oral Tablet",
+        "rxcui": "197316",
+        "suppress": "N",
+        "synonym": "albuterol 2 MG (as albuterol sulfate 2.4 MG) Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 4 MG Oral Tablet",
+        "rxcui": "197318",
+        "suppress": "N",
+        "synonym": "albuterol 4 MG (as albuterol sulfate 4.8 MG) Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.5 MG/ML Injectable Solution",
+        "rxcui": "199924",
+        "suppress": "N",
+        "synonym": "albuterol (as albuterol sulfate) 0.5 MG/ML Injectable Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+        "rxcui": "2123072",
+        "suppress": "N",
+        "synonym": "albuterol 90 MCG/ACTUAT Metered Dose Inhaler, 200 Actuations, generic for ProAir",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+        "rxcui": "2123076",
+        "suppress": "N",
+        "synonym": "albuterol 90 MCG/INHAL Metered Dose Inhaler, 200 Actuation, generic for Ventolin",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA020503 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+        "rxcui": "2123111",
+        "suppress": "N",
+        "synonym": "albuterol 90 MCG/INHAL Metered Dose Inhaler, 200 Actuations, generic for Proventil",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "Sensor 200 ACTUAT albuterol 0.09 MG/ACTUAT Dry Powder Inhaler",
+        "rxcui": "2166796",
+        "suppress": "N",
+        "synonym": "albuterol 90 MCG /INHAL Dry Powder Inhaler with sensor, 200 Actuations",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 5 MG/ML Inhalation Solution",
+        "rxcui": "245314",
+        "suppress": "N",
+        "synonym": "albuterol 0.5 % Concentrate for Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 2 MG/ML Inhalation Solution",
+        "rxcui": "247840",
+        "suppress": "N",
+        "synonym": "albuterol 5 MG per 2.5 ML Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 1 MG/ML Injectable Solution",
+        "rxcui": "248066",
+        "suppress": "N",
+        "synonym": "albuterol (as albuterol sulfate) 1 MG/ML Injectable Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.1 MG Inhalation Powder",
+        "rxcui": "252298",
+        "suppress": "N",
+        "synonym": "albuterol (as albuterol sulfate) 0.1 MG Inhalation Powder",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "120 ACTUAT albuterol 0.09 MG/ACTUAT / budesonide 0.08 MG/ACTUAT Metered Dose Inhaler",
+        "rxcui": "2665906",
+        "suppress": "N",
+        "synonym": "albuterol 90 MCG/INHAL / budesonide 80 MCG/INHAL Metered Dose Inhaler, 120 Actuations",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "28 ACTUAT albuterol 0.09 MG/ACTUAT / budesonide 0.08 MG/ACTUAT Metered Dose Inhaler",
+        "rxcui": "2678391",
+        "suppress": "N",
+        "synonym": "albuterol sulfate 108 MCG/ACTUAT / budesonide 80 MCG/ACTUAT Metered Dose Inhaler, 28 Actuations",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.2 MG Inhalation Powder",
+        "rxcui": "307779",
+        "suppress": "N",
+        "synonym": "albuterol 200 MCG/ACTUAT Inhalation Powder",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.417 MG/ML Inhalation Solution",
+        "rxcui": "351136",
+        "suppress": "N",
+        "synonym": "albuterol 0.042 % (1.25 MG/3 ML) Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.21 MG/ML Inhalation Solution",
+        "rxcui": "351137",
+        "suppress": "N",
+        "synonym": "albuterol sulfate 0.021 % (0.63 MG/3 ML) Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "12 HR albuterol 4 MG Extended Release Oral Tablet",
+        "rxcui": "359144",
+        "suppress": "N",
+        "synonym": "albuterol 4 MG 12 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "12 HR albuterol 8 MG Extended Release Oral Tablet",
+        "rxcui": "359145",
+        "suppress": "N",
+        "synonym": "albuterol 8 MG 12 HR Extended Release Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.1 MG/ML Injectable Solution",
+        "rxcui": "386998",
+        "suppress": "N",
+        "synonym": "albuterol (as albuterol sulfate) 0.1 MG/ML Injectable Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 8 MG Oral Tablet",
+        "rxcui": "392321",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.83 MG/ML Inhalation Solution",
+        "rxcui": "630208",
+        "suppress": "N",
+        "synonym": "albuterol 0.083 % Inhalation Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "albuterol 0.4 MG/ML Oral Solution",
+        "rxcui": "755497",
+        "suppress": "N",
+        "synonym": "albuterol 2 MG per 5 ML Syrup",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "NDA020983 60 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler",
+        "rxcui": "801092",
+        "suppress": "N",
+        "synonym": "albuterol 0.09 MG/ACTUAT 60 ACTUAT Metered Dose Inhaler",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=albuterol"
+ },
+ "b437f8ed86e29d2d310183f4": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "apixaban 5 MG Oral Tablet",
+        "rxcui": "1364445",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1364447/related.json?tty=SCD"
+ },
+ "b957e887023f5d5c812e04cd": {
+  "json": {
+   "count": 17,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "68071312206",
+       "68071312209",
+       "68071341102",
+       "68071341109",
+       "68180051402",
+       "68180051405",
+       "68180051409",
+       "68180051430",
+       "68180098001",
+       "68180098002",
+       "68180098003",
+       "68180098005",
+       "68180098009",
+       "68180098030",
+       "68387054330",
+       "68645055254",
+       "68645058754",
+       "68645061090",
+       "68788640701",
+       "68788640703",
+       "68788640706",
+       "68788640709",
+       "68788831001",
+       "68788831003",
+       "68788831006",
+       "68788831009",
+       "70518046800",
+       "70518046801",
+       "70518046802",
+       "70518115200",
+       "70518115201",
+       "70518115202",
+       "70518115203",
+       "70518115204",
+       "70518439700",
+       "70518450900",
+       "70882010430",
+       "70934012030",
+       "70934012090",
+       "70934015590",
+       "70934020090",
+       "71205074230",
+       "71205074260",
+       "71205074290",
+       "71335053600",
+       "71335053601",
+       "71335053602",
+       "71335053603",
+       "71335053604",
+       "71335053605",
+       "71335053606",
+       "71335053607",
+       "71335053608",
+       "71335053609",
+       "71335268001",
+       "71610061245",
+       "71610061260",
+       "71610063815",
+       "71610063830",
+       "71610063845",
+       "71610063860",
+       "71610063880",
+       "71610073115",
+       "71610073130",
+       "71610073145",
+       "71610073160",
+       "71610073180",
+       "72865021001",
+       "72865021010",
+       "72865021045",
+       "72865021050",
+       "72865021090",
+       "76282041901",
+       "76282041905",
+       "76282041910",
+       "76282041918",
+       "76282041930",
+       "76282041945",
+       "76282041950",
+       "76282041990",
+       "76282073001",
+       "76282073005",
+       "76282073010",
+       "76282073018",
+       "76282073030",
+       "76282073045",
+       "76282073050",
+       "76282073090",
+       "76420034200",
+       "76420034201",
+       "76420034230",
+       "76420034260",
+       "76420034290",
+       "82009006410",
+       "87441004701"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68180098001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68180098003",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68180098030",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68645055254",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68645058754",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68645061090",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282041901",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282041910",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282041945",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282041950",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282041990",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282073001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282073010",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282073045",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282073050",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "76282073090",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "82009006410",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "be8bc4483c47e0495a765260": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "tty": "GPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "lisinopril 2.5 MG Oral Tablet [Zestril]",
+        "rxcui": "104375",
+        "suppress": "N",
+        "synonym": "Zestril 2.5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 5 MG Oral Tablet [Zestril]",
+        "rxcui": "104376",
+        "suppress": "N",
+        "synonym": "Zestril 5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 10 MG Oral Tablet [Zestril]",
+        "rxcui": "104377",
+        "suppress": "N",
+        "synonym": "Zestril 10 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 20 MG Oral Tablet [Zestril]",
+        "rxcui": "104378",
+        "suppress": "N",
+        "synonym": "Zestril 20 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 1 MG/ML Oral Solution [Qbrelis]",
+        "rxcui": "1806890",
+        "suppress": "N",
+        "synonym": "Qbrelis 1 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 10 MG Oral Tablet [Prinivil]",
+        "rxcui": "206765",
+        "suppress": "N",
+        "synonym": "Prinivil 10 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 20 MG Oral Tablet [Prinivil]",
+        "rxcui": "206766",
+        "suppress": "N",
+        "synonym": "Prinivil 20 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 40 MG Oral Tablet [Zestril]",
+        "rxcui": "206771",
+        "suppress": "N",
+        "synonym": "Zestril 40 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 30 MG Oral Tablet [Zestril]",
+        "rxcui": "213482",
+        "suppress": "N",
+        "synonym": "Zestril 30 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "hydrochlorothiazide 25 MG / lisinopril 20 MG Oral Tablet [Zestoretic]",
+        "rxcui": "823971",
+        "suppress": "N",
+        "synonym": "Zestoretic 20/25 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "hydrochlorothiazide 12.5 MG / lisinopril 20 MG Oral Tablet [Zestoretic]",
+        "rxcui": "823982",
+        "suppress": "N",
+        "synonym": "Zestoretic 20/12.5 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "hydrochlorothiazide 12.5 MG / lisinopril 10 MG Oral Tablet [Zestoretic]",
+        "rxcui": "823986",
+        "suppress": "N",
+        "synonym": "Zestoretic 10/12.5 Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "lisinopril 1 MG/ML Oral Solution",
+        "rxcui": "1806884",
+        "suppress": "N",
+        "synonym": "lisinopril 1 MG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 40 MG Oral Tablet",
+        "rxcui": "197884",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "hydrochlorothiazide 12.5 MG / lisinopril 10 MG Oral Tablet",
+        "rxcui": "197885",
+        "suppress": "N",
+        "synonym": "HCTZ 12.5 MG / lisinopril 10 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "hydrochlorothiazide 12.5 MG / lisinopril 20 MG Oral Tablet",
+        "rxcui": "197886",
+        "suppress": "N",
+        "synonym": "HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "hydrochlorothiazide 25 MG / lisinopril 20 MG Oral Tablet",
+        "rxcui": "197887",
+        "suppress": "N",
+        "synonym": "HCTZ 25 MG / lisinopril 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 30 MG Oral Tablet",
+        "rxcui": "205326",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 2.5 MG Oral Tablet",
+        "rxcui": "311353",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 5 MG Oral Tablet",
+        "rxcui": "311354",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 10 MG Oral Tablet",
+        "rxcui": "314076",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "lisinopril 20 MG Oral Tablet",
+        "rxcui": "314077",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lisinopril"
+ },
+ "c0aa731879f2b7b6c2d1a448": {
+  "json": {
+   "count": 14,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "65841080930",
+       "65841080977",
+       "65862029101",
+       "65862029105",
+       "67046043703",
+       "67296170106",
+       "67296230509",
+       "67877015901",
+       "67877015905",
+       "67877015910",
+       "67877041301",
+       "67877041305",
+       "67877041310",
+       "67877041333",
+       "67877041390",
+       "68071311102",
+       "68071311103",
+       "68071311106",
+       "68071311108",
+       "68071311109",
+       "68094090450",
+       "68094090460",
+       "68645012059",
+       "68645059559",
+       "68788849501",
+       "68788849503",
+       "68788849506",
+       "68788849508",
+       "68788849509",
+       "68788881401",
+       "68788881403",
+       "68788881406",
+       "68788881408",
+       "68788881409",
+       "68788886601",
+       "68788886603",
+       "68788886606",
+       "68788886608",
+       "68788886609",
+       "68788890301",
+       "68788890303",
+       "68788890306",
+       "68788890308",
+       "68788890309",
+       "69238212501",
+       "69238212503",
+       "69238212505",
+       "69238212507",
+       "69238212509",
+       "69315041001",
+       "69315041005",
+       "69948000105",
+       "69948000112",
+       "70010049101",
+       "70010049105",
+       "70010049109",
+       "70010049110",
+       "70010049118",
+       "70010049119",
+       "70518437000",
+       "70518437001",
+       "70518437002",
+       "70518437003",
+       "70518437004",
+       "70934013430",
+       "70934013490",
+       "70934013498",
+       "70934078890",
+       "70934078898",
+       "71205014778",
+       "71205018620",
+       "71205018630",
+       "71205018660",
+       "71205018672",
+       "71205018690",
+       "71205068630",
+       "71205068660",
+       "71205068672",
+       "71205068690",
+       "71335029301",
+       "71335029302",
+       "71335029303",
+       "71335029304",
+       "71335029305",
+       "71335029306",
+       "71335029307",
+       "71335029308",
+       "71335029309",
+       "71335072001",
+       "71335072002",
+       "71335072003",
+       "71335072004",
+       "71335072005",
+       "71335072006",
+       "71335072007",
+       "71335072008",
+       "71335072009",
+       "71335088601",
+       "71335088602",
+       "71335088603",
+       "71335088604",
+       "71335088605",
+       "71335088606",
+       "71335088607",
+       "71335088608",
+       "71335088609",
+       "71335235401",
+       "71335235402",
+       "71335235403",
+       "71335235404",
+       "71335235405",
+       "71335235406",
+       "71335235407",
+       "71335235408",
+       "71335235409",
+       "71335256801",
+       "71335256802",
+       "71335256803",
+       "71335256804",
+       "71335256805",
+       "71335256806",
+       "71335256807",
+       "71335256808",
+       "71335256809",
+       "71335316601",
+       "71335316602",
+       "71335316603",
+       "71335316604",
+       "71335316605",
+       "71335316606",
+       "71335316607",
+       "71335316608",
+       "71335316609",
+       "71335968301",
+       "71335968302",
+       "71335968303",
+       "71335968304",
+       "71335968305",
+       "71335968306",
+       "71335968307",
+       "71335968308",
+       "71335968309",
+       "71610044730",
+       "71610044753",
+       "71610044760",
+       "71610044770",
+       "71610044780",
+       "71610044794",
+       "71610045430",
+       "71610045453"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "67877015901",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "67877015905",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "67877041301",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "67877041305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "67877041390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "68094090450",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "68094090460",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "68645059559",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "69315041001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "69315041005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "70010049101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "70010049105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "70010049109",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02838",
+     "ndc": "70010049110",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "c0d3bb88a7bba866cf101c25": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "Sensor 200 ACTUAT albuterol 0.09 MG/ACTUAT Dry Powder Inhaler [ProAir]",
+        "rxcui": "2166797",
+        "suppress": "N",
+        "synonym": "Sensor 200 ACTUAT ProAir 0.09 MG/ACTUAT Dry Powder Inhaler",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2166796/related.json?tty=SBD"
+ },
+ "c371e079a7bc4002bd79d787": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00093505910",
+      "00093505998",
+      "00378395105",
+      "00378395107",
+      "00378395109",
+      "00378395177",
+      "00480358610",
+      "00480358698",
+      "00615800705",
+      "00615800707",
+      "00615800714",
+      "00615800728",
+      "00615800730",
+      "00615800739",
+      "00781538292",
+      "00904629106",
+      "00904629161",
+      "10135065005",
+      "16571013709",
+      "16571013710",
+      "16571013750",
+      "16714017401",
+      "16714017402",
+      "16714017403",
+      "16729004501",
+      "16729004510",
+      "16729004515",
+      "16729004516",
+      "16729004517",
+      "24658050810",
+      "24658050890",
+      "31722042505",
+      "31722042510",
+      "31722042590",
+      "33342031610",
+      "33342031611",
+      "33342031612",
+      "33342031615",
+      "33342031644",
+      "35356089418",
+      "35356089430",
+      "35356089490",
+      "42385094101",
+      "42385094105",
+      "42385094110",
+      "42385094111",
+      "42385094130",
+      "42385094168",
+      "42385094190",
+      "42571017310",
+      "42571017390",
+      "42708000430",
+      "42708001330",
+      "42708014130",
+      "43063049630",
+      "43063049660",
+      "43353018160",
+      "43353089209",
+      "43598009905",
+      "43598009910",
+      "43598009978",
+      "43598009987",
+      "43598009990",
+      "43598083105",
+      "43598083178",
+      "43598083179",
+      "43598083190",
+      "48433000801",
+      "48433000820",
+      "50090125700",
+      "50090125701",
+      "50090125800",
+      "50090488000",
+      "50090488001",
+      "50090497200",
+      "50090518100",
+      "50090518101",
+      "50090518102",
+      "50090518200",
+      "50090563400",
+      "50090563401",
+      "50090648100",
+      "50090648101",
+      "50090648102",
+      "50090648200",
+      "50090660400",
+      "50090660401",
+      "50090660402",
+      "50090738600",
+      "50090738601",
+      "50090738602",
+      "50090738700",
+      "50090752800",
+      "50090752801",
+      "50090752802",
+      "50090752900",
+      "50090772200",
+      "50090772201",
+      "50090772202",
+      "50090772300",
+      "50228045205",
+      "50228045206",
+      "50228045290",
+      "50268009411",
+      "50268009415",
+      "50436998803",
+      "51079020901",
+      "51079020920",
+      "51407007905",
+      "51407007990",
+      "51655046452",
+      "51655092026",
+      "51655092030",
+      "51655092083",
+      "55111012205",
+      "55111012210",
+      "55111012230",
+      "55111012260",
+      "55111012290",
+      "55154663400",
+      "55154763000",
+      "55700054830",
+      "59651060705",
+      "59651060730",
+      "59651060790",
+      "59651060799",
+      "59762015601",
+      "59762015602",
+      "60290004001",
+      "60290004002",
+      "60290004003",
+      "60290004004",
+      "60505257900",
+      "60505257903",
+      "60505257905",
+      "60505257907",
+      "60505257908",
+      "60505257909",
+      "60760088390",
+      "61919025830",
+      "61919025890",
+      "61919063230",
+      "61919091630",
+      "62175089143",
+      "62175089146",
+      "63187010830",
+      "63187010860",
+      "63187010890",
+      "63304082805",
+      "63304082890",
+      "63629803201",
+      "63629803202",
+      "63629847001",
+      "63629847101",
+      "63739002010",
+      "67046140303",
+      "67046145303",
+      "67046150503",
+      "67046152603",
+      "67046164303",
+      "67877051205",
+      "67877051210",
+      "67877051233",
+      "67877051238",
+      "67877051244",
+      "67877051290",
+      "68071091530",
+      "68071282409",
+      "68071296703",
+      "68071296706",
+      "68071296709",
+      "68071347006",
+      "68071358009",
+      "68071365909",
+      "68071371403",
+      "68071371406",
+      "68071371409",
+      "68071389103",
+      "68071484009",
+      "68071516803",
+      "68071529209",
+      "68084009801",
+      "68084009811",
+      "68180063602",
+      "68180063606",
+      "68180063609",
+      "68382025010",
+      "68382025016",
+      "68645045954",
+      "68645045970",
+      "68645048154",
+      "68645048170",
+      "68645048254",
+      "68645059154",
+      "68788409603",
+      "68788409606",
+      "68788409609",
+      "68788841601",
+      "68788841603",
+      "68788841606",
+      "68788841609",
+      "68788861301",
+      "68788861303",
+      "68788861306",
+      "68788861309",
+      "68788862501",
+      "68788862503",
+      "68788862506",
+      "68788862509",
+      "68788868301",
+      "68788868303",
+      "68788868306",
+      "68788868309",
+      "68788869301",
+      "68788869303",
+      "68788869306",
+      "68788869309",
+      "69097089805",
+      "69097089812",
+      "69097094505",
+      "69097094512",
+      "70377002811",
+      "70377002813",
+      "70377007811",
+      "70377007812",
+      "70377007813",
+      "70518018600",
+      "70518018601",
+      "70518018602",
+      "70518303700",
+      "70518303701",
+      "70518303702",
+      "70518333900",
+      "70518333901",
+      "70518378300",
+      "70518378301",
+      "70518378302",
+      "70518378303",
+      "70518442300",
+      "70518442301",
+      "70518442302",
+      "70518458700",
+      "70710177500",
+      "70710177505",
+      "70710177509",
+      "70756024812",
+      "70756024830",
+      "70756024851",
+      "70756024890",
+      "70771187600",
+      "70771187605",
+      "70771187609",
+      "70882012030",
+      "70934006930",
+      "70934006990",
+      "70934020190",
+      "70934061430",
+      "70934061490",
+      "71205024730",
+      "71205024760",
+      "71205024790",
+      "71205079130",
+      "71205079190",
+      "71209009104",
+      "71335000401",
+      "71335000402",
+      "71335000403",
+      "71335000404",
+      "71335000405",
+      "71335101001",
+      "71335101002",
+      "71335101003",
+      "71335101004",
+      "71335101005",
+      "71335101006",
+      "71335101007",
+      "71335101008",
+      "71335101009",
+      "71335105101",
+      "71335105102",
+      "71335105103",
+      "71335105104",
+      "71335105105",
+      "71335105106",
+      "71335105107",
+      "71335105108",
+      "71335105109",
+      "71335150701",
+      "71335150702",
+      "71335150703",
+      "71335150704",
+      "71335150705",
+      "71335150706",
+      "71335150707",
+      "71335150708",
+      "71335150709",
+      "71335192901",
+      "71335192902",
+      "71335192903",
+      "71335192904",
+      "71335192905",
+      "71335192906",
+      "71335192907",
+      "71335192908",
+      "71335192909",
+      "71335221301",
+      "71335221302",
+      "71335221303",
+      "71335221304",
+      "71335221305",
+      "71335221306",
+      "71335221307",
+      "71335221308",
+      "71335221309",
+      "71335239301",
+      "71335239302",
+      "71335239303",
+      "71335239304",
+      "71335239305",
+      "71335239306",
+      "71335239307",
+      "71335239308",
+      "71335239309",
+      "71335240401",
+      "71335240402",
+      "71335240403",
+      "71335240404",
+      "71335240405",
+      "71335240406",
+      "71335240407",
+      "71335240408",
+      "71335240409",
+      "71335279901",
+      "71335279902",
+      "71335279903",
+      "71335279904",
+      "71335279905",
+      "71335279906",
+      "71335279907",
+      "71335279908",
+      "71335279909",
+      "71399052005",
+      "71610002245",
+      "71610002260",
+      "71610018015",
+      "71610018030",
+      "71610018045",
+      "71610018060",
+      "71610074415",
+      "71610074430",
+      "71610074445",
+      "71610074453",
+      "71610074460",
+      "71610074470",
+      "72162155505",
+      "72162155509",
+      "72162171202",
+      "72162171203",
+      "72162171204",
+      "72162171206",
+      "72162171207",
+      "72162171209",
+      "72189029190",
+      "72189058730",
+      "72189058790",
+      "72205002305",
+      "72205002330",
+      "72205002390",
+      "72205002399",
+      "72603028301",
+      "72603028302",
+      "72603028303",
+      "72603040401",
+      "72603040402",
+      "72789008430",
+      "75834025601",
+      "75834025605",
+      "75834025650",
+      "75834025690",
+      "76420094500",
+      "76420094505",
+      "76420094512",
+      "76420094520",
+      "76420094530",
+      "76420094538",
+      "76420094544",
+      "76420094560",
+      "76420094590",
+      "77771045205",
+      "77771045290",
+      "81033051301",
+      "81033051320",
+      "82009000210",
+      "82009017710",
+      "82137001701",
+      "82804005430",
+      "82804005460",
+      "82804005490",
+      "82804016130",
+      "82804016190"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617310/ndcs.json"
+ },
+ "c9980eb6743625adf7f32216": {
+  "json": {
+   "drugGroup": {
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=xyzzy"
+ },
+ "cf14696b26f4473f90a193b9": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "atorvastatin 20 MG Oral Tablet",
+        "rxcui": "617310",
+        "suppress": "N",
+        "synonym": "atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617318/related.json?tty=SCD"
+ },
+ "cf67f5f7001de3c7a20e7ec6": {
+  "json": {
+   "count": 11,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "71335192905",
+       "71335192906",
+       "71335192907",
+       "71335192908",
+       "71335192909",
+       "71335221301",
+       "71335221302",
+       "71335221303",
+       "71335221304",
+       "71335221305",
+       "71335221306",
+       "71335221307",
+       "71335221308",
+       "71335221309",
+       "71335239301",
+       "71335239302",
+       "71335239303",
+       "71335239304",
+       "71335239305",
+       "71335239306",
+       "71335239307",
+       "71335239308",
+       "71335239309",
+       "71335240401",
+       "71335240402",
+       "71335240403",
+       "71335240404",
+       "71335240405",
+       "71335240406",
+       "71335240407",
+       "71335240408",
+       "71335240409",
+       "71335279901",
+       "71335279902",
+       "71335279903",
+       "71335279904",
+       "71335279905",
+       "71335279906",
+       "71335279907",
+       "71335279908",
+       "71335279909",
+       "71399052005",
+       "71610002245",
+       "71610002260",
+       "71610018015",
+       "71610018030",
+       "71610018045",
+       "71610018060",
+       "71610074415",
+       "71610074430",
+       "71610074445",
+       "71610074453",
+       "71610074460",
+       "71610074470",
+       "72162155505",
+       "72162155509",
+       "72162171202",
+       "72162171203",
+       "72162171204",
+       "72162171206",
+       "72162171207",
+       "72162171209",
+       "72189029190",
+       "72189058730",
+       "72189058790",
+       "72205002305",
+       "72205002330",
+       "72205002390",
+       "72205002399",
+       "72603028301",
+       "72603028302",
+       "72603028303",
+       "72603040401",
+       "72603040402",
+       "72789008430",
+       "75834025601",
+       "75834025605",
+       "75834025650",
+       "75834025690",
+       "76420094500",
+       "76420094505",
+       "76420094512",
+       "76420094520",
+       "76420094530",
+       "76420094538",
+       "76420094544",
+       "76420094560",
+       "76420094590",
+       "77771045205",
+       "77771045290",
+       "81033051301",
+       "81033051320",
+       "82009000210",
+       "82009017710",
+       "82137001701",
+       "82804005430",
+       "82804005460",
+       "82804005490",
+       "82804016130",
+       "82804016190"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72205002305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72205002390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72205002399",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72603028301",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72603028302",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72603028303",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72603040401",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "72603040402",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "75834025601",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "82009000210",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "82009017710",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "d37b69cf58e7dec24955bb10": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "atorvastatin 80 MG Oral Tablet [Lipitor]",
+        "rxcui": "262095",
+        "suppress": "N",
+        "synonym": "Lipitor 80 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 10 MG Oral Tablet [Lipitor]",
+        "rxcui": "617314",
+        "suppress": "N",
+        "synonym": "Lipitor 10 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 20 MG Oral Tablet [Lipitor]",
+        "rxcui": "617318",
+        "suppress": "N",
+        "synonym": "Lipitor 20 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "atorvastatin 40 MG Oral Tablet [Lipitor]",
+        "rxcui": "617320",
+        "suppress": "N",
+        "synonym": "Lipitor 40 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=Lipitor"
+ },
+ "e97c7dee446fe38eadc5c2c2": {
+  "json": {
+   "count": 39,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00093505910",
+       "00093505998",
+       "00378395105",
+       "00378395107",
+       "00378395109",
+       "00378395177",
+       "00480358610",
+       "00480358698",
+       "00615800705",
+       "00615800707",
+       "00615800714",
+       "00615800728",
+       "00615800730",
+       "00615800739",
+       "00781538292",
+       "00904629106",
+       "00904629161",
+       "10135065005",
+       "16571013709",
+       "16571013710",
+       "16571013750",
+       "16714017401",
+       "16714017402",
+       "16714017403",
+       "16729004501",
+       "16729004510",
+       "16729004515",
+       "16729004516",
+       "16729004517",
+       "24658050810",
+       "24658050890",
+       "31722042505",
+       "31722042510",
+       "31722042590",
+       "33342031610",
+       "33342031611",
+       "33342031612",
+       "33342031615",
+       "33342031644",
+       "35356089418",
+       "35356089430",
+       "35356089490",
+       "42385094101",
+       "42385094105",
+       "42385094110",
+       "42385094111",
+       "42385094130",
+       "42385094168",
+       "42385094190",
+       "42571017310",
+       "42571017390",
+       "42708000430",
+       "42708001330",
+       "42708014130",
+       "43063049630",
+       "43063049660",
+       "43353018160",
+       "43353089209",
+       "43598009905",
+       "43598009910",
+       "43598009978",
+       "43598009987",
+       "43598009990",
+       "43598083105",
+       "43598083178",
+       "43598083179",
+       "43598083190",
+       "48433000801",
+       "48433000820",
+       "50090125700",
+       "50090125701",
+       "50090125800",
+       "50090488000",
+       "50090488001",
+       "50090497200",
+       "50090518100",
+       "50090518101",
+       "50090518102",
+       "50090518200",
+       "50090563400",
+       "50090563401",
+       "50090648100",
+       "50090648101",
+       "50090648102",
+       "50090648200",
+       "50090660400",
+       "50090660401",
+       "50090660402",
+       "50090738600",
+       "50090738601",
+       "50090738602",
+       "50090738700",
+       "50090752800",
+       "50090752801",
+       "50090752802",
+       "50090752900",
+       "50090772200",
+       "50090772201",
+       "50090772202",
+       "50090772300",
+       "50228045205",
+       "50228045206",
+       "50228045290",
+       "50268009411",
+       "50268009415",
+       "50436998803",
+       "51079020901",
+       "51079020920",
+       "51407007905",
+       "51407007990",
+       "51655046452",
+       "51655092026",
+       "51655092030",
+       "51655092083",
+       "55111012205",
+       "55111012210",
+       "55111012230",
+       "55111012260",
+       "55111012290",
+       "55154663400",
+       "55154763000",
+       "55700054830",
+       "59651060705",
+       "59651060730",
+       "59651060790",
+       "59651060799",
+       "59762015601",
+       "59762015602",
+       "60290004001",
+       "60290004002",
+       "60290004003",
+       "60290004004",
+       "60505257900",
+       "60505257903",
+       "60505257905",
+       "60505257907",
+       "60505257908",
+       "60505257909",
+       "60760088390",
+       "61919025830",
+       "61919025890",
+       "61919063230",
+       "61919091630",
+       "62175089143",
+       "62175089146",
+       "63187010830",
+       "63187010860",
+       "63187010890",
+       "63304082805",
+       "63304082890"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00093505910",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00093505998",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00378395105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00378395177",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00480358610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00480358698",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00904629106",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "00904629161",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "16571013709",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "16571013710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "16571013750",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "16714017403",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "31722042505",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "31722042510",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "31722042590",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "33342031610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "33342031615",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "42385094101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "42385094105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "42385094111",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "42385094190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "42571017310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "42571017390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "43598009905",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "43598009990",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "43598083105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "43598083190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "50228045205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "50228045290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "50268009411",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "50268009415",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "51079020901",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "51079020920",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "55111012205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "55111012290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "59651060790",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "59651060799",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "60505257908",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02792",
+     "ndc": "60505257909",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "f43c0741a8ef37d8731f455d": {
+  "json": {
+   "count": 17,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00093111310",
+       "00143971401",
+       "00143971410",
+       "00185061001",
+       "00185061010",
+       "00378207401",
+       "00378207410",
+       "00591040701",
+       "00591040710",
+       "00615825405",
+       "00615825430",
+       "00615825439",
+       "00781166692",
+       "00904679861",
+       "23155087801",
+       "23155087810",
+       "24658024210",
+       "24658024215",
+       "24658024218",
+       "24658024230",
+       "24658024245",
+       "24658024290",
+       "31722017701",
+       "31722017710",
+       "31722017731",
+       "31722041901",
+       "31722041910",
+       "33358021230",
+       "42708003130",
+       "42708009430",
+       "42708015430",
+       "43063076901",
+       "43063076912",
+       "43063076914",
+       "43063076930",
+       "43063076960",
+       "43063076990",
+       "43063076993",
+       "43063076998",
+       "43063081201",
+       "43063081212",
+       "43063081214",
+       "43063081230",
+       "43063081260",
+       "43063081290",
+       "43063081293",
+       "43063081298",
+       "43353011345",
+       "43353016960",
+       "43353030130",
+       "43353030145",
+       "43353030160",
+       "43547035303",
+       "43547035310",
+       "43547035311",
+       "43547041604",
+       "43547041609",
+       "43547041610",
+       "43547041611",
+       "43547041615",
+       "43547041650",
+       "49999018230",
+       "50090298800",
+       "50090298801",
+       "50090298803",
+       "50090298804",
+       "50090298805",
+       "50090377400",
+       "50090377401",
+       "50090377403",
+       "50090377404",
+       "50090377405",
+       "50090488500",
+       "50090512000",
+       "50090512001",
+       "50090512003",
+       "50090512004",
+       "50090512005",
+       "50090512100",
+       "50090512200",
+       "50090702200",
+       "50090722100",
+       "51655039926",
+       "51655039952",
+       "51655040130",
+       "51655040226",
+       "51655099526",
+       "51655099552",
+       "52959072820",
+       "54458087410",
+       "55045292900",
+       "55154807800",
+       "55289063860",
+       "55700047900",
+       "55700047930",
+       "55700047960",
+       "55700047990",
+       "55700051318",
+       "55700051330",
+       "55700051360",
+       "55700051390",
+       "55887059110",
+       "58864060315",
+       "58864060330",
+       "58864060390",
+       "60505018601",
+       "60505018607",
+       "60505018609",
+       "60505268501",
+       "60505268508",
+       "60505268509",
+       "60687032501",
+       "60687032511",
+       "60760035830",
+       "60760035890",
+       "61919030630",
+       "61919030660",
+       "61919030690",
+       "61919074630",
+       "61919074690",
+       "62135064231",
+       "62135064290",
+       "63187009830",
+       "63187009860",
+       "63187009890",
+       "63187082130",
+       "63187082160",
+       "63187082190",
+       "63629538201",
+       "63629538202",
+       "65862003900",
+       "65862003901",
+       "65862003905",
+       "65862003930",
+       "65862003999",
+       "66685070301",
+       "66685070302",
+       "66685070303",
+       "67046042203",
+       "67544015915",
+       "67544021915",
+       "68001021000",
+       "68001021008",
+       "68001026800",
+       "68001026808",
+       "68001033400",
+       "68001033408",
+       "68071167201",
+       "68071312203",
+       "68071312205"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "00591040701",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "00591040710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "00904679861",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "23155087801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "23155087810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "31722017701",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "31722017710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "43547035310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "43547035311",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "43547041610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "43547041611",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "60687032501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "60687032511",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "62135064231",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "62135064290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68001033400",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01815",
+     "ndc": "68001033408",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "f7c99cb18084b9393cf94c70": {
+  "json": {
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=apixaban&quantity_units=30&strength=5mg"
+ }
+}

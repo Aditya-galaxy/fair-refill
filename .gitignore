@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+.env
+# Local state: a person's medicine list is health information and stays on their machine.
+/state/
+/cache/
