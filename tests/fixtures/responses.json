@@ -345,6 +345,21 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "0b38c4fb233d04305b208a53": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "atorvastatin 40 MG Oral Tablet",
+    "rxcui": "617311",
+    "suppress": "N",
+    "synonym": "atorvastatin (as atorvastatin calcium) 40 MG Oral Tablet",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617311/properties.json"
+ },
  "0b66aebbee969d4ee6fb0c2f": {
   "json": {
    "ndcGroup": {
@@ -1284,6 +1299,839 @@
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=20mg"
  },
+ "229a13298f19abe07003b6e2": {
+  "json": {
+   "count": 39,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00093505705",
+       "00093505798",
+       "00378395305",
+       "00378395307",
+       "00378395309",
+       "00378395377",
+       "00440712830",
+       "00480358810",
+       "00480358898",
+       "00615800905",
+       "00615800907",
+       "00615800939",
+       "00781538892",
+       "00904629304",
+       "10135065305",
+       "16571013909",
+       "16571013910",
+       "16571013950",
+       "16714017601",
+       "16714017602",
+       "16714017603",
+       "16729004701",
+       "16729004710",
+       "16729004715",
+       "16729004716",
+       "16729004717",
+       "24658051010",
+       "24658051090",
+       "31722042705",
+       "31722042710",
+       "31722042790",
+       "33342031810",
+       "33342031811",
+       "33342031812",
+       "33342031815",
+       "33342031844",
+       "42385094301",
+       "42385094305",
+       "42385094308",
+       "42385094310",
+       "42385094311",
+       "42385094330",
+       "42385094364",
+       "42385094368",
+       "42385094390",
+       "42571017510",
+       "42571017590",
+       "43063048790",
+       "43353018415",
+       "43353018430",
+       "43353018460",
+       "43353032115",
+       "43353032130",
+       "43353032145",
+       "43353032160",
+       "43353081515",
+       "43353081530",
+       "43353081545",
+       "43353098115",
+       "43353098130",
+       "43353098145",
+       "43353098160",
+       "43598010305",
+       "43598010310",
+       "43598010381",
+       "43598010387",
+       "43598010390",
+       "43598083305",
+       "43598083379",
+       "43598083381",
+       "43598083390",
+       "48433001001",
+       "48433001003",
+       "50090065401",
+       "50090126400",
+       "50090126401",
+       "50090468500",
+       "50090468501",
+       "50090505100",
+       "50090505101",
+       "50090529800",
+       "50090529801",
+       "50090563900",
+       "50090563901",
+       "50090605400",
+       "50090605401",
+       "50090605402",
+       "50090605700",
+       "50090605701",
+       "50090606100",
+       "50090606101",
+       "50090606102",
+       "50090650500",
+       "50090650501",
+       "50090650502",
+       "50090650600",
+       "50090697000",
+       "50090735800",
+       "50090735801",
+       "50090735802",
+       "50090735900",
+       "50090753200",
+       "50090753201",
+       "50090753202",
+       "50090753300",
+       "50090772400",
+       "50090772401",
+       "50090772402",
+       "50090772500",
+       "50228045405",
+       "50228045490",
+       "50268009611",
+       "50268009612",
+       "51079021101",
+       "51079021103",
+       "51407008105",
+       "51407008190",
+       "51655074752",
+       "51655088030",
+       "51655088130",
+       "55111012405",
+       "55111012430",
+       "55111012460",
+       "55111012490",
+       "55154028406",
+       "55154438406",
+       "55154728900",
+       "55700003430",
+       "59651060905",
+       "59651060930",
+       "59651060990",
+       "59651060999",
+       "59762015801",
+       "59762015802",
+       "60290004201",
+       "60290004202",
+       "60290004203",
+       "60290004204",
+       "60505267100",
+       "60505267103",
+       "60505267105",
+       "60505267107",
+       "60505267108",
+       "60505267109",
+       "61919053130",
+       "61919053190",
+       "62175089741",
+       "62175089746",
+       "63187065630",
+       "63187065660"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00093505705",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00093505798",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00378395305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00378395377",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00480358810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00480358898",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "00904629304",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "16571013909",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "16571013910",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "16571013950",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "16714017601",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "16714017603",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "31722042705",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "31722042710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "31722042790",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "33342031810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "33342031815",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "42385094301",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "42385094305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "42385094311",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "42385094390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "42571017510",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "42571017590",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "43598010305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "43598010390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "43598083305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "43598083390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "50228045405",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "50228045490",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "50268009611",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "50268009612",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "51079021101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "51079021103",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "55111012405",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "55111012490",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "59651060990",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "59651060999",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "60505267108",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "60505267109",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "2381cb09bad06287b8d7682e": {
+  "json": {
+   "count": 10,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "68788407603",
+       "68788407606",
+       "68788407607",
+       "68788407608",
+       "68788407609",
+       "68788413601",
+       "68788413603",
+       "68788413606",
+       "68788413607",
+       "68788413608",
+       "68788413609",
+       "68788811001",
+       "68788811003",
+       "68788811006",
+       "68788811007",
+       "68788811008",
+       "68788811009",
+       "68788849801",
+       "68788849803",
+       "68788849806",
+       "68788849807",
+       "68788849808",
+       "68788849809",
+       "68788856401",
+       "68788865201",
+       "68788865203",
+       "68788865206",
+       "68788865207",
+       "68788865208",
+       "68788865209",
+       "69367018001",
+       "69367018005",
+       "69367018010",
+       "69367038101",
+       "69367038105",
+       "69367038110",
+       "70010006301",
+       "70010006305",
+       "70010006306",
+       "70010006309",
+       "70010006310",
+       "70518114900",
+       "70518114901",
+       "70518114902",
+       "70518195100",
+       "70518195101",
+       "70518195102",
+       "70518195103",
+       "70518283300",
+       "70518283301",
+       "70518283302",
+       "70518283303",
+       "70518283304",
+       "70518283305",
+       "70518283306",
+       "70518283307",
+       "70518283308",
+       "70518283309",
+       "70518469800",
+       "70882012456",
+       "70934006660",
+       "70934013630",
+       "70934013660",
+       "70934013690",
+       "70934021290",
+       "70934031190",
+       "70934040490",
+       "70934042290",
+       "70934078460",
+       "71093013200",
+       "71093013204",
+       "71093013205",
+       "71093013206",
+       "71205056200",
+       "71205056230",
+       "71205056260",
+       "71205056278",
+       "71205056290",
+       "71205062230",
+       "71205062260",
+       "71205062290",
+       "71205078430",
+       "71205078460",
+       "71205078478",
+       "71205078490",
+       "71205088200",
+       "71205088211",
+       "71205088230",
+       "71205088255",
+       "71205088260",
+       "71205088264",
+       "71205088272",
+       "71205088278",
+       "71205088290",
+       "71335107200",
+       "71335107201",
+       "71335107202",
+       "71335107203",
+       "71335107204",
+       "71335107205",
+       "71335107206",
+       "71335107207",
+       "71335107208",
+       "71335107209",
+       "71335183400",
+       "71335183401",
+       "71335183402",
+       "71335183403",
+       "71335183404",
+       "71335183405",
+       "71335183406",
+       "71335183407",
+       "71335183408",
+       "71335183409",
+       "71335222400",
+       "71335222401",
+       "71335222402",
+       "71335222403",
+       "71335222404",
+       "71335222405",
+       "71335222406",
+       "71335222407",
+       "71335222408",
+       "71335222409",
+       "71335246600",
+       "71335246601",
+       "71335246602",
+       "71335246603",
+       "71335246604",
+       "71335246605",
+       "71335246606",
+       "71335246607",
+       "71335246608",
+       "71335246609",
+       "71335313200",
+       "71335313201",
+       "71335313202",
+       "71335313203",
+       "71335313204",
+       "71335313205",
+       "71335313206",
+       "71335313207",
+       "71335313208",
+       "71335313209",
+       "71610091730",
+       "71610091753",
+       "71610091760",
+       "71610091770",
+       "71610091780",
+       "71610091792"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "69367018001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "69367018005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "69367018010",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "69367038101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "69367038105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "69367038110",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "70010006301",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "70010006305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "70010006309",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "70010006310",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "294c9b67aeee3c3fa2e424a2": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "200 ACTUAT albuterol 0.09 MG/ACTUAT Dry Powder Inhaler",
+    "rxcui": "1649560",
+    "suppress": "N",
+    "synonym": "albuterol 90 MCG/ACTUAT Dry Powder Inhaler, 200 ACTUAT",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1649560/properties.json"
+ },
  "2a376d4039bb9549d0e1e8e9": {
   "json": {
    "count": 3,
@@ -1781,6 +2629,21 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/314076/ndcs.json"
  },
+ "35f1cb29c99289399822114a": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "atorvastatin 20 MG Oral Tablet [Lipitor]",
+    "rxcui": "617318",
+    "suppress": "N",
+    "synonym": "Lipitor 20 MG Oral Tablet",
+    "tty": "SBD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617318/properties.json"
+ },
  "3683ef71ed1a72042b0f3f13": {
   "json": {
    "ndcGroup": {
@@ -2007,6 +2870,349 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lipitor"
  },
+ "441d699e5b154fdc7b46c83b": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00093505610",
+      "00093505698",
+      "00378395005",
+      "00378395007",
+      "00378395009",
+      "00378395077",
+      "00480358510",
+      "00480358598",
+      "00615800605",
+      "00615800607",
+      "00615800630",
+      "00615800639",
+      "00781538192",
+      "00904629006",
+      "00904629061",
+      "10135064910",
+      "16571013609",
+      "16571013610",
+      "16571013650",
+      "16714017301",
+      "16714017302",
+      "16714017303",
+      "16729004401",
+      "16729004410",
+      "16729004415",
+      "16729004416",
+      "16729004417",
+      "24658050710",
+      "24658050790",
+      "31722042405",
+      "31722042410",
+      "31722042490",
+      "33342031510",
+      "33342031511",
+      "33342031512",
+      "33342031515",
+      "33342031544",
+      "35356086018",
+      "35356086030",
+      "35356086090",
+      "42385094001",
+      "42385094005",
+      "42385094010",
+      "42385094011",
+      "42385094030",
+      "42385094068",
+      "42385094090",
+      "42571017210",
+      "42571017290",
+      "42708000330",
+      "42708001430",
+      "43063037330",
+      "43063047430",
+      "43353011545",
+      "43598009805",
+      "43598009810",
+      "43598009878",
+      "43598009887",
+      "43598009890",
+      "43598083005",
+      "43598083078",
+      "43598083079",
+      "43598083090",
+      "48433000701",
+      "48433000720",
+      "50090125400",
+      "50090125401",
+      "50090125500",
+      "50090125501",
+      "50090496400",
+      "50090496401",
+      "50090506900",
+      "50090516200",
+      "50090518400",
+      "50090518401",
+      "50090518402",
+      "50090518500",
+      "50090549701",
+      "50090563600",
+      "50090563601",
+      "50090647900",
+      "50090647901",
+      "50090647902",
+      "50090648000",
+      "50090757400",
+      "50090757401",
+      "50090757402",
+      "50090757500",
+      "50090772000",
+      "50090772001",
+      "50090772002",
+      "50090772100",
+      "50228045110",
+      "50228045190",
+      "50268009311",
+      "50268009315",
+      "51079020801",
+      "51079020820",
+      "51407007810",
+      "51407007890",
+      "51655061030",
+      "51655061352",
+      "51655061383",
+      "51655061452",
+      "51655094652",
+      "55111012105",
+      "55111012110",
+      "55111012130",
+      "55111012160",
+      "55111012190",
+      "55154588400",
+      "55154663500",
+      "55700065930",
+      "59651060605",
+      "59651060630",
+      "59651060690",
+      "59651060699",
+      "59762015501",
+      "59762015502",
+      "60290003901",
+      "60290003902",
+      "60290003903",
+      "60290003904",
+      "60429032310",
+      "60505257800",
+      "60505257803",
+      "60505257805",
+      "60505257807",
+      "60505257808",
+      "60505257809",
+      "60760059330",
+      "60760066630",
+      "61919095630",
+      "61919095690",
+      "62175089043",
+      "62175089046",
+      "63304082705",
+      "63304082790",
+      "63629846901",
+      "63739001810",
+      "67046144203",
+      "67046145803",
+      "67046149103",
+      "67046167703",
+      "67296213009",
+      "67877051105",
+      "67877051110",
+      "67877051133",
+      "67877051138",
+      "67877051155",
+      "67877051190",
+      "68071091430",
+      "68071238903",
+      "68071238906",
+      "68071354609",
+      "68071370109",
+      "68071381303",
+      "68071386803",
+      "68071391209",
+      "68071500803",
+      "68071519803",
+      "68084009701",
+      "68084009711",
+      "68180063502",
+      "68180063506",
+      "68180063509",
+      "68382024910",
+      "68382024916",
+      "68645045854",
+      "68645045870",
+      "68645048054",
+      "68645048070",
+      "68788400801",
+      "68788400803",
+      "68788400806",
+      "68788400809",
+      "68788790001",
+      "68788790003",
+      "68788790006",
+      "68788790009",
+      "68788838901",
+      "68788838903",
+      "68788838906",
+      "68788838909",
+      "68788839501",
+      "68788839503",
+      "68788839506",
+      "68788839509",
+      "68788840901",
+      "68788840903",
+      "68788840906",
+      "68788840909",
+      "68788865603",
+      "68788865606",
+      "68788865609",
+      "68788867203",
+      "68788867206",
+      "68788867209",
+      "68788868401",
+      "68788868403",
+      "68788868406",
+      "68788868409",
+      "68788884203",
+      "68788884206",
+      "68788884209",
+      "69097089705",
+      "69097089715",
+      "69097094405",
+      "69097094415",
+      "70377002711",
+      "70377002713",
+      "70377007711",
+      "70377007712",
+      "70377007713",
+      "70518022400",
+      "70518022401",
+      "70518022402",
+      "70518022403",
+      "70518329800",
+      "70518329801",
+      "70518413800",
+      "70518413801",
+      "70518442200",
+      "70518442201",
+      "70518442202",
+      "70518442203",
+      "70518455000",
+      "70710177700",
+      "70710177705",
+      "70710177709",
+      "70756024712",
+      "70756024730",
+      "70756024751",
+      "70756024790",
+      "70771187500",
+      "70771187505",
+      "70771187509",
+      "70882011930",
+      "70934007030",
+      "70934025090",
+      "70934031290",
+      "70934048230",
+      "70934048290",
+      "71205024630",
+      "71205024660",
+      "71205024690",
+      "71205080230",
+      "71205080290",
+      "71209009004",
+      "71335016901",
+      "71335016902",
+      "71335016903",
+      "71335016904",
+      "71335138801",
+      "71335138802",
+      "71335138803",
+      "71335138804",
+      "71335138805",
+      "71335138806",
+      "71335171001",
+      "71335171002",
+      "71335171003",
+      "71335171004",
+      "71335171005",
+      "71335171006",
+      "71335224101",
+      "71335224102",
+      "71335224103",
+      "71335224104",
+      "71335224105",
+      "71335224106",
+      "71335238801",
+      "71335238802",
+      "71335238803",
+      "71335238804",
+      "71335238805",
+      "71335238806",
+      "71335297701",
+      "71335297702",
+      "71335297703",
+      "71335297704",
+      "71335297705",
+      "71335297706",
+      "71335314401",
+      "71335314402",
+      "71335314403",
+      "71335314404",
+      "71335314405",
+      "71335314406",
+      "71399051001",
+      "71610016960",
+      "72162155409",
+      "72189022630",
+      "72189022690",
+      "72189053130",
+      "72189053190",
+      "72189068130",
+      "72205002205",
+      "72205002230",
+      "72205002290",
+      "72205002299",
+      "72603028201",
+      "72603028202",
+      "72603028203",
+      "72603040301",
+      "72603040302",
+      "72789015330",
+      "75834025501",
+      "75834025505",
+      "75834025550",
+      "75834025590",
+      "76420094300",
+      "76420094305",
+      "76420094312",
+      "76420094320",
+      "76420094330",
+      "76420094338",
+      "76420094355",
+      "76420094360",
+      "76420094390",
+      "77771045110",
+      "77771045190",
+      "81033051101",
+      "81033051110",
+      "82009000110",
+      "82009000190",
+      "82009017610",
+      "82137001601",
+      "82804014430",
+      "82804014490"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617312/ndcs.json"
+ },
  "45172f5edabb662fbe7f765b": {
   "json": {
    "results": [
@@ -2035,6 +3241,21 @@
   },
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=metformin&quantity_units=30&strength=500mg"
+ },
+ "4629b546f297bbd1e34d913a": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "atorvastatin 4 MG/ML Oral Suspension",
+    "rxcui": "2630760",
+    "suppress": "N",
+    "synonym": "atorvastatin (as atorvastatin calcium) 20 MG per 5 ML Oral Suspension",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2630760/properties.json"
  },
  "46c05357888683e3c5fdd77c": {
   "json": {
@@ -3269,6 +4490,35 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=metformin"
  },
+ "477c27cdb403e9522db5d55b": {
+  "json": {
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051310",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.67",
+     "requested_quote_units": "30",
+     "slug": "atorvastatin-40mg-tablet",
+     "special_handling": "",
+     "strength": "40mg",
+     "unit_billing_price": "$0.0224",
+     "unit_price": "$0.0195",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-40mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=40mg"
+ },
  "4f51b51b9a8a736b81b474fd": {
   "json": {
    "ndcGroup": {
@@ -3293,6 +4543,36 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617318/ndcs.json"
+ },
+ "526a9d312a1c001fb3e2a35a": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "atorvastatin 10 MG Oral Tablet",
+    "rxcui": "617312",
+    "suppress": "N",
+    "synonym": "atorvastatin (as atorvastatin calcium) 10 MG Oral Tablet",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617312/properties.json"
+ },
+ "5881db0faa46d87c97875e37": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "atorvastatin 20 MG Oral Tablet",
+    "rxcui": "617310",
+    "suppress": "N",
+    "synonym": "atorvastatin (as atorvastatin calcium) 20 MG Oral Tablet",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617310/properties.json"
  },
  "5ba19ef6ea1ff77f5c820f5e": {
   "json": {
@@ -3401,6 +4681,411 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=lipiter"
  },
+ "5ec0f5f10c68643fa44adce5": {
+  "json": {
+   "count": 25,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "63187065690",
+       "63187090730",
+       "63187090760",
+       "63187090790",
+       "63304083005",
+       "63304083090",
+       "63629847201",
+       "63739003733",
+       "67046159303",
+       "67046166603",
+       "67877051405",
+       "67877051410",
+       "67877051433",
+       "67877051438",
+       "67877051490",
+       "68071201803",
+       "68071201806",
+       "68071227609",
+       "68071276509",
+       "68071387409",
+       "68071396109",
+       "68071496209",
+       "68084059025",
+       "68084059095",
+       "68180063802",
+       "68180063806",
+       "68180063809",
+       "68382025210",
+       "68382025216",
+       "68645046154",
+       "68645049554",
+       "69097091105",
+       "69097091112",
+       "69097094705",
+       "69097094712",
+       "70377003012",
+       "70377003014",
+       "70377008011",
+       "70377008012",
+       "70377008013",
+       "70518151401",
+       "70518330400",
+       "70518330401",
+       "70518384800",
+       "70518384801",
+       "70518384802",
+       "70518447300",
+       "70518447301",
+       "70518447302",
+       "70710177000",
+       "70710177005",
+       "70710177009",
+       "70756025030",
+       "70756025051",
+       "70756025090",
+       "70771187800",
+       "70771187805",
+       "70771187809",
+       "71205009830",
+       "71205009860",
+       "71205009890",
+       "71205033520",
+       "71205033530",
+       "71205033560",
+       "71205033590",
+       "71209009304",
+       "71209009310",
+       "71335029501",
+       "71335029502",
+       "71335029503",
+       "71335058301",
+       "71335058302",
+       "71335058303",
+       "71335133601",
+       "71335133602",
+       "71335133603",
+       "71335133604",
+       "71335222501",
+       "71335222502",
+       "71335222503",
+       "71335222504",
+       "71335240701",
+       "71335240702",
+       "71335240703",
+       "71335240704",
+       "71335258201",
+       "71335258202",
+       "71335258203",
+       "71335258204",
+       "71335964601",
+       "71335964602",
+       "71335964603",
+       "71335964604",
+       "71335964605",
+       "71610003615",
+       "71610003630",
+       "71610003645",
+       "71610003660",
+       "71610017015",
+       "71610017030",
+       "71610017045",
+       "71610017060",
+       "71610063315",
+       "71610063330",
+       "71610063345",
+       "71610063360",
+       "71610074615",
+       "71610074630",
+       "71610074645",
+       "71610074653",
+       "71610074660",
+       "72162155609",
+       "72189029530",
+       "72189053730",
+       "72189053790",
+       "72205002505",
+       "72205002530",
+       "72205002590",
+       "72205002599",
+       "72603028501",
+       "72603028502",
+       "72603028503",
+       "72603040601",
+       "72603040602",
+       "75834025801",
+       "75834025802",
+       "75834025850",
+       "75834025890",
+       "76420094800",
+       "76420094805",
+       "76420094812",
+       "76420094820",
+       "76420094830",
+       "76420094838",
+       "76420094860",
+       "76420094890",
+       "77771045405",
+       "77771045490",
+       "81033051531",
+       "81033051580",
+       "82009000410",
+       "82009017910",
+       "82137001901"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "67877051405",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "67877051490",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "68084059025",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "68084059095",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "68382025210",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "68382025216",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70377003012",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70377003014",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70377008011",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70377008013",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70710177000",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70710177009",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70756025051",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "70756025090",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72205002505",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72205002590",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72205002599",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72603028501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72603028502",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72603028503",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72603040601",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "72603040602",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "75834025801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "82009000410",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.06926",
+     "ndc": "82009017910",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
  "607a88656df22b6a74ffc0fc": {
   "json": {
    "drugGroup": {
@@ -3409,6 +5094,270 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lipiter"
+ },
+ "65bb5c7102a95384c22161c1": {
+  "json": {
+   "count": 11,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "71335259101",
+       "71335259102",
+       "71335259103",
+       "71335259104",
+       "71335259105",
+       "71335259106",
+       "71335259107",
+       "71335269701",
+       "71335269702",
+       "71335269703",
+       "71335269704",
+       "71335269705",
+       "71335269706",
+       "71335269707",
+       "71335269708",
+       "71335971101",
+       "71335971102",
+       "71335971103",
+       "71335971104",
+       "71335971105",
+       "71335971106",
+       "71335971107",
+       "71335971108",
+       "71335972301",
+       "71335972302",
+       "71335972303",
+       "71335972304",
+       "71335972305",
+       "71335972306",
+       "71335972307",
+       "71399054001",
+       "71399064001",
+       "71610016315",
+       "71610016330",
+       "71610016345",
+       "71610016815",
+       "71610016830",
+       "71610016845",
+       "71610016860",
+       "71610074515",
+       "71610074530",
+       "71610074545",
+       "71610074553",
+       "71610074560",
+       "72162223809",
+       "72189055730",
+       "72189055790",
+       "72205002405",
+       "72205002430",
+       "72205002490",
+       "72205002499",
+       "72603028401",
+       "72603028402",
+       "72603028403",
+       "72603040501",
+       "72603040502",
+       "72789008930",
+       "75834025701",
+       "75834025725",
+       "75834025750",
+       "75834025790",
+       "76420094600",
+       "76420094605",
+       "76420094612",
+       "76420094620",
+       "76420094623",
+       "76420094630",
+       "76420094638",
+       "76420094660",
+       "76420094690",
+       "77771045310",
+       "77771045390",
+       "81033051401",
+       "81033051440",
+       "82009000310",
+       "82009017810",
+       "82137001801",
+       "82804002630",
+       "82804002660",
+       "82804002690",
+       "82804005630",
+       "82804005660",
+       "82804005690",
+       "82868002930",
+       "82868004830",
+       "87441001301"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72205002405",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72205002490",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72205002499",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72603028401",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72603028402",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72603028403",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72603040501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "72603040502",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "75834025701",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "82009000310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "82009017810",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
  "6eda1562cab7bf0f92f7770e": {
   "json": {
@@ -3419,6 +5368,607 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=xyzzy"
+ },
+ "78b4ebaa8fbfc92582547f13": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00093505810",
+      "00093505898",
+      "00378212177",
+      "00378395205",
+      "00378395207",
+      "00378395209",
+      "00378395277",
+      "00480358710",
+      "00480358798",
+      "00615800805",
+      "00615800807",
+      "00615800814",
+      "00615800828",
+      "00615800830",
+      "00615800839",
+      "00781538492",
+      "00904629206",
+      "00904629261",
+      "10135065110",
+      "16571013809",
+      "16571013810",
+      "16571013850",
+      "16714017501",
+      "16714017502",
+      "16714017503",
+      "16729004601",
+      "16729004610",
+      "16729004615",
+      "16729004616",
+      "16729004617",
+      "24658050910",
+      "24658050990",
+      "31722042605",
+      "31722042610",
+      "31722042690",
+      "33342031710",
+      "33342031711",
+      "33342031712",
+      "33342031715",
+      "33342031744",
+      "42385094201",
+      "42385094205",
+      "42385094210",
+      "42385094211",
+      "42385094230",
+      "42385094268",
+      "42385094290",
+      "42571017410",
+      "42571017490",
+      "42708000530",
+      "42708010830",
+      "42708014430",
+      "43063045330",
+      "43353028015",
+      "43353028715",
+      "43353028730",
+      "43353028745",
+      "43353028760",
+      "43353082160",
+      "43353095915",
+      "43353095930",
+      "43353095945",
+      "43598010105",
+      "43598010110",
+      "43598010178",
+      "43598010187",
+      "43598010190",
+      "43598083205",
+      "43598083278",
+      "43598083279",
+      "43598083290",
+      "48433000901",
+      "48433000920",
+      "50090126000",
+      "50090126001",
+      "50090491300",
+      "50090520700",
+      "50090520701",
+      "50090520702",
+      "50090520800",
+      "50090563200",
+      "50090563201",
+      "50090591500",
+      "50090591501",
+      "50090591502",
+      "50090591600",
+      "50090592100",
+      "50090592101",
+      "50090633300",
+      "50090633301",
+      "50090633302",
+      "50090633400",
+      "50090644000",
+      "50090644001",
+      "50090644002",
+      "50090644100",
+      "50090680000",
+      "50090680001",
+      "50090680002",
+      "50090680100",
+      "50090689000",
+      "50090689001",
+      "50090689100",
+      "50090738400",
+      "50090738401",
+      "50090738402",
+      "50090738500",
+      "50090772600",
+      "50090772601",
+      "50090772602",
+      "50090772700",
+      "50090780600",
+      "50090780601",
+      "50090780602",
+      "50090780700",
+      "50090780701",
+      "50228045310",
+      "50228045311",
+      "50228045390",
+      "50268009511",
+      "50268009515",
+      "50436998901",
+      "51079021001",
+      "51079021020",
+      "51407008010",
+      "51407008090",
+      "51655046552",
+      "51655064030",
+      "54458088116",
+      "55111012305",
+      "55111012310",
+      "55111012330",
+      "55111012360",
+      "55111012390",
+      "55154416600",
+      "55154664600",
+      "55154762800",
+      "58517000130",
+      "59651060805",
+      "59651060830",
+      "59651060890",
+      "59651060899",
+      "59762015701",
+      "59762015702",
+      "60290004101",
+      "60290004102",
+      "60290004103",
+      "60290004104",
+      "60429032505",
+      "60505258000",
+      "60505258003",
+      "60505258005",
+      "60505258007",
+      "60505258008",
+      "60505258009",
+      "60760055830",
+      "60760070930",
+      "60760072630",
+      "60760073430",
+      "60760082930",
+      "60760088230",
+      "60760097930",
+      "61919030330",
+      "61919030390",
+      "62175089241",
+      "62175089246",
+      "63187010930",
+      "63187010960",
+      "63187010990",
+      "63304082905",
+      "63304082990",
+      "63629486501",
+      "63739003610",
+      "67046152903",
+      "67877051305",
+      "67877051310",
+      "67877051323",
+      "67877051333",
+      "67877051338",
+      "67877051390",
+      "68071091630",
+      "68071230203",
+      "68071299103",
+      "68071299109",
+      "68071299409",
+      "68071326709",
+      "68071359509",
+      "68071362809",
+      "68071366703",
+      "68071388209",
+      "68071394803",
+      "68071483709",
+      "68071509103",
+      "68071519403",
+      "68084009901",
+      "68084009911",
+      "68180063702",
+      "68180063706",
+      "68180063709",
+      "68382025110",
+      "68382025116",
+      "68645046054",
+      "68645048354",
+      "68645056854",
+      "68645059254",
+      "68788809401",
+      "68788809403",
+      "68788809406",
+      "68788809409",
+      "68788829801",
+      "68788829803",
+      "68788829806",
+      "68788829809",
+      "68788857409",
+      "68788888701",
+      "68788888703",
+      "68788888706",
+      "68788888709",
+      "69097089905",
+      "69097089915",
+      "69097094605",
+      "69097094615",
+      "70377002911",
+      "70377002913",
+      "70377007911",
+      "70377007912",
+      "70377007913",
+      "70518132200",
+      "70518132201",
+      "70518132202",
+      "70518132203",
+      "70518132204",
+      "70518132205",
+      "70518327300",
+      "70518327301",
+      "70518327302",
+      "70518327303",
+      "70518327304",
+      "70518327305",
+      "70518327306",
+      "70518432100",
+      "70518447400",
+      "70518447401",
+      "70518447402",
+      "70518459200",
+      "70710177200",
+      "70710177205",
+      "70710177209",
+      "70756024912",
+      "70756024930",
+      "70756024951",
+      "70756024990",
+      "70771187700",
+      "70771187705",
+      "70771187709",
+      "70882010930",
+      "70934009130",
+      "70934009190",
+      "70934061530",
+      "70934061590",
+      "71205026430",
+      "71205026460",
+      "71205026490",
+      "71205073130",
+      "71205073160",
+      "71205073190",
+      "71205076530",
+      "71205076560",
+      "71205076590",
+      "71209009204",
+      "71209009210",
+      "71335010201",
+      "71335010202",
+      "71335010203",
+      "71335010204",
+      "71335076701",
+      "71335076703",
+      "71335101101",
+      "71335101102",
+      "71335101103",
+      "71335101104",
+      "71335101105",
+      "71335101106",
+      "71335101107",
+      "71335101108",
+      "71335112601",
+      "71335112602",
+      "71335112603",
+      "71335112604",
+      "71335112605",
+      "71335112606",
+      "71335112607",
+      "71335132202",
+      "71335249301",
+      "71335249302",
+      "71335249303",
+      "71335249304",
+      "71335249305",
+      "71335249306",
+      "71335249307",
+      "71335259101",
+      "71335259102",
+      "71335259103",
+      "71335259104",
+      "71335259105",
+      "71335259106",
+      "71335259107",
+      "71335269701",
+      "71335269702",
+      "71335269703",
+      "71335269704",
+      "71335269705",
+      "71335269706",
+      "71335269707",
+      "71335269708",
+      "71335971101",
+      "71335971102",
+      "71335971103",
+      "71335971104",
+      "71335971105",
+      "71335971106",
+      "71335971107",
+      "71335971108",
+      "71335972301",
+      "71335972302",
+      "71335972303",
+      "71335972304",
+      "71335972305",
+      "71335972306",
+      "71335972307",
+      "71399054001",
+      "71399064001",
+      "71610016315",
+      "71610016330",
+      "71610016345",
+      "71610016815",
+      "71610016830",
+      "71610016845",
+      "71610016860",
+      "71610074515",
+      "71610074530",
+      "71610074545",
+      "71610074553",
+      "71610074560",
+      "72162223809",
+      "72189055730",
+      "72189055790",
+      "72205002405",
+      "72205002430",
+      "72205002490",
+      "72205002499",
+      "72603028401",
+      "72603028402",
+      "72603028403",
+      "72603040501",
+      "72603040502",
+      "72789008930",
+      "75834025701",
+      "75834025725",
+      "75834025750",
+      "75834025790",
+      "76420094600",
+      "76420094605",
+      "76420094612",
+      "76420094620",
+      "76420094623",
+      "76420094630",
+      "76420094638",
+      "76420094660",
+      "76420094690",
+      "77771045310",
+      "77771045390",
+      "81033051401",
+      "81033051440",
+      "82009000310",
+      "82009017810",
+      "82137001801",
+      "82804002630",
+      "82804002660",
+      "82804002690",
+      "82804005630",
+      "82804005660",
+      "82804005690",
+      "82868002930",
+      "82868004830",
+      "87441001301"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617311/ndcs.json"
+ },
+ "7b95c9156baa01922db62a4a": {
+  "json": {
+   "count": 10,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "72205002299",
+       "72603028201",
+       "72603028202",
+       "72603028203",
+       "72603040301",
+       "72603040302",
+       "72789015330",
+       "75834025501",
+       "75834025505",
+       "75834025550",
+       "75834025590",
+       "76420094300",
+       "76420094305",
+       "76420094312",
+       "76420094320",
+       "76420094330",
+       "76420094338",
+       "76420094355",
+       "76420094360",
+       "76420094390",
+       "77771045110",
+       "77771045190",
+       "81033051101",
+       "81033051110",
+       "82009000110",
+       "82009000190",
+       "82009017610",
+       "82137001601",
+       "82804014430",
+       "82804014490"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72205002299",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72603028201",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72603028202",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72603028203",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72603040301",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72603040302",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "75834025501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "82009000110",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "82009000190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "82009017610",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
  "7f44fcbf0f6c61e808c21780": {
   "json": {
@@ -3908,6 +6458,459 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "852df282f07935a31f0ea8d8": {
+  "json": {
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051110",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.25",
+     "requested_quote_units": "30",
+     "slug": "atorvastatin-10mg-tablet",
+     "special_handling": "",
+     "strength": "10mg",
+     "unit_billing_price": "$0.0083",
+     "unit_price": "$0.0073",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-10mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=10mg"
+ },
+ "88133100f705c8d3bd9bced1": {
+  "json": {
+   "count": 27,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "50090728000",
+       "50090759500",
+       "50090759503",
+       "50090759504",
+       "50090759505",
+       "50090759506",
+       "50090759700",
+       "50228010500",
+       "50228010501",
+       "50228010505",
+       "50228010510",
+       "50228010530",
+       "50742015401",
+       "50742015405",
+       "50742015410",
+       "50742015490",
+       "50742015499",
+       "51079017201",
+       "51079017220",
+       "51079097217",
+       "51079097219",
+       "51079097230",
+       "51079097256",
+       "51224002060",
+       "51224002070",
+       "51655055625",
+       "51655055626",
+       "51655055652",
+       "51655056125",
+       "51655056126",
+       "51655056152",
+       "51991080505",
+       "51991080510",
+       "52959020730",
+       "52959020760",
+       "53746021801",
+       "53746021805",
+       "53746021810",
+       "55154417200",
+       "55700066660",
+       "55700066690",
+       "55887062701",
+       "57664039713",
+       "57664039718",
+       "57664039751",
+       "57664039753",
+       "57664039758",
+       "57664039788",
+       "58517004090",
+       "58657064001",
+       "58657064010",
+       "58657064050",
+       "58864001528",
+       "59651085401",
+       "59651085405",
+       "59651085445",
+       "59651085450",
+       "59651085460",
+       "59651085479",
+       "59651085490",
+       "59651085499",
+       "60429011101",
+       "60429011110",
+       "60429011112",
+       "60429011118",
+       "60429011127",
+       "60429011136",
+       "60429011145",
+       "60429011160",
+       "60429011190",
+       "60505019000",
+       "60505019001",
+       "60505019004",
+       "60505019008",
+       "60687015501",
+       "60687015511",
+       "60760052360",
+       "61919031330",
+       "61919031360",
+       "61919031390",
+       "62135068005",
+       "62135068010",
+       "62135068018",
+       "62135068060",
+       "62135068090",
+       "62207044043",
+       "62207044047",
+       "62207044049",
+       "62207044050",
+       "62207044057",
+       "62207044096",
+       "62584025901",
+       "62584025911",
+       "63187023830",
+       "63187023860",
+       "63187023878",
+       "63187023890",
+       "63629139501",
+       "63629139502",
+       "63629139503",
+       "63629850101",
+       "63629850201",
+       "65862000801",
+       "65862000805",
+       "65862000833",
+       "65862000845",
+       "65862000850",
+       "65862000860",
+       "65862000890",
+       "65862000899",
+       "66267049314",
+       "66267049360",
+       "66267049393",
+       "66336088430",
+       "67046029803",
+       "67046159403",
+       "67544004730",
+       "67877021701",
+       "67877021705",
+       "67877021710",
+       "67877021733",
+       "67877021738",
+       "67877056101",
+       "67877056105",
+       "67877056110",
+       "67877093001",
+       "67877093005",
+       "67877093010",
+       "68071351803",
+       "68071351806",
+       "68071351808",
+       "68071351809",
+       "68071354106",
+       "68071354108",
+       "68071354109",
+       "68071373901",
+       "68071390006",
+       "68071530608",
+       "68094068860",
+       "68094068870",
+       "68382075801",
+       "68382075805",
+       "68382075810",
+       "68382075816",
+       "68382075830",
+       "68382075877",
+       "68645053959",
+       "68645054459",
+       "68645058259",
+       "68788407601"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "50228010501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "50228010505",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "50228010510",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "59651085401",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "59651085405",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "59651085499",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "60687015501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "60687015511",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "62135068005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "62135068018",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "62135068090",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "65862000801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "65862000805",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "65862000899",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "67877056101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "67877056105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "67877056110",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "67877093001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "67877093005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "67877093010",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68094068860",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68094068870",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68382075801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68382075805",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68382075810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68645054459",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "68645058259",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
  "88167a6c5e5a1d1f58556195": {
   "json": {
    "results": [
@@ -3936,6 +6939,21 @@
   },
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=lisinopril&quantity_units=30&strength=10mg"
+ },
+ "8d97dbb2fbcfa0f982f170e4": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "apixaban 5 MG Oral Tablet [Eliquis]",
+    "rxcui": "1364447",
+    "suppress": "N",
+    "synonym": "Eliquis 5 MG Oral Tablet",
+    "tty": "SBD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1364447/properties.json"
  },
  "8f2451541e859d1fc1f9b9db": {
   "json": {
@@ -3986,6 +7004,516 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/801092/related.json?tty=SBD"
+ },
+ "91fef6741b061f8242f0d7ce": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00093104801",
+      "00185021301",
+      "00378023401",
+      "00378023405",
+      "00378718505",
+      "00555038502",
+      "00555038504",
+      "00603446721",
+      "00603446728",
+      "00603446732",
+      "00615801505",
+      "00615801528",
+      "00615801530",
+      "00615801539",
+      "00615862905",
+      "00615862928",
+      "00615862930",
+      "00615862939",
+      "00781505001",
+      "00781505005",
+      "00781505010",
+      "00781505061",
+      "00904716261",
+      "10135061710",
+      "13411016302",
+      "13411016303",
+      "13411016306",
+      "13411016309",
+      "13411016310",
+      "23155010201",
+      "23155010205",
+      "23155010206",
+      "23155010209",
+      "23155010210",
+      "23155084101",
+      "23155084105",
+      "23155084110",
+      "24658029005",
+      "24658029018",
+      "24658029036",
+      "24658029090",
+      "24658079001",
+      "24658079010",
+      "25000013403",
+      "25000013414",
+      "25000013451",
+      "25000013498",
+      "33342014110",
+      "33342014111",
+      "33342014144",
+      "33358023400",
+      "42385090410",
+      "42385094701",
+      "42385094705",
+      "42385094711",
+      "42385094718",
+      "42385094719",
+      "42385094790",
+      "42708000960",
+      "42708020360",
+      "42806021305",
+      "42806021310",
+      "42806031301",
+      "42806031305",
+      "42806031310",
+      "43063001201",
+      "43063052714",
+      "43063052720",
+      "43063052730",
+      "43063052760",
+      "43063052790",
+      "43063052793",
+      "43063052794",
+      "43063052798",
+      "43063053986",
+      "43063053990",
+      "43063053993",
+      "43063053994",
+      "43063053996",
+      "43063089820",
+      "43063089830",
+      "43063089860",
+      "43063089890",
+      "43063089893",
+      "43063089898",
+      "43353034030",
+      "43353034053",
+      "43353034060",
+      "43353034070",
+      "43353034075",
+      "43353034080",
+      "43353034092",
+      "43353034094",
+      "43353034096",
+      "43353098230",
+      "43353098253",
+      "43353098260",
+      "43353098270",
+      "43353098280",
+      "43353098292",
+      "43353098294",
+      "43353098296",
+      "43547032010",
+      "43547032011",
+      "43547035710",
+      "43547035711",
+      "43547035750",
+      "45865051730",
+      "45865051751",
+      "45865051760",
+      "45865051790",
+      "49483062201",
+      "49483062210",
+      "49483062250",
+      "49483062281",
+      "49999010630",
+      "49999010660",
+      "49999010690",
+      "50090208100",
+      "50090208103",
+      "50090208104",
+      "50090208105",
+      "50090208106",
+      "50090306400",
+      "50090306403",
+      "50090306404",
+      "50090306405",
+      "50090306406",
+      "50090308800",
+      "50090489100",
+      "50090494300",
+      "50090648500",
+      "50090685800",
+      "50090685803",
+      "50090685804",
+      "50090685805",
+      "50090685806",
+      "50090685900",
+      "50090701000",
+      "50090701003",
+      "50090701004",
+      "50090701005",
+      "50090701006",
+      "50090701100",
+      "50090701300",
+      "50090727800",
+      "50090727803",
+      "50090727804",
+      "50090727805",
+      "50090727806",
+      "50090728000",
+      "50090759500",
+      "50090759503",
+      "50090759504",
+      "50090759505",
+      "50090759506",
+      "50090759700",
+      "50228010500",
+      "50228010501",
+      "50228010505",
+      "50228010510",
+      "50228010530",
+      "50742015401",
+      "50742015405",
+      "50742015410",
+      "50742015490",
+      "50742015499",
+      "51079017201",
+      "51079017220",
+      "51079097217",
+      "51079097219",
+      "51079097230",
+      "51079097256",
+      "51224002060",
+      "51224002070",
+      "51655055625",
+      "51655055626",
+      "51655055652",
+      "51655056125",
+      "51655056126",
+      "51655056152",
+      "51991080505",
+      "51991080510",
+      "52959020730",
+      "52959020760",
+      "53746021801",
+      "53746021805",
+      "53746021810",
+      "55154417200",
+      "55700066660",
+      "55700066690",
+      "55887062701",
+      "57664039713",
+      "57664039718",
+      "57664039751",
+      "57664039753",
+      "57664039758",
+      "57664039788",
+      "58517004090",
+      "58657064001",
+      "58657064010",
+      "58657064050",
+      "58864001528",
+      "59651085401",
+      "59651085405",
+      "59651085445",
+      "59651085450",
+      "59651085460",
+      "59651085479",
+      "59651085490",
+      "59651085499",
+      "60429011101",
+      "60429011110",
+      "60429011112",
+      "60429011118",
+      "60429011127",
+      "60429011136",
+      "60429011145",
+      "60429011160",
+      "60429011190",
+      "60505019000",
+      "60505019001",
+      "60505019004",
+      "60505019008",
+      "60687015501",
+      "60687015511",
+      "60760052360",
+      "61919031330",
+      "61919031360",
+      "61919031390",
+      "62135068005",
+      "62135068010",
+      "62135068018",
+      "62135068060",
+      "62135068090",
+      "62207044043",
+      "62207044047",
+      "62207044049",
+      "62207044050",
+      "62207044057",
+      "62207044096",
+      "62584025901",
+      "62584025911",
+      "63187023830",
+      "63187023860",
+      "63187023878",
+      "63187023890",
+      "63629139501",
+      "63629139502",
+      "63629139503",
+      "63629850101",
+      "63629850201",
+      "65862000801",
+      "65862000805",
+      "65862000833",
+      "65862000845",
+      "65862000850",
+      "65862000860",
+      "65862000890",
+      "65862000899",
+      "66267049314",
+      "66267049360",
+      "66267049393",
+      "66336088430",
+      "67046029803",
+      "67046159403",
+      "67544004730",
+      "67877021701",
+      "67877021705",
+      "67877021710",
+      "67877021733",
+      "67877021738",
+      "67877056101",
+      "67877056105",
+      "67877056110",
+      "67877093001",
+      "67877093005",
+      "67877093010",
+      "68071351803",
+      "68071351806",
+      "68071351808",
+      "68071351809",
+      "68071354106",
+      "68071354108",
+      "68071354109",
+      "68071373901",
+      "68071390006",
+      "68071530608",
+      "68094068860",
+      "68094068870",
+      "68382075801",
+      "68382075805",
+      "68382075810",
+      "68382075816",
+      "68382075830",
+      "68382075877",
+      "68645053959",
+      "68645054459",
+      "68645058259",
+      "68788407601",
+      "68788407603",
+      "68788407606",
+      "68788407607",
+      "68788407608",
+      "68788407609",
+      "68788413601",
+      "68788413603",
+      "68788413606",
+      "68788413607",
+      "68788413608",
+      "68788413609",
+      "68788811001",
+      "68788811003",
+      "68788811006",
+      "68788811007",
+      "68788811008",
+      "68788811009",
+      "68788849801",
+      "68788849803",
+      "68788849806",
+      "68788849807",
+      "68788849808",
+      "68788849809",
+      "68788856401",
+      "68788865201",
+      "68788865203",
+      "68788865206",
+      "68788865207",
+      "68788865208",
+      "68788865209",
+      "69367018001",
+      "69367018005",
+      "69367018010",
+      "69367038101",
+      "69367038105",
+      "69367038110",
+      "70010006301",
+      "70010006305",
+      "70010006306",
+      "70010006309",
+      "70010006310",
+      "70518114900",
+      "70518114901",
+      "70518114902",
+      "70518195100",
+      "70518195101",
+      "70518195102",
+      "70518195103",
+      "70518283300",
+      "70518283301",
+      "70518283302",
+      "70518283303",
+      "70518283304",
+      "70518283305",
+      "70518283306",
+      "70518283307",
+      "70518283308",
+      "70518283309",
+      "70518469800",
+      "70882012456",
+      "70934006660",
+      "70934013630",
+      "70934013660",
+      "70934013690",
+      "70934021290",
+      "70934031190",
+      "70934040490",
+      "70934042290",
+      "70934078460",
+      "71093013200",
+      "71093013204",
+      "71093013205",
+      "71093013206",
+      "71205056200",
+      "71205056230",
+      "71205056260",
+      "71205056278",
+      "71205056290",
+      "71205062230",
+      "71205062260",
+      "71205062290",
+      "71205078430",
+      "71205078460",
+      "71205078478",
+      "71205078490",
+      "71205088200",
+      "71205088211",
+      "71205088230",
+      "71205088255",
+      "71205088260",
+      "71205088264",
+      "71205088272",
+      "71205088278",
+      "71205088290",
+      "71335107200",
+      "71335107201",
+      "71335107202",
+      "71335107203",
+      "71335107204",
+      "71335107205",
+      "71335107206",
+      "71335107207",
+      "71335107208",
+      "71335107209",
+      "71335183400",
+      "71335183401",
+      "71335183402",
+      "71335183403",
+      "71335183404",
+      "71335183405",
+      "71335183406",
+      "71335183407",
+      "71335183408",
+      "71335183409",
+      "71335222400",
+      "71335222401",
+      "71335222402",
+      "71335222403",
+      "71335222404",
+      "71335222405",
+      "71335222406",
+      "71335222407",
+      "71335222408",
+      "71335222409",
+      "71335246600",
+      "71335246601",
+      "71335246602",
+      "71335246603",
+      "71335246604",
+      "71335246605",
+      "71335246606",
+      "71335246607",
+      "71335246608",
+      "71335246609",
+      "71335313200",
+      "71335313201",
+      "71335313202",
+      "71335313203",
+      "71335313204",
+      "71335313205",
+      "71335313206",
+      "71335313207",
+      "71335313208",
+      "71335313209",
+      "71610091730",
+      "71610091753",
+      "71610091760",
+      "71610091770",
+      "71610091780",
+      "71610091792",
+      "71610091794",
+      "71610092053",
+      "71610092060",
+      "71610092080",
+      "71610092930",
+      "71610092953",
+      "71610092960",
+      "71610092970",
+      "71610092980",
+      "71610092994",
+      "71709011006",
+      "71709011007",
+      "71717010411",
+      "72162152201",
+      "72162152205",
+      "72189021930",
+      "72189021960",
+      "72189021982",
+      "72189021990",
+      "72189061730",
+      "72189061782",
+      "72189065830",
+      "72189065882",
+      "72189065890",
+      "72789019220",
+      "72789019221",
+      "72789019230",
+      "72789019260",
+      "72789019290",
+      "72789019293",
+      "72789053142",
+      "72789056120",
+      "72789056130",
+      "72789056142",
+      "72789056160",
+      "72789056190",
+      "72789056193",
+      "82009004610",
+      "82009017410",
+      "82804030978",
+      "82868004960",
+      "82868004990",
+      "82868004998",
+      "83301000801",
+      "83301000802",
+      "83301000803",
+      "87441005601"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/861007/ndcs.json"
  },
  "939020bb21ee926b0fa4f291": {
   "json": {
@@ -4091,6 +7619,1229 @@
   },
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "99a49fe554f87bbea26d565c": {
+  "json": {
+   "count": 38,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00093505810",
+       "00093505898",
+       "00378212177",
+       "00378395205",
+       "00378395207",
+       "00378395209",
+       "00378395277",
+       "00480358710",
+       "00480358798",
+       "00615800805",
+       "00615800807",
+       "00615800814",
+       "00615800828",
+       "00615800830",
+       "00615800839",
+       "00781538492",
+       "00904629206",
+       "00904629261",
+       "10135065110",
+       "16571013809",
+       "16571013810",
+       "16571013850",
+       "16714017501",
+       "16714017502",
+       "16714017503",
+       "16729004601",
+       "16729004610",
+       "16729004615",
+       "16729004616",
+       "16729004617",
+       "24658050910",
+       "24658050990",
+       "31722042605",
+       "31722042610",
+       "31722042690",
+       "33342031710",
+       "33342031711",
+       "33342031712",
+       "33342031715",
+       "33342031744",
+       "42385094201",
+       "42385094205",
+       "42385094210",
+       "42385094211",
+       "42385094230",
+       "42385094268",
+       "42385094290",
+       "42571017410",
+       "42571017490",
+       "42708000530",
+       "42708010830",
+       "42708014430",
+       "43063045330",
+       "43353028015",
+       "43353028715",
+       "43353028730",
+       "43353028745",
+       "43353028760",
+       "43353082160",
+       "43353095915",
+       "43353095930",
+       "43353095945",
+       "43598010105",
+       "43598010110",
+       "43598010178",
+       "43598010187",
+       "43598010190",
+       "43598083205",
+       "43598083278",
+       "43598083279",
+       "43598083290",
+       "48433000901",
+       "48433000920",
+       "50090126000",
+       "50090126001",
+       "50090491300",
+       "50090520700",
+       "50090520701",
+       "50090520702",
+       "50090520800",
+       "50090563200",
+       "50090563201",
+       "50090591500",
+       "50090591501",
+       "50090591502",
+       "50090591600",
+       "50090592100",
+       "50090592101",
+       "50090633300",
+       "50090633301",
+       "50090633302",
+       "50090633400",
+       "50090644000",
+       "50090644001",
+       "50090644002",
+       "50090644100",
+       "50090680000",
+       "50090680001",
+       "50090680002",
+       "50090680100",
+       "50090689000",
+       "50090689001",
+       "50090689100",
+       "50090738400",
+       "50090738401",
+       "50090738402",
+       "50090738500",
+       "50090772600",
+       "50090772601",
+       "50090772602",
+       "50090772700",
+       "50090780600",
+       "50090780601",
+       "50090780602",
+       "50090780700",
+       "50090780701",
+       "50228045310",
+       "50228045311",
+       "50228045390",
+       "50268009511",
+       "50268009515",
+       "50436998901",
+       "51079021001",
+       "51079021020",
+       "51407008010",
+       "51407008090",
+       "51655046552",
+       "51655064030",
+       "54458088116",
+       "55111012305",
+       "55111012310",
+       "55111012330",
+       "55111012360",
+       "55111012390",
+       "55154416600",
+       "55154664600",
+       "55154762800",
+       "58517000130",
+       "59651060805",
+       "59651060830",
+       "59651060890",
+       "59651060899",
+       "59762015701",
+       "59762015702",
+       "60290004101",
+       "60290004102",
+       "60290004103",
+       "60290004104",
+       "60429032505",
+       "60505258000"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00093505810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00093505898",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00378395205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00378395277",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00480358710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00480358798",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00904629206",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "00904629261",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "16571013809",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "16571013810",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "16571013850",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "16714017501",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "16714017503",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "31722042605",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "31722042610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "31722042690",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "33342031710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "33342031715",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "42385094201",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "42385094205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "42385094211",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "42385094290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "42571017410",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "42571017490",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "43598010105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "43598010190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "43598083205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "43598083290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "50228045310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "50228045390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "50268009511",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "50268009515",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "51079021001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "51079021020",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "55111012305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "55111012390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "59651060890",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "59651060899",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "9c5a93f5b5430b87337e9d4a": {
+  "json": {
+   "count": 5,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "71610091794",
+       "71610092053",
+       "71610092060",
+       "71610092080",
+       "71610092930",
+       "71610092953",
+       "71610092960",
+       "71610092970",
+       "71610092980",
+       "71610092994",
+       "71709011006",
+       "71709011007",
+       "71717010411",
+       "72162152201",
+       "72162152205",
+       "72189021930",
+       "72189021960",
+       "72189021982",
+       "72189021990",
+       "72189061730",
+       "72189061782",
+       "72189065830",
+       "72189065882",
+       "72189065890",
+       "72789019220",
+       "72789019221",
+       "72789019230",
+       "72789019260",
+       "72789019290",
+       "72789019293",
+       "72789053142",
+       "72789056120",
+       "72789056130",
+       "72789056142",
+       "72789056160",
+       "72789056190",
+       "72789056193",
+       "82009004610",
+       "82009017410",
+       "82804030978",
+       "82868004960",
+       "82868004990",
+       "82868004998",
+       "83301000801",
+       "83301000802",
+       "83301000803",
+       "87441005601"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "82009004610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "82009017410",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "83301000801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "83301000802",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "83301000803",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "9dd07188905f0eee2f42c987": {
+  "json": {
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "500",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051405",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$6.20",
+     "requested_quote_units": "30",
+     "slug": "atorvastatin-80mg-tablet",
+     "special_handling": "",
+     "strength": "80mg",
+     "unit_billing_price": "$0.0399",
+     "unit_price": "$0.0347",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-80mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=80mg"
+ },
+ "a71271d5a385b00eda33ed77": {
+  "json": {
+   "count": 41,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00093505610",
+       "00093505698",
+       "00378395005",
+       "00378395007",
+       "00378395009",
+       "00378395077",
+       "00480358510",
+       "00480358598",
+       "00615800605",
+       "00615800607",
+       "00615800630",
+       "00615800639",
+       "00781538192",
+       "00904629006",
+       "00904629061",
+       "10135064910",
+       "16571013609",
+       "16571013610",
+       "16571013650",
+       "16714017301",
+       "16714017302",
+       "16714017303",
+       "16729004401",
+       "16729004410",
+       "16729004415",
+       "16729004416",
+       "16729004417",
+       "24658050710",
+       "24658050790",
+       "31722042405",
+       "31722042410",
+       "31722042490",
+       "33342031510",
+       "33342031511",
+       "33342031512",
+       "33342031515",
+       "33342031544",
+       "35356086018",
+       "35356086030",
+       "35356086090",
+       "42385094001",
+       "42385094005",
+       "42385094010",
+       "42385094011",
+       "42385094030",
+       "42385094068",
+       "42385094090",
+       "42571017210",
+       "42571017290",
+       "42708000330",
+       "42708001430",
+       "43063037330",
+       "43063047430",
+       "43353011545",
+       "43598009805",
+       "43598009810",
+       "43598009878",
+       "43598009887",
+       "43598009890",
+       "43598083005",
+       "43598083078",
+       "43598083079",
+       "43598083090",
+       "48433000701",
+       "48433000720",
+       "50090125400",
+       "50090125401",
+       "50090125500",
+       "50090125501",
+       "50090496400",
+       "50090496401",
+       "50090506900",
+       "50090516200",
+       "50090518400",
+       "50090518401",
+       "50090518402",
+       "50090518500",
+       "50090549701",
+       "50090563600",
+       "50090563601",
+       "50090647900",
+       "50090647901",
+       "50090647902",
+       "50090648000",
+       "50090757400",
+       "50090757401",
+       "50090757402",
+       "50090757500",
+       "50090772000",
+       "50090772001",
+       "50090772002",
+       "50090772100",
+       "50228045110",
+       "50228045190",
+       "50268009311",
+       "50268009315",
+       "51079020801",
+       "51079020820",
+       "51407007810",
+       "51407007890",
+       "51655061030",
+       "51655061352",
+       "51655061383",
+       "51655061452",
+       "51655094652",
+       "55111012105",
+       "55111012110",
+       "55111012130",
+       "55111012160",
+       "55111012190",
+       "55154588400",
+       "55154663500",
+       "55700065930",
+       "59651060605",
+       "59651060630",
+       "59651060690",
+       "59651060699",
+       "59762015501",
+       "59762015502",
+       "60290003901",
+       "60290003902",
+       "60290003903",
+       "60290003904",
+       "60429032310",
+       "60505257800",
+       "60505257803",
+       "60505257805",
+       "60505257807",
+       "60505257808",
+       "60505257809",
+       "60760059330",
+       "60760066630",
+       "61919095630",
+       "61919095690",
+       "62175089043",
+       "62175089046",
+       "63304082705",
+       "63304082790",
+       "63629846901",
+       "63739001810",
+       "67046144203",
+       "67046145803",
+       "67046149103",
+       "67046167703",
+       "67296213009",
+       "67877051105",
+       "67877051110",
+       "67877051133",
+       "67877051138",
+       "67877051155"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00093505610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00093505698",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00378395005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00378395077",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00480358510",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00480358598",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00904629006",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "00904629061",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "16571013609",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "16571013610",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "16571013650",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "16714017303",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "31722042405",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "31722042410",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "31722042490",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "33342031510",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "33342031515",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "42385094001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "42385094005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "42385094011",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "42385094090",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "42571017210",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "42571017290",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "43598009805",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "43598009890",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "43598083005",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "43598083090",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "50228045110",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "50228045190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "50268009311",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "50268009315",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "51079020801",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "51079020820",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "55111012105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "55111012190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "59651060690",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "59651060699",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "60505257808",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "60505257809",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "67877051105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "67877051110",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "a9c45f84f6e2489eb4f7453b": {
+  "json": {
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=4mg"
  },
  "ab01e9ce04d0104034156984": {
   "json": {
@@ -6205,6 +10956,388 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=Lipitor"
  },
+ "d51ecad74ed06497114f8c78": {
+  "json": {
+   "count": 15,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00093104801",
+       "00185021301",
+       "00378023401",
+       "00378023405",
+       "00378718505",
+       "00555038502",
+       "00555038504",
+       "00603446721",
+       "00603446728",
+       "00603446732",
+       "00615801505",
+       "00615801528",
+       "00615801530",
+       "00615801539",
+       "00615862905",
+       "00615862928",
+       "00615862930",
+       "00615862939",
+       "00781505001",
+       "00781505005",
+       "00781505010",
+       "00781505061",
+       "00904716261",
+       "10135061710",
+       "13411016302",
+       "13411016303",
+       "13411016306",
+       "13411016309",
+       "13411016310",
+       "23155010201",
+       "23155010205",
+       "23155010206",
+       "23155010209",
+       "23155010210",
+       "23155084101",
+       "23155084105",
+       "23155084110",
+       "24658029005",
+       "24658029018",
+       "24658029036",
+       "24658029090",
+       "24658079001",
+       "24658079010",
+       "25000013403",
+       "25000013414",
+       "25000013451",
+       "25000013498",
+       "33342014110",
+       "33342014111",
+       "33342014144",
+       "33358023400",
+       "42385090410",
+       "42385094701",
+       "42385094705",
+       "42385094711",
+       "42385094718",
+       "42385094719",
+       "42385094790",
+       "42708000960",
+       "42708020360",
+       "42806021305",
+       "42806021310",
+       "42806031301",
+       "42806031305",
+       "42806031310",
+       "43063001201",
+       "43063052714",
+       "43063052720",
+       "43063052730",
+       "43063052760",
+       "43063052790",
+       "43063052793",
+       "43063052794",
+       "43063052798",
+       "43063053986",
+       "43063053990",
+       "43063053993",
+       "43063053994",
+       "43063053996",
+       "43063089820",
+       "43063089830",
+       "43063089860",
+       "43063089890",
+       "43063089893",
+       "43063089898",
+       "43353034030",
+       "43353034053",
+       "43353034060",
+       "43353034070",
+       "43353034075",
+       "43353034080",
+       "43353034092",
+       "43353034094",
+       "43353034096",
+       "43353098230",
+       "43353098253",
+       "43353098260",
+       "43353098270",
+       "43353098280",
+       "43353098292",
+       "43353098294",
+       "43353098296",
+       "43547032010",
+       "43547032011",
+       "43547035710",
+       "43547035711",
+       "43547035750",
+       "45865051730",
+       "45865051751",
+       "45865051760",
+       "45865051790",
+       "49483062201",
+       "49483062210",
+       "49483062250",
+       "49483062281",
+       "49999010630",
+       "49999010660",
+       "49999010690",
+       "50090208100",
+       "50090208103",
+       "50090208104",
+       "50090208105",
+       "50090208106",
+       "50090306400",
+       "50090306403",
+       "50090306404",
+       "50090306405",
+       "50090306406",
+       "50090308800",
+       "50090489100",
+       "50090494300",
+       "50090648500",
+       "50090685800",
+       "50090685803",
+       "50090685804",
+       "50090685805",
+       "50090685806",
+       "50090685900",
+       "50090701000",
+       "50090701003",
+       "50090701004",
+       "50090701005",
+       "50090701006",
+       "50090701100",
+       "50090701300",
+       "50090727800",
+       "50090727803",
+       "50090727804",
+       "50090727805",
+       "50090727806"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "00378718505",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "00904716261",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "23155084101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "23155084105",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "23155084110",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "42385094701",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "42385094705",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "42385094711",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "43547035710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "43547035711",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "43547035750",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "49483062201",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "49483062210",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "49483062250",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.01451",
+     "ndc": "49483062281",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "e3535c33ec7e22e1a7444d5b": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "lisinopril 10 MG Oral Tablet",
+    "rxcui": "314076",
+    "suppress": "N",
+    "synonym": "",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/314076/properties.json"
+ },
+ "e8d957279278488aed9738a8": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "metformin hydrochloride 500 MG Oral Tablet",
+    "rxcui": "861007",
+    "suppress": "N",
+    "synonym": "",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/861007/properties.json"
+ },
  "e97c7dee446fe38eadc5c2c2": {
   "json": {
    "count": 39,
@@ -6701,6 +11834,21 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "eb8cf9bb0654befeb672dbe2": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "24 HR metformin hydrochloride 500 MG Extended Release Oral Tablet",
+    "rxcui": "860975",
+    "suppress": "N",
+    "synonym": "metformin HCl 500 MG 24 HR Extended Release Oral Tablet",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/860975/properties.json"
+ },
  "f43c0741a8ef37d8731f455d": {
   "json": {
    "count": 17,
@@ -7065,11 +12213,1070 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "f4af2451256e8f61dc68deab": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00093505705",
+      "00093505798",
+      "00378395305",
+      "00378395307",
+      "00378395309",
+      "00378395377",
+      "00440712830",
+      "00480358810",
+      "00480358898",
+      "00615800905",
+      "00615800907",
+      "00615800939",
+      "00781538892",
+      "00904629304",
+      "10135065305",
+      "16571013909",
+      "16571013910",
+      "16571013950",
+      "16714017601",
+      "16714017602",
+      "16714017603",
+      "16729004701",
+      "16729004710",
+      "16729004715",
+      "16729004716",
+      "16729004717",
+      "24658051010",
+      "24658051090",
+      "31722042705",
+      "31722042710",
+      "31722042790",
+      "33342031810",
+      "33342031811",
+      "33342031812",
+      "33342031815",
+      "33342031844",
+      "42385094301",
+      "42385094305",
+      "42385094308",
+      "42385094310",
+      "42385094311",
+      "42385094330",
+      "42385094364",
+      "42385094368",
+      "42385094390",
+      "42571017510",
+      "42571017590",
+      "43063048790",
+      "43353018415",
+      "43353018430",
+      "43353018460",
+      "43353032115",
+      "43353032130",
+      "43353032145",
+      "43353032160",
+      "43353081515",
+      "43353081530",
+      "43353081545",
+      "43353098115",
+      "43353098130",
+      "43353098145",
+      "43353098160",
+      "43598010305",
+      "43598010310",
+      "43598010381",
+      "43598010387",
+      "43598010390",
+      "43598083305",
+      "43598083379",
+      "43598083381",
+      "43598083390",
+      "48433001001",
+      "48433001003",
+      "50090065401",
+      "50090126400",
+      "50090126401",
+      "50090468500",
+      "50090468501",
+      "50090505100",
+      "50090505101",
+      "50090529800",
+      "50090529801",
+      "50090563900",
+      "50090563901",
+      "50090605400",
+      "50090605401",
+      "50090605402",
+      "50090605700",
+      "50090605701",
+      "50090606100",
+      "50090606101",
+      "50090606102",
+      "50090650500",
+      "50090650501",
+      "50090650502",
+      "50090650600",
+      "50090697000",
+      "50090735800",
+      "50090735801",
+      "50090735802",
+      "50090735900",
+      "50090753200",
+      "50090753201",
+      "50090753202",
+      "50090753300",
+      "50090772400",
+      "50090772401",
+      "50090772402",
+      "50090772500",
+      "50228045405",
+      "50228045490",
+      "50268009611",
+      "50268009612",
+      "51079021101",
+      "51079021103",
+      "51407008105",
+      "51407008190",
+      "51655074752",
+      "51655088030",
+      "51655088130",
+      "55111012405",
+      "55111012430",
+      "55111012460",
+      "55111012490",
+      "55154028406",
+      "55154438406",
+      "55154728900",
+      "55700003430",
+      "59651060905",
+      "59651060930",
+      "59651060990",
+      "59651060999",
+      "59762015801",
+      "59762015802",
+      "60290004201",
+      "60290004202",
+      "60290004203",
+      "60290004204",
+      "60505267100",
+      "60505267103",
+      "60505267105",
+      "60505267107",
+      "60505267108",
+      "60505267109",
+      "61919053130",
+      "61919053190",
+      "62175089741",
+      "62175089746",
+      "63187065630",
+      "63187065660",
+      "63187065690",
+      "63187090730",
+      "63187090760",
+      "63187090790",
+      "63304083005",
+      "63304083090",
+      "63629847201",
+      "63739003733",
+      "67046159303",
+      "67046166603",
+      "67877051405",
+      "67877051410",
+      "67877051433",
+      "67877051438",
+      "67877051490",
+      "68071201803",
+      "68071201806",
+      "68071227609",
+      "68071276509",
+      "68071387409",
+      "68071396109",
+      "68071496209",
+      "68084059025",
+      "68084059095",
+      "68180063802",
+      "68180063806",
+      "68180063809",
+      "68382025210",
+      "68382025216",
+      "68645046154",
+      "68645049554",
+      "69097091105",
+      "69097091112",
+      "69097094705",
+      "69097094712",
+      "70377003012",
+      "70377003014",
+      "70377008011",
+      "70377008012",
+      "70377008013",
+      "70518151401",
+      "70518330400",
+      "70518330401",
+      "70518384800",
+      "70518384801",
+      "70518384802",
+      "70518447300",
+      "70518447301",
+      "70518447302",
+      "70710177000",
+      "70710177005",
+      "70710177009",
+      "70756025030",
+      "70756025051",
+      "70756025090",
+      "70771187800",
+      "70771187805",
+      "70771187809",
+      "71205009830",
+      "71205009860",
+      "71205009890",
+      "71205033520",
+      "71205033530",
+      "71205033560",
+      "71205033590",
+      "71209009304",
+      "71209009310",
+      "71335029501",
+      "71335029502",
+      "71335029503",
+      "71335058301",
+      "71335058302",
+      "71335058303",
+      "71335133601",
+      "71335133602",
+      "71335133603",
+      "71335133604",
+      "71335222501",
+      "71335222502",
+      "71335222503",
+      "71335222504",
+      "71335240701",
+      "71335240702",
+      "71335240703",
+      "71335240704",
+      "71335258201",
+      "71335258202",
+      "71335258203",
+      "71335258204",
+      "71335964601",
+      "71335964602",
+      "71335964603",
+      "71335964604",
+      "71335964605",
+      "71610003615",
+      "71610003630",
+      "71610003645",
+      "71610003660",
+      "71610017015",
+      "71610017030",
+      "71610017045",
+      "71610017060",
+      "71610063315",
+      "71610063330",
+      "71610063345",
+      "71610063360",
+      "71610074615",
+      "71610074630",
+      "71610074645",
+      "71610074653",
+      "71610074660",
+      "72162155609",
+      "72189029530",
+      "72189053730",
+      "72189053790",
+      "72205002505",
+      "72205002530",
+      "72205002590",
+      "72205002599",
+      "72603028501",
+      "72603028502",
+      "72603028503",
+      "72603040601",
+      "72603040602",
+      "75834025801",
+      "75834025802",
+      "75834025850",
+      "75834025890",
+      "76420094800",
+      "76420094805",
+      "76420094812",
+      "76420094820",
+      "76420094830",
+      "76420094838",
+      "76420094860",
+      "76420094890",
+      "77771045405",
+      "77771045490",
+      "81033051531",
+      "81033051580",
+      "82009000410",
+      "82009017910",
+      "82137001901"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/259255/ndcs.json"
+ },
+ "f5e558abf8a1a8f708ffccf2": {
+  "json": {
+   "count": 16,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "67877051190",
+       "68071091430",
+       "68071238903",
+       "68071238906",
+       "68071354609",
+       "68071370109",
+       "68071381303",
+       "68071386803",
+       "68071391209",
+       "68071500803",
+       "68071519803",
+       "68084009701",
+       "68084009711",
+       "68180063502",
+       "68180063506",
+       "68180063509",
+       "68382024910",
+       "68382024916",
+       "68645045854",
+       "68645045870",
+       "68645048054",
+       "68645048070",
+       "68788400801",
+       "68788400803",
+       "68788400806",
+       "68788400809",
+       "68788790001",
+       "68788790003",
+       "68788790006",
+       "68788790009",
+       "68788838901",
+       "68788838903",
+       "68788838906",
+       "68788838909",
+       "68788839501",
+       "68788839503",
+       "68788839506",
+       "68788839509",
+       "68788840901",
+       "68788840903",
+       "68788840906",
+       "68788840909",
+       "68788865603",
+       "68788865606",
+       "68788865609",
+       "68788867203",
+       "68788867206",
+       "68788867209",
+       "68788868401",
+       "68788868403",
+       "68788868406",
+       "68788868409",
+       "68788884203",
+       "68788884206",
+       "68788884209",
+       "69097089705",
+       "69097089715",
+       "69097094405",
+       "69097094415",
+       "70377002711",
+       "70377002713",
+       "70377007711",
+       "70377007712",
+       "70377007713",
+       "70518022400",
+       "70518022401",
+       "70518022402",
+       "70518022403",
+       "70518329800",
+       "70518329801",
+       "70518413800",
+       "70518413801",
+       "70518442200",
+       "70518442201",
+       "70518442202",
+       "70518442203",
+       "70518455000",
+       "70710177700",
+       "70710177705",
+       "70710177709",
+       "70756024712",
+       "70756024730",
+       "70756024751",
+       "70756024790",
+       "70771187500",
+       "70771187505",
+       "70771187509",
+       "70882011930",
+       "70934007030",
+       "70934025090",
+       "70934031290",
+       "70934048230",
+       "70934048290",
+       "71205024630",
+       "71205024660",
+       "71205024690",
+       "71205080230",
+       "71205080290",
+       "71209009004",
+       "71335016901",
+       "71335016902",
+       "71335016903",
+       "71335016904",
+       "71335138801",
+       "71335138802",
+       "71335138803",
+       "71335138804",
+       "71335138805",
+       "71335138806",
+       "71335171001",
+       "71335171002",
+       "71335171003",
+       "71335171004",
+       "71335171005",
+       "71335171006",
+       "71335224101",
+       "71335224102",
+       "71335224103",
+       "71335224104",
+       "71335224105",
+       "71335224106",
+       "71335238801",
+       "71335238802",
+       "71335238803",
+       "71335238804",
+       "71335238805",
+       "71335238806",
+       "71335297701",
+       "71335297702",
+       "71335297703",
+       "71335297704",
+       "71335297705",
+       "71335297706",
+       "71335314401",
+       "71335314402",
+       "71335314403",
+       "71335314404",
+       "71335314405",
+       "71335314406",
+       "71399051001",
+       "71610016960",
+       "72162155409",
+       "72189022630",
+       "72189022690",
+       "72189053130",
+       "72189053190",
+       "72189068130",
+       "72205002205",
+       "72205002230",
+       "72205002290"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "67877051190",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "68084009701",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "68084009711",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "68382024910",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "68382024916",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70377002711",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70377002713",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70377007711",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70377007713",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70710177700",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70710177709",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70756024712",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70756024751",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "70756024790",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72205002205",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.02283",
+     "ndc": "72205002290",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
  "f7c99cb18084b9393cf94c70": {
   "json": {
    "results": []
   },
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=apixaban&quantity_units=30&strength=5mg"
+ },
+ "f89882afb44a17c956f7490d": {
+  "json": {
+   "count": 18,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "60505258003",
+       "60505258005",
+       "60505258007",
+       "60505258008",
+       "60505258009",
+       "60760055830",
+       "60760070930",
+       "60760072630",
+       "60760073430",
+       "60760082930",
+       "60760088230",
+       "60760097930",
+       "61919030330",
+       "61919030390",
+       "62175089241",
+       "62175089246",
+       "63187010930",
+       "63187010960",
+       "63187010990",
+       "63304082905",
+       "63304082990",
+       "63629486501",
+       "63739003610",
+       "67046152903",
+       "67877051305",
+       "67877051310",
+       "67877051323",
+       "67877051333",
+       "67877051338",
+       "67877051390",
+       "68071091630",
+       "68071230203",
+       "68071299103",
+       "68071299109",
+       "68071299409",
+       "68071326709",
+       "68071359509",
+       "68071362809",
+       "68071366703",
+       "68071388209",
+       "68071394803",
+       "68071483709",
+       "68071509103",
+       "68071519403",
+       "68084009901",
+       "68084009911",
+       "68180063702",
+       "68180063706",
+       "68180063709",
+       "68382025110",
+       "68382025116",
+       "68645046054",
+       "68645048354",
+       "68645056854",
+       "68645059254",
+       "68788809401",
+       "68788809403",
+       "68788809406",
+       "68788809409",
+       "68788829801",
+       "68788829803",
+       "68788829806",
+       "68788829809",
+       "68788857409",
+       "68788888701",
+       "68788888703",
+       "68788888706",
+       "68788888709",
+       "69097089905",
+       "69097089915",
+       "69097094605",
+       "69097094615",
+       "70377002911",
+       "70377002913",
+       "70377007911",
+       "70377007912",
+       "70377007913",
+       "70518132200",
+       "70518132201",
+       "70518132202",
+       "70518132203",
+       "70518132204",
+       "70518132205",
+       "70518327300",
+       "70518327301",
+       "70518327302",
+       "70518327303",
+       "70518327304",
+       "70518327305",
+       "70518327306",
+       "70518432100",
+       "70518447400",
+       "70518447401",
+       "70518447402",
+       "70518459200",
+       "70710177200",
+       "70710177205",
+       "70710177209",
+       "70756024912",
+       "70756024930",
+       "70756024951",
+       "70756024990",
+       "70771187700",
+       "70771187705",
+       "70771187709",
+       "70882010930",
+       "70934009130",
+       "70934009190",
+       "70934061530",
+       "70934061590",
+       "71205026430",
+       "71205026460",
+       "71205026490",
+       "71205073130",
+       "71205073160",
+       "71205073190",
+       "71205076530",
+       "71205076560",
+       "71205076590",
+       "71209009204",
+       "71209009210",
+       "71335010201",
+       "71335010202",
+       "71335010203",
+       "71335010204",
+       "71335076701",
+       "71335076703",
+       "71335101101",
+       "71335101102",
+       "71335101103",
+       "71335101104",
+       "71335101105",
+       "71335101106",
+       "71335101107",
+       "71335101108",
+       "71335112601",
+       "71335112602",
+       "71335112603",
+       "71335112604",
+       "71335112605",
+       "71335112606",
+       "71335112607",
+       "71335132202",
+       "71335249301",
+       "71335249302",
+       "71335249303",
+       "71335249304",
+       "71335249305",
+       "71335249306",
+       "71335249307"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "60505258008",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "60505258009",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "67877051305",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "67877051310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "67877051390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "68084009901",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "68084009911",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "68382025110",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "68382025116",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70377002911",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70377002913",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70377007911",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70377007913",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70710177200",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70710177209",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70756024912",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70756024951",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.03743",
+     "ndc": "70756024990",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "faafe5f04df5d1bc73f95f4f": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "atorvastatin 80 MG Oral Tablet",
+    "rxcui": "259255",
+    "suppress": "N",
+    "synonym": "atorvastatin (as atorvastatin calcium) 80 MG Oral Tablet",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/259255/properties.json"
+ },
+ "fb7aba32d06af7bd4712e666": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {},
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2630760/ndcs.json"
  }
 }

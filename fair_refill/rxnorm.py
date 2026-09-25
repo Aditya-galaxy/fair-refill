@@ -260,6 +260,17 @@ class RxNorm:
                     return Drug(drug.rxcui, drug.name, drug.tty, family)
         return drug
 
+    def drug(self, rxcui: str) -> Drug | None:
+        """The drug behind an ID handed out earlier, so a follow-up ("the
+        regular tablet") refers to exactly what was offered."""
+        if not rxcui.isdigit():
+            return None
+        data = self.http.get(f"{BASE}/rxcui/{rxcui}/properties.json")
+        props = data.get("properties") if isinstance(data, dict) else None
+        if not props or props.get("tty") not in ("SCD", "SBD"):
+            return None
+        return self._with_family(Drug(props["rxcui"], props["name"], props["tty"]))
+
     def generic_of(self, drug: Drug) -> Drug:
         """The clinical drug behind a brand: same ingredient, strength and form."""
         if drug.tty == "SCD":

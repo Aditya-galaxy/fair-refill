@@ -46,6 +46,13 @@ def main() -> int:
     for text, you_pay in SCENARIOS:
         result = check.ask(text, you_pay=you_pay)
         print(f"  {text!r:<40} {result.kind:<10} {result.speech[:90]}")
+        # The MCP tools refer back to drugs by ID ("the regular tablet"), so
+        # record looking each one up and pricing it, as a follow-up would.
+        for drug in result.choices:
+            again = check.rx.drug(drug.rxcui)
+            if again and result.kind == "choose":
+                follow = check.check(again, 30, you_pay)
+                print(f"    ↳ {again.spoken:<36} {follow.kind:<10} {follow.speech[:70]}")
     out = ROOT / "tests" / "fixtures" / "responses.json"
     out.write_text(json.dumps(transport.recorded, indent=1, sort_keys=True), encoding="utf-8")
     print(f"\n  {len(transport.recorded)} responses -> {out.relative_to(ROOT)}")

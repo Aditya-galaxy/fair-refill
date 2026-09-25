@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fair Refill</title>
+<!--
+  The card an Alexa+ device with a screen shows beside the spoken answer.
+
+  Built to Amazon's add-on design guide: one title, one or two details, one
+  action, and type sized to be read from across a room (the guide's 1.6 scale).
+  Everything on it is also in the spoken answer; the card never carries
+  information a person without a screen would miss.
+
+  It is an MCP App (ui:// resource). A host delivers the tool result with the
+  ui/notifications/tool-result notification; the simulator in this repo also
+  posts {type: "fair-refill", data}. Opened directly with #<json>, it renders
+  that — which is how the screenshots are made.
+-->
+<style>
+  :root {
+    --bg: #0f1a24; --panel: #16263a; --ink: #f4f7fa; --soft: #a9b8c6;
+    --accent: #7fd1c7; --warn: #ffcf7a; --base: 22px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 400 var(--base)/1.35 "Amazon Ember", -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: flex; align-items: center; justify-content: center; padding: 4vmin;
+  }
+  .card {
+    width: min(100%, 1100px); background: var(--panel); border-radius: 28px;
+    padding: 5vmin 6vmin; box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+  }
+  .brand { color: var(--accent); font-weight: 600; letter-spacing: .02em;
+           font-size: calc(var(--base) * 1); margin-bottom: 2vmin; }
+  h1 { margin: 0 0 3vmin; font-weight: 650; letter-spacing: -.01em;
+       font-size: clamp(34px, calc(var(--base) * 1.6 * 1.6), 64px); line-height: 1.1; }
+  .details { list-style: none; margin: 0 0 4vmin; padding: 0; }
+  .details li { font-size: clamp(26px, calc(var(--base) * 1.6), 42px); color: var(--ink); margin: 1.2vmin 0; }
+  .details li:first-child { color: var(--warn); }
+  .action {
+    display: inline-block; border-radius: 999px; padding: 1.6vmin 3.4vmin;
+    background: var(--accent); color: #062521; font-weight: 650;
+    font-size: clamp(22px, calc(var(--base) * 1.25), 32px);
+  }
+  .sources { margin-top: 3.5vmin; color: var(--soft); font-size: 16px; }
+  .empty { color: var(--soft); font-size: 28px; text-align: center; }
+</style>
+</head>
+<body>
+  <main class="card" id="card">
+    <div class="empty">Ask about a prescription to see its price here.</div>
+  </main>
+<script>
+  const card = document.getElementById("card");
+
+  function text(tag, value, cls) {
+    const el = document.createElement(tag);
+    el.textContent = value;          // never innerHTML: this text comes from price sources
+    if (cls) el.className = cls;
+    return el;
+  }
+
+  function render(data) {
+    const c = data && data.card;
+    card.replaceChildren();
+    card.append(text("div", "Fair Refill", "brand"));
+    if (!c) {
+      card.append(text("h1", data && data.speech ? data.speech : "Ask about a prescription."));
+      return;
+    }
+    card.append(text("h1", c.title));
+    const list = document.createElement("ul");
+    list.className = "details";
+    (c.details || []).slice(0, 2).forEach((d) => list.append(text("li", d)));
+    card.append(list);
+    if (c.action) card.append(text("span", c.action, "action"));
+    if (c.sources && c.sources.length) card.append(text("div", "Sources: " + c.sources.join(" · "), "sources"));
+  }
+
+  window.addEventListener("message", (event) => {
+    const m = event.data || {};
+    if (m.method === "ui/notifications/tool-result" && m.params) {
+      render(m.params.structuredContent || m.params);
+    } else if (m.type === "fair-refill") {
+      render(m.data);
+    }
+  });
+
+  if (location.hash.length > 1) {
+    try { render(JSON.parse(decodeURIComponent(location.hash.slice(1)))); } catch (_) {}
+  }
+</script>
+</body>
+</html>

@@ -23,3 +23,6 @@ ignore = ["S101"]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S105", "S106"]
+
+[tool.setuptools.package-data]
+fair_refill = ["card.html"]
