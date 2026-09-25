@@ -12,9 +12,22 @@ they don't know to ask.
 >
 > "You may be paying about $35 a month more than you need to for atorvastatin 20 mg tablet. Cost Plus Drugs sells it for $5.41 a month plus shipping, and Amazon RxPass covers it for $5 a month with Prime, outside insurance. Ask your pharmacist whether paying cash would cost less than your insurance. They're allowed to tell you."
 
-> **Status: in development, private.** The pricing core below is built and
-> tested on live data. The MCP server and the simulated Alexa+ front end come
-> next. Built for the Amazon Developer Hackathon, Alexa+ track.
+> **Status: in development, private.** Built for the Amazon Developer
+> Hackathon, Alexa+ track.
+
+## Run it
+
+```bash
+pip install -e .
+python -m fair_refill.simulator      # http://127.0.0.1:8765
+```
+
+That starts two things on one port:
+
+- **The add-on:** an MCP server at `/mcp`, over Streamable HTTP. It speaks protocol 2025-11-25, the version Alexa+ documents, and newer versions too. Seven tools: check a price, price the one you picked, save / list / check all / remove from your list, and Medicare's yearly limits. Its card is an MCP App (`ui://fair-refill/card.html`).
+- **A simulated Alexa+** at `/`. It uses the add-on the way Alexa+ would: as an MCP client, speaking its answers and hosting its card on an Echo Show-style screen. Alexa+'s own developer tools aren't open to hackathon entrants, so this stands in for them. The add-on is real either way.
+
+Point any MCP client at `http://127.0.0.1:8765/mcp` to use the add-on directly. `python -m fair_refill.server` runs the add-on alone.
 
 ## Where every number comes from
 

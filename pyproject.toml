@@ -25,4 +25,4 @@ ignore = ["S101"]
 "tests/*" = ["S105", "S106"]
 
 [tool.setuptools.package-data]
-fair_refill = ["card.html"]
+fair_refill = ["card.html", "simulator.html"]

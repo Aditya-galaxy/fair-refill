@@ -131,7 +131,7 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
             speech = (f"I checked {len(rows)} medicines. None looks overpriced for what you told me you pay. "
                       "For any without a price, ask your pharmacist for the cash price.")
         else:
-            names = ", ".join(r["name"] for r in flagged)
+            names = _spoken_list([r["name"] for r in flagged])
             speech = (f"You may be able to save about {money(total)} a month, or {money(total * 12)} a year, "
                       f"on {names}. Ask your pharmacist whether paying cash would cost less than your insurance.")
         return {"kind": "summary", "speech": speech, "medicines": rows,
@@ -154,8 +154,7 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
         saved = cabinet.all()
         if not saved:
             return {"kind": "empty", "speech": "Your list is empty."}
-        names = [s.name for s in saved]
-        listed = names[0] if len(names) == 1 else ", ".join(names[:-1]) + f", and {names[-1]}"
+        listed = _spoken_list([s.name for s in saved])
         return {"kind": "list", "speech": f"Your list has {listed}.",
                 "medicines": [{"choice_id": s.choice_id, "name": s.name} for s in saved]}
 
@@ -176,6 +175,13 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
 
     return MCPServer("Fair Refill", title="Fair Refill", instructions=INSTRUCTIONS, version="0.1.0",
                      extensions=[apps])
+
+
+def _spoken_list(names: list[str]) -> str:
+    """"a", "a and b", "a, b, and c" — the way a list is said."""
+    if len(names) <= 2:
+        return " and ".join(names)
+    return ", ".join(names[:-1]) + f", and {names[-1]}"
 
 
 def _quantity(n: int) -> int:

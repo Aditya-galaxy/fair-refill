@@ -117,3 +117,10 @@ def test_medicare_limits(server):
 def test_a_misheard_quantity_falls_back_to_a_month(server):
     r = call(server, "check_prescription_price", medicine="atorvastatin 20 mg", monthly_quantity=30000)
     assert "84 cents a month" in r["speech"]
+
+
+def test_lists_are_said_the_way_people_say_them():
+    from fair_refill.server import _spoken_list
+    assert _spoken_list(["a"]) == "a"
+    assert _spoken_list(["a", "b"]) == "a and b"
+    assert _spoken_list(["a", "b", "c"]) == "a, b, and c"

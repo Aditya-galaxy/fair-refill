@@ -155,7 +155,9 @@ def split_query(text: str) -> tuple[str, str | None]:
     """("atorvastatin", "20 mg") from "atorvastatin 20mg", and ("lipitor", "20")
     from "Lipitor 20" — a strength with no unit matches any unit. The name is
     the words before the first number."""
-    text = text.strip()
+    # Speech recognition writes units out: "10 milligrams", "90 micrograms".
+    text = re.sub(r"\bmilligrams?\b", "mg", text.strip(), flags=re.IGNORECASE)
+    text = re.sub(r"\bmicrograms?\b", "mcg", text, flags=re.IGNORECASE)
     m = _STRENGTH.search(text)
     if m:
         strength: str | None = f"{m.group(1)} {m.group(2).lower()}"

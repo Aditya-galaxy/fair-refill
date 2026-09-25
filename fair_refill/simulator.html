@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fair Refill · simulated Alexa+</title>
+<style>
+  :root {
+    --room: #e8edf1; --ink: #13202b; --soft: #5d6b78; --bezel: #0b0d10; --screen: #0f1a24;
+    --alexa: #22d3ee; --alexa2: #1d4ed8; --chip: #ffffff; --line: #d3dbe2;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh; background: radial-gradient(1200px 700px at 50% 20%, #f7fafc, var(--room));
+    color: var(--ink); font: 400 16px/1.45 -apple-system, "Segoe UI", Roboto, "Amazon Ember", sans-serif;
+    display: grid; grid-template-columns: 1fr minmax(0, 360px); gap: 28px; padding: 28px 32px;
+  }
+  header { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 14px; }
+  header h1 { margin: 0; font-size: 20px; letter-spacing: -.01em; }
+  header .tag { color: var(--soft); font-size: 14px; }
+  main { display: flex; flex-direction: column; align-items: center; gap: 22px; min-width: 0; }
+
+  /* the device */
+  .device { width: min(100%, 980px); aspect-ratio: 16 / 10; background: var(--bezel); border-radius: 30px;
+            padding: 18px; box-shadow: 0 40px 80px rgba(19, 32, 43, .25), inset 0 0 0 2px #1d2126; position: relative; }
+  .screen { width: 100%; height: 100%; border-radius: 16px; overflow: hidden; background: var(--screen); position: relative; }
+  .screen iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .clock { position: absolute; top: 12px; right: 20px; color: #cfe0ee; font-size: 15px; opacity: .8; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 7px; opacity: 0; transition: opacity .25s;
+         background: linear-gradient(90deg, var(--alexa2), var(--alexa), var(--alexa2)); background-size: 200% 100%; }
+  .bar.on { opacity: 1; animation: sweep 1.2s linear infinite; }
+  .bar.listen { opacity: 1; animation: pulse 1s ease-in-out infinite; }
+  @keyframes sweep { to { background-position: -200% 0; } }
+  @keyframes pulse { 50% { opacity: .35; } }
+
+  /* captions and input */
+  .captions { width: min(100%, 980px); min-height: 92px; }
+  .you { color: var(--soft); font-size: 17px; margin: 0 0 6px; }
+  .alexa { font-size: 20px; margin: 0; }
+  .ask { width: min(100%, 980px); display: flex; gap: 10px; }
+  .ask input { flex: 1; font: inherit; font-size: 17px; padding: 14px 16px; border-radius: 14px;
+               border: 1px solid var(--line); background: #fff; min-width: 0; }
+  .ask button { font: inherit; font-weight: 600; border: 0; border-radius: 14px; padding: 0 18px; cursor: pointer; }
+  .mic { width: 52px; background: var(--alexa2); color: #fff; font-size: 20px !important; }
+  .mic.listening { background: var(--alexa); color: #062b33; }
+  .send { background: var(--ink); color: #fff; }
+  .chips { width: min(100%, 980px); display: flex; flex-wrap: wrap; gap: 8px; }
+  .chips button { font: inherit; font-size: 14px; background: var(--chip); border: 1px solid var(--line);
+                  border-radius: 999px; padding: 8px 14px; cursor: pointer; color: var(--ink); }
+  .chips button:hover { border-color: var(--alexa2); }
+
+  /* what Alexa+ called */
+  aside { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px; align-self: start;
+          position: sticky; top: 28px; }
+  aside h2 { font-size: 15px; margin: 0 0 4px; }
+  aside p { color: var(--soft); font-size: 13px; margin: 0 0 14px; }
+  .call { font: 13px/1.5 ui-monospace, "SF Mono", Menlo, monospace; background: #f4f7f9; border-radius: 10px;
+          padding: 10px 12px; white-space: pre-wrap; word-break: break-word; max-height: 46vh; overflow: auto; }
+  .meta { color: var(--soft); font-size: 12px; margin-top: 8px; }
+  @media (max-width: 1000px) { body { grid-template-columns: 1fr; padding: 16px; } aside { position: static; } }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Fair Refill</h1>
+    <span class="tag">Simulated Alexa+ · the add-on is a real MCP server over Streamable HTTP</span>
+  </header>
+
+  <main>
+    <div class="device" aria-label="Simulated Echo Show">
+      <div class="screen">
+        <iframe id="card" title="Fair Refill card" sandbox="allow-scripts"></iframe>
+        <div class="clock" id="clock"></div>
+        <div class="bar" id="bar"></div>
+      </div>
+    </div>
+
+    <section class="captions" aria-live="polite">
+      <p class="you" id="you"></p>
+      <p class="alexa" id="alexa">Say "Alexa, ask Fair Refill…" or tap a suggestion.</p>
+    </section>
+
+    <form class="ask" id="form">
+      <button type="button" class="mic" id="mic" title="Speak" aria-label="Speak">🎙</button>
+      <input id="text" autocomplete="off" placeholder="Am I overpaying for my atorvastatin 20 mg? I pay $40 a month.">
+      <button class="send" type="submit">Ask</button>
+    </form>
+
+    <div class="chips" id="chips">
+      <button>Am I overpaying for my atorvastatin 20 mg? I pay forty dollars a month.</button>
+      <button>How much should Lipitor 20 cost?</button>
+      <button>Check my metformin 500</button>
+      <button>The regular one</button>
+      <button>Remember this</button>
+      <button>Check all my medicines</button>
+      <button>What's the Medicare limit on drug costs?</button>
+    </div>
+  </main>
+
+  <aside>
+    <h2>What Alexa+ called</h2>
+    <p>Each request goes to the Fair Refill add-on over MCP. This panel is for judges; a customer only hears the answer and sees the card.</p>
+    <div class="call" id="call">Nothing yet.</div>
+    <div class="meta" id="meta"></div>
+  </aside>
+
+<script>
+  const $ = (id) => document.getElementById(id);
+  const card = $("card"), bar = $("bar");
+  let state = {};
+  let voice = null;
+
+  function tick() { $("clock").textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); }
+  tick(); setInterval(tick, 15000);
+
+  // The add-on's own card (its MCP App), read from the add-on over MCP.
+  fetch("/api/card").then((r) => r.text()).then((html) => { card.srcdoc = html; });
+
+  function pickVoice() {
+    const vs = speechSynthesis.getVoices().filter((v) => v.lang && v.lang.startsWith("en-US"));
+    voice = vs.find((v) => /Samantha|Joanna|Google US English|Aria|Jenny/.test(v.name)) || vs[0] || null;
+  }
+  if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+
+  function speak(text) {
+    return new Promise((resolve) => {
+      if (!("speechSynthesis" in window) || !text) return resolve();
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      if (voice) u.voice = voice;
+      u.rate = 0.98;
+      u.onend = u.onerror = () => resolve();
+      speechSynthesis.speak(u);
+    });
+  }
+
+  function show(result) {
+    // MCP Apps: deliver the tool result to the view.
+    card.contentWindow && card.contentWindow.postMessage(
+      { jsonrpc: "2.0", method: "ui/notifications/tool-result", params: { structuredContent: result } }, "*");
+  }
+
+  async function ask(text) {
+    text = text.trim();
+    if (!text) return;
+    $("you").textContent = "“" + text + "”";
+    $("alexa").textContent = "";
+    bar.className = "bar on";
+    let answered = false;
+    // Alexa+ guidance: say something while a slow answer is on its way.
+    const interim = setTimeout(() => { if (!answered) { $("alexa").textContent = "One moment…"; speak("One moment."); } }, 1100);
+    try {
+      const r = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" },
+                                          body: JSON.stringify({ text, state }) });
+      const data = await r.json();
+      answered = true; clearTimeout(interim);
+      state = data.state || {};
+      $("alexa").textContent = data.speech;
+      if (data.card) show(data.result);
+      $("call").textContent = data.tool
+        ? data.tool + "(" + JSON.stringify(data.arguments, null, 1) + ")\n\n→ " + JSON.stringify(data.result, null, 1)
+        : "No tool needed: Alexa+ answers directly.";
+      $("meta").textContent = data.tool ? `${data.ms} ms over MCP` : "";
+      await speak(data.speech);
+    } catch (e) {
+      answered = true; clearTimeout(interim);
+      $("alexa").textContent = "Sorry, I couldn't reach Fair Refill. Try again in a moment.";
+    } finally {
+      bar.className = "bar";
+    }
+  }
+
+  $("form").addEventListener("submit", (e) => { e.preventDefault(); const t = $("text").value; $("text").value = ""; ask(t); });
+  $("chips").addEventListener("click", (e) => { if (e.target.tagName === "BUTTON") ask(e.target.textContent); });
+
+  // Voice in, where the browser supports it.
+  const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (Rec) {
+    const rec = new Rec(); rec.lang = "en-US"; rec.interimResults = true;
+    rec.onstart = () => { $("mic").classList.add("listening"); bar.className = "bar listen"; };
+    rec.onresult = (e) => {
+      const r = e.results[e.results.length - 1];
+      $("text").value = r[0].transcript;
+      if (r.isFinal) { const t = r[0].transcript; $("text").value = ""; ask(t); }
+    };
+    rec.onend = () => { $("mic").classList.remove("listening"); if (bar.className === "bar listen") bar.className = "bar"; };
+    $("mic").addEventListener("click", () => { speechSynthesis.cancel(); rec.start(); });
+  } else {
+    $("mic").disabled = true; $("mic").title = "Voice input isn't supported in this browser; type instead.";
+  }
+</script>
+</body>
+</html>

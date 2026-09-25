@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fair-refill",
+      "runtimeExecutable": "/private/tmp/claude-501/-Users-aditya-HawkAI/1cb2dae3-ffdf-4a5d-84c3-95ff8537209e/scratchpad/fr-venv/bin/python",
+      "runtimeArgs": ["-m", "fair_refill.simulator"],
+      "port": 8765
+    }
+  ]
+}
