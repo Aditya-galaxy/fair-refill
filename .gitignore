@@ -8,3 +8,5 @@ __pycache__/
 # Local state: a person's medicine list is health information and stays on their machine.
 /state/
 /cache/
+# Local tool configuration
+.claude/
