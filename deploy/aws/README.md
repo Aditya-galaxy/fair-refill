@@ -64,19 +64,51 @@ price sources, but each uncached question makes a few requests to them. If it
 is misused, `destroy.sh` is the off switch. People's lists are kept only under
 their random keys, with no names, and vanish on restart.
 
-## Bedrock AgentCore Runtime (optional)
+## Bedrock AgentCore Runtime
 
-AgentCore Runtime hosts MCP servers and is one of the services the
-hackathon's AWS Builder challenge names. The add-on already meets its
-contract for MCP: Streamable HTTP at `0.0.0.0:8000/mcp`, stateless, ARM64.
-Run the add-on alone, on that port:
+AgentCore Runtime hosts MCP servers, and is one of the services the
+hackathon's AWS Builder challenge names. The add-on runs on it unchanged.
 
 ```bash
-FAIR_REFILL_HOST=0.0.0.0 FAIR_REFILL_PORT=8000 FAIR_REFILL_STATELESS=1 \
-FAIR_REFILL_PUBLIC=1 python -m fair_refill.server
+npm install -g @aws/agentcore      # once
+deploy/aws/agentcore.sh            # create or update, then call one tool
+deploy/aws/agentcore.sh destroy    # remove it
 ```
 
-Two things to know before choosing it:
+The script creates an AgentCore project in `deploy/aws/.agentcore/` (not
+committed), copies the add-on into it with the entrypoint and Dockerfile from
+`deploy/aws/agentcore/`, registers it as an MCP runtime, and deploys.
+AgentCore builds the image in AWS CodeBuild, so Docker isn't needed. Keep the
+`.agentcore/` folder: later runs and `destroy` find the deployment through it.
 
-- **It isn't a public address.** AgentCore requires each caller to sign in (IAM, or OAuth through Cognito or another provider), so judges couldn't just open it. It suits "Alexa+ calls the add-on", not "try it in a browser".
-- It needs its own setup (the `agentcore` CLI and an OAuth user pool), which isn't scripted here. AWS's guide: https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-mcp.html
+### How it differs from the ECS deployment
+
+| | ECS Express Mode (`deploy.sh`) | AgentCore Runtime (`agentcore.sh`) |
+|---|---|---|
+| What runs | The add-on and the simulated Alexa+ | The add-on only |
+| Who can call it | Anyone with the address | Only signed-in callers: AWS credentials by default, or OAuth tokens |
+| Good for | "Try it in a browser" | "An agent calls the add-on", which is how Alexa+ would use it |
+| Price cache | One, kept warm | One per runtime session, starting empty, so the first check of a medicine takes 6 to 14 seconds |
+| Saved lists | Per browser, until a restart | Per `X-Fair-Refill-List` key, for the life of the runtime session |
+
+### What makes it fit
+
+AgentCore's contract for an MCP server is Streamable HTTP at
+`0.0.0.0:8000/mcp`, on ARM64, keeping nothing between requests, and accepting
+the `Mcp-Session-Id` AgentCore adds. `deploy/aws/agentcore/main.py` sets
+exactly that. `X-Fair-Refill-List`, the key a caller's list is kept under, is
+put on the runtime's header allowlist so AgentCore passes it through.
+
+### Signing in
+
+By default callers sign requests with AWS credentials (IAM), which is what
+`agentcore invoke` does for you. To accept OAuth tokens instead, set
+`FAIR_REFILL_OIDC_DISCOVERY_URL` and `FAIR_REFILL_OIDC_CLIENT_ID` before the
+first run; AWS's guide shows how to make a Cognito user pool for that:
+https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-mcp.html
+
+### What has and hasn't been checked
+
+- Checked: the entrypoint run locally from only the files the script copies, on port 8000, with requests shaped as AgentCore sends them: a session ID the server never issued, tool calls with no handshake first, a list saved and read back under a key, and no list without one.
+- **Not checked: the `agentcore` commands and the build.** They follow the CLI's reference (version 0.31.1) but have not been run. The parts most likely to need a fix on first run are `agentcore create` in a script, and whether `add agent --type byo --build Container` accepts the Dockerfile as placed.
+- `agentcore deploy --dry-run` and `--diff`, run inside `deploy/aws/.agentcore/FairRefill`, show what would be made before anything is.
