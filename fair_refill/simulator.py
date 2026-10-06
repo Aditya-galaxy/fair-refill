@@ -26,6 +26,7 @@ from starlette.requests import Request
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.routing import Route
 
+from . import prewarm
 from .brain import State, route
 from .server import CARD_URI, build
 
@@ -109,7 +110,9 @@ def main() -> None:
     import uvicorn
 
     print(f"\n  Fair Refill — simulated Alexa+ at http://{HOST}:{PORT}  (add-on: {MCP_URL})\n")
-    uvicorn.run(app(), host=HOST, port=PORT, log_level="warning")
+    served = app()
+    prewarm.in_background()
+    uvicorn.run(served, host=HOST, port=PORT, log_level="warning")
 
 
 if __name__ == "__main__":

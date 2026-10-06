@@ -41,14 +41,14 @@ class Nadac:
     def __init__(self, http: Http, dataset: str = DATASET_2026) -> None:
         self.http = http
         self.url = QUERY.format(dataset=dataset)
-        self._as_of: str | None = None
 
     def latest_as_of(self) -> str:
-        if self._as_of is None:
-            data = self.http.post(self.url, {"limit": 1, "properties": ["as_of_date"],
-                                             "sorts": [{"property": "as_of_date", "order": "desc"}]})
-            self._as_of = data["results"][0]["as_of_date"]
-        return self._as_of
+        # Asked each time rather than remembered: a server that stays up for
+        # weeks must notice each new publication. The cache (http.py) keeps
+        # this from being a request per question.
+        data = self.http.post(self.url, {"limit": 1, "properties": ["as_of_date"],
+                                         "sorts": [{"property": "as_of_date", "order": "desc"}]})
+        return data["results"][0]["as_of_date"]
 
     def price(self, ndcs: list[str]) -> NadacPrice | None:
         if not ndcs:
