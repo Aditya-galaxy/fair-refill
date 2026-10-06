@@ -23,10 +23,10 @@ from pathlib import Path
 from typing import Any
 
 from mcp.server.apps import Apps
-from mcp.server.mcpserver import MCPServer
+from mcp.server.mcpserver import Context, MCPServer
 
 from . import medicare, prewarm
-from .cabinet import Cabinet, Saved
+from .cabinet import LIST_HEADER, Cabinet, Cabinets, Saved
 from .compare import CASH_CAVEAT, Finding, money
 from .service import PriceCheck, Result
 
@@ -38,6 +38,10 @@ CARD_HTML = (Path(__file__).parent / "card.html").read_text(encoding="utf-8")
 # read how it's meant to be used without having the repository.
 SKILL_URI = "skill://fair-refill/SKILL.md"
 SKILL_PATH = ROOT / "skills" / "fair-refill" / "SKILL.md"
+
+NO_LIST = {"kind": "unavailable",
+           "speech": "I can't keep a list of medicines here, because I can't tell whose it would be. "
+                     "I can still check any medicine's price."}
 
 INSTRUCTIONS = """Fair Refill checks whether someone is paying more than they need to for a prescription.
 It compares only the identical medicine, never a substitute, and every answer ends with what to ask
@@ -66,7 +70,10 @@ def _payload(r: Result) -> dict[str, Any]:
 def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MCPServer:
     state = Path(os.environ.get("FAIR_REFILL_STATE", ROOT / "state"))
     check = check or PriceCheck(cache_dir=prewarm.cache_dir())
-    cabinet = cabinet or Cabinet(state / "my_medicines.json")
+    cabinets = Cabinets(state, public=os.environ.get("FAIR_REFILL_PUBLIC", "0") == "1", own=cabinet)
+
+    def my_list(ctx: Context) -> Cabinet | None:
+        return cabinets.of((ctx.headers or {}).get(LIST_HEADER))
 
     apps = Apps()
     apps.add_html_resource(CARD_URI, CARD_HTML, title="Fair Refill card",
@@ -103,8 +110,11 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                    "Remember a medicine on the person's list, so 'check all my medicines' covers it. Use "
                    "when they say 'remember this', 'add it to my list', 'save my lisinopril'. `choice_id` "
                    "comes from a previous price check."))
-    def save_my_medicine(choice_id: str, monthly_quantity: int = 30,
+    def save_my_medicine(choice_id: str, ctx: Context, monthly_quantity: int = 30,
                          you_pay_per_month: float | None = None) -> dict[str, Any]:
+        cabinet = my_list(ctx)
+        if cabinet is None:
+            return NO_LIST
         drug = check.rx.drug(choice_id)
         if drug is None:
             return {"kind": "not_found", "speech": "I couldn't tell which medicine to save. Check its price "
@@ -118,7 +128,10 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                description=(
                    "Check every saved medicine at once and total what the person could save. Use for 'check "
                    "all my medicines', 'am I overpaying for any of my prescriptions', 'go through my list'."))
-    def check_all_my_medicines() -> dict[str, Any]:
+    def check_all_my_medicines(ctx: Context) -> dict[str, Any]:
+        cabinet = my_list(ctx)
+        if cabinet is None:
+            return NO_LIST
         saved = cabinet.all()
         if not saved:
             return {"kind": "empty", "speech": "Your list is empty. Check a medicine's price, then ask me to "
@@ -153,7 +166,10 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
     @apps.tool(resource_uri=CARD_URI, name="remove_my_medicine",
                description="Take a medicine off the person's saved list ('remove my lisinopril', "
                            "'I don't take that any more'). `choice_id` from the saved list.")
-    def remove_my_medicine(choice_id: str) -> dict[str, Any]:
+    def remove_my_medicine(choice_id: str, ctx: Context) -> dict[str, Any]:
+        cabinet = my_list(ctx)
+        if cabinet is None:
+            return NO_LIST
         gone = cabinet.remove(choice_id)
         if gone is None:
             return {"kind": "not_found", "speech": "That medicine wasn't on your list."}
@@ -161,7 +177,10 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
 
     @apps.tool(resource_uri=CARD_URI, name="list_my_medicines",
                description="Say which medicines are on the person's saved list ('what's on my list').")
-    def list_my_medicines() -> dict[str, Any]:
+    def list_my_medicines(ctx: Context) -> dict[str, Any]:
+        cabinet = my_list(ctx)
+        if cabinet is None:
+            return NO_LIST
         saved = cabinet.all()
         if not saved:
             return {"kind": "empty", "speech": "Your list is empty."}
@@ -214,7 +233,10 @@ def main() -> None:
 
     host = os.environ.get("FAIR_REFILL_HOST", "127.0.0.1")
     port = int(os.environ.get("FAIR_REFILL_PORT", "8765"))
-    app = build().streamable_http_app(host=host)
+    # FAIR_REFILL_STATELESS=1 keeps nothing between requests, so any copy of
+    # the server can answer any of them. Hosts that run several copies, or
+    # that manage sessions themselves (Bedrock AgentCore Runtime), need it.
+    app = build().streamable_http_app(host=host, stateless_http=os.environ.get("FAIR_REFILL_STATELESS", "0") == "1")
     prewarm.in_background()
     uvicorn.run(app, host=host, port=port, log_level="warning")
 

@@ -65,7 +65,7 @@ and Cost Plus's price that day. It also:
   Amazon RxPass is mentioned where its list includes the medicine, with its conditions.
 - **A simulated Alexa+** that uses the add-on as an MCP client, speaks its answers, and hosts its card on an Echo Show-style screen. Alexa+'s own developer tools are not open to entrants (friction log, entry 1), so this stands in for them. The add-on is the real thing; only the front end is simulated.
 - **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 53 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
-- **118 tests**, all offline: they replay 111 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
+- **120 tests**, all offline: they replay 111 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
 
 Run it:
 
@@ -86,7 +86,7 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 - **Every figure says what it is** (what pharmacies pay, a price you can buy at, or Medicare's price) and carries its date.
 - **It says what it can't do.** Inhalers, liquids and creams are priced per gram or millilitre; it says it can't compare those yet instead of estimating.
 - **Every answer ends with a next step:** the pharmacist, the doctor or the plan.
-- **A person's medicine list stays on their machine.** It is health information and is never sent anywhere.
+- **A person's medicine list is theirs alone.** Run locally, it stays on that machine. On a shared server each browser's list is kept under a random key only that browser holds, and a request without one gets no list.
 
 ## What's not there yet
 

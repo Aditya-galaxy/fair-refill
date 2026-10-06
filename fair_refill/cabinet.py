@@ -5,12 +5,20 @@ A list of prescriptions is health information, so it stays on the machine
 running the add-on, in one JSON file, and every entry can be removed by voice.
 Nothing is sent anywhere except the medicine's name and strength, to the
 public price sources, when it's checked.
+
+On someone's own machine there is one list. A server that many people reach
+(`Cabinets(public=True)`) must never hand one person another's medicines, so
+there each list is kept under a long random key the client chooses and sends
+with every request, and a request without one gets no list at all. The key
+is a secret between that client and the server, like a session cookie; it
+isn't an identity. On Alexa+ the account would take its place.
 """
 
 from __future__ import annotations
 
 import json
 import os
+import re
 import tempfile
 import threading
 from dataclasses import asdict, dataclass
@@ -53,3 +61,23 @@ class Cabinet:
             if gone:
                 self._save([i for i in items if i.choice_id != choice_id])
             return gone
+
+
+LIST_HEADER = "x-fair-refill-list"
+_LIST_KEY = re.compile(r"[A-Za-z0-9_-]{20,64}")      # long enough not to be guessed
+
+
+class Cabinets:
+    """Whose list a request means."""
+
+    def __init__(self, state: Path, public: bool = False, own: Cabinet | None = None) -> None:
+        self.state = state
+        self.public = public
+        self.own = own or Cabinet(state / "my_medicines.json")
+
+    def of(self, key: str | None) -> Cabinet | None:
+        """The list kept under `key`. With no usable key: the machine's own
+        list, or on a public server none."""
+        if key and _LIST_KEY.fullmatch(key):
+            return Cabinet(self.state / "lists" / f"{key}.json")
+        return None if self.public else self.own

@@ -54,6 +54,14 @@ Point any MCP client at `http://127.0.0.1:8765/mcp` to use the add-on directly. 
 - **It says what it can't do.** Inhalers, liquids and creams are priced per gram or millilitre, and it doesn't estimate those yet.
 - **Every answer ends with a next step:** your pharmacist, your doctor or your plan. Since 2018, federal law lets pharmacists tell you when paying cash costs less.
 
+## Run it on AWS
+
+[`deploy/aws/`](deploy/aws/README.md) builds a container and runs it on Amazon ECS Express Mode at a public HTTPS address. There, each browser keeps its own list of medicines under a random key, so no visitor sees another's.
+
+```bash
+deploy/aws/deploy.sh
+```
+
 ## The Agent Skill
 
 [`skills/fair-refill/`](skills/fair-refill/SKILL.md) is an [Agent Skill](https://agentskills.io) for the add-on: how to hold the conversation around its tools, what to say, and the rules an answer must keep. Copy the folder into an agent's skills directory. The add-on also serves it, at `skill://fair-refill/SKILL.md`, so a client that connects can read how it's meant to be used. A test keeps the skill and the server in step: it names every tool the server has and none it doesn't.

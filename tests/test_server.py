@@ -113,6 +113,35 @@ def test_a_list_with_nothing_overpriced_says_so_plainly(server):
     assert summary["card"]["details"] == ["1 checked", "Nothing looks overpriced"]
 
 
+def test_a_shared_server_keeps_no_list_for_someone_it_cannot_tell_apart(tmp_path, monkeypatch):
+    """On a server many people reach, one list would hand one person another's
+    medicines. Without a key saying whose list is meant, there is none."""
+    monkeypatch.setenv("FAIR_REFILL_PUBLIC", "1")
+    monkeypatch.setenv("FAIR_REFILL_STATE", str(tmp_path))
+    shared = build(PriceCheck(replay_client(FIXTURES), today=date(2026, 10, 6)))
+    for tool, args in (("save_my_medicine", {"choice_id": "617310"}), ("list_my_medicines", {}),
+                       ("check_all_my_medicines", {}), ("remove_my_medicine", {"choice_id": "617310"})):
+        r = call(shared, tool, **args)
+        assert r["kind"] == "unavailable" and "can't tell whose" in r["speech"], tool
+    assert not any(tmp_path.iterdir())                       # and nothing was written
+    # Prices need no list, so they still work.
+    assert call(shared, "check_prescription_price", medicine="atorvastatin 20 mg")["kind"] == "answer"
+
+
+def test_lists_are_kept_apart_by_key(tmp_path):
+    from fair_refill.cabinet import Cabinets, Saved
+    cabinets = Cabinets(tmp_path, public=True)
+    ann, ben = "a" * 32, "b" * 32
+    cabinets.of(ann).add(Saved("617310", "atorvastatin 20 mg tablet", 30, 40.0))
+    assert [m.name for m in cabinets.of(ann).all()] == ["atorvastatin 20 mg tablet"]
+    assert cabinets.of(ben).all() == []
+    # A key that is short, or shaped like a path, is no key.
+    for bad in ("short", "../../etc/passwd", "a" * 65, "", None):
+        assert cabinets.of(bad) is None
+    # On someone's own machine there is one list, key or no key.
+    assert Cabinets(tmp_path).of(None) is not None
+
+
 def test_empty_list_says_what_to_do(server):
     r = call(server, "check_all_my_medicines")
     assert r["kind"] == "empty" and "remember it" in r["speech"]
