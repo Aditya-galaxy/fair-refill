@@ -1,18 +1,12 @@
 # Fair Refill — submission
 
-> **DRAFT, 6 Oct 2026. Delete this box before submitting.**
-> Open items are marked **TODO**. Checked against the official rules
-> (https://amazonappdev2026.devpost.com/rules) on 6 Oct: judging is four
-> equally weighted criteria (tech implementation, design, potential impact,
-> quality of the idea), and product feedback has five set questions.
-
 **Amazon Developer Hackathon 2026, Alexa+ track.**
 Solo entry by Aditya (GitHub `Aditya-galaxy`).
 
 | | |
 |---|---|
-| Repository | https://github.com/Aditya-galaxy/fair-refill (Apache-2.0) — **TODO:** make public, or add `testing@devpost.com` and the six Amazon reviewers as collaborators |
-| Demo video | **TODO:** link (under 3 minutes, public on YouTube or Vimeo) |
+| Repository | https://github.com/Aditya-galaxy/fair-refill (Apache-2.0) |
+| Demo video | _link to be added_ |
 | Friction log | [FRICTION_LOG.md](FRICTION_LOG.md) |
 | Product feedback | [below](#product-feedback) |
 
@@ -99,28 +93,66 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 - One cash-price source. Cost Plus doesn't carry every drug (Eliquis, for one), and for those the answer has no "you can buy it for" figure.
 - The JAMA figure is from 2013 claims. It is the best published number and the answer to "is this still true" is what the add-on is for.
 
-## Demo video outline (under 3 minutes)
+## Product feedback
 
-**TODO: record.** Start the simulator a few minutes early so the answers are warm.
+The rules ask five questions. The detail behind each answer, with steps and
+workarounds, is in [FRICTION_LOG.md](FRICTION_LOG.md).
+
+### Which tools, APIs and SDKs were used
+
+- The Model Context Protocol: a self-hosted server over Streamable HTTP (spec 2025-11-25 and later), built with the MCP Python SDK 2.x.
+- MCP Apps, for the card shown on devices with a screen.
+- The open Agent Skills format, for `skills/fair-refill/`.
+- Alexa+'s published requirements and design guidance for MCP add-ons, which the tools, the spoken answers and the card were written to.
+- Not used, because they are closed to entrants: the Alexa+ Category SDK, MCP Toolkit, CLI and Web Simulator.
+
+### What worked well
+
+- **Building on an open protocol.** Because the add-on is a plain MCP server, it could be built and tested with any MCP client, with no Amazon account or device. The same server is what Alexa+ would call.
+- **MCP Apps for the screen.** The card is a resource the add-on serves, so the spoken answer and the screen come from one place and can't disagree.
+- **Voice guidance that is specific.** "Offer at most five options", "no error codes to the customer" and the far-field type scale are concrete enough to write tests against, and this project does.
+- **The MCP SDK's error messages.** The one breaking change met on the way named its own fix (friction log, entry 4).
+
+### What needs improvement
+
+1. **Give entrants something to test Alexa+ against.** The Alexa+ track exists to build for the MCP Toolkit, CLI and Web Simulator, and all are preview-only for selected partners. This entry had to build its own Alexa+ stand-in, so the one thing it can't show is the add-on running on Alexa+. A rate-limited sandbox for the Web Simulator would fix that (entry 1).
+2. **Say what Alexa+ does with an Agent Skill.** The track's "Build with Agent Skills" link leads to skills for scaffolding MCP Apps, not to how a skill is written or how Alexa+ loads one (entry 3).
+3. **Say up front what works outside the US.** Ring's API supports US-located devices only, and the Playground doesn't cover enough of the payloads to stand in. That ruled the Ring track out before any code was written (entry 2).
+4. **Pin starter samples to an SDK version** (entry 4).
+
+### Onboarding
+
+Mixed. Choosing the open standards made the first working server quick: no
+account, no device, no approval. Finding out what could and couldn't be used
+took longer than building it. Several Alexa+ setup pages read as if the tools
+were available, and only the FAQ says they are preview-only. A notice at the
+top of each of those pages would have saved that time.
+
+### Would you build with these again
+
+_To be answered by Aditya._
+
+---
+
+## Before submitting
+
+Delete this section once every box is ticked.
+
+- [ ] Record the demo video (plan below) and put its link in the table at the top. It must be under 3 minutes and public on YouTube or Vimeo, with no third-party logos on screen.
+- [ ] Answer "Would you build with these again" above.
+- [ ] Read the "Steps taken" lines in `FRICTION_LOG.md` and correct any that aren't what you did. Add anything else you hit; the log is worth up to 10%.
+- [ ] Make the repository public, or add `testing@devpost.com`, `chris-trag`, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth` and `emersonsklar` as collaborators. Invitations expire after 7 days.
+- [ ] On Devpost: paste the description, choose the Alexa+ track and any mini challenges, and submit before Fri 23 Oct, 12:00 PT (Sat 24 Oct, 00:30 IST).
+
+### Recording plan
+
+Run `python -m fair_refill.prewarm` first, then start the simulator, so every answer is instant.
 
 1. (0:00) The problem, in two sentences, over the simulator's idle screen.
 2. (0:20) "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month." Answer and card.
-3. (0:50) "Check my metformin." It asks which one; pick "the 500 milligram extended release".
+3. (0:50) "Check my metformin 500." It asks which one; say "the extended release".
 4. (1:15) "How much should Lipitor 20 cost?" Brand against generic, as a question for the pharmacist.
 5. (1:40) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap. Then "What will Ozempic cost me next year?" for the January 2027 price.
 6. (2:00) "Remember this", then "check all my medicines". The total.
 7. (2:20) "What about my albuterol inhaler?" It says what it can't do.
-8. (2:35) Ten seconds on the build: MCP server, card as an MCP App, sources on screen. Close on the pharmacist line.
-
-## Product feedback
-
-The full detail, with workarounds, is in [FRICTION_LOG.md](FRICTION_LOG.md).
-The three things that would have changed this project most:
-
-1. **Give entrants something to test Alexa+ against.** The Alexa+ track exists to build for the MCP Toolkit, CLI and Web Simulator, and all three are preview-only for selected partners. This entry had to build its own Alexa+ stand-in, so the one thing it can't show is the add-on running on Alexa+. A rate-limited sandbox for the Web Simulator would fix that. Failing that, the preview-only notice belongs on every setup page, not only in the FAQ.
-2. **Say up front what works outside the US.** Ring's API supports US-located devices only, and the Playground doesn't cover enough of the payloads to stand in. That ruled the Ring track out before any code was written. A table of which track features non-US entrants can demo would save others the same week.
-3. **Pin starter samples to an SDK version.** The MCP Python SDK renamed `FastMCP` to `MCPServer` in v2, so samples written for v1 fail on a fresh install. The SDK's own error message points to the fix, which is how it should be done.
-
-What worked well: building the add-on as a plain MCP server meant it could be developed and tested with any MCP client, with no Amazon account or device, and the same server should be what Alexa+ calls. Having the card as an MCP App kept the screen experience inside the add-on.
-
-**TODO (Aditya):** add anything from your own time with the docs, the forum, or registration that isn't in the friction log. Each new item should also go in `FRICTION_LOG.md`; it counts for up to 10% of the score.
+8. (2:35) Ten seconds on the build: MCP server, card as an MCP App, the Agent Skill. Close on the pharmacist line.
