@@ -18,12 +18,17 @@ someone:
   * It says what it can't do. Inhalers, liquids and creams are priced per
     gram or millilitre, which needs a package size this doesn't have yet;
     for those it says so instead of guessing.
+  * A cash price is never offered without its catch: money paid outside
+    insurance usually doesn't count toward a deductible or Medicare's yearly
+    limit, so for someone on several medicines the cheaper refill can be the
+    dearer year.
   * No jargon in anything spoken: "what pharmacies pay", never "NADAC".
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import date
 
 from . import medicare, rxpass
 from .costplus import Quote
@@ -34,6 +39,10 @@ from .rxnorm import Drug
 # month, or a small share of what they pay.
 _WORTH_IT_DOLLARS = 3.0
 _WORTH_IT_SHARE = 0.2
+
+# Said whenever a cash price is. "Usually", because a few plans accept a claim
+# for a cash purchase; the pharmacist or plan knows which.
+CASH_CAVEAT = "Cash prices usually don't count toward your deductible or Medicare's yearly limit."
 
 
 @dataclass(frozen=True)
@@ -96,17 +105,68 @@ def _card_money(x: float) -> str:
     return f"${x:,.2f}" if x < 100 else f"${x:,.0f}"
 
 
+def _coming(n: medicare.NegotiatedPrice) -> str:
+    # "About", and "typical": CMS gives one figure for every strength and form
+    # of a drug, and a package of one strength can cost more or less than it.
+    return (f"From January {n.starts.year}, Medicare's negotiated price for {{brand}} is about "
+            f"{money(n.price_30_day)} for a typical 30-day supply, down from a list price of "
+            f"{money(n.list_price_30_day)}.")
+
+
+def medicare_price(drug: Drug, today: date | None = None, now_costs: float | None = None,
+                   whole_brand: bool = False) -> Finding | None:
+    """For a brand Medicare has negotiated a price for: that price, in force
+    or coming, and what to ask the plan. It needs no pharmacy price, so it
+    answers for injections and inhalers too. `now_costs` is what pharmacies
+    pay for a month today, when that's known. `whole_brand` answers for the
+    brand rather than one strength of it: CMS gives one figure for all."""
+    today = today or date.today()
+    if whole_brand and drug.brand:
+        drug = Drug(drug.rxcui, f"{drug.brand} [{drug.brand}]", drug.tty)
+    current, coming = medicare.negotiated_for(drug.brand, today), medicare.upcoming_for(drug.brand, today)
+    if current:
+        speech = [f"Medicare's negotiated price for {drug.brand} is {money(current.price_30_day)} "
+                  f"for a 30-day supply this year, down from {money(current.list_price_30_day)}.",
+                  f"If you have Medicare drug coverage, what you pay for covered drugs this year stops at "
+                  f"{money(medicare.PART_D_CAP)}, and you can spread it over monthly payments.",
+                  "Ask your plan how much of the new price you pay."]
+        return Finding(medicine=drug.spoken, speech=" ".join(speech), title=drug.spoken,
+                       details=(f"Medicare price: {_card_money(current.price_30_day)} / 30 days",
+                                f"Yearly cap: {_card_money(medicare.PART_D_CAP)}"),
+                       action="Ask your plan",
+                       sources=(f"CMS negotiated prices {current.starts.year}", medicare.PART_D_CAP_SOURCE))
+    if coming:
+        speech = []
+        if now_costs is not None:
+            speech.append(f"Pharmacies pay about {money(now_costs)} a month for {drug.spoken} now.")
+        speech.append(_coming(coming).format(brand=drug.brand))
+        if medicare.open_enrollment(today):
+            speech.append("Medicare open enrollment runs until December 7, so now is the time to check how "
+                          "each plan covers it.")
+        speech.append("Ask your plan what you'll pay from January.")
+        return Finding(medicine=drug.spoken, speech=" ".join(speech), title=drug.spoken,
+                       details=(f"From Jan {coming.starts.year}: about {_card_money(coming.price_30_day)} / 30 days",
+                                f"List price: {_card_money(coming.list_price_30_day)}"),
+                       action="Ask your plan",
+                       sources=(f"CMS negotiated prices {coming.starts.year}",))
+    return None
+
+
 def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice | None,
-           generic_cost: NadacPrice | None, cash: Quote | None, you_pay: float | None = None) -> Finding:
+           generic_cost: NadacPrice | None, cash: Quote | None, you_pay: float | None = None,
+           today: date | None = None) -> Finding:
     """`asked` is what the person named (brand or generic); `generic` is the
     same clinical drug without a brand. `quantity` is units a month."""
     name = asked.spoken
     is_brand = asked.tty == "SBD"
-    negotiated = medicare.negotiated_for(asked.brand)
+    today = today or date.today()
+    negotiated = medicare.negotiated_for(asked.brand, today)
+    coming = medicare.upcoming_for(asked.brand, today)
     sources = []
 
     unit = (asked_cost or generic_cost).unit if (asked_cost or generic_cost) else "EA"
-    if (unit != "EA" or not comparable_form(asked.form)) and not negotiated:
+    priced_per_unit = unit == "EA" and comparable_form(asked.form)
+    if not priced_per_unit and not (negotiated or coming):
         return cannot_compare(asked)
 
     options: list[Option] = []
@@ -115,7 +175,7 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
         sources.append(f"CMS NADAC, {generic_cost.as_of}")
     cash_month = cash.total * quantity / cash.quantity if cash else None
     if cash_month is not None:
-        options.append(Option("Cost Plus Drugs", cash_month, "plus shipping"))
+        options.append(Option("Cost Plus Drugs", cash_month, "plus shipping; outside insurance"))
         sources.append("Cost Plus Drugs public prices")
     if rxpass.may_cover(generic.ingredients, generic.form):
         options.append(Option("Amazon RxPass", float(rxpass.PRICE_PER_MONTH),
@@ -131,19 +191,12 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
     sentences: list[str] = []
     details: list[str] = []
 
-    # ── a brand with no generic on sale: Medicare's negotiated price and cap ──
-    if is_brand and negotiated and not (generic_cost and generic_cost is not asked_cost) and not cash:
-        sentences.append(f"Medicare's negotiated price for {asked.brand} is {money(negotiated.price_30_day)} "
-                         f"for a 30-day supply this year, down from {money(negotiated.list_price_30_day_2023)}.")
-        sentences.append(f"If you have Medicare drug coverage, what you pay for covered drugs this year stops at "
-                         f"{money(medicare.PART_D_CAP)}, and you can spread it over monthly payments.")
-        sentences.append("Ask your plan how much of the new price you pay.")
-        return Finding(
-            medicine=name, speech=" ".join(sentences), title=name,
-            details=(f"Medicare price: {_card_money(negotiated.price_30_day)} / 30 days",
-                     f"Yearly cap: {_card_money(medicare.PART_D_CAP)}"),
-            action="Ask your plan", options=tuple(options),
-            sources=(f"CMS negotiated prices {medicare.YEAR}", medicare.PART_D_CAP_SOURCE))
+    # ── a brand with no generic on sale: Medicare's negotiated price ─────────
+    if is_brand and (negotiated or coming) and not (generic_cost and generic_cost is not asked_cost) and not cash:
+        now_costs = asked_cost.per_unit * quantity if asked_cost and priced_per_unit else None
+        found = medicare_price(asked, today, now_costs)
+        return Finding(medicine=found.medicine, speech=found.speech, title=found.title, details=found.details,
+                       action=found.action, options=tuple(options), sources=found.sources)
 
     # ── a brand with a generic ───────────────────────────────────────────────
     if is_brand and asked_cost and benchmark is not None:
@@ -154,10 +207,13 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
         if cheapest:
             sentences.append("For the generic: " + _where_to_buy(cash_opt, sub_opt))
             details.append(f"{cheapest.label}: {_card_money(cheapest.monthly)}/mo")
+            sentences.append(CASH_CAVEAT)
         sentences.append("Ask your pharmacist or doctor whether the generic is right for you.")
         if negotiated:
             sentences.append(f"With Medicare, the negotiated price for {asked.brand} is "
                              f"{money(negotiated.price_30_day)} a month this year.")
+        elif coming:
+            sentences.append(_coming(coming).format(brand=asked.brand))
         return Finding(medicine=name, speech=" ".join(sentences), title=name, details=tuple(details[:2]),
                        action="Ask about the generic", options=tuple(options), sources=tuple(sources))
 
@@ -169,6 +225,7 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
         sentences.append(f"You may be paying about {money(overpaying)} a month more than you need to "
                          f"for {name}.")
         sentences.append(_where_to_buy(cash_opt, sub_opt))
+        sentences.append(CASH_CAVEAT)
         sentences.append("Ask your pharmacist whether paying cash would cost less than your insurance. "
                          "They're allowed to tell you.")
         details = [f"You pay: {_card_money(you_pay)}/mo",
@@ -186,6 +243,7 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
             details.append(f"Pharmacies pay: {_card_money(benchmark)}/mo")
         if cheapest:
             sentences.append(_where_to_buy(cash_opt, sub_opt))
+            sentences.append(CASH_CAVEAT)
             sentences.append("If you pay more than that, ask your pharmacist about the cash price.")
             details.append(f"{cheapest.label}: {_card_money(cheapest.monthly)}/mo")
         elif benchmark is not None:

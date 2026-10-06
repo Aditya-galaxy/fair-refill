@@ -345,6 +345,45 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "0356f62e95f82dc949b7dff1": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "48792786501"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1100702/ndcs.json"
+ },
+ "0a9c6946f4c9aec2e2283562": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "linagliptin 5 MG Oral Tablet",
+        "rxcui": "1100702",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1100706/related.json?tty=SCD"
+ },
  "0b38c4fb233d04305b208a53": {
   "json": {
    "properties": {
@@ -781,6 +820,192 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/860975/ndcs.json"
+ },
+ "0c8f84a5c9d496fea5b7d929": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "1 ML etanercept 50 MG/ML Auto-Injector [Enbrel]",
+        "rxcui": "1653225",
+        "suppress": "N",
+        "synonym": "1 ML Enbrel 50 MG/ML Auto-Injector",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "1 ML etanercept 50 MG/ML Cartridge [Enbrel]",
+        "rxcui": "2182340",
+        "suppress": "N",
+        "synonym": "1 ML Enbrel 50 MG/ML Cartridge",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "0.5 ML etanercept 50 MG/ML Injection [Enbrel]",
+        "rxcui": "2392142",
+        "suppress": "N",
+        "synonym": "0.5 ML Enbrel 50 MG/ML Injection",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "etanercept 25 MG/ML Injectable Solution [Enbrel]",
+        "rxcui": "261105",
+        "suppress": "N",
+        "synonym": "Enbrel 25 MG/ML Injectable Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "1 ML etanercept 50 MG/ML Prefilled Syringe [Enbrel]",
+        "rxcui": "802652",
+        "suppress": "N",
+        "synonym": "1 ML Enbrel 50 MG/ML Prefilled Syringe",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "0.5 ML etanercept 50 MG/ML Prefilled Syringe [Enbrel]",
+        "rxcui": "809159",
+        "suppress": "N",
+        "synonym": "0.5 ML Enbrel 50 MG/ML Prefilled Syringe",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=enbrel"
+ },
+ "0d8cff973dd3f18deed14fca": {
+  "json": {
+   "count": 0,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00527495332",
+       "82347001504"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "7c87b03c-630e-58e9-8fcc-1d1fa6753879"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [],
+   "schema": {
+    "7c87b03c-630e-58e9-8fcc-1d1fa6753879": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
  "0ddbcd1a0fa8c5cf5ba01934": {
   "json": {
@@ -2629,6 +2854,31 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/314076/ndcs.json"
  },
+ "32b8e748e0ecf3086b0d51ab": {
+  "json": {
+   "relatedGroup": {
+    "conceptGroup": [
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "linaclotide 0.145 MG Oral Capsule",
+        "rxcui": "1307409",
+        "suppress": "N",
+        "synonym": "linaclotide 145 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1307415/related.json?tty=SCD"
+ },
  "35f1cb29c99289399822114a": {
   "json": {
    "properties": {
@@ -2692,6 +2942,35 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2123111/related.json?tty=SBD"
+ },
+ "3afc9f6ac2768a08226d6542": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00597014030",
+      "00597014061",
+      "00597014070",
+      "00597014090",
+      "50090438300",
+      "55154041008"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1100706/ndcs.json"
+ },
+ "3df595e45f2a55b82247dd2d": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {},
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1307409/ndcs.json"
  },
  "404b11f6384f6d6d59b191c4": {
   "json": {
@@ -4559,6 +4838,188 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/617312/properties.json"
  },
+ "55aa60bee5c32fd7884df148": {
+  "json": {
+   "count": 3,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00597014030",
+       "00597014061",
+       "00597014070",
+       "00597014090",
+       "50090438300",
+       "55154041008"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "7c87b03c-630e-58e9-8fcc-1d1fa6753879"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "16.79819",
+     "ndc": "00597014030",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "16.79819",
+     "ndc": "00597014061",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "16.79819",
+     "ndc": "00597014090",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "7c87b03c-630e-58e9-8fcc-1d1fa6753879": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "562115466e5e426229c34c67": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "linaclotide 0.145 MG Oral Capsule [Linzess]",
+        "rxcui": "1307415",
+        "suppress": "N",
+        "synonym": "Linzess 145 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linaclotide 0.29 MG Oral Capsule [Linzess]",
+        "rxcui": "1307421",
+        "suppress": "N",
+        "synonym": "Linzess 0.29 MG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "linaclotide 0.072 MG Oral Capsule [Linzess]",
+        "rxcui": "1869699",
+        "suppress": "N",
+        "synonym": "Linzess 72 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=linzess"
+ },
  "5881db0faa46d87c97875e37": {
   "json": {
    "properties": {
@@ -4680,6 +5141,14 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=lipiter"
+ },
+ "5e1b44f953d460e2f226c943": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=levothyroxine&quantity_units=30&strength=0.05mg"
  },
  "5ec0f5f10c68643fa44adce5": {
   "json": {
@@ -5369,6 +5838,14 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=xyzzy"
  },
+ "780fe1c1827f622ba18c3715": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=linaclotide&quantity_units=30&strength=0.145mg"
+ },
  "78b4ebaa8fbfc92582547f13": {
   "json": {
    "ndcGroup": {
@@ -5970,6 +6447,22 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "7c2b5a064c0304e20557b09d": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00456120104",
+      "00456120107",
+      "00456120130"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1307415/ndcs.json"
+ },
  "7f44fcbf0f6c61e808c21780": {
   "json": {
    "count": 16,
@@ -6388,6 +6881,116 @@
    ],
    "schema": {
     "8a80abf6-0a4d-5cf5-aa1e-9d10057641ba": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "8352452b2199d574e47266ac": {
+  "json": {
+   "count": 0,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": "48792786501"
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "7c87b03c-630e-58e9-8fcc-1d1fa6753879"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [],
+   "schema": {
+    "7c87b03c-630e-58e9-8fcc-1d1fa6753879": {
      "fields": {
       "as_of_date": {
        "description": "As of Date",
@@ -7620,6 +8223,1648 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "93e716f8099701902aa1a218": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "tty": "GPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189106",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189191",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.2 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.3 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189685",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.3 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.4 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189687",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.4 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.5 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189689",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.6 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189691",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.6 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.7 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189693",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.7 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.8 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189695",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 0.8 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 1 MG Oral Tablet [Thyro-Tabs]",
+        "rxcui": "1189697",
+        "suppress": "N",
+        "synonym": "Thyro-Tabs 1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Capsule [Tirosint]",
+        "rxcui": "1923049",
+        "suppress": "N",
+        "synonym": "Tirosint 175 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Capsule [Tirosint]",
+        "rxcui": "1923052",
+        "suppress": "N",
+        "synonym": "Tirosint 0.2 MG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056466",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.025 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056470",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.05 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056474",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.075 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056478",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.088 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056482",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.1 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056486",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.112 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056490",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.125 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.013 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056494",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.013 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056498",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.137 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056502",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.15 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056506",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.175 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2056510",
+        "suppress": "N",
+        "synonym": "Tirosint SOL 0.2 MG per 1 ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0022 MG/MG Oral Powder [ThyroKare]",
+        "rxcui": "2100023",
+        "suppress": "N",
+        "synonym": "ThyroKare 0.0022 MG/MG Oral Powder",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Tablet [Euthyrox]",
+        "rxcui": "2104866",
+        "suppress": "N",
+        "synonym": "Euthyrox 137 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.02 MG/ML Oral Solution [Thyquidity]",
+        "rxcui": "2473282",
+        "suppress": "N",
+        "synonym": "Thyquidity 0.02 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0625 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2566610",
+        "suppress": "N",
+        "synonym": "Tirosint 0.0625 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0375 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2566615",
+        "suppress": "N",
+        "synonym": "Tirosint 0.0375 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.044 MG/ML Oral Solution [Tirosint]",
+        "rxcui": "2566619",
+        "suppress": "N",
+        "synonym": "Tirosint 0.044 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.03 MG/ML Oral Solution [Ermeza]",
+        "rxcui": "2626056",
+        "suppress": "N",
+        "synonym": "Ermeza 0.03 MG/ML Oral Solution",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0375 MG Oral Capsule [Tirosint]",
+        "rxcui": "2630740",
+        "suppress": "N",
+        "synonym": "Tirosint 37.5 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.044 MG Oral Capsule [Tirosint]",
+        "rxcui": "2630744",
+        "suppress": "N",
+        "synonym": "Tirosint 44 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0625 MG Oral Capsule [Tirosint]",
+        "rxcui": "2630748",
+        "suppress": "N",
+        "synonym": "Tirosint 62.5 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0022 MG/MG Oral Powder [Thyrocryn]",
+        "rxcui": "2675685",
+        "suppress": "N",
+        "synonym": "Thyrocryn 0.22 % Oral Powder",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG / liothyronine sodium 0.0375 MG Oral Tablet [Thyrolar]",
+        "rxcui": "903302",
+        "suppress": "N",
+        "synonym": "Thyrolar 3 (levothyroxine sodium 150 MCG / liothyronine sodium 37.5 MCG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG / liothyronine sodium 0.025 MG Oral Tablet [Thyrolar]",
+        "rxcui": "903309",
+        "suppress": "N",
+        "synonym": "Thyrolar 2 (levothyroxine sodium 100 MCG / liothyronine sodium 25 MCG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG / liothyronine sodium 0.00625 MG Oral Tablet [Thyrolar]",
+        "rxcui": "903316",
+        "suppress": "N",
+        "synonym": "Thyrolar 1/2 (levothyroxine sodium 25 MCG / liothyronine sodium 6.25 MCG) Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Capsule [Tirosint]",
+        "rxcui": "905453",
+        "suppress": "N",
+        "synonym": "Tirosint 112 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Capsule [Tirosint]",
+        "rxcui": "905457",
+        "suppress": "N",
+        "synonym": "Tirosint 137 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Capsule [Tirosint]",
+        "rxcui": "905460",
+        "suppress": "N",
+        "synonym": "Tirosint 75 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Capsule [Tirosint]",
+        "rxcui": "905464",
+        "suppress": "N",
+        "synonym": "Tirosint 88 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966153",
+        "suppress": "N",
+        "synonym": "Euthyrox 25 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Tablet [Levo-T]",
+        "rxcui": "966154",
+        "suppress": "N",
+        "synonym": "Levo-T 25 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966157",
+        "suppress": "N",
+        "synonym": "Levoxyl 25 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Tablet [Synthroid]",
+        "rxcui": "966158",
+        "suppress": "N",
+        "synonym": "Synthroid 25 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966160",
+        "suppress": "N",
+        "synonym": "Euthyrox 50 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Tablet [Levo-T]",
+        "rxcui": "966161",
+        "suppress": "N",
+        "synonym": "Levo-T 50 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966164",
+        "suppress": "N",
+        "synonym": "Levoxyl 50 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966166",
+        "suppress": "N",
+        "synonym": "Euthyrox 75 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Tablet [Levo-T]",
+        "rxcui": "966167",
+        "suppress": "N",
+        "synonym": "Levo-T 75 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966170",
+        "suppress": "N",
+        "synonym": "Levoxyl 75 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Tablet [Synthroid]",
+        "rxcui": "966171",
+        "suppress": "N",
+        "synonym": "Synthroid 75 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966173",
+        "suppress": "N",
+        "synonym": "Euthyrox 88 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966175",
+        "suppress": "N",
+        "synonym": "Levoxyl 88 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966177",
+        "suppress": "N",
+        "synonym": "Euthyrox 0.1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet [Levo-T]",
+        "rxcui": "966178",
+        "suppress": "N",
+        "synonym": "Levo-T 0.1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966182",
+        "suppress": "N",
+        "synonym": "Euthyrox 112 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966184",
+        "suppress": "N",
+        "synonym": "Levoxyl 112 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Tablet [Synthroid]",
+        "rxcui": "966185",
+        "suppress": "N",
+        "synonym": "Synthroid 112 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966187",
+        "suppress": "N",
+        "synonym": "Euthyrox 125 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Tablet [Levo-T]",
+        "rxcui": "966188",
+        "suppress": "N",
+        "synonym": "Levo-T 125 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966190",
+        "suppress": "N",
+        "synonym": "Levoxyl 125 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Tablet [Synthroid]",
+        "rxcui": "966191",
+        "suppress": "N",
+        "synonym": "Synthroid 125 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966194",
+        "suppress": "N",
+        "synonym": "Levoxyl 137 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966196",
+        "suppress": "N",
+        "synonym": "Euthyrox 0.15 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Tablet [Levo-T]",
+        "rxcui": "966197",
+        "suppress": "N",
+        "synonym": "Levo-T 0.15 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966200",
+        "suppress": "N",
+        "synonym": "Levoxyl 0.15 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Tablet [Synthroid]",
+        "rxcui": "966201",
+        "suppress": "N",
+        "synonym": "Synthroid 0.15 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966202",
+        "suppress": "N",
+        "synonym": "Euthyrox 175 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966204",
+        "suppress": "N",
+        "synonym": "Levoxyl 175 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Tablet [Synthroid]",
+        "rxcui": "966205",
+        "suppress": "N",
+        "synonym": "Synthroid 175 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet [Euthyrox]",
+        "rxcui": "966207",
+        "suppress": "N",
+        "synonym": "Euthyrox 0.2 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet [Levo-T]",
+        "rxcui": "966208",
+        "suppress": "N",
+        "synonym": "Levo-T 0.2 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966211",
+        "suppress": "N",
+        "synonym": "Levoxyl 0.2 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.3 MG Oral Tablet [Levo-T]",
+        "rxcui": "966214",
+        "suppress": "N",
+        "synonym": "Levo-T 0.3 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.3 MG Oral Tablet [Synthroid]",
+        "rxcui": "966218",
+        "suppress": "N",
+        "synonym": "Synthroid 0.3 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Tablet [Unithroid]",
+        "rxcui": "966228",
+        "suppress": "N",
+        "synonym": "Unithroid 25 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Tablet [Unithroid]",
+        "rxcui": "966232",
+        "suppress": "N",
+        "synonym": "Unithroid 88 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet [Unithroid]",
+        "rxcui": "966233",
+        "suppress": "N",
+        "synonym": "Unithroid 0.1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Tablet [Unithroid]",
+        "rxcui": "966235",
+        "suppress": "N",
+        "synonym": "Unithroid 112 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Tablet [Unithroid]",
+        "rxcui": "966237",
+        "suppress": "N",
+        "synonym": "Unithroid 125 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Tablet [Unithroid]",
+        "rxcui": "966238",
+        "suppress": "N",
+        "synonym": "Unithroid 0.15 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet [Unithroid]",
+        "rxcui": "966241",
+        "suppress": "N",
+        "synonym": "Unithroid 0.2 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.3 MG Oral Tablet [Unithroid]",
+        "rxcui": "966243",
+        "suppress": "N",
+        "synonym": "Unithroid 0.3 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Tablet [Unithroid]",
+        "rxcui": "966244",
+        "suppress": "N",
+        "synonym": "Unithroid 50 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Tablet [Unithroid]",
+        "rxcui": "966246",
+        "suppress": "N",
+        "synonym": "Unithroid 175 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Tablet [Synthroid]",
+        "rxcui": "966247",
+        "suppress": "N",
+        "synonym": "Synthroid 50 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet [Synthroid]",
+        "rxcui": "966250",
+        "suppress": "N",
+        "synonym": "Synthroid 0.1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet [Synthroid]",
+        "rxcui": "966251",
+        "suppress": "N",
+        "synonym": "Synthroid 0.2 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Tablet [Synthroid]",
+        "rxcui": "966271",
+        "suppress": "N",
+        "synonym": "Synthroid 137 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Tablet [Synthroid]",
+        "rxcui": "966282",
+        "suppress": "N",
+        "synonym": "Synthroid 88 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet [Levoxyl]",
+        "rxcui": "966283",
+        "suppress": "N",
+        "synonym": "Levoxyl 0.1 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Tablet [Unithroid]",
+        "rxcui": "966286",
+        "suppress": "N",
+        "synonym": "Unithroid 75 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Tablet [Levo-T]",
+        "rxcui": "966397",
+        "suppress": "N",
+        "synonym": "Levo-T 112 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Tablet [Levo-T]",
+        "rxcui": "966399",
+        "suppress": "N",
+        "synonym": "Levo-T 175 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Tablet [Levo-T]",
+        "rxcui": "966401",
+        "suppress": "N",
+        "synonym": "Levo-T 88 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Tablet [Levo-T]",
+        "rxcui": "966410",
+        "suppress": "N",
+        "synonym": "Levo-T 137 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Capsule [Tirosint]",
+        "rxcui": "966415",
+        "suppress": "N",
+        "synonym": "Tirosint 0.1 MG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Capsule [Tirosint]",
+        "rxcui": "966417",
+        "suppress": "N",
+        "synonym": "Tirosint 125 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Capsule [Tirosint]",
+        "rxcui": "966420",
+        "suppress": "N",
+        "synonym": "Tirosint 0.15 MG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Capsule [Tirosint]",
+        "rxcui": "966423",
+        "suppress": "N",
+        "synonym": "Tirosint 25 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Capsule [Tirosint]",
+        "rxcui": "966426",
+        "suppress": "N",
+        "synonym": "Tirosint 50 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.013 MG Oral Capsule [Tirosint]",
+        "rxcui": "966434",
+        "suppress": "N",
+        "synonym": "Tirosint 13 MCG Oral Capsule",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Tablet [Unithroid]",
+        "rxcui": "966436",
+        "suppress": "N",
+        "synonym": "Unithroid 137 MCG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Injection",
+        "rxcui": "1115267",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 100 MCG Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Injection",
+        "rxcui": "1115269",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 200 MCG Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0022 MG/MG Oral Powder",
+        "rxcui": "1423483",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 0.22 % Oral Powder",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Capsule",
+        "rxcui": "1923047",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 175 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Capsule",
+        "rxcui": "1923050",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 200 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG/ML Oral Solution",
+        "rxcui": "2056462",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 25 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG/ML Oral Solution",
+        "rxcui": "2056468",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 50 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG/ML Oral Solution",
+        "rxcui": "2056472",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 75 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG/ML Oral Solution",
+        "rxcui": "2056476",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 88 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG/ML Oral Solution",
+        "rxcui": "2056480",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 100 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG/ML Oral Solution",
+        "rxcui": "2056484",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 112 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG/ML Oral Solution",
+        "rxcui": "2056488",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 125 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.013 MG/ML Oral Solution",
+        "rxcui": "2056492",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 13 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG/ML Oral Solution",
+        "rxcui": "2056496",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 137 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG/ML Oral Solution",
+        "rxcui": "2056500",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG/ML Oral Solution",
+        "rxcui": "2056504",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 175 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG/ML Oral Solution",
+        "rxcui": "2056508",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 200 MCG per 1 ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "5 ML levothyroxine sodium 0.1 MG/ML Injection",
+        "rxcui": "2166148",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 500 MCG per 5 ML Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "5 ML levothyroxine sodium 0.02 MG/ML Injection",
+        "rxcui": "2166193",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 100 MCG per 5 ML Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "5 ML levothyroxine sodium 0.04 MG/ML Injection",
+        "rxcui": "2166196",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 200 MCG per 5 ML Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.02 MG/ML Oral Solution",
+        "rxcui": "2473276",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 20 MCG per ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0625 MG/ML Oral Solution",
+        "rxcui": "2566608",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0375 MG/ML Oral Solution",
+        "rxcui": "2566613",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.044 MG/ML Oral Solution",
+        "rxcui": "2566617",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "1 ML levothyroxine sodium 0.1 MG/ML Injection",
+        "rxcui": "2621123",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 100 MCG per 1 ML Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.03 MG/ML Oral Solution",
+        "rxcui": "2626050",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 30 MCG per ML Oral Solution",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0375 MG Oral Capsule",
+        "rxcui": "2630738",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 37.5 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.044 MG Oral Capsule",
+        "rxcui": "2630742",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 44 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0625 MG Oral Capsule",
+        "rxcui": "2630746",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 62.5 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Tablet",
+        "rxcui": "892246",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 100 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.2 MG Oral Tablet",
+        "rxcui": "892251",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 200 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.3 MG Oral Tablet",
+        "rxcui": "892255",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 300 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.4 MG Oral Tablet",
+        "rxcui": "892259",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.5 MG Oral Tablet",
+        "rxcui": "892263",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.6 MG Oral Tablet",
+        "rxcui": "892267",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.7 MG Oral Tablet",
+        "rxcui": "892271",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.8 MG Oral Tablet",
+        "rxcui": "892275",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 1 MG Oral Tablet",
+        "rxcui": "892279",
+        "suppress": "N",
+        "synonym": "",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0125 MG / liothyronine sodium 0.0031 MG Oral Tablet",
+        "rxcui": "903283",
+        "suppress": "N",
+        "synonym": "liotrix, USP 15 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG / liothyronine sodium 0.0375 MG Oral Tablet",
+        "rxcui": "903298",
+        "suppress": "N",
+        "synonym": "liotrix, USP 180 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG / liothyronine sodium 0.025 MG Oral Tablet",
+        "rxcui": "903305",
+        "suppress": "N",
+        "synonym": "liotrix, USP 120 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG / liothyronine sodium 0.00625 MG Oral Tablet",
+        "rxcui": "903312",
+        "suppress": "N",
+        "synonym": "liotrix, USP 30 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG / liothyronine sodium 0.0125 MG Oral Tablet",
+        "rxcui": "903438",
+        "suppress": "N",
+        "synonym": "liotrix, USP 60 MG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Capsule",
+        "rxcui": "905451",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 112 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Capsule",
+        "rxcui": "905455",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 137 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Capsule",
+        "rxcui": "905458",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 75 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Capsule",
+        "rxcui": "905462",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 88 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.5 MG Injection",
+        "rxcui": "966219",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 500 MCG Injection",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Tablet",
+        "rxcui": "966220",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 25 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Tablet",
+        "rxcui": "966221",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 50 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.075 MG Oral Tablet",
+        "rxcui": "966222",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 75 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Tablet",
+        "rxcui": "966224",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 125 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Tablet",
+        "rxcui": "966225",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 150 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.112 MG Oral Tablet",
+        "rxcui": "966248",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 112 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.175 MG Oral Tablet",
+        "rxcui": "966249",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 175 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.088 MG Oral Tablet",
+        "rxcui": "966253",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 88 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.137 MG Oral Tablet",
+        "rxcui": "966270",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 137 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.0125 MG Oral Tablet",
+        "rxcui": "966280",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 12.5 MCG Oral Tablet",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.1 MG Oral Capsule",
+        "rxcui": "966404",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 100 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.125 MG Oral Capsule",
+        "rxcui": "966405",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 125 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.025 MG Oral Capsule",
+        "rxcui": "966406",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 25 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.05 MG Oral Capsule",
+        "rxcui": "966407",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 50 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.013 MG Oral Capsule",
+        "rxcui": "966412",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 13 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "levothyroxine sodium 0.15 MG Oral Capsule",
+        "rxcui": "966413",
+        "suppress": "N",
+        "synonym": "levothyroxine sodium 150 MCG Oral Capsule",
+        "tty": "SCD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SCD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=levothyroxine"
+ },
+ "94c0e3e1c061f62aa6e6c849": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "linaclotide 0.145 MG Oral Capsule [Linzess]",
+    "rxcui": "1307415",
+    "suppress": "N",
+    "synonym": "Linzess 145 MCG Oral Capsule",
+    "tty": "SBD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1307415/properties.json"
+ },
+ "960114348f9c7f0853c196db": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "linagliptin 5 MG Oral Tablet [Tradjenta]",
+    "rxcui": "1100706",
+    "suppress": "N",
+    "synonym": "Tradjenta 5 MG Oral Tablet",
+    "tty": "SBD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1100706/properties.json"
+ },
+ "988ca27dde236cc90a73c903": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "3 ML semaglutide 1.34 MG/ML Pen Injector [Ozempic]",
+        "rxcui": "2398842",
+        "suppress": "N",
+        "synonym": "3 ML Ozempic 1.34 MG/ML Pen Injector",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "3 ML semaglutide 2.68 MG/ML Pen Injector [Ozempic]",
+        "rxcui": "2599365",
+        "suppress": "N",
+        "synonym": "Ozempic 8 MG per 3 ML Pen Injector",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "0.25 MG, 0.5 MG Dose 3 ML semaglutide 0.68 MG/ML Pen Injector [Ozempic]",
+        "rxcui": "2619154",
+        "suppress": "N",
+        "synonym": "0.25 MG, 0.5 MG Dose 3 ML Ozempic 0.68 MG/ML Pen Injector",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "semaglutide 1.5 MG Oral Tablet [Ozempic]",
+        "rxcui": "2736944",
+        "suppress": "N",
+        "synonym": "Ozempic 1.5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "semaglutide 4 MG Oral Tablet [Ozempic]",
+        "rxcui": "2736946",
+        "suppress": "N",
+        "synonym": "Ozempic 4 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       },
+       {
+        "language": "ENG",
+        "name": "semaglutide 9 MG Oral Tablet [Ozempic]",
+        "rxcui": "2736948",
+        "suppress": "N",
+        "synonym": "Ozempic 9 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=ozempic"
+ },
  "99a49fe554f87bbea26d565c": {
   "json": {
    "count": 38,
@@ -8110,6 +10355,14 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "9a648f9e0bdfc6e2a63b7de9": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=linagliptin&quantity_units=30&strength=5mg"
+ },
  "9c5a93f5b5430b87337e9d4a": {
   "json": {
    "count": 5,
@@ -8327,6 +10580,137 @@
   },
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=80mg"
+ },
+ "9e23ca2bd2624f18dccc7187": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {},
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2056468/ndcs.json"
+ },
+ "9e3260cda56b3774f240b223": {
+  "json": {
+   "count": 1,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00456120104",
+       "00456120107",
+       "00456120130"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "7c87b03c-630e-58e9-8fcc-1d1fa6753879"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "9.01992",
+     "ndc": "00456120130",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "7c87b03c-630e-58e9-8fcc-1d1fa6753879": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
  "a71271d5a385b00eda33ed77": {
   "json": {
@@ -9246,6 +11630,34 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=albuterol"
  },
+ "b3f17a23c0e3884b109f681d": {
+  "json": {
+   "drugGroup": {
+    "conceptGroup": [
+     {
+      "tty": "BPCK"
+     },
+     {
+      "conceptProperties": [
+       {
+        "language": "ENG",
+        "name": "linagliptin 5 MG Oral Tablet [Tradjenta]",
+        "rxcui": "1100706",
+        "suppress": "N",
+        "synonym": "Tradjenta 5 MG Oral Tablet",
+        "tty": "SBD",
+        "umlscui": ""
+       }
+      ],
+      "tty": "SBD"
+     }
+    ],
+    "name": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=tradjenta"
+ },
  "b437f8ed86e29d2d310183f4": {
   "json": {
    "relatedGroup": {
@@ -9270,6 +11682,21 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1364447/related.json?tty=SCD"
+ },
+ "b78951fd1338b4ea37d15f4f": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00527495332",
+      "82347001504"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/966407/ndcs.json"
  },
  "b957e887023f5d5c812e04cd": {
   "json": {
@@ -11253,6 +13680,21 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "debdbb8c2abac07ce7368e99": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "levothyroxine sodium 0.05 MG/ML Oral Solution",
+    "rxcui": "2056468",
+    "suppress": "N",
+    "synonym": "levothyroxine sodium 50 MCG per 1 ML Oral Solution",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2056468/properties.json"
+ },
  "e3535c33ec7e22e1a7444d5b": {
   "json": {
    "properties": {
@@ -11267,6 +13709,428 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/314076/properties.json"
+ },
+ "e4df4f0b937943959b42262f": {
+  "json": {
+   "count": 27,
+   "query": {
+    "conditions": [
+     {
+      "operator": "in",
+      "property": "ndc",
+      "value": [
+       "00378180304",
+       "00378180310",
+       "00378180377",
+       "00480868701",
+       "00480868710",
+       "00480868798",
+       "00527134201",
+       "00527134210",
+       "00527328143",
+       "00527328146",
+       "00615857405",
+       "00615857414",
+       "00615857439",
+       "00781518101",
+       "00781518110",
+       "00781518192",
+       "00904695061",
+       "16729044815",
+       "16729044817",
+       "31722028501",
+       "31722028510",
+       "31722028530",
+       "31722028590",
+       "33342039410",
+       "33342039411",
+       "33342039444",
+       "35356077230",
+       "35356077290",
+       "47781064310",
+       "47781064390",
+       "50090282600",
+       "50090466800",
+       "50090466801",
+       "50090466900",
+       "50090566100",
+       "50090566101",
+       "50090609000",
+       "50090609001",
+       "50090656900",
+       "50090656901",
+       "50090657200",
+       "50090659400",
+       "50090666000",
+       "50090756200",
+       "50090756201",
+       "50090756300",
+       "50090806000",
+       "50090806001",
+       "51079044001",
+       "51079044020",
+       "51655045352",
+       "51655053252",
+       "51655072352",
+       "51655073952",
+       "51655074930",
+       "51655092452",
+       "55154355900",
+       "55154538000",
+       "58864095030",
+       "60687046401",
+       "60687046411",
+       "61919040330",
+       "61919046690",
+       "62584015401",
+       "62584015411",
+       "63629271201",
+       "63629271202",
+       "63629271203",
+       "63629871201",
+       "66267012930",
+       "67046081903",
+       "68071375009",
+       "68071399609",
+       "68071522609",
+       "68180096601",
+       "68180096602",
+       "68180096603",
+       "68180096609",
+       "68788400503",
+       "68788400509",
+       "68788769803",
+       "68788769809",
+       "68788791103",
+       "68788791109",
+       "69238183101",
+       "69238183107",
+       "70518320800",
+       "70518439000",
+       "70934016630",
+       "70934016690",
+       "70934027330",
+       "70934027390",
+       "70934039890",
+       "70934039897",
+       "71205024230",
+       "71205024260",
+       "71205024290",
+       "71205035230",
+       "71205035260",
+       "71205035290",
+       "71205064630",
+       "71205064660",
+       "71205064690",
+       "71335150201",
+       "71335150202",
+       "71335150203",
+       "71335150204",
+       "71335150205",
+       "71335150206",
+       "71335150207",
+       "71335150208",
+       "71335228801",
+       "71335961701",
+       "71335961702",
+       "71335961703",
+       "71335961704",
+       "71335961705",
+       "71335961706",
+       "71335961707",
+       "71335961708",
+       "71335976201",
+       "71335976202",
+       "71335976203",
+       "71335976204",
+       "71335976205",
+       "71335976206",
+       "71335976207",
+       "71335976208",
+       "72162145900",
+       "72189015530",
+       "72189015590",
+       "72603066101",
+       "72603066102",
+       "72603066110",
+       "72603066111",
+       "72789027230",
+       "72789027290",
+       "72865023710",
+       "72865023790",
+       "82804009930",
+       "82804009990",
+       "82804014930",
+       "82804014990",
+       "82804031430",
+       "87063008400",
+       "87063008430",
+       "87063008460",
+       "87063008490"
+      ]
+     },
+     {
+      "operator": "=",
+      "property": "as_of_date",
+      "value": "2026-09-23"
+     }
+    ],
+    "count": true,
+    "format": "json",
+    "keys": true,
+    "limit": 500,
+    "offset": 0,
+    "properties": [
+     "ndc",
+     "nadac_per_unit",
+     "pricing_unit",
+     "corresponding_generic_drug_nadac_per_unit"
+    ],
+    "resources": [
+     {
+      "alias": "t",
+      "id": "7c87b03c-630e-58e9-8fcc-1d1fa6753879"
+     }
+    ],
+    "results": true,
+    "rowIds": false,
+    "schema": true
+   },
+   "results": [
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00378180310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00378180377",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00480868710",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00480868798",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00527328143",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00527328146",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "00904695061",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "16729044815",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "16729044817",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "31722028510",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "31722028590",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "33342039410",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "33342039411",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "33342039444",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "47781064310",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "47781064390",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "51079044001",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "51079044020",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "60687046401",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "60687046411",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "68180096601",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "68180096603",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "68180096609",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "69238183101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "69238183107",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "72603066101",
+     "pricing_unit": "EA"
+    },
+    {
+     "corresponding_generic_drug_nadac_per_unit": "",
+     "nadac_per_unit": "0.04073",
+     "ndc": "72603066102",
+     "pricing_unit": "EA"
+    }
+   ],
+   "schema": {
+    "7c87b03c-630e-58e9-8fcc-1d1fa6753879": {
+     "fields": {
+      "as_of_date": {
+       "description": "As of Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "classification_for_rate_setting": {
+       "description": "Classification for Rate Setting",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "corresponding_generic_drug_effective_date": {
+       "description": "Corresponding Generic Drug Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "corresponding_generic_drug_nadac_per_unit": {
+       "description": "Corresponding Generic Drug NADAC Per Unit",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "effective_date": {
+       "description": "Effective Date",
+       "mysql_type": "date",
+       "type": "varchar"
+      },
+      "explanation_code": {
+       "description": "Explanation Code",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "nadac_per_unit": {
+       "description": "NADAC Per Unit",
+       "mysql_type": "decimal",
+       "precision": "10",
+       "scale": "5",
+       "type": "numeric"
+      },
+      "ndc": {
+       "description": "NDC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "ndc_description": {
+       "description": "NDC Description",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "otc": {
+       "description": "OTC",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pharmacy_type_indicator": {
+       "description": "Pharmacy Type Indicator",
+       "mysql_type": "text",
+       "type": "text"
+      },
+      "pricing_unit": {
+       "description": "Pricing Unit",
+       "mysql_type": "text",
+       "type": "text"
+      }
+     }
+    }
+   }
+  },
+  "status": 200,
+  "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
  "e8d957279278488aed9738a8": {
   "json": {
@@ -11793,6 +14657,182 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/860975/properties.json"
+ },
+ "eef6bdeb1ed67d432f4a0775": {
+  "json": {
+   "ndcGroup": {
+    "ndcList": {
+     "ndc": [
+      "00378180304",
+      "00378180310",
+      "00378180377",
+      "00480868701",
+      "00480868710",
+      "00480868798",
+      "00527134201",
+      "00527134210",
+      "00527328143",
+      "00527328146",
+      "00615857405",
+      "00615857414",
+      "00615857439",
+      "00781518101",
+      "00781518110",
+      "00781518192",
+      "00904695061",
+      "16729044815",
+      "16729044817",
+      "31722028501",
+      "31722028510",
+      "31722028530",
+      "31722028590",
+      "33342039410",
+      "33342039411",
+      "33342039444",
+      "35356077230",
+      "35356077290",
+      "47781064310",
+      "47781064390",
+      "50090282600",
+      "50090466800",
+      "50090466801",
+      "50090466900",
+      "50090566100",
+      "50090566101",
+      "50090609000",
+      "50090609001",
+      "50090656900",
+      "50090656901",
+      "50090657200",
+      "50090659400",
+      "50090666000",
+      "50090756200",
+      "50090756201",
+      "50090756300",
+      "50090806000",
+      "50090806001",
+      "51079044001",
+      "51079044020",
+      "51655045352",
+      "51655053252",
+      "51655072352",
+      "51655073952",
+      "51655074930",
+      "51655092452",
+      "55154355900",
+      "55154538000",
+      "58864095030",
+      "60687046401",
+      "60687046411",
+      "61919040330",
+      "61919046690",
+      "62584015401",
+      "62584015411",
+      "63629271201",
+      "63629271202",
+      "63629271203",
+      "63629871201",
+      "66267012930",
+      "67046081903",
+      "68071375009",
+      "68071399609",
+      "68071522609",
+      "68180096601",
+      "68180096602",
+      "68180096603",
+      "68180096609",
+      "68788400503",
+      "68788400509",
+      "68788769803",
+      "68788769809",
+      "68788791103",
+      "68788791109",
+      "69238183101",
+      "69238183107",
+      "70518320800",
+      "70518439000",
+      "70934016630",
+      "70934016690",
+      "70934027330",
+      "70934027390",
+      "70934039890",
+      "70934039897",
+      "71205024230",
+      "71205024260",
+      "71205024290",
+      "71205035230",
+      "71205035260",
+      "71205035290",
+      "71205064630",
+      "71205064660",
+      "71205064690",
+      "71335150201",
+      "71335150202",
+      "71335150203",
+      "71335150204",
+      "71335150205",
+      "71335150206",
+      "71335150207",
+      "71335150208",
+      "71335228801",
+      "71335961701",
+      "71335961702",
+      "71335961703",
+      "71335961704",
+      "71335961705",
+      "71335961706",
+      "71335961707",
+      "71335961708",
+      "71335976201",
+      "71335976202",
+      "71335976203",
+      "71335976204",
+      "71335976205",
+      "71335976206",
+      "71335976207",
+      "71335976208",
+      "72162145900",
+      "72189015530",
+      "72189015590",
+      "72603066101",
+      "72603066102",
+      "72603066110",
+      "72603066111",
+      "72789027230",
+      "72789027290",
+      "72865023710",
+      "72865023790",
+      "82804009930",
+      "82804009990",
+      "82804014930",
+      "82804014990",
+      "82804031430",
+      "87063008400",
+      "87063008430",
+      "87063008460",
+      "87063008490"
+     ]
+    },
+    "rxcui": null
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/966221/ndcs.json"
+ },
+ "f353e4bfeed7a8b28ec58051": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "levothyroxine sodium 0.05 MG Oral Capsule",
+    "rxcui": "966407",
+    "suppress": "N",
+    "synonym": "levothyroxine sodium 50 MCG Oral Capsule",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/966407/properties.json"
  },
  "f43c0741a8ef37d8731f455d": {
   "json": {
@@ -13223,5 +16263,20 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/2630760/ndcs.json"
+ },
+ "fc2944f9c225649e03a82a20": {
+  "json": {
+   "properties": {
+    "language": "ENG",
+    "name": "levothyroxine sodium 0.05 MG Oral Tablet",
+    "rxcui": "966221",
+    "suppress": "N",
+    "synonym": "levothyroxine sodium 50 MCG Oral Tablet",
+    "tty": "SCD",
+    "umlscui": ""
+   }
+  },
+  "status": 200,
+  "url": "https://rxnav.nlm.nih.gov/REST/rxcui/966221/properties.json"
  }
 }

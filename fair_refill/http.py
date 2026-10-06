@@ -117,11 +117,20 @@ class ReplayTransport(httpx.BaseTransport):
 
 
 class RecordingTransport(httpx.BaseTransport):
-    def __init__(self) -> None:
+    """Records what the sources answer. Given what's `known` already, it
+    answers from that and goes online only for the rest, so adding a scenario
+    keeps every earlier one on the week of prices it was recorded in."""
+
+    def __init__(self, known: dict[str, dict] | None = None) -> None:
         self.inner = httpx.HTTPTransport(retries=1)
-        self.recorded: dict[str, dict] = {}
+        self.recorded: dict[str, dict] = dict(known or {})
+        self.fetched = 0
 
     def handle_request(self, request: httpx.Request) -> httpx.Response:
+        hit = self.recorded.get(request_key(request))
+        if hit is not None:
+            return httpx.Response(hit["status"], json=hit["json"], request=request)
+        self.fetched += 1
         response = self.inner.handle_request(request)
         response.read()
         self.recorded[request_key(request)] = {"url": str(request.url), "status": response.status_code,

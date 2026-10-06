@@ -10,12 +10,13 @@ must keep for the person hearing it.
 from __future__ import annotations
 
 import re
+from datetime import date
 from pathlib import Path
 
 import pytest
 
 from fair_refill import medicare, rxpass
-from fair_refill.compare import assess, cannot_compare, comparable_form, money
+from fair_refill.compare import CASH_CAVEAT, assess, cannot_compare, comparable_form, medicare_price, money
 from fair_refill.costplus import Quote
 from fair_refill.http import replay_client
 from fair_refill.nadac import NadacPrice
@@ -23,11 +24,12 @@ from fair_refill.rxnorm import Drug, split_query
 from fair_refill.service import PriceCheck
 
 FIXTURES = Path(__file__).parent / "fixtures" / "responses.json"
+RECORDED_ON = date(2026, 10, 6)       # some answers depend on the date; the prices are that week's
 
 
 @pytest.fixture(scope="module")
 def check():
-    return PriceCheck(replay_client(FIXTURES))
+    return PriceCheck(replay_client(FIXTURES), today=RECORDED_ON)
 
 
 # ── what's said has to be safe to hear ───────────────────────────────────────
@@ -37,7 +39,8 @@ DANGEROUS = re.compile(r"\b(stop taking|skip|switch to|instead of your|double up
 NEXT_STEP = re.compile(r"(pharmacist|your plan|doctor)", re.I)
 
 ANSWERS = ["atorvastatin 20 mg", "Lipitor 20", "lipiter 20", "eliquis 5 mg",
-           "metformin 500 mg extended release", "albuterol inhaler", "lisinopril 10 mg"]
+           "metformin 500 mg extended release", "albuterol inhaler", "lisinopril 10 mg",
+           "Ozempic", "Tradjenta", "Linzess 145 mcg", "Enbrel"]
 
 
 @pytest.mark.parametrize("text", ANSWERS)
@@ -85,6 +88,42 @@ def test_a_brand_without_a_generic_gets_medicare_facts(check):
     r = check.ask("eliquis 5 mg")
     assert "negotiated price for Eliquis is $231 for a 30-day supply this year, down from $521" in r.speech
     assert "$2,100" in r.speech
+
+
+def test_a_cash_price_always_comes_with_its_catch(check):
+    """Money paid outside insurance usually doesn't count toward a deductible
+    or Medicare's yearly limit. Whoever hears a cash price hears that too."""
+    for text, you_pay in (("atorvastatin 20 mg", None), ("atorvastatin 20 mg", 40.0), ("Lipitor 20", None)):
+        speech = check.ask(text, you_pay=you_pay).speech
+        assert "Cost Plus Drugs sells it" in speech
+        assert CASH_CAVEAT in speech, speech
+    assert CASH_CAVEAT not in check.ask("eliquis 5 mg").speech       # no cash price said, so no catch to add
+
+
+def test_a_price_that_starts_in_january_is_said_as_coming(check):
+    r = check.ask("Tradjenta")
+    assert r.speech.startswith("Pharmacies pay about $504 a month for Tradjenta 5 mg tablet now.")
+    assert ("From January 2027, Medicare's negotiated price for Tradjenta is about $78 for a typical 30-day "
+            "supply, down from a list price of $488.") in r.speech
+    assert r.speech.endswith("Ask your plan what you'll pay from January.")
+    assert "this year" not in r.speech
+    assert r.finding.sources == ("CMS negotiated prices 2027",)
+
+
+def test_a_negotiated_injection_is_answered_for_the_brand_without_asking_which_pen(check):
+    r = check.ask("Ozempic")
+    assert r.kind == "answer" and r.finding.title == "Ozempic"
+    assert "Ozempic is about $274 for a typical 30-day supply" in r.speech
+    assert r.choices == ()                 # no strength was picked, so none is there to save
+    r = check.ask("Enbrel")
+    assert "negotiated price for Enbrel is $2,355 for a 30-day supply this year" in r.speech
+
+
+def test_micrograms_find_what_rxnorm_writes_in_milligrams(check):
+    assert check.ask("Linzess 145 mcg").finding.title == "Linzess 0.145 mg capsule"
+    r = check.ask("levothyroxine 50 mcg")
+    assert r.kind == "choose"
+    assert r.speech == "Which levothyroxine do you take: 0.05 mg/ml liquid, 0.05 mg tablet, or 0.05 mg capsule?"
 
 
 def test_an_ambiguous_medicine_is_a_short_question(check):
@@ -185,10 +224,34 @@ def test_comparable_forms():
 
 
 def test_negotiated_prices_are_cms_figures():
-    assert medicare.negotiated_for("Eliquis").price_30_day == 231.00
-    assert medicare.negotiated_for("novolog").price_30_day == 119.00
-    assert medicare.negotiated_for("Lipitor") is None
+    assert medicare.negotiated_for("Eliquis", RECORDED_ON).price_30_day == 231.00
+    assert medicare.negotiated_for("novolog", RECORDED_ON).price_30_day == 119.00
+    assert medicare.negotiated_for("Lipitor", RECORDED_ON) is None
     assert medicare.PART_D_CAP == 2100
+    assert len(medicare.NEGOTIATED_2027) == 15
+    coming = {n.brand: (n.price_30_day, n.list_price_30_day) for n in medicare.NEGOTIATED_2027}
+    assert coming["Ozempic / Rybelsus / Wegovy"] == (274, 959)
+    assert coming["Breo Ellipta"] == (67, 397)
+    assert coming["Pomalyst"] == (8650, 21744)
+
+
+def test_a_negotiated_price_is_coming_until_its_first_day_and_current_for_its_first_year():
+    assert medicare.negotiated_for("Ozempic", date(2026, 12, 31)) is None
+    assert medicare.upcoming_for("Ozempic", date(2026, 12, 31)).price_30_day == 274.00
+    assert medicare.upcoming_for("Ozempic", date(2027, 1, 1)) is None
+    assert medicare.negotiated_for("Wegovy", date(2027, 1, 1)).price_30_day == 274.00
+    # CMS raises each price with inflation after its first year, so last
+    # year's figure is not said as this year's.
+    assert medicare.negotiated_for("Eliquis", date(2027, 1, 1)) is None
+
+
+def test_open_enrollment_is_mentioned_only_while_it_is_open():
+    tradjenta = Drug("1", "linagliptin 5 MG Oral Tablet [Tradjenta]", "SBD")
+    before, during = medicare_price(tradjenta, date(2026, 10, 14)), medicare_price(tradjenta, date(2026, 10, 15))
+    assert "open enrollment" not in before.speech
+    assert "Medicare open enrollment runs until December 7" in during.speech
+    assert "open enrollment" not in medicare_price(tradjenta, date(2026, 12, 8)).speech
+    assert medicare_price(Drug("1", "atorvastatin 20 MG Oral Tablet [Lipitor]", "SBD"), RECORDED_ON) is None
 
 
 def test_replay_refuses_to_go_online():

@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -25,7 +26,7 @@ TOOLS = {"check_prescription_price", "check_chosen_medicine", "save_my_medicine"
 
 @pytest.fixture
 def server(tmp_path):
-    return build(PriceCheck(replay_client(FIXTURES)), Cabinet(tmp_path / "my_medicines.json"))
+    return build(PriceCheck(replay_client(FIXTURES), today=date(2026, 10, 6)), Cabinet(tmp_path / "my_medicines.json"))
 
 
 def call(server, tool, **args):

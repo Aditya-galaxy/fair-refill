@@ -66,10 +66,11 @@ def quantity_said(text: str) -> int | None:
 
 _FILLER = re.compile(
     r"\b(alexa|ask|fair refill|am i|are you|i'?m|i am|i|over ?paying|paying|pay|too much|how much|should|does|"
-    r"do|is|it|cost|costs|price|prices|for|my|the|a|an|of|per|each|every|month|months|monthly|what|can|get|"
+    r"do|is|it|cost|costs|price|prices|for|my|the|a|an|of|per|each|every|month|months|monthly|what'?s|what|can|get|"
     r"cheaper|cheap|way|to|me|tell|about|check|much|in|on|with|and|any|dollars?|bucks|tablets? a month|"
     r"once a day|twice a day|three times a day|daily|every day|please|if|whether|that|there|some|now|"
-    r"currently|right|really|actually|still)\b", re.IGNORECASE)
+    r"currently|right|really|actually|still|will|would|going|be|next|this|year|from|january|medicare'?s?|"
+    r"negotiated|new|soon)\b", re.IGNORECASE)
 
 
 def medicine_said(text: str) -> str:

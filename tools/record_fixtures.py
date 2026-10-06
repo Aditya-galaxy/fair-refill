@@ -1,7 +1,8 @@
 """
 Record real API responses for the tests.
 
-    python tools/record_fixtures.py
+    python tools/record_fixtures.py                  # every scenario, from scratch
+    python tools/record_fixtures.py "Ozempic"        # only these, added to the file
 
 Runs each scenario through the real pipeline against the live APIs, with no
 cache, and saves every request and response to tests/fixtures/responses.json.
@@ -36,14 +37,24 @@ SCENARIOS = [
     ("lisinopril 10 mg", 15.0),
     ("atorvastatin", None),
     ("xyzzy", None),
+    ("Ozempic", None),
+    ("Tradjenta", None),
+    ("Linzess 145 mcg", None),
+    ("Enbrel", None),
+    ("levothyroxine 50 mcg", None),
 ]
 
 
 def main() -> int:
-    transport = RecordingTransport()
+    out = ROOT / "tests" / "fixtures" / "responses.json"
+    only = set(sys.argv[1:])
+    # Naming scenarios adds to what's recorded: requests already in the file
+    # are answered from it, so one new medicine doesn't move every other
+    # test's prices to a new week.
+    transport = RecordingTransport(json.loads(out.read_text(encoding="utf-8")) if only else None)
     http = Http(httpx.Client(transport=transport, headers={"User-Agent": USER_AGENT}, timeout=40))
     check = PriceCheck(http)
-    for text, you_pay in SCENARIOS:
+    for text, you_pay in [s for s in SCENARIOS if not only or s[0] in only]:
         result = check.ask(text, you_pay=you_pay)
         print(f"  {text!r:<40} {result.kind:<10} {result.speech[:90]}")
         # The MCP tools refer back to drugs by ID ("the regular tablet"), so
@@ -53,9 +64,8 @@ def main() -> int:
             if again and result.kind == "choose":
                 follow = check.check(again, 30, you_pay)
                 print(f"    ↳ {again.spoken:<36} {follow.kind:<10} {follow.speech[:70]}")
-    out = ROOT / "tests" / "fixtures" / "responses.json"
     out.write_text(json.dumps(transport.recorded, indent=1, sort_keys=True), encoding="utf-8")
-    print(f"\n  {len(transport.recorded)} responses -> {out.relative_to(ROOT)}")
+    print(f"\n  {transport.fetched} fetched, {len(transport.recorded)} responses in {out.relative_to(ROOT)}")
     return 0
 
 
