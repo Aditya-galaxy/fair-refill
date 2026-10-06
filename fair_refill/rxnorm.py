@@ -174,7 +174,14 @@ def _matches_strength(drug: Drug, strength: str) -> bool:
     number, _, unit = strength.partition(" ")
     unit = {"units": "unit"}.get(unit, unit)
     after = rf" {re.escape(unit)}\b" if unit else r" [A-Za-z]"
-    return re.search(rf"(?<![\d.]){re.escape(number)}{after}", drug.name, flags=re.IGNORECASE) is not None
+    if re.search(rf"(?<![\d.]){re.escape(number)}{after}", drug.name, flags=re.IGNORECASE):
+        return True
+    # People and labels say micrograms where RxNorm writes milligrams:
+    # "levothyroxine 50 mcg" is "levothyroxine sodium 0.05 MG Oral Tablet".
+    if unit == "mcg":
+        in_mg = f"{float(number) / 1000:.6f}".rstrip("0").rstrip(".")
+        return re.search(rf"(?<![\d.]){re.escape(in_mg)} mg\b", drug.name, flags=re.IGNORECASE) is not None
+    return False
 
 
 _PRODUCT_SPECIFIC = re.compile(r"^(?:NDA\d+|Sensor)\s+")

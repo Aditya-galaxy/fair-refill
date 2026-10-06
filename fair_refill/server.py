@@ -27,12 +27,17 @@ from mcp.server.mcpserver import MCPServer
 
 from . import medicare, prewarm
 from .cabinet import Cabinet, Saved
-from .compare import Finding, money
+from .compare import CASH_CAVEAT, Finding, money
 from .service import PriceCheck, Result
 
 ROOT = Path(__file__).resolve().parent.parent
 CARD_URI = "ui://fair-refill/card.html"
 CARD_HTML = (Path(__file__).parent / "card.html").read_text(encoding="utf-8")
+# The Agent Skill that goes with the add-on: how to hold the conversation
+# around these tools. Served by the add-on too, so a client that connects can
+# read how it's meant to be used without having the repository.
+SKILL_URI = "skill://fair-refill/SKILL.md"
+SKILL_PATH = ROOT / "skills" / "fair-refill" / "SKILL.md"
 
 INSTRUCTIONS = """Fair Refill checks whether someone is paying more than they need to for a prescription.
 It compares only the identical medicine, never a substitute, and every answer ends with what to ask
@@ -71,7 +76,8 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                description=(
                    "Check whether someone is overpaying for a prescription. Use when they ask 'am I paying "
                    "too much for my atorvastatin', 'how much should Lipitor cost', 'is there a cheaper way "
-                   "to get my metformin', or name a medicine and what they pay. `medicine` is the name as "
+                   "to get my metformin', 'what will Ozempic cost next year', 'what's Medicare's price for "
+                   "Eliquis', or name a medicine and what they pay. `medicine` is the name as "
                    "said, with the strength if given ('lisinopril 10 mg', 'Lipitor 20'); misspellings are "
                    "corrected. `monthly_quantity` is tablets or capsules a month (default 30). "
                    "`you_pay_per_month` is what they pay now, in dollars, if they said."))
@@ -133,7 +139,8 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
         else:
             names = _spoken_list([r["name"] for r in flagged])
             speech = (f"You may be able to save about {money(total)} a month, or {money(total * 12)} a year, "
-                      f"on {names}. Ask your pharmacist whether paying cash would cost less than your insurance.")
+                      f"on {names}. {CASH_CAVEAT} Ask your pharmacist or plan which way costs you less "
+                      "over the year.")
         return {"kind": "summary", "speech": speech, "medicines": rows,
                 "card": {"title": "Your medicines", "details": [f"{len(rows)} checked",
                                                                  f"Could save: {money(total)}/mo"],
@@ -173,8 +180,17 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                                      f"Insulin: ${medicare.INSULIN_MONTHLY_CAP}/mo max"],
                          "action": "Ask your plan", "sources": [medicare.PART_D_CAP_SOURCE]}}
 
-    return MCPServer("Fair Refill", title="Fair Refill", instructions=INSTRUCTIONS, version="0.1.0",
-                     extensions=[apps])
+    server = MCPServer("Fair Refill", title="Fair Refill", instructions=INSTRUCTIONS, version="0.1.0",
+                       extensions=[apps])
+
+    if SKILL_PATH.exists():
+        @server.resource(SKILL_URI, name="fair-refill-skill", title="Fair Refill Agent Skill",
+                         description="How to use these tools in a conversation: what to ask, what to say, "
+                                     "and the rules an answer must keep.", mime_type="text/markdown")
+        def skill() -> str:
+            return SKILL_PATH.read_text(encoding="utf-8")
+
+    return server
 
 
 def _spoken_list(names: list[str]) -> str:

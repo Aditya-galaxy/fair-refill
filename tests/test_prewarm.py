@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 import time
+from datetime import date
 from pathlib import Path
 
 import httpx
@@ -36,7 +37,8 @@ class Offline(httpx.BaseTransport):
 
 
 def _check(transport: httpx.BaseTransport, cache: Path, refresh_after: float = 1.0) -> PriceCheck:
-    return PriceCheck(Http(httpx.Client(transport=transport), cache_dir=cache, refresh_after=refresh_after))
+    return PriceCheck(Http(httpx.Client(transport=transport), cache_dir=cache, refresh_after=refresh_after),
+                      today=date(2026, 10, 6))
 
 
 @pytest.fixture

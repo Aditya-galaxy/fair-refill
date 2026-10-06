@@ -32,9 +32,9 @@ from .service import PriceCheck
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Widely prescribed tablets and capsules, then the brands Medicare negotiated
-# prices for in 2026 (medicare.py) and a few brands people name instead of the
-# generic. Every strength of each is warmed. Order matters only in that the
+# Widely prescribed tablets and capsules, then brands Medicare has negotiated
+# prices for, in force or starting in January (medicare.py), and a few brands
+# people name instead of the generic. Every strength of each is warmed. Order matters only in that the
 # first ones are ready first.
 MEDICINES: tuple[str, ...] = (
     "atorvastatin", "lisinopril", "metformin", "amlodipine", "levothyroxine", "metoprolol", "losartan",
@@ -44,6 +44,7 @@ MEDICINES: tuple[str, ...] = (
     "glipizide", "venlafaxine", "allopurinol", "warfarin", "atenolol", "famotidine", "finasteride",
     "donepezil", "spironolactone", "apixaban",
     "Eliquis", "Xarelto", "Jardiance", "Januvia", "Farxiga", "Entresto",
+    "Ozempic", "Rybelsus", "Trelegy", "Linzess", "Tradjenta", "Janumet",
     "Lipitor", "Crestor", "Zoloft", "Synthroid",
 )
 QUANTITIES = (30,)                # tablets a month; the default, and what most people take

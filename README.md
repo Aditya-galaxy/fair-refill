@@ -10,7 +10,7 @@ they don't know to ask.
 
 > *"Alexa, ask Fair Refill if I'm overpaying for my atorvastatin. I pay $40 a month."*
 >
-> "You may be paying about $35 a month more than you need to for atorvastatin 20 mg tablet. Cost Plus Drugs sells it for $5.41 a month plus shipping, and Amazon RxPass covers it for $5 a month with Prime, outside insurance. Ask your pharmacist whether paying cash would cost less than your insurance. They're allowed to tell you."
+> "You may be paying about $35 a month more than you need to for atorvastatin 20 mg tablet. Cost Plus Drugs sells it for $5.41 a month plus shipping, and Amazon RxPass covers it for $5 a month with Prime, outside insurance. Cash prices usually don't count toward your deductible or Medicare's yearly limit. Ask your pharmacist whether paying cash would cost less than your insurance. They're allowed to tell you."
 
 > **Status: in development, private.** Built for the Amazon Developer
 > Hackathon, Alexa+ track.
@@ -27,7 +27,7 @@ That starts two things on one port:
 - **The add-on:** an MCP server at `/mcp`, over Streamable HTTP. It speaks protocol 2025-11-25, the version Alexa+ documents, and newer versions too. Seven tools: check a price, price the one you picked, save / list / check all / remove from your list, and Medicare's yearly limits. Its card is an MCP App (`ui://fair-refill/card.html`).
 - **A simulated Alexa+** at `/`. It uses the add-on the way Alexa+ would: as an MCP client, speaking its answers and hosting its card on an Echo Show-style screen. Alexa+'s own developer tools aren't open to hackathon entrants, so this stands in for them. The add-on is real either way.
 
-On start it also looks up every strength of 47 commonly asked-about medicines in the background, and again every five hours, so those questions are answered from a local copy in well under a second instead of the 5 to 15 seconds a first lookup takes. A full round takes about eight minutes. `python -m fair_refill.prewarm` runs one round by hand; `FAIR_REFILL_PREWARM=0` turns it off. A kept price is the source's own answer, never more than 12 hours old, and is still spoken with the source's date.
+On start it also looks up every strength of 53 commonly asked-about medicines in the background, and again every five hours, so those questions are answered from a local copy in well under a second instead of the 5 to 15 seconds a first lookup takes. A full round takes eight to ten minutes. `python -m fair_refill.prewarm` runs one round by hand; `FAIR_REFILL_PREWARM=0` turns it off. A kept price is the source's own answer, never more than 12 hours old, and is still spoken with the source's date.
 
 Point any MCP client at `http://127.0.0.1:8765/mcp` to use the add-on directly. `python -m fair_refill.server` runs the add-on alone.
 
@@ -39,6 +39,7 @@ Point any MCP client at `http://127.0.0.1:8765/mcp` to use the add-on directly. 
 | [NADAC](https://data.medicaid.gov/) (CMS, weekly) | What pharmacies pay per tablet | "Pharmacies pay about 84 cents a month" |
 | [Cost Plus Drugs API](https://costplusdrugs.github.io/apidocs/) | A cash price anyone can buy at | The reference for "you may be overpaying"; a quote counts only if its NDC is the identical drug's |
 | [CMS negotiated prices, 2026](https://www.cms.gov/files/document/fact-sheet-negotiated-prices-initial-price-applicability-year-2026.pdf) | Medicare's price for 10 brand drugs | "Medicare's negotiated price for Eliquis is $231" |
+| [CMS negotiated prices, 2027](https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf) | Medicare's price for 15 more, from 1 January 2027 | "From January 2027, Medicare's negotiated price for Ozempic is about $274" |
 | [Amazon RxPass](https://pharmacy.amazon.com/rxpass) | $5 a month for listed generics, with Prime | Mentioned along with its conditions; never the basis for "you're overpaying" |
 
 ## The rules it keeps
@@ -46,8 +47,14 @@ Point any MCP client at `http://127.0.0.1:8765/mcp` to use the add-on directly. 
 - **The identical drug only.** It never suggests a different medicine, strength or dose, or skipping one.
 - **Brand to generic is a question** for the pharmacist or doctor, never an instruction.
 - **Every figure says what it is:** what pharmacies pay, a price you can buy at, or Medicare's price. Each is dated.
+- **A cash price comes with its catch.** Money paid outside insurance usually doesn't count toward a deductible or Medicare's yearly limit, so for someone on several medicines the cheaper refill can be the dearer year. Every answer that gives a cash price says so.
+- **A price that starts in January is said as coming,** not as this year's. And a negotiated price is quoted as current only in its first year, because CMS raises it with inflation after that.
 - **It says what it can't do.** Inhalers, liquids and creams are priced per gram or millilitre, and it doesn't estimate those yet.
 - **Every answer ends with a next step:** your pharmacist, your doctor or your plan. Since 2018, federal law lets pharmacists tell you when paying cash costs less.
+
+## The Agent Skill
+
+[`skills/fair-refill/`](skills/fair-refill/SKILL.md) is an [Agent Skill](https://agentskills.io) for the add-on: how to hold the conversation around its tools, what to say, and the rules an answer must keep. Copy the folder into an agent's skills directory. The add-on also serves it, at `skill://fair-refill/SKILL.md`, so a client that connects can read how it's meant to be used. A test keeps the skill and the server in step: it names every tool the server has and none it doesn't.
 
 ```bash
 pip install -e ".[dev]"

@@ -1,17 +1,18 @@
 # Fair Refill — submission
 
 > **DRAFT, 6 Oct 2026. Delete this box before submitting.**
-> Open items are marked **TODO**. I could not open the official rules page, so
-> check the section order and the judging criteria against the Devpost form
-> before pasting anything in.
+> Open items are marked **TODO**. Checked against the official rules
+> (https://amazonappdev2026.devpost.com/rules) on 6 Oct: judging is four
+> equally weighted criteria (tech implementation, design, potential impact,
+> quality of the idea), and product feedback has five set questions.
 
 **Amazon Developer Hackathon 2026, Alexa+ track.**
 Solo entry by Aditya (GitHub `Aditya-galaxy`).
 
 | | |
 |---|---|
-| Repository | https://github.com/Aditya-galaxy/fair-refill (Apache-2.0) — **TODO:** make public, or invite the six reviewers within 7 days of judging |
-| Demo video | **TODO:** link (under 3 minutes) |
+| Repository | https://github.com/Aditya-galaxy/fair-refill (Apache-2.0) — **TODO:** make public, or add `testing@devpost.com` and the six Amazon reviewers as collaborators |
+| Demo video | **TODO:** link (under 3 minutes, public on YouTube or Vimeo) |
 | Friction log | [FRICTION_LOG.md](FRICTION_LOG.md) |
 | Product feedback | [below](#product-feedback) |
 
@@ -41,16 +42,18 @@ websites.
 >
 > "You may be paying about $35 a month more than you need to for atorvastatin
 > 20 mg tablet. Cost Plus Drugs sells it for $5.41 a month plus shipping, and
-> Amazon RxPass covers it for $5 a month with Prime, outside insurance. Ask
-> your pharmacist whether paying cash would cost less than your insurance.
-> They're allowed to tell you."
+> Amazon RxPass covers it for $5 a month with Prime, outside insurance. Cash
+> prices usually don't count toward your deductible or Medicare's yearly
+> limit. Ask your pharmacist whether paying cash would cost less than your
+> insurance. They're allowed to tell you."
 
-That is the add-on's real answer on 6 Oct 2026, from CMS's 30 Sep price file
+That is the add-on's real answer on 6 Oct 2026, from CMS's weekly price file
 and Cost Plus's price that day. It also:
 
 - asks which one when a name is ambiguous ("Which atorvastatin do you take: 4 mg/ml liquid, 10 mg tablet, 20 mg tablet, 40 mg tablet, or 80 mg tablet?") and prices the exact choice;
 - corrects a misheard name ("lipiter" to Lipitor) and says what it found;
 - gives Medicare's 2026 negotiated price for the ten drugs that have one (Eliquis: $231 for 30 days, down from $521) and the $2,100 yearly cap;
+- gives the price that starts on 1 January 2027 for the fifteen drugs CMS negotiated next ("From January 2027, Medicare's negotiated price for Ozempic is about $274 for a typical 30-day supply, down from a list price of $959"), and during Medicare open enrollment (15 Oct to 7 Dec) says that now is the time to check how each plan covers it;
 - keeps a list of someone's medicines and checks them all at once, with a total;
 - shows a card on devices with a screen: what you pay, the comparison price, the next step, and the sources.
 
@@ -58,15 +61,16 @@ and Cost Plus's price that day. It also:
 
 - **An MCP server** over Streamable HTTP with seven tools, written to Alexa+'s requirements for MCP add-ons: one tool per thing a person wants, a short spoken answer in every result, stable IDs for choices, and no error codes reaching the person.
 - **The card is an MCP App** (`ui://fair-refill/card.html`), served by the add-on itself.
+- **An Agent Skill** (`skills/fair-refill/`) says how to hold the conversation around the tools and which rules an answer must keep. The add-on serves it as a resource too, and a test fails if the skill and the server's tools drift apart.
 - **Four public sources**, joined on the exact drug:
   RxNorm (National Library of Medicine) identifies the medicine and its package codes;
   CMS NADAC gives what pharmacies pay, weekly;
   the Cost Plus Drugs API gives a cash price anyone can buy at;
-  CMS's 2026 fact sheet gives Medicare's negotiated prices.
+  CMS's 2026 and 2027 fact sheets give Medicare's negotiated prices.
   Amazon RxPass is mentioned where its list includes the medicine, with its conditions.
 - **A simulated Alexa+** that uses the add-on as an MCP client, speaks its answers, and hosts its card on an Echo Show-style screen. Alexa+'s own developer tools are not open to entrants (friction log, entry 1), so this stands in for them. The add-on is the real thing; only the front end is simulated.
-- **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 47 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
-- **91 tests**, all offline: they replay 71 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
+- **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 53 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
+- **108 tests**, all offline: they replay 98 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
 
 Run it:
 
@@ -81,6 +85,7 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 
 - **The identical drug only.** Two prices are compared only when both are for package codes of the same clinical drug: same ingredient, strength and form. It never suggests a different medicine, strength or dose, or skipping one. A test fails if an answer contains "switch to", "skip" or "take less".
 - **Brand to generic is a question** for the pharmacist or doctor, never an instruction.
+- **A cash price comes with its catch.** Money paid outside insurance usually doesn't count toward a deductible or Medicare's yearly limit, so someone on several medicines could pay less per refill and more over the year. Every answer that gives a cash price says so.
 - **Every figure says what it is** (what pharmacies pay, a price you can buy at, or Medicare's price) and carries its date.
 - **It says what it can't do.** Inhalers, liquids and creams are priced per gram or millilitre; it says it can't compare those yet instead of estimating.
 - **Every answer ends with a next step:** the pharmacist, the doctor or the plan.
@@ -89,7 +94,8 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 ## What's not there yet
 
 - It has not run on Alexa+ itself, only against the simulator and generic MCP clients.
-- Tablets and capsules only.
+- Price comparisons cover tablets and capsules only. Injections and inhalers get an answer only where Medicare has negotiated a price for the brand.
+- Strengths are said the way RxNorm writes them, so 50 micrograms of levothyroxine is found but spoken as "0.05 mg".
 - One cash-price source. Cost Plus doesn't carry every drug (Eliquis, for one), and for those the answer has no "you can buy it for" figure.
 - The JAMA figure is from 2013 claims. It is the best published number and the answer to "is this still true" is what the add-on is for.
 
@@ -101,7 +107,7 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 2. (0:20) "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month." Answer and card.
 3. (0:50) "Check my metformin." It asks which one; pick "the 500 milligram extended release".
 4. (1:15) "How much should Lipitor 20 cost?" Brand against generic, as a question for the pharmacist.
-5. (1:40) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap.
+5. (1:40) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap. Then "What will Ozempic cost me next year?" for the January 2027 price.
 6. (2:00) "Remember this", then "check all my medicines". The total.
 7. (2:20) "What about my albuterol inhaler?" It says what it can't do.
 8. (2:35) Ten seconds on the build: MCP server, card as an MCP App, sources on screen. Close on the pharmacist line.

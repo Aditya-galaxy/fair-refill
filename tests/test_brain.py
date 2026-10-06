@@ -28,6 +28,9 @@ def test_quantity_said(said, n):
 
 
 @pytest.mark.parametrize("said, medicine", [
+    ("What will Ozempic cost me next year?", "Ozempic"),
+    ("what's Medicare's negotiated price for Tradjenta", "Tradjenta"),
+    ("is my Linzess 145 mcg going to get cheaper in January", "Linzess 145 mcg"),
     ("Alexa, ask Fair Refill if I'm overpaying for my atorvastatin 20 mg. I pay $40 a month.", "atorvastatin 20 mg"),
     ("How much should Lipitor 20 cost?", "Lipitor 20"),
     ("am I paying too much for lisinopril 10 milligrams", "lisinopril 10 milligrams"),

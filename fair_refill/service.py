@@ -9,11 +9,13 @@ touches three public APIs and a person is waiting on a spoken reply.
 from __future__ import annotations
 
 import os
+import re
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
+from datetime import date
 from pathlib import Path
 
-from .compare import Finding, assess, cannot_compare, comparable_form
+from .compare import Finding, assess, cannot_compare, comparable_form, medicare_price
 from .costplus import CostPlus
 from .http import Http, SourceUnavailable
 from .nadac import Nadac
@@ -32,8 +34,12 @@ class Result:
 
 
 class PriceCheck:
-    def __init__(self, http: Http | None = None, cache_dir: Path | None = None) -> None:
+    def __init__(self, http: Http | None = None, cache_dir: Path | None = None,
+                 today: date | None = None) -> None:
         self.http = http or Http(cache_dir=cache_dir)
+        # Some answers depend on the date (a Medicare price that starts in
+        # January). A fixed `today` is for the tests, which replay one day's prices.
+        self.today = today
         self.rx = RxNorm(self.http)
         self.nadac = Nadac(self.http)
         self.costplus = CostPlus(self.http)
@@ -46,6 +52,13 @@ class PriceCheck:
         if not found:
             return Result("not_found", f"I couldn't find a medicine called {text}. "
                                        "Try the name on the label, and the strength if you know it.")
+        if not all(comparable_form(d.form) for d in found):
+            # Where Medicare has negotiated a price for the brand, that is the
+            # answer, and it's the same whichever pen or strength: no question
+            # about which one, and nothing remembered as if one had been picked.
+            by_brand = medicare_price(found[0], self.today, whole_brand=True)
+            if by_brand:
+                return Result("answer", by_brand.speech, finding=by_brand, corrected=corrected)
         if not any(comparable_form(d.form) for d in found):
             # No point asking which inhaler it is only to say inhalers can't be
             # compared yet: say so straight away.
@@ -58,6 +71,8 @@ class PriceCheck:
             # the options themselves once the shared words are said once.
             prefix = os.path.commonprefix(said)
             prefix = prefix[: prefix.rfind(" ") + 1] if " " in prefix else ""
+            # A strength stays whole: "0.05 mg tablet", never "0.05" and then "mg tablet".
+            prefix = re.sub(r"\d[\d.]*\s*$", "", prefix)
             tails = [x[len(prefix):] for x in said] if prefix else said
             # "extended-release tablet, or tablet" → "…, or regular tablet"
             tails = [f"regular {t}" if t in ("tablet", "capsule") and any(u.endswith(t) and u != t for u in tails)
@@ -86,7 +101,7 @@ class PriceCheck:
             return Result("unavailable", "One of the price sources isn't answering right now. "
                                          "Try again in a minute.", choices=(drug,))
         finding = assess(asked=drug, generic=generic, quantity=quantity, asked_cost=asked_cost,
-                         generic_cost=generic_cost, cash=cash, you_pay=you_pay)
+                         generic_cost=generic_cost, cash=cash, you_pay=you_pay, today=self.today)
         return Result("answer", finding.speech, finding=finding, choices=(drug,))
 
     def ask(self, text: str, quantity: int = 30, you_pay: float | None = None) -> Result:
