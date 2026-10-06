@@ -131,10 +131,13 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
             r = check.check(drug, item.monthly_quantity, item.you_pay_per_month)
             over = r.finding.overpaying_by if r.finding else None
             rows.append({"name": item.name, "overpaying_by": over, "speech": r.speech})
+            # Each medicine is counted with its own shipping, though one
+            # order would carry several: the total errs on the low side.
             total += over or 0.0
         flagged = [r for r in rows if r["overpaying_by"]]
         if not flagged:
-            speech = (f"I checked {len(rows)} medicines. None looks overpriced for what you told me you pay. "
+            checked = "1 medicine. It doesn't look" if len(rows) == 1 else f"{len(rows)} medicines. None looks"
+            speech = (f"I checked {checked} overpriced for what you told me you pay. "
                       "For any without a price, ask your pharmacist for the cash price.")
         else:
             names = _spoken_list([r["name"] for r in flagged])
@@ -142,9 +145,10 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                       f"on {names}. {CASH_CAVEAT} Ask your pharmacist or plan which way costs you less "
                       "over the year.")
         return {"kind": "summary", "speech": speech, "medicines": rows,
-                "card": {"title": "Your medicines", "details": [f"{len(rows)} checked",
-                                                                 f"Could save: {money(total)}/mo"],
-                         "action": "Ask about cash prices", "sources": []}}
+                "card": {"title": "Your medicines",
+                         "details": [f"{len(rows)} checked",
+                                     f"Could save: {money(total)}/mo" if flagged else "Nothing looks overpriced"],
+                         "action": "Ask about cash prices" if flagged else "No change needed", "sources": []}}
 
     @apps.tool(resource_uri=CARD_URI, name="remove_my_medicine",
                description="Take a medicine off the person's saved list ('remove my lisinopril', "

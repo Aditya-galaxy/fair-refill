@@ -26,6 +26,24 @@ _STRENGTH = re.compile(r"(\d+(?:\.\d+)?)\s*(mg|mcg|g|ml|unit|units|%)\b", re.IGN
 _BARE_NUMBER = re.compile(r"(?<![\w.])(\d+(?:\.\d+)?)(?![\w.])")
 _BRAND = re.compile(r"\[([^\]]+)\]\s*$")
 
+# Medicines whose labels give the strength in micrograms. RxNorm writes every
+# strength in milligrams ("levothyroxine sodium 0.05 MG"), but nobody takes
+# "0.05 milligrams" of levothyroxine: the bottle, the pharmacist and Cost Plus
+# all say 50 micrograms. Only these are converted. Most small strengths are
+# labelled in milligrams (alprazolam 0.25 mg, tamsulosin 0.4 mg), so a rule
+# by size would get those wrong.
+_IN_MICROGRAMS = frozenset({
+    "levothyroxine", "liothyronine", "linaclotide", "lubiprostone", "misoprostol", "digoxin", "dofetilide",
+    "roflumilast", "calcitriol", "paricalcitol", "doxercalciferol", "cyanocobalamin", "fentanyl",
+})
+_SUB_MILLIGRAM = re.compile(r"(?<![\d.])(0?\.\d+) ?MG\b")
+
+
+def _in_micrograms(text: str) -> str:
+    """"0.05 MG" → "50 MCG"; strengths of a milligram or more stay as they are."""
+    return _SUB_MILLIGRAM.sub(lambda m: f"{round(float(m.group(1)) * 1000, 3):g} MCG", text)
+
+
 # How a person would say a dose form out loud.
 _SPOKEN_FORMS = (
     ("Extended Release Oral Tablet", "extended-release tablet"),
@@ -65,7 +83,7 @@ class Drug:
     @property
     def spoken(self) -> str:
         """"atorvastatin 20 mg tablet" / "Lipitor 20 mg tablet" — the way it's said aloud."""
-        base = _BRAND.sub("", self.name).strip()
+        base = _BRAND.sub("", self.labelled).strip()
         # Release-mechanism prefixes and salt names are pharmacy detail, not
         # how anyone says a medicine: "metformin 500 mg extended-release tablet".
         base = re.sub(r"^(?:(?:Modified|Osmotic|Biphasic)\s+)?\d+\s*HR\s+", "", base)
@@ -94,9 +112,14 @@ class Drug:
         return re.sub(r"\s+", " ", base).strip()
 
     @property
+    def labelled(self) -> str:
+        """RxNorm's name with the strength in the unit the label uses."""
+        return _in_micrograms(self.name) if self.ingredients & _IN_MICROGRAMS else self.name
+
+    @property
     def strength_token(self) -> str | None:
-        """"20mg" — how Cost Plus writes a strength."""
-        m = _STRENGTH.search(self.name)
+        """"20mg", "50mcg" — how Cost Plus writes a strength."""
+        m = _STRENGTH.search(self.labelled)
         return f"{m.group(1)}{m.group(2).lower()}" if m else None
 
     @property
@@ -174,7 +197,9 @@ def _matches_strength(drug: Drug, strength: str) -> bool:
     number, _, unit = strength.partition(" ")
     unit = {"units": "unit"}.get(unit, unit)
     after = rf" {re.escape(unit)}\b" if unit else r" [A-Za-z]"
-    if re.search(rf"(?<![\d.]){re.escape(number)}{after}", drug.name, flags=re.IGNORECASE):
+    # Either way of writing it: RxNorm's, or the label's ("levothyroxine 50").
+    if any(re.search(rf"(?<![\d.]){re.escape(number)}{after}", text, flags=re.IGNORECASE)
+           for text in (drug.name, drug.labelled)):
         return True
     # People and labels say micrograms where RxNorm writes milligrams:
     # "levothyroxine 50 mcg" is "levothyroxine sodium 0.05 MG Oral Tablet".
@@ -231,6 +256,9 @@ class RxNorm:
         spelling was fixed. Brands come back as brands, generics as generics:
         someone who says "Lipitor" is asking about Lipitor."""
         text, forms = form_hint(text)
+        # "Tablet" or "capsule" is dropped from the name, but it's still an
+        # answer to "which one?" when a medicine comes as both.
+        solid = next((w for w in ("tablet", "capsule") if re.search(rf"\b{w}s?\b", text, flags=re.IGNORECASE)), None)
         name, strength = split_query(text)
         if not name:
             return [], None
@@ -258,6 +286,8 @@ class RxNorm:
         elif any(" Extended Release " in f" {d.name} " for d in concepts) and \
                 any("Extended Release" not in d.name for d in concepts):
             pass   # both kinds exist and nobody said which: the caller asks
+        if solid and not forms:
+            concepts = [d for d in concepts if d.form.endswith(solid)] or concepts
         concepts = [self._with_family(d) for d in concepts]
         return sorted(_one_per_spoken_name(concepts), key=_strength_order), corrected
 

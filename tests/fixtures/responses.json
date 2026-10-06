@@ -1495,6 +1495,36 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/1364447/ndcs.json"
  },
+ "1ba0959b20624c45d0b369f1": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "500",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051405",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$8.59",
+     "requested_quote_units": "90",
+     "slug": "atorvastatin-80mg-tablet",
+     "special_handling": "",
+     "strength": "80mg",
+     "unit_billing_price": "$0.0399",
+     "unit_price": "$0.0347",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-80mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=90&strength=80mg"
+ },
  "224f0917d327e02f531a8338": {
   "json": {
    "results": [
@@ -2342,6 +2372,36 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "2443225cb0bc7a9b69f91a67": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Glucophage",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Metformin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877093010",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.93",
+     "requested_quote_units": "90",
+     "slug": "metformin-500mg-tablet",
+     "special_handling": "",
+     "strength": "500mg",
+     "unit_billing_price": "$0.0106",
+     "unit_price": "$0.009",
+     "url": "https://www.costplusdrugs.com/medications/metformin-500mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=metformin&quantity_units=90&strength=500mg"
+ },
  "294c9b67aeee3c3fa2e424a2": {
   "json": {
    "properties": {
@@ -2595,6 +2655,44 @@
   },
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
+ },
+ "2fa6dbb466a4652381e06b1e": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=linaclotide&quantity_units=90&strength=145mcg"
+ },
+ "315e41e04fb4cf4d48498c62": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Synthroid",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Levothyroxine",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "68180096603",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.93",
+     "requested_quote_units": "30",
+     "slug": "levothyroxine-50mcg-tablet",
+     "special_handling": "",
+     "strength": "50mcg",
+     "unit_billing_price": "$0.0304",
+     "unit_price": "$0.027",
+     "url": "https://www.costplusdrugs.com/medications/levothyroxine-50mcg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=levothyroxine&quantity_units=30&strength=50mcg"
  },
  "31e5a9f0f68d0a27aedcd160": {
   "json": {
@@ -4798,6 +4896,36 @@
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=30&strength=40mg"
  },
+ "4868412ade5912863f745556": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051110",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.76",
+     "requested_quote_units": "90",
+     "slug": "atorvastatin-10mg-tablet",
+     "special_handling": "",
+     "strength": "10mg",
+     "unit_billing_price": "$0.0083",
+     "unit_price": "$0.0073",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-10mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=90&strength=10mg"
+ },
  "4f51b51b9a8a736b81b474fd": {
   "json": {
    "ndcGroup": {
@@ -5564,6 +5692,36 @@
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=lipiter"
  },
+ "6167625a3d5edfa39a52f388": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051310",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$7.02",
+     "requested_quote_units": "90",
+     "slug": "atorvastatin-40mg-tablet",
+     "special_handling": "",
+     "strength": "40mg",
+     "unit_billing_price": "$0.0224",
+     "unit_price": "$0.0195",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-40mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=90&strength=40mg"
+ },
  "65bb5c7102a95384c22161c1": {
   "json": {
    "count": 11,
@@ -5837,6 +5995,14 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/spellingsuggestions.json?name=xyzzy"
+ },
+ "75935c1a661e88bef7c797c6": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=90&strength=4mg"
  },
  "780fe1c1827f622ba18c3715": {
   "json": {
@@ -7061,6 +7227,14 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "846c93ddc373079180503e06": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=linagliptin&quantity_units=90&strength=5mg"
+ },
  "852df282f07935a31f0ea8d8": {
   "json": {
    "results": [
@@ -7542,6 +7716,14 @@
   },
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=lisinopril&quantity_units=30&strength=10mg"
+ },
+ "8c716cc01f0d02de8ff207e3": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=linaclotide&quantity_units=30&strength=145mcg"
  },
  "8d97dbb2fbcfa0f982f170e4": {
   "json": {
@@ -10712,6 +10894,14 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "a03da31852c5d66d73ffcc7a": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=apixaban&quantity_units=90&strength=5mg"
+ },
  "a71271d5a385b00eda33ed77": {
   "json": {
    "count": 41,
@@ -13328,6 +13518,36 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "d14b2e79c6e539718de63bd8": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Synthroid",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Levothyroxine",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "68180096603",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$7.79",
+     "requested_quote_units": "90",
+     "slug": "levothyroxine-50mcg-tablet",
+     "special_handling": "",
+     "strength": "50mcg",
+     "unit_billing_price": "$0.0304",
+     "unit_price": "$0.027",
+     "url": "https://www.costplusdrugs.com/medications/levothyroxine-50mcg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=levothyroxine&quantity_units=90&strength=50mcg"
+ },
  "d51ecad74ed06497114f8c78": {
   "json": {
    "count": 15,
@@ -13680,6 +13900,36 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "d64cf6aa149ab1ac8960f0cd": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Lipitor",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Atorvastatin",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "67877051210",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$6.23",
+     "requested_quote_units": "90",
+     "slug": "atorvastatin-20mg-tablet",
+     "special_handling": "",
+     "strength": "20mg",
+     "unit_billing_price": "$0.0137",
+     "unit_price": "$0.0119",
+     "url": "https://www.costplusdrugs.com/medications/atorvastatin-20mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=atorvastatin&quantity_units=90&strength=20mg"
+ },
  "debdbb8c2abac07ce7368e99": {
   "json": {
    "properties": {
@@ -13709,6 +13959,36 @@
   },
   "status": 200,
   "url": "https://rxnav.nlm.nih.gov/REST/rxcui/314076/properties.json"
+ },
+ "e35602ea94698eceae3fd678": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Prinivil",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Lisinopril",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "68180098003",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$6.14",
+     "requested_quote_units": "90",
+     "slug": "lisinopril-10mg-tablet",
+     "special_handling": "",
+     "strength": "10mg",
+     "unit_billing_price": "$0.0131",
+     "unit_price": "$0.011",
+     "url": "https://www.costplusdrugs.com/medications/lisinopril-10mg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=lisinopril&quantity_units=90&strength=10mg"
  },
  "e4df4f0b937943959b42262f": {
   "json": {

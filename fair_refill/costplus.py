@@ -6,7 +6,11 @@ its NDC is one of the NDCs RxNorm lists for the exact drug in question — a
 name match is not enough, because "metformin 500mg" can be an immediate- or
 extended-release tablet, and those are different medicines.
 
-Quotes exclude shipping, and every answer that uses one says so.
+A quote is the medicine plus Cost Plus's $5.00 pharmacy fee, both charged per
+fill. Shipping is extra and charged per order, so it is added here before any
+price is said: what someone compares with their copay has to be what arrives
+at their door. The fee and the shipping are per fill and per order, not per
+tablet, which is why three months at once costs far less per month.
 """
 
 from __future__ import annotations
@@ -17,13 +21,24 @@ from .http import Http
 
 URL = "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main"
 
+# "Standard Shipping, additional cost at checkout: $5.25", from the price
+# breakdown on Cost Plus's own medicine pages, read on 2026-10-06. Tax, where
+# a state charges it, is not included.
+SHIPPING = 5.25
+SHIPPING_CHECKED = "2026-10-06"
+LONG_SUPPLY_MONTHS = 3            # the longer fill compared with a month at a time
+
 
 @dataclass(frozen=True)
 class Quote:
     ndc: str
-    total: float                  # for `quantity` units, before shipping
+    total: float                  # for `quantity` units, with the pharmacy fee, before shipping
     quantity: int
     url: str
+
+    def delivered(self, units: int) -> float:
+        """What `units` cost in one order, at the door."""
+        return self.total * units / self.quantity + SHIPPING
 
 
 def _money(text: str) -> float:

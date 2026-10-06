@@ -16,7 +16,7 @@ from datetime import date
 from pathlib import Path
 
 from .compare import Finding, assess, cannot_compare, comparable_form, medicare_price
-from .costplus import CostPlus
+from .costplus import LONG_SUPPLY_MONTHS, CostPlus
 from .http import Http, SourceUnavailable
 from .nadac import Nadac
 from .rxnorm import Drug, RxNorm
@@ -86,7 +86,7 @@ class PriceCheck:
     def check(self, drug: Drug, quantity: int = 30, you_pay: float | None = None) -> Result:
         try:
             generic = self.rx.generic_of(drug)
-            with ThreadPoolExecutor(max_workers=3) as pool:
+            with ThreadPoolExecutor(max_workers=4) as pool:
                 asked_ndcs_f = pool.submit(self.rx.ndcs, drug.rxcui)
                 generic_ndcs_f = pool.submit(self.rx.ndcs, generic.rxcui) if generic.rxcui != drug.rxcui \
                     else asked_ndcs_f
@@ -96,12 +96,16 @@ class PriceCheck:
                     else asked_cost_f
                 cash_f = pool.submit(self.costplus.quote, generic.ingredient, generic.strength_token, quantity,
                                      set(generic_ndcs))
+                cash_long_f = pool.submit(self.costplus.quote, generic.ingredient, generic.strength_token,
+                                          quantity * LONG_SUPPLY_MONTHS, set(generic_ndcs))
                 asked_cost, generic_cost, cash = asked_cost_f.result(), generic_cost_f.result(), cash_f.result()
+                cash_long = cash_long_f.result()
         except SourceUnavailable:
             return Result("unavailable", "One of the price sources isn't answering right now. "
                                          "Try again in a minute.", choices=(drug,))
         finding = assess(asked=drug, generic=generic, quantity=quantity, asked_cost=asked_cost,
-                         generic_cost=generic_cost, cash=cash, you_pay=you_pay, today=self.today)
+                         generic_cost=generic_cost, cash=cash, cash_long=cash_long, you_pay=you_pay,
+                         today=self.today)
         return Result("answer", finding.speech, finding=finding, choices=(drug,))
 
     def ask(self, text: str, quantity: int = 30, you_pay: float | None = None) -> Result:

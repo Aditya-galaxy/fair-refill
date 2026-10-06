@@ -34,12 +34,13 @@ websites.
 
 > **"Alexa, ask Fair Refill if I'm overpaying for my atorvastatin 20 milligrams. I pay forty dollars a month."**
 >
-> "You may be paying about $35 a month more than you need to for atorvastatin
-> 20 mg tablet. Cost Plus Drugs sells it for $5.41 a month plus shipping, and
-> Amazon RxPass covers it for $5 a month with Prime, outside insurance. Cash
-> prices usually don't count toward your deductible or Medicare's yearly
-> limit. Ask your pharmacist whether paying cash would cost less than your
-> insurance. They're allowed to tell you."
+> "You may be paying about $29 a month more than you need to for atorvastatin
+> 20 mg tablet. Cost Plus Drugs delivers it for about $11 a month, or $3.83 a
+> month if your doctor prescribes three months at once, and Amazon RxPass
+> covers it for $5 a month with Prime, outside insurance. Cash prices usually
+> don't count toward your deductible or Medicare's yearly limit. Ask your
+> pharmacist whether paying cash would cost less than your insurance. They're
+> allowed to tell you."
 
 That is the add-on's real answer on 6 Oct 2026, from CMS's weekly price file
 and Cost Plus's price that day. It also:
@@ -59,12 +60,12 @@ and Cost Plus's price that day. It also:
 - **Four public sources**, joined on the exact drug:
   RxNorm (National Library of Medicine) identifies the medicine and its package codes;
   CMS NADAC gives what pharmacies pay, weekly;
-  the Cost Plus Drugs API gives a cash price anyone can buy at;
+  the Cost Plus Drugs API gives a cash price anyone can buy at, for one month and for three;
   CMS's 2026 and 2027 fact sheets give Medicare's negotiated prices.
   Amazon RxPass is mentioned where its list includes the medicine, with its conditions.
 - **A simulated Alexa+** that uses the add-on as an MCP client, speaks its answers, and hosts its card on an Echo Show-style screen. Alexa+'s own developer tools are not open to entrants (friction log, entry 1), so this stands in for them. The add-on is the real thing; only the front end is simulated.
 - **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 53 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
-- **108 tests**, all offline: they replay 98 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
+- **118 tests**, all offline: they replay 111 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
 
 Run it:
 
@@ -79,6 +80,8 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 
 - **The identical drug only.** Two prices are compared only when both are for package codes of the same clinical drug: same ingredient, strength and form. It never suggests a different medicine, strength or dose, or skipping one. A test fails if an answer contains "switch to", "skip" or "take less".
 - **Brand to generic is a question** for the pharmacist or doctor, never an instruction.
+- **A cash price is the price at the door.** Cost Plus's quote leaves out $5.25 shipping an order, so that's added before anything is said or compared. Someone paying $9 a month is not told they're overpaying because a quote says $5.41.
+- **Three months at once is offered, not advised.** Cost Plus charges its fee per fill and shipping per order, so three months in one fill costs far less per month ($3.83 against $10.66 for atorvastatin 20 mg). It needs a different prescription, so the answer says "if your doctor prescribes three months at once".
 - **A cash price comes with its catch.** Money paid outside insurance usually doesn't count toward a deductible or Medicare's yearly limit, so someone on several medicines could pay less per refill and more over the year. Every answer that gives a cash price says so.
 - **Every figure says what it is** (what pharmacies pay, a price you can buy at, or Medicare's price) and carries its date.
 - **It says what it can't do.** Inhalers, liquids and creams are priced per gram or millilitre; it says it can't compare those yet instead of estimating.
@@ -89,7 +92,6 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 
 - It has not run on Alexa+ itself, only against the simulator and generic MCP clients.
 - Price comparisons cover tablets and capsules only. Injections and inhalers get an answer only where Medicare has negotiated a price for the brand.
-- Strengths are said the way RxNorm writes them, so 50 micrograms of levothyroxine is found but spoken as "0.05 mg".
 - One cash-price source. Cost Plus doesn't carry every drug (Eliquis, for one), and for those the answer has no "you can buy it for" figure.
 - The JAMA figure is from 2013 claims. It is the best published number and the answer to "is this still true" is what the add-on is for.
 

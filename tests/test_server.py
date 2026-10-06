@@ -67,7 +67,7 @@ def test_card_resource_is_served(server):
 def test_price_check_speaks_and_shows(server):
     r = call(server, "check_prescription_price", medicine="atorvastatin 20 mg", you_pay_per_month=40)
     assert r["kind"] == "answer"
-    assert "paying about $35 a month more" in r["speech"]
+    assert "paying about $29 a month more" in r["speech"]
     assert r["card"]["title"] == "atorvastatin 20 mg tablet"
     assert len(r["card"]["details"]) <= 2
     assert r["medicine"]["choice_id"] == "617310"
@@ -96,13 +96,21 @@ def test_my_medicines_saves_totals_and_forgets(server):
     summary = call(server, "check_all_my_medicines")
     assert summary["kind"] == "summary"
     total = sum(m["overpaying_by"] or 0 for m in summary["medicines"])
-    assert total == pytest.approx((40 - 5.41) + 9.62, abs=0.05)
+    # Each against Cost Plus delivered: $5.41 and $5.38 for a month, plus $5.25 shipping.
+    assert total == pytest.approx((40 - 10.66) + (15 - 10.63), abs=0.05)
     assert "a year" in summary["speech"]
 
     listed = call(server, "list_my_medicines")
     assert "atorvastatin 20 mg tablet" in listed["speech"]
     assert call(server, "remove_my_medicine", choice_id="617310")["kind"] == "removed"
     assert "atorvastatin" not in call(server, "list_my_medicines")["speech"]
+
+
+def test_a_list_with_nothing_overpriced_says_so_plainly(server):
+    call(server, "save_my_medicine", choice_id="617310", you_pay_per_month=9)       # under the delivered price
+    summary = call(server, "check_all_my_medicines")
+    assert summary["speech"].startswith("I checked 1 medicine. It doesn't look overpriced")
+    assert summary["card"]["details"] == ["1 checked", "Nothing looks overpriced"]
 
 
 def test_empty_list_says_what_to_do(server):

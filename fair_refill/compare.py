@@ -22,6 +22,11 @@ someone:
     insurance usually doesn't count toward a deductible or Medicare's yearly
     limit, so for someone on several medicines the cheaper refill can be the
     dearer year.
+  * A price someone can buy at is the price at their door. Cost Plus's
+    quote leaves out shipping, so shipping is added before anything is said
+    or compared. "You're overpaying" is measured against a month at a time,
+    delivered: the same prescription they hold now. Three months at once is
+    cheaper per month and is offered as that, with the doctor as the way to it.
   * No jargon in anything spoken: "what pharmacies pay", never "NADAC".
 """
 
@@ -31,7 +36,7 @@ from dataclasses import dataclass, field
 from datetime import date
 
 from . import medicare, rxpass
-from .costplus import Quote
+from .costplus import LONG_SUPPLY_MONTHS, SHIPPING, SHIPPING_CHECKED, Quote
 from .nadac import NadacPrice
 from .rxnorm import Drug
 
@@ -75,11 +80,14 @@ def money(x: float) -> str:
     return f"${x:,.0f}"
 
 
-def _where_to_buy(cash: Option | None, sub: Option | None) -> str:
-    """One sentence, both places, each with the condition that matters."""
+def _where_to_buy(cash: Option | None, sub: Option | None, long: Option | None = None) -> str:
+    """One sentence, every place, each with the condition that matters."""
     parts = []
     if cash:
-        parts.append(f"Cost Plus Drugs sells it for {money(cash.monthly)} a month plus shipping")
+        said = f"Cost Plus Drugs delivers it for about {money(cash.monthly)} a month"
+        if long:
+            said += f", or {money(long.monthly)} a month if your doctor prescribes three months at once"
+        parts.append(said)
     if sub:
         parts.append(f"Amazon RxPass covers it for {money(sub.monthly)} a month with Prime, outside insurance")
     return (", and ".join(parts) + ".") if parts else ""
@@ -99,6 +107,15 @@ def cannot_compare(drug: Drug) -> Finding:
                 "when paying cash costs less than your insurance."),
         title=drug.spoken, details=("Price check covers tablets and capsules", "Ask for the cash price"),
         action="Ask your pharmacist", sources=(medicare.GAG_CLAUSE_BAN_SOURCE,))
+
+
+def _card_line(o: Option) -> str:
+    delivered = " delivered" if o.label.startswith("Cost Plus") else ""
+    return f"{o.label}: {_card_money(o.monthly)}/mo{delivered}"
+
+
+def _worth_it(gap: float, against: float) -> bool:
+    return gap >= max(_WORTH_IT_DOLLARS, _WORTH_IT_SHARE * against)
 
 
 def _card_money(x: float) -> str:
@@ -154,9 +171,10 @@ def medicare_price(drug: Drug, today: date | None = None, now_costs: float | Non
 
 def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice | None,
            generic_cost: NadacPrice | None, cash: Quote | None, you_pay: float | None = None,
-           today: date | None = None) -> Finding:
+           today: date | None = None, cash_long: Quote | None = None) -> Finding:
     """`asked` is what the person named (brand or generic); `generic` is the
-    same clinical drug without a brand. `quantity` is units a month."""
+    same clinical drug without a brand. `quantity` is units a month. `cash`
+    is a quote for a month, `cash_long` for three months in one fill."""
     name = asked.spoken
     is_brand = asked.tty == "SBD"
     today = today or date.today()
@@ -173,10 +191,19 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
     benchmark = generic_cost.per_unit * quantity if generic_cost and generic_cost.unit == "EA" else None
     if generic_cost:
         sources.append(f"CMS NADAC, {generic_cost.as_of}")
-    cash_month = cash.total * quantity / cash.quantity if cash else None
+    cash_month = cash.delivered(quantity) if cash else None
     if cash_month is not None:
-        options.append(Option("Cost Plus Drugs", cash_month, "plus shipping; outside insurance"))
-        sources.append("Cost Plus Drugs public prices")
+        options.append(Option("Cost Plus Drugs", cash_month,
+                              f"delivered, with ${SHIPPING:.2f} shipping an order; outside insurance"))
+        sources.append(f"Cost Plus Drugs public prices, shipping as of {SHIPPING_CHECKED}")
+    # Three months in one fill, per month. Offered only where it's a real
+    # saving on a month at a time: it needs a new prescription to get.
+    long_month = cash_long.delivered(quantity * LONG_SUPPLY_MONTHS) / LONG_SUPPLY_MONTHS if cash_long else None
+    long_opt = None
+    if cash_month is not None and long_month is not None and _worth_it(cash_month - long_month, long_month):
+        long_opt = Option("Cost Plus Drugs, three months at once", long_month,
+                          "per month, delivered; needs a three-month prescription; outside insurance")
+        options.append(long_opt)
     if rxpass.may_cover(generic.ingredients, generic.form):
         options.append(Option("Amazon RxPass", float(rxpass.PRICE_PER_MONTH),
                               "if your strength is covered; " + "; ".join(rxpass.CAVEATS)))
@@ -205,8 +232,8 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
                          f"{money(benchmark)} for the generic, {generic.spoken}.")
         details.append(f"Brand: {_card_money(brand_month)}/mo · generic: {_card_money(benchmark)}/mo")
         if cheapest:
-            sentences.append("For the generic: " + _where_to_buy(cash_opt, sub_opt))
-            details.append(f"{cheapest.label}: {_card_money(cheapest.monthly)}/mo")
+            sentences.append("For the generic: " + _where_to_buy(cash_opt, sub_opt, long_opt))
+            details.append(_card_line(cheapest))
             sentences.append(CASH_CAVEAT)
         sentences.append("Ask your pharmacist or doctor whether the generic is right for you.")
         if negotiated:
@@ -219,33 +246,44 @@ def assess(*, asked: Drug, generic: Drug, quantity: int, asked_cost: NadacPrice 
 
     # ── a generic, or a brand we can only price as itself ────────────────────
     overpaying = None
-    if you_pay is not None and cheapest and you_pay - cheapest.monthly >= max(_WORTH_IT_DOLLARS,
-                                                                           _WORTH_IT_SHARE * cheapest.monthly):
+    if you_pay is not None and cheapest and _worth_it(you_pay - cheapest.monthly, cheapest.monthly):
         overpaying = you_pay - cheapest.monthly
         sentences.append(f"You may be paying about {money(overpaying)} a month more than you need to "
                          f"for {name}.")
-        sentences.append(_where_to_buy(cash_opt, sub_opt))
+        sentences.append(_where_to_buy(cash_opt, sub_opt, long_opt))
         sentences.append(CASH_CAVEAT)
         sentences.append("Ask your pharmacist whether paying cash would cost less than your insurance. "
                          "They're allowed to tell you.")
         details = [f"You pay: {_card_money(you_pay)}/mo",
-                   f"{cheapest.label}: {_card_money(cheapest.monthly)}/mo"]
+                   _card_line(cheapest)]
         action = "Ask about the cash price"
+    elif you_pay is not None and long_opt and _worth_it(you_pay - long_opt.monthly, long_opt.monthly):
+        # Fair for a month at a time, but three months at once would cost less.
+        # Not "overpaying": it takes a different prescription to get there.
+        sentences.append(f"{money(you_pay)} a month for {name} is a fair price for a month at a time.")
+        sentences.append(f"Cost Plus Drugs delivers three months at once for about {money(long_opt.monthly)} "
+                         "a month.")
+        sentences.append(CASH_CAVEAT)
+        sentences.append("Ask your doctor or pharmacist whether a three-month supply would suit you.")
+        details = [f"You pay: {_card_money(you_pay)}/mo",
+                   f"Three months at once: {_card_money(long_opt.monthly)}/mo delivered"]
+        action = "Ask about three months"
     elif you_pay is not None and cheapest:
         sentences.append(f"{money(you_pay)} a month for {name} is a fair price.")
         if benchmark is not None:
             sentences.append(f"Pharmacies pay about {money(benchmark)} a month for it.")
-        details = [f"You pay: {_card_money(you_pay)}/mo", f"Lowest found: {_card_money(cheapest.monthly)}/mo"]
+        lowest = min(o.monthly for o in (cheapest, long_opt) if o)
+        details = [f"You pay: {_card_money(you_pay)}/mo", f"Lowest found: {_card_money(lowest)}/mo"]
         action = "No change needed"
     else:
         if benchmark is not None:
             sentences.append(f"Pharmacies pay about {money(benchmark)} a month for {name}.")
             details.append(f"Pharmacies pay: {_card_money(benchmark)}/mo")
         if cheapest:
-            sentences.append(_where_to_buy(cash_opt, sub_opt))
+            sentences.append(_where_to_buy(cash_opt, sub_opt, long_opt))
             sentences.append(CASH_CAVEAT)
             sentences.append("If you pay more than that, ask your pharmacist about the cash price.")
-            details.append(f"{cheapest.label}: {_card_money(cheapest.monthly)}/mo")
+            details.append(_card_line(cheapest))
         elif benchmark is not None:
             sentences.append("Ask your pharmacist for the cash price. They're allowed to tell you when "
                              "paying cash costs less than your insurance.")

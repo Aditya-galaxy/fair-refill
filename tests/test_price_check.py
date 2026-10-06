@@ -59,15 +59,17 @@ def test_every_answer_is_plain_safe_and_ends_with_a_next_step(check, text):
 def test_generic_is_priced_against_what_pharmacies_pay(check):
     r = check.ask("atorvastatin 20 mg")
     assert "Pharmacies pay about 84 cents a month for atorvastatin 20 mg tablet" in r.speech
-    assert "Cost Plus Drugs sells it for $5.41 a month plus shipping" in r.speech
+    assert "Cost Plus Drugs delivers it for about $11 a month" in r.speech
     assert r.finding.sources[0].startswith("CMS NADAC, 2026-")
 
 
 def test_overpaying_is_measured_against_a_price_anyone_can_buy_at(check):
     r = check.ask("atorvastatin 20 mg", you_pay=40.0)
-    # $40 - $5.41 at Cost Plus, not $40 - $5 at RxPass, which needs Prime and skips insurance
-    assert r.finding.overpaying_by == pytest.approx(40 - 5.41, abs=0.01)
-    assert "paying about $35 a month more than you need to" in r.speech
+    # $40 against Cost Plus at the door ($5.41 and $5.25 shipping), for a month
+    # at a time: the prescription they hold now. Not against RxPass, which
+    # needs Prime and skips insurance, nor against three months at once.
+    assert r.finding.overpaying_by == pytest.approx(40 - (5.41 + 5.25), abs=0.01)
+    assert "paying about $29 a month more than you need to" in r.speech
     assert "They're allowed to tell you" in r.speech
 
 
@@ -95,7 +97,7 @@ def test_a_cash_price_always_comes_with_its_catch(check):
     or Medicare's yearly limit. Whoever hears a cash price hears that too."""
     for text, you_pay in (("atorvastatin 20 mg", None), ("atorvastatin 20 mg", 40.0), ("Lipitor 20", None)):
         speech = check.ask(text, you_pay=you_pay).speech
-        assert "Cost Plus Drugs sells it" in speech
+        assert "Cost Plus Drugs delivers it" in speech
         assert CASH_CAVEAT in speech, speech
     assert CASH_CAVEAT not in check.ask("eliquis 5 mg").speech       # no cash price said, so no catch to add
 
@@ -119,11 +121,53 @@ def test_a_negotiated_injection_is_answered_for_the_brand_without_asking_which_p
     assert "negotiated price for Enbrel is $2,355 for a 30-day supply this year" in r.speech
 
 
-def test_micrograms_find_what_rxnorm_writes_in_milligrams(check):
-    assert check.ask("Linzess 145 mcg").finding.title == "Linzess 0.145 mg capsule"
-    r = check.ask("levothyroxine 50 mcg")
-    assert r.kind == "choose"
-    assert r.speech == "Which levothyroxine do you take: 0.05 mg/ml liquid, 0.05 mg tablet, or 0.05 mg capsule?"
+def test_medicines_labelled_in_micrograms_are_found_and_said_in_micrograms(check):
+    """RxNorm writes "levothyroxine sodium 0.05 MG"; the bottle says 50 mcg."""
+    assert check.ask("Linzess 145 mcg").finding.title == "Linzess 145 mcg capsule"
+    for said in ("levothyroxine 50 mcg", "levothyroxine 50", "levothyroxine 0.05 mg"):
+        r = check.ask(said)
+        assert r.kind == "choose", said
+        assert r.speech == "Which levothyroxine do you take: 50 mcg/ml liquid, 50 mcg tablet, or 50 mcg capsule?"
+    # Saying the form is an answer to that question before it's asked.
+    priced = check.ask("levothyroxine 50 mcg tablet")
+    assert priced.kind == "answer"
+    # Cost Plus lists it as 50mcg, so it's only found when asked for that way.
+    assert "Cost Plus Drugs delivers it for" in priced.speech and "levothyroxine 50 mcg tablet" in priced.speech
+
+
+@pytest.mark.parametrize("name, spoken, token", [
+    ("levothyroxine sodium 0.05 MG Oral Tablet", "levothyroxine 50 mcg tablet", "50mcg"),
+    ("levothyroxine sodium 0.137 MG Oral Tablet [Synthroid]", "Synthroid 137 mcg tablet", "137mcg"),
+    ("levothyroxine sodium 0.0125 MG Oral Capsule", "levothyroxine 12.5 mcg capsule", "12.5mcg"),
+    ("digoxin 0.125 MG Oral Tablet", "digoxin 125 mcg tablet", "125mcg"),
+    # Small strengths that are labelled in milligrams stay in milligrams.
+    ("alprazolam 0.25 MG Oral Tablet", "alprazolam 0.25 mg tablet", "0.25mg"),
+    ("tamsulosin hydrochloride 0.4 MG Oral Capsule", "tamsulosin 0.4 mg capsule", "0.4mg"),
+])
+def test_only_medicines_labelled_in_micrograms_are_converted(name, spoken, token):
+    d = Drug("1", name, "SBD" if "[" in name else "SCD")
+    assert (d.spoken, d.strength_token) == (spoken, token)
+
+
+def test_three_months_at_once_is_offered_as_something_to_ask_the_doctor_for(check):
+    """Cost Plus charges its fee per fill and shipping per order, so three
+    months in one fill costs far less per month. Recorded prices: $5.41 for
+    30 tablets and $6.23 for 90, each plus $5.25 shipping."""
+    said = "or $3.83 a month if your doctor prescribes three months at once"
+    assert said in check.ask("atorvastatin 20 mg").speech
+    assert said in check.ask("atorvastatin 20 mg", you_pay=40.0).speech
+
+    # Paying less than a month at a time costs delivered: not "overpaying",
+    # but three months at once would still be cheaper, so that's what's said.
+    r = check.ask("atorvastatin 20 mg", you_pay=9.0)
+    assert r.finding.overpaying_by is None
+    assert r.speech.startswith("$9 a month for atorvastatin 20 mg tablet is a fair price for a month at a time.")
+    assert "Cost Plus Drugs delivers three months at once for about $3.83 a month." in r.speech
+    assert r.speech.endswith("Ask your doctor or pharmacist whether a three-month supply would suit you.")
+
+    # Paying less than either: nothing to change.
+    r = check.ask("atorvastatin 20 mg", you_pay=4.0)
+    assert r.finding.action == "No change needed" and "three" not in r.speech
 
 
 def test_an_ambiguous_medicine_is_a_short_question(check):
@@ -202,8 +246,29 @@ def _assess(you_pay=None, cash=CASH):
 
 
 def test_small_gaps_are_not_worth_worrying_someone_about():
-    assert _assess(you_pay=7.0).overpaying_by is None        # $1.59 over: not worth a trip
-    assert _assess(you_pay=9.0).overpaying_by == pytest.approx(3.59)
+    # Cost Plus at the door is $5.41 + $5.25 shipping = $10.66.
+    assert _assess(you_pay=12.0).overpaying_by is None       # $1.34 over: not worth a trip
+    assert _assess(you_pay=14.0).overpaying_by == pytest.approx(3.34)
+
+
+def test_someone_paying_less_than_the_delivered_price_is_not_told_they_overpay():
+    """The quote alone is $5.41, but nobody gets it for that: shipping is
+    $5.25 an order. $9 a month beats what Cost Plus costs at the door."""
+    f = _assess(you_pay=9.0)
+    assert f.overpaying_by is None and "fair price" in f.speech
+
+
+def test_three_months_is_offered_only_where_it_saves_enough_to_matter():
+    long = Quote("67877051210", 6.23, 90, "https://example")
+    with_long = assess(asked=GENERIC, generic=GENERIC, quantity=30, asked_cost=COST, generic_cost=COST,
+                       cash=CASH, cash_long=long)
+    assert [o.label for o in with_long.options][:2] == ["Cost Plus Drugs", "Cost Plus Drugs, three months at once"]
+    assert with_long.options[1].monthly == pytest.approx((6.23 + 5.25) / 3)
+    # A three-month price that is barely lower isn't worth a new prescription.
+    barely = Quote("67877051210", 26.00, 90, "https://example")
+    without = assess(asked=GENERIC, generic=GENERIC, quantity=30, asked_cost=COST, generic_cost=COST,
+                     cash=CASH, cash_long=barely)
+    assert "three months" not in without.speech
 
 
 def test_rxpass_alone_never_says_someone_is_overpaying_without_its_conditions():
