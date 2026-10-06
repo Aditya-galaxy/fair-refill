@@ -64,7 +64,7 @@ and Cost Plus's price that day. It also:
   Amazon RxPass is mentioned where its list includes the medicine, with its conditions.
 - **A simulated Alexa+** that uses the add-on as an MCP client, speaks its answers, and hosts its card on an Echo Show-style screen. Alexa+'s own developer tools are not open to entrants (friction log, entry 1), so this stands in for them. The add-on is the real thing; only the front end is simulated.
 - **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 53 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
-- **108 tests**, all offline: they replay 98 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
+- **114 tests**, all offline: they replay 100 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
 
 Run it:
 
@@ -89,7 +89,6 @@ This is health-adjacent, so what it refuses to do matters as much as what it doe
 
 - It has not run on Alexa+ itself, only against the simulator and generic MCP clients.
 - Price comparisons cover tablets and capsules only. Injections and inhalers get an answer only where Medicare has negotiated a price for the brand.
-- Strengths are said the way RxNorm writes them, so 50 micrograms of levothyroxine is found but spoken as "0.05 mg".
 - One cash-price source. Cost Plus doesn't carry every drug (Eliquis, for one), and for those the answer has no "you can buy it for" figure.
 - The JAMA figure is from 2013 claims. It is the best published number and the answer to "is this still true" is what the add-on is for.
 

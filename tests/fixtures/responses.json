@@ -2596,6 +2596,36 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
+ "315e41e04fb4cf4d48498c62": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": [
+    {
+     "auto_refill": true,
+     "brand_generic": "Generic",
+     "brand_name": "Synthroid",
+     "form": "Tablet",
+     "insurance_eligible": "Yes",
+     "medication_name": "Levothyroxine",
+     "medispan_pack_size": "1000",
+     "medispan_pack_size_units": "ea",
+     "medispan_quantity": "1",
+     "ndc": "68180096603",
+     "pill_nonpill": "Pill",
+     "requested_quote": "$5.93",
+     "requested_quote_units": "30",
+     "slug": "levothyroxine-50mcg-tablet",
+     "special_handling": "",
+     "strength": "50mcg",
+     "unit_billing_price": "$0.0304",
+     "unit_price": "$0.027",
+     "url": "https://www.costplusdrugs.com/medications/levothyroxine-50mcg-tablet/"
+    }
+   ]
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=levothyroxine&quantity_units=30&strength=50mcg"
+ },
  "31e5a9f0f68d0a27aedcd160": {
   "json": {
    "ndcGroup": {
@@ -7542,6 +7572,14 @@
   },
   "status": 200,
   "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=lisinopril&quantity_units=30&strength=10mg"
+ },
+ "8c716cc01f0d02de8ff207e3": {
+  "json": {
+   "deprecation_notice": "This API is deprecated. Please migrate to the new pricing API at https://api.costplusdrugs.com/pricelist/cpd. Documentation: https://mccpdc-llc.github.io/pricing-api-documentation/cpd.html",
+   "results": []
+  },
+  "status": 200,
+  "url": "https://us-central1-costplusdrugs-publicapi.cloudfunctions.net/main?medication_name=linaclotide&quantity_units=30&strength=145mcg"
  },
  "8d97dbb2fbcfa0f982f170e4": {
   "json": {

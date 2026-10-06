@@ -119,11 +119,31 @@ def test_a_negotiated_injection_is_answered_for_the_brand_without_asking_which_p
     assert "negotiated price for Enbrel is $2,355 for a 30-day supply this year" in r.speech
 
 
-def test_micrograms_find_what_rxnorm_writes_in_milligrams(check):
-    assert check.ask("Linzess 145 mcg").finding.title == "Linzess 0.145 mg capsule"
-    r = check.ask("levothyroxine 50 mcg")
-    assert r.kind == "choose"
-    assert r.speech == "Which levothyroxine do you take: 0.05 mg/ml liquid, 0.05 mg tablet, or 0.05 mg capsule?"
+def test_medicines_labelled_in_micrograms_are_found_and_said_in_micrograms(check):
+    """RxNorm writes "levothyroxine sodium 0.05 MG"; the bottle says 50 mcg."""
+    assert check.ask("Linzess 145 mcg").finding.title == "Linzess 145 mcg capsule"
+    for said in ("levothyroxine 50 mcg", "levothyroxine 50", "levothyroxine 0.05 mg"):
+        r = check.ask(said)
+        assert r.kind == "choose", said
+        assert r.speech == "Which levothyroxine do you take: 50 mcg/ml liquid, 50 mcg tablet, or 50 mcg capsule?"
+    tablet = next(d for d in r.choices if d.spoken == "levothyroxine 50 mcg tablet")
+    priced = check.check(tablet, 30)
+    # Cost Plus lists it as 50mcg, so it's only found when asked for that way.
+    assert "Cost Plus Drugs sells it for" in priced.speech and "levothyroxine 50 mcg tablet" in priced.speech
+
+
+@pytest.mark.parametrize("name, spoken, token", [
+    ("levothyroxine sodium 0.05 MG Oral Tablet", "levothyroxine 50 mcg tablet", "50mcg"),
+    ("levothyroxine sodium 0.137 MG Oral Tablet [Synthroid]", "Synthroid 137 mcg tablet", "137mcg"),
+    ("levothyroxine sodium 0.0125 MG Oral Capsule", "levothyroxine 12.5 mcg capsule", "12.5mcg"),
+    ("digoxin 0.125 MG Oral Tablet", "digoxin 125 mcg tablet", "125mcg"),
+    # Small strengths that are labelled in milligrams stay in milligrams.
+    ("alprazolam 0.25 MG Oral Tablet", "alprazolam 0.25 mg tablet", "0.25mg"),
+    ("tamsulosin hydrochloride 0.4 MG Oral Capsule", "tamsulosin 0.4 mg capsule", "0.4mg"),
+])
+def test_only_medicines_labelled_in_micrograms_are_converted(name, spoken, token):
+    d = Drug("1", name, "SBD" if "[" in name else "SCD")
+    assert (d.spoken, d.strength_token) == (spoken, token)
 
 
 def test_an_ambiguous_medicine_is_a_short_question(check):
