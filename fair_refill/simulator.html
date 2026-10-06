@@ -109,6 +109,17 @@
   const $ = (id) => document.getElementById(id);
   const card = $("card"), bar = $("bar");
   let state = {};
+  // Whose list of medicines this browser's requests are for: a long random
+  // key made here and kept here. The server keeps the list under it and
+  // never learns who it belongs to.
+  let listKey = null;
+  try {
+    listKey = localStorage.getItem("fair-refill-list");
+    if (!listKey) {
+      listKey = Array.from(crypto.getRandomValues(new Uint8Array(24)), (b) => b.toString(16).padStart(2, "0")).join("");
+      localStorage.setItem("fair-refill-list", listKey);
+    }
+  } catch (e) { /* no storage: the add-on falls back to its own single list, or none on a shared server */ }
   let voice = null;
 
   function tick() { $("clock").textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); }
@@ -152,7 +163,7 @@
     const interim = setTimeout(() => { if (!answered) { $("alexa").textContent = "One moment…"; speak("One moment."); } }, 1100);
     try {
       const r = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" },
-                                          body: JSON.stringify({ text, state }) });
+                                          body: JSON.stringify({ text, state, list: listKey }) });
       const data = await r.json();
       answered = true; clearTimeout(interim);
       state = data.state || {};

@@ -1,0 +1,15 @@
+# Only what the image needs goes into the build: see the COPY lines in Dockerfile.
+.git
+.github
+.venv
+.claude
+.pytest_cache
+.ruff_cache
+__pycache__
+*.pyc
+*.egg-info
+cache
+state
+tests
+tools
+deploy
