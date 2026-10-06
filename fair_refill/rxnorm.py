@@ -256,6 +256,9 @@ class RxNorm:
         spelling was fixed. Brands come back as brands, generics as generics:
         someone who says "Lipitor" is asking about Lipitor."""
         text, forms = form_hint(text)
+        # "Tablet" or "capsule" is dropped from the name, but it's still an
+        # answer to "which one?" when a medicine comes as both.
+        solid = next((w for w in ("tablet", "capsule") if re.search(rf"\b{w}s?\b", text, flags=re.IGNORECASE)), None)
         name, strength = split_query(text)
         if not name:
             return [], None
@@ -283,6 +286,8 @@ class RxNorm:
         elif any(" Extended Release " in f" {d.name} " for d in concepts) and \
                 any("Extended Release" not in d.name for d in concepts):
             pass   # both kinds exist and nobody said which: the caller asks
+        if solid and not forms:
+            concepts = [d for d in concepts if d.form.endswith(solid)] or concepts
         concepts = [self._with_family(d) for d in concepts]
         return sorted(_one_per_spoken_name(concepts), key=_strength_order), corrected
 

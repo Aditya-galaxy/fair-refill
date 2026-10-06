@@ -82,6 +82,9 @@ well-meant answer could hurt someone.
 - **Keep the catch with the cash price.** Money paid outside insurance
   usually doesn't count toward a deductible or Medicare's yearly limit. The
   speech says this whenever it gives a cash price. Don't trim it.
+- **Three months at once is the doctor's call.** The speech offers it as "if
+  your doctor prescribes three months at once". Don't turn that into advice
+  to change a prescription.
 - **Keep the last sentence.** Every answer ends by sending the person to their
   pharmacist, doctor or plan. That sentence is the point of the answer.
 - **Say what a figure is.** "What pharmacies pay" is not a price anyone can
