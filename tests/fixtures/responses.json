@@ -10901,61 +10901,6 @@
   "status": 200,
   "url": "https://data.medicaid.gov/api/1/datastore/query/fbb83258-11c7-47f5-8b18-5f8e79f7e704/0"
  },
- "d37b69cf58e7dec24955bb10": {
-  "json": {
-   "drugGroup": {
-    "conceptGroup": [
-     {
-      "tty": "BPCK"
-     },
-     {
-      "conceptProperties": [
-       {
-        "language": "ENG",
-        "name": "atorvastatin 80 MG Oral Tablet [Lipitor]",
-        "rxcui": "262095",
-        "suppress": "N",
-        "synonym": "Lipitor 80 MG Oral Tablet",
-        "tty": "SBD",
-        "umlscui": ""
-       },
-       {
-        "language": "ENG",
-        "name": "atorvastatin 10 MG Oral Tablet [Lipitor]",
-        "rxcui": "617314",
-        "suppress": "N",
-        "synonym": "Lipitor 10 MG Oral Tablet",
-        "tty": "SBD",
-        "umlscui": ""
-       },
-       {
-        "language": "ENG",
-        "name": "atorvastatin 20 MG Oral Tablet [Lipitor]",
-        "rxcui": "617318",
-        "suppress": "N",
-        "synonym": "Lipitor 20 MG Oral Tablet",
-        "tty": "SBD",
-        "umlscui": ""
-       },
-       {
-        "language": "ENG",
-        "name": "atorvastatin 40 MG Oral Tablet [Lipitor]",
-        "rxcui": "617320",
-        "suppress": "N",
-        "synonym": "Lipitor 40 MG Oral Tablet",
-        "tty": "SBD",
-        "umlscui": ""
-       }
-      ],
-      "tty": "SBD"
-     }
-    ],
-    "name": null
-   }
-  },
-  "status": 200,
-  "url": "https://rxnav.nlm.nih.gov/REST/drugs.json?name=Lipitor"
- },
  "d51ecad74ed06497114f8c78": {
   "json": {
    "count": 15,

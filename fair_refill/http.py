@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import threading
 import time
 from pathlib import Path
 from typing import Any
@@ -40,10 +41,15 @@ _DEFAULT_TTL = 12 * 3600
 
 
 class Http:
-    def __init__(self, client: httpx.Client | None = None, cache_dir: Path | None = None) -> None:
+    def __init__(self, client: httpx.Client | None = None, cache_dir: Path | None = None,
+                 refresh_after: float = 1.0) -> None:
         self.client = client or httpx.Client(timeout=TIMEOUT, headers={"User-Agent": USER_AGENT},
                                              follow_redirects=True)
         self.cache_dir = cache_dir
+        # The share of an answer's life after which it's fetched again. Someone
+        # asking gets any answer that's still good (1.0); pre-warming re-fetches
+        # early (prewarm.py), so nothing it keeps warm runs out between rounds.
+        self.refresh_after = refresh_after
 
     def _cached(self, request: httpx.Request) -> Any | None:
         if self.cache_dir is None:
@@ -52,7 +58,7 @@ class Http:
         if not path.exists():
             return None
         entry = json.loads(path.read_text(encoding="utf-8"))
-        if time.time() - entry["at"] > _TTL_SECONDS.get(request.url.host, _DEFAULT_TTL):
+        if time.time() - entry["at"] > _TTL_SECONDS.get(request.url.host, _DEFAULT_TTL) * self.refresh_after:
             return None
         return entry["json"]
 
@@ -60,7 +66,9 @@ class Http:
         if self.cache_dir is None:
             return
         self.cache_dir.mkdir(parents=True, exist_ok=True)
-        tmp = self.cache_dir / f".{request_key(request)}.tmp"
+        # A name of its own per writer: parallel lookups often fetch the same
+        # thing at once, and each must be able to finish its own write.
+        tmp = self.cache_dir / f".{request_key(request)}.{threading.get_ident()}.tmp"
         tmp.write_text(json.dumps({"at": time.time(), "json": data}), encoding="utf-8")
         tmp.replace(self.cache_dir / f"{request_key(request)}.json")
 

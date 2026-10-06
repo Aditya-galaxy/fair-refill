@@ -24,5 +24,10 @@ ignore = ["S101"]
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S105", "S106"]
 
+# Named explicitly: the local cache/ and state/ folders sit beside the package,
+# and setuptools refuses to guess between them.
+[tool.setuptools]
+packages = ["fair_refill"]
+
 [tool.setuptools.package-data]
 fair_refill = ["card.html", "simulator.html"]

@@ -227,6 +227,9 @@ class RxNorm:
         name, strength = split_query(text)
         if not name:
             return [], None
+        # RxNorm ignores case, and speech recognition capitalises as it
+        # pleases: one spelling means one lookup, and one cached answer.
+        name = name.lower()
         corrected = None
         concepts = self._concepts(name)
         if not concepts:

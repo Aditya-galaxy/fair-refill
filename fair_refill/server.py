@@ -25,7 +25,7 @@ from typing import Any
 from mcp.server.apps import Apps
 from mcp.server.mcpserver import MCPServer
 
-from . import medicare
+from . import medicare, prewarm
 from .cabinet import Cabinet, Saved
 from .compare import Finding, money
 from .service import PriceCheck, Result
@@ -60,7 +60,7 @@ def _payload(r: Result) -> dict[str, Any]:
 
 def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MCPServer:
     state = Path(os.environ.get("FAIR_REFILL_STATE", ROOT / "state"))
-    check = check or PriceCheck(cache_dir=Path(os.environ.get("FAIR_REFILL_CACHE", ROOT / "cache")))
+    check = check or PriceCheck(cache_dir=prewarm.cache_dir())
     cabinet = cabinet or Cabinet(state / "my_medicines.json")
 
     apps = Apps()
@@ -195,6 +195,7 @@ def main() -> None:
     host = os.environ.get("FAIR_REFILL_HOST", "127.0.0.1")
     port = int(os.environ.get("FAIR_REFILL_PORT", "8765"))
     app = build().streamable_http_app(host=host)
+    prewarm.in_background()
     uvicorn.run(app, host=host, port=port, log_level="warning")
 
 

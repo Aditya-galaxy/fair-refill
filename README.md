@@ -27,6 +27,8 @@ That starts two things on one port:
 - **The add-on:** an MCP server at `/mcp`, over Streamable HTTP. It speaks protocol 2025-11-25, the version Alexa+ documents, and newer versions too. Seven tools: check a price, price the one you picked, save / list / check all / remove from your list, and Medicare's yearly limits. Its card is an MCP App (`ui://fair-refill/card.html`).
 - **A simulated Alexa+** at `/`. It uses the add-on the way Alexa+ would: as an MCP client, speaking its answers and hosting its card on an Echo Show-style screen. Alexa+'s own developer tools aren't open to hackathon entrants, so this stands in for them. The add-on is real either way.
 
+On start it also looks up every strength of 47 commonly asked-about medicines in the background, and again every five hours, so those questions are answered from a local copy in well under a second instead of the 5 to 15 seconds a first lookup takes. A full round takes about eight minutes. `python -m fair_refill.prewarm` runs one round by hand; `FAIR_REFILL_PREWARM=0` turns it off. A kept price is the source's own answer, never more than 12 hours old, and is still spoken with the source's date.
+
 Point any MCP client at `http://127.0.0.1:8765/mcp` to use the add-on directly. `python -m fair_refill.server` runs the add-on alone.
 
 ## Where every number comes from
