@@ -1,0 +1,71 @@
+{
+ "note": "The film, in order. A `card` segment is a still with the narrator over it. A `turn` segment is one question put to the real add-on through the simulated Alexa+: the person's line is `ask`, and the assistant's line is whatever the add-on answers when the frames are captured (video/out/answers.json), never text written here. `group` puts consecutive turns in one voice request. `pause_after` is silence after the segment, in seconds. The film runs close to its three-minute limit: the inhaler question (\"I can compare prices for tablets and capsules, but not yet for inhalers\") was cut for time.",
+ "voices": {
+  "narrator": "Charon",
+  "person": "Orus",
+  "assistant": "Aoede"
+ },
+ "say_voices": {
+  "narrator": "Daniel",
+  "person": "Alex",
+  "assistant": "Samantha"
+ },
+ "segments": [
+  {
+   "id": "open",
+   "kind": "card",
+   "card": "open.html",
+   "pause_after": 0.5,
+   "say": "One in five Americans aged sixty-five and over say they didn't take a medicine as prescribed because of its cost. In one study, the insurance copay was higher than the cash price for more than a quarter of generic prescriptions. A pharmacist is allowed to tell you, but only if you ask. Fair Refill is an Alexa Plus add-on for asking."
+  },
+  {
+   "id": "atorvastatin",
+   "kind": "turn",
+   "group": "a",
+   "pause_after": 0.4,
+   "ask": "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month."
+  },
+  {
+   "id": "remember",
+   "kind": "turn",
+   "group": "a",
+   "pause_after": 0.5,
+   "ask": "Remember this."
+  },
+  {
+   "id": "metformin",
+   "kind": "turn",
+   "group": "b",
+   "pause_after": 0.2,
+   "ask": "Check my metformin 500."
+  },
+  {
+   "id": "extended",
+   "kind": "turn",
+   "group": "b",
+   "pause_after": 0.5,
+   "ask": "The extended release."
+  },
+  {
+   "id": "eliquis",
+   "kind": "turn",
+   "group": "c",
+   "pause_after": 0.5,
+   "ask": "Is my Eliquis too expensive?"
+  },
+  {
+   "id": "all",
+   "kind": "turn",
+   "group": "d",
+   "pause_after": 0.5,
+   "ask": "Check all my medicines."
+  },
+  {
+   "id": "close",
+   "kind": "card",
+   "card": "close.html",
+   "pause_after": 1.0,
+   "say": "Fair Refill is a real MCP server with seven tools, and its card is an MCP App. Every price is for the identical medicine, from a public source, and every answer ends at the pharmacist. Alexa Plus's developer tools weren't open to entrants, so the screen you saw is a stand-in. The add-on behind it is real."
+  }
+ ]
+}

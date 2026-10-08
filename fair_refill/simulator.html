@@ -126,6 +126,7 @@
   tick(); setInterval(tick, 15000);
 
   // The add-on's own card (its MCP App), read from the add-on over MCP.
+  const cardReady = new Promise((resolve) => card.addEventListener("load", resolve, { once: true }));
   fetch("/api/card").then((r) => r.text()).then((html) => { card.srcdoc = html; });
 
   function pickVoice() {
@@ -134,9 +135,16 @@
   }
   if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
+  // A link can carry a conversation: /?ask=first+question&ask=second. The page
+  // asks each in turn without speaking, so a link can show an answer, and the
+  // demo film's frames are this page and the add-on's real answers.
+  // &hear=… then shows one more question as just heard, before any answer.
+  const linked = new URLSearchParams(location.search);
+  const quiet = linked.has("ask") || linked.has("hear");
+
   function speak(text) {
     return new Promise((resolve) => {
-      if (!("speechSynthesis" in window) || !text) return resolve();
+      if (quiet || !("speechSynthesis" in window) || !text) return resolve();
       speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       if (voice) u.voice = voice;
@@ -180,6 +188,19 @@
     } finally {
       bar.className = "bar";
     }
+  }
+
+  if (quiet) {
+    (async () => {
+      await cardReady;
+      for (const question of linked.getAll("ask")) await ask(question);
+      if (linked.get("hear")) {
+        $("you").textContent = "“" + linked.get("hear").trim() + "”";
+        $("alexa").textContent = "";
+        bar.className = "bar listen";
+      }
+      document.body.dataset.asked = "done";
+    })();
   }
 
   $("form").addEventListener("submit", (e) => { e.preventDefault(); const t = $("text").value; $("text").value = ""; ask(t); });

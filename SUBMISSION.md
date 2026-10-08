@@ -19,7 +19,9 @@ pharmacist.
 
 ## The problem
 
-One in five Americans over 65 has skipped medicine because of cost. In a JAMA
+One in five Americans aged 65 and over reported not taking a medicine as
+prescribed because of its cost: not filling it, skipping doses, or taking less
+(Dusetzina et al., JAMA Network Open, 2023; a 2022 survey). In a JAMA
 study of 2013 claims (Van Nuys et al., 2018), the insured patient's copay was
 higher than the drug's cash price for more than a quarter of generic
 prescriptions. Since 2018 federal law has let pharmacists say when paying cash
@@ -65,7 +67,7 @@ and Cost Plus's price that day. It also:
   Amazon RxPass is mentioned where its list includes the medicine, with its conditions.
 - **A simulated Alexa+** that uses the add-on as an MCP client, speaks its answers, and hosts its card on an Echo Show-style screen. Alexa+'s own developer tools are not open to entrants (friction log, entry 1), so this stands in for them. The add-on is the real thing; only the front end is simulated.
 - **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 53 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
-- **120 tests**, all offline: they replay 111 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
+- **132 tests**, all offline: they replay 111 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
 
 Run it:
 
@@ -140,21 +142,22 @@ _To be answered by Aditya._
 
 Delete this section once every box is ticked.
 
-- [ ] Record the demo video (plan below) and put its link in the table at the top. It must be under 3 minutes and public on YouTube or Vimeo, with no third-party logos on screen.
+- [ ] Upload `video/out/fair-refill-demo.mp4` (2:41; built by `video/`, see the README) to YouTube or Vimeo as public, and put its link in the table at the top. Watch it once first: the words are machine-checked, the pacing and tone are not.
 - [ ] Answer "Would you build with these again" above.
 - [ ] Read the "Steps taken" lines in `FRICTION_LOG.md` and correct any that aren't what you did. Add anything else you hit; the log is worth up to 10%.
 - [ ] Make the repository public, or add `testing@devpost.com`, `chris-trag`, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth` and `emersonsklar` as collaborators. Invitations expire after 7 days.
 - [ ] On Devpost: paste the description, choose the Alexa+ track and any mini challenges, and submit before Fri 23 Oct, 12:00 PT (Sat 24 Oct, 00:30 IST).
 
-### Recording plan
+### What the film shows
 
-Run `python -m fair_refill.prewarm` first, then start the simulator, so every answer is instant.
+Built by `video/` from `video/script.json`; the assistant's lines are the add-on's answers on the day the frames were taken.
 
-1. (0:00) The problem, in two sentences, over the simulator's idle screen.
-2. (0:20) "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month." Answer and card.
-3. (0:50) "Check my metformin 500." It asks which one; say "the extended release".
-4. (1:15) "How much should Lipitor 20 cost?" Brand against generic, as a question for the pharmacist.
-5. (1:40) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap. Then "What will Ozempic cost me next year?" for the January 2027 price.
-6. (2:00) "Remember this", then "check all my medicines". The total.
-7. (2:20) "What about my albuterol inhaler?" It says what it can't do.
-8. (2:35) Ten seconds on the build: MCP server, card as an MCP App, the Agent Skill. Close on the pharmacist line.
+1. (0:00) The problem, over a title card with its two sources.
+2. (0:25) "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month." Answer and card.
+3. (1:00) "Remember this."
+4. (1:08) "Check my metformin 500." It asks which one; "The extended release."
+5. (1:30) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap.
+6. (1:53) "Check all my medicines." The total.
+7. (2:14) How it's built, and that the front end is a stand-in.
+
+Cut for time: the Lipitor brand-against-generic question, Ozempic's 2027 price, and the inhaler question that shows what it can't do. All three still work in the simulator.
