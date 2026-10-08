@@ -70,7 +70,8 @@ _FILLER = re.compile(
     r"cheaper|cheap|way|to|me|tell|about|check|much|in|on|with|and|any|dollars?|bucks|tablets? a month|"
     r"once a day|twice a day|three times a day|daily|every day|please|if|whether|that|there|some|now|"
     r"currently|right|really|actually|still|will|would|going|be|next|this|year|from|january|medicare'?s?|"
-    r"negotiated|new|soon)\b", re.IGNORECASE)
+    r"negotiated|new|soon|too|expensive|overpriced|over ?charged|pricey|costly|high|fair|reasonable|"
+    r"a rip ?off|rip ?off|getting|being|charged|seems?|looks?|feels?)\b", re.IGNORECASE)
 
 
 def medicine_said(text: str) -> str:

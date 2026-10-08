@@ -35,6 +35,12 @@ def test_quantity_said(said, n):
     ("How much should Lipitor 20 cost?", "Lipitor 20"),
     ("am I paying too much for lisinopril 10 milligrams", "lisinopril 10 milligrams"),
     ("check my metformin", "metformin"),
+    # How people complain about a price is not part of the medicine's name.
+    ("Is my Eliquis too expensive?", "Eliquis"),
+    ("is Jardiance 10 mg overpriced", "Jardiance 10 mg"),
+    ("am I being overcharged for my Xarelto 20", "Xarelto 20"),
+    ("is $40 a fair price for atorvastatin 20 mg", "atorvastatin 20 mg"),
+    ("my lisinopril seems really pricey", "lisinopril"),
 ])
 def test_medicine_said(said, medicine):
     assert medicine_said(said) == medicine
