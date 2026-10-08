@@ -2,7 +2,9 @@
 
 **An Alexa+ add-on that answers one question: am I paying more than I need to for this prescription?**
 
-One in five Americans over 65 has skipped medicine because of cost. And in a
+One in five Americans aged 65 and over reported not taking a medicine as
+prescribed because of its cost (Dusetzina et al., JAMA Network Open, 2023; a
+2022 survey). And in a
 JAMA study, for more than a quarter of generic prescriptions the insured
 patient's copay was *more* than the drug's cash price (Van Nuys et al., 2018,
 using 2013 claims). Most people never find out, because nobody tells them and
@@ -70,6 +72,23 @@ deploy/aws/deploy.sh
 pip install -e ".[dev]"
 pytest -q                 # offline: replays responses recorded from the live APIs
 ```
+
+## The demo film
+
+The film in the submission is made from the product, not recorded by hand:
+
+```bash
+pip install -e ".[video]"
+FAIR_REFILL_PORT=8791 python -m fair_refill.simulator    # in another terminal
+python video/capture.py     # frames: the real page after each question and each answer
+python video/narrate.py     # voices (GEMINI_API_KEY), or --engine say for a free draft
+python video/verify.py      # a second model transcribes the voices and checks every word
+python video/build.py       # video/out/fair-refill-demo.mp4, and it must be under 3 minutes
+```
+
+- **The pictures are the simulator's own page.** A link can carry a conversation (`/?ask=first+question&ask=second`), and the page asks each question in turn without speaking. The same links work for sharing an answer.
+- **The assistant's voice reads only what the add-on answered** when the frames were taken (`video/out/answers.json`). The script holds the questions and the narration, and no words for the assistant.
+- **The voices are checked.** Hosted voice models slip: one take said "three months at months", and the next dropped "your deductible or" from a sentence. `verify.py` fails a take that drops, adds or changes two or more words in a row, and lists one-word differences for a person to judge.
 
 ## Licence
 

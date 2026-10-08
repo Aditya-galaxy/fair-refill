@@ -13,3 +13,4 @@ __pycache__/
 
 # The AgentCore project deploy/aws/agentcore.sh generates: account IDs and deployment state.
 /deploy/aws/.agentcore/
+video/out/
