@@ -171,10 +171,11 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                       f"on {names}. {CASH_CAVEAT} Ask your pharmacist or plan which way costs you less "
                       "over the year.")
         return {"kind": "summary", "speech": speech, "medicines": rows,
-                "card": {"title": "Your medicines",
-                         "details": [f"{len(rows)} checked",
-                                     f"Could save: {money(total)}/mo" if flagged else "Nothing looks overpriced"],
-                         "action": "Ask about cash prices" if flagged else "No change needed", "sources": []}}
+                "card": ({"title": "Your medicines", "headline": f"Could save about {money(total)} a month",
+                          "details": [f"About {money(total * 12)} a year", f"{len(rows)} checked"],
+                          "action": "Ask about cash prices", "sources": []} if flagged else
+                         {"title": "Your medicines", "details": [f"{len(rows)} checked", "Nothing looks overpriced"],
+                          "action": "No change needed", "sources": []})}
 
     @apps.tool(resource_uri=CARD_URI, name="remove_my_medicine",
                description="Take a medicine off the person's saved list ('remove my lisinopril', "

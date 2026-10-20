@@ -99,6 +99,7 @@ def test_my_medicines_saves_totals_and_forgets(server):
     # Each against Cost Plus delivered: $5.41 and $5.38 for a month, plus $5.25 shipping.
     assert total == pytest.approx((40 - 10.66) + (15 - 10.63), abs=0.05)
     assert "a year" in summary["speech"]
+    assert summary["card"]["headline"] == f"Could save about ${round(total)} a month"
 
     listed = call(server, "list_my_medicines")
     assert "atorvastatin 20 mg tablet" in listed["speech"]
