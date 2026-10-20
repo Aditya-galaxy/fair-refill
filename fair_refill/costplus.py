@@ -52,7 +52,22 @@ class CostPlus:
     def quote(self, ingredient: str, strength: str | None, quantity: int,
               allowed_ndcs: set[str]) -> Quote | None:
         """The cheapest quote for the identical drug, or None."""
-        params: dict[str, str | int] = {"medication_name": ingredient, "quantity_units": quantity}
+        found = self._quote(ingredient, strength, quantity, allowed_ndcs)
+        if found:
+            return found
+        # Cost Plus's search wants its own name exactly, and it names many
+        # medicines by salt or release: "Metoprolol Tartrate", "Pantoprazole
+        # Sodium", "Omeprazole Delayed Release (DR)". Searching "metoprolol"
+        # finds nothing. Its catalogue says which name and strength it sells
+        # the identical packages under, so ask again by that.
+        for name, sold_as in self._sold_as(allowed_ndcs):
+            found = self._quote(name, sold_as, quantity, allowed_ndcs)
+            if found:
+                return found
+        return None
+
+    def _quote(self, name: str, strength: str | None, quantity: int, allowed_ndcs: set[str]) -> Quote | None:
+        params: dict[str, str | int] = {"medication_name": name, "quantity_units": quantity}
         if strength:
             params["strength"] = strength
         data = self.http.get(URL, params)
@@ -64,3 +79,10 @@ class CostPlus:
             quotes.append(Quote(ndc=ndc, total=_money(r["requested_quote"]),
                                 quantity=int(r.get("requested_quote_units") or quantity), url=r.get("url", "")))
         return min(quotes, key=lambda q: q.total) if quotes else None
+
+    def _sold_as(self, allowed_ndcs: set[str]) -> list[tuple[str, str | None]]:
+        """(Cost Plus's name, its strength) for any of these packages it sells.
+        The whole catalogue is one request, kept as long as any price."""
+        data = self.http.get(URL)
+        return sorted({(r["medication_name"], r.get("strength") or None) for r in data.get("results") or []
+                       if (r.get("ndc") or "").replace("-", "") in allowed_ndcs and r.get("medication_name")})

@@ -42,6 +42,9 @@ SCENARIOS = [
     ("Linzess 145 mcg", None),
     ("Enbrel", None),
     ("levothyroxine 50 mcg", None),
+    ("metoprolol tartrate 25 mg", 20.0),
+    ("pantoprazole 40 mg", None),
+    ("omeprazole 20 mg", None),
 ]
 
 

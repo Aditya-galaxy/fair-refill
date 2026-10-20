@@ -69,6 +69,12 @@ class PriceCheck:
             by_brand = medicare_price(found[0], self.today, whole_brand=True)
             if by_brand:
                 return Result("answer", by_brand.speech, finding=by_brand, corrected=corrected)
+        # Asked without a form, offer the forms people take at home and this
+        # can price, tablets and capsules: not a hospital injection or a
+        # child's granules. Anyone on a liquid says so, and is asked about those.
+        solid = [d for d in found if comparable_form(d.form)]
+        if solid and len(solid) < len(found):
+            found = solid
         if not any(comparable_form(d.form) for d in found):
             # No point asking which inhaler it is only to say inhalers can't be
             # compared yet: say so straight away.

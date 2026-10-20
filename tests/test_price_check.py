@@ -127,7 +127,7 @@ def test_medicines_labelled_in_micrograms_are_found_and_said_in_micrograms(check
     for said in ("levothyroxine 50 mcg", "levothyroxine 50", "levothyroxine 0.05 mg"):
         r = check.ask(said)
         assert r.kind == "choose", said
-        assert r.speech == "Which levothyroxine do you take: 50 mcg/ml liquid, 50 mcg tablet, or 50 mcg capsule?"
+        assert r.speech == "Which levothyroxine 50 mcg do you take: tablet, or capsule?"
     # Saying the form is an answer to that question before it's asked.
     priced = check.ask("levothyroxine 50 mcg tablet")
     assert priced.kind == "answer"
@@ -168,6 +168,33 @@ def test_three_months_at_once_is_offered_as_something_to_ask_the_doctor_for(chec
     # Paying less than either: nothing to change.
     r = check.ask("atorvastatin 20 mg", you_pay=4.0)
     assert r.finding.action == "No change needed" and "three" not in r.speech
+
+
+def test_cost_plus_is_asked_by_the_name_it_sells_under(check):
+    """Cost Plus's search wants its own name exactly: "metoprolol" finds
+    nothing, "Metoprolol Tartrate" does. Its catalogue says which name it sells
+    the identical package under."""
+    r = check.ask("metoprolol tartrate 25 mg", you_pay=20.0)
+    assert r.kind == "answer"
+    assert "Cost Plus Drugs delivers it for about" in r.speech
+    assert r.finding.overpaying_by is not None
+
+
+def test_one_medicine_named_means_the_single_ingredient_product(check):
+    # "25 mg" also matches hydrochlorothiazide 25 mg inside combination pills.
+    r = check.ask("metoprolol tartrate 25 mg", you_pay=20.0)
+    assert r.finding.title == "metoprolol 25 mg tablet"
+
+
+def test_without_a_form_said_only_tablets_and_capsules_are_offered(check):
+    # Pantoprazole 40 mg also comes as a hospital injection and as granules.
+    r = check.ask("pantoprazole 40 mg")
+    assert r.kind == "answer" and r.finding.title == "pantoprazole 40 mg delayed-release tablet"
+    r = check.ask("omeprazole 20 mg")
+    assert r.kind == "choose"
+    assert all(word in r.speech for word in ("capsule", "tablet")) and "injection" not in r.speech.lower()
+    # Saying the form still reaches the others.
+    assert "not yet for inhalers" in check.ask("albuterol inhaler").speech
 
 
 def test_an_ambiguous_medicine_is_a_short_question(check):
@@ -331,6 +358,30 @@ class _FakeHttp:
 
     def get(self, url, params=None):
         return self.payload
+
+
+def test_the_catalogue_is_asked_only_when_the_plain_name_finds_nothing():
+    from fair_refill.costplus import CostPlus
+
+    class Http:
+        def __init__(self):
+            self.asked = []
+
+        def get(self, url, params=None):
+            self.asked.append(params)
+            if params is None:                      # the catalogue
+                return {"results": [{"ndc": "11111-1111-11", "medication_name": "Metoprolol Tartrate",
+                                     "strength": "25mg"}]}
+            if params["medication_name"] == "Metoprolol Tartrate":
+                return {"results": [{"ndc": "11111111111", "requested_quote": "$5.30",
+                                     "requested_quote_units": "30"}]}
+            return {"results": []}
+
+    http = Http()
+    q = CostPlus(http).quote("metoprolol", "25mg", 30, {"11111111111"})
+    assert q.total == 5.30
+    assert [p and p["medication_name"] for p in http.asked] == ["metoprolol", None, "Metoprolol Tartrate"]
+    assert http.asked[2]["strength"] == "25mg"
 
 
 def test_a_cash_price_counts_only_for_the_identical_drug():
