@@ -51,6 +51,8 @@ _SPOKEN_FORMS = (
     ("Delayed Release Oral Tablet", "delayed-release tablet"),
     ("Extended Release Oral Capsule", "extended-release capsule"),
     ("Chewable Tablet", "chewable tablet"),
+    ("Disintegrating Oral Tablet", "dissolving tablet"),
+    ("Oral Granules", "granules"),
     ("Oral Tablet", "tablet"),
     ("Oral Capsule", "capsule"),
     ("Oral Solution", "liquid"),
@@ -275,8 +277,10 @@ class RxNorm:
         concepts = [d for d in concepts
                     if (d.tty == "SBD" and (d.brand or "").lower() == said) or (not asked_for_brand and d.tty == "SCD")]
         # Someone who names one medicine means the single-ingredient product,
-        # not every combination pill that contains it.
-        if len(said.split()) == 1:
+        # not every combination pill that contains it: "metoprolol tartrate
+        # 25 mg" is not hydrochlorothiazide 25 mg with metoprolol. Only naming
+        # two ("losartan and hydrochlorothiazide") asks for a combination.
+        if not re.search(r"\band\b|/|\+", said):
             single = [d for d in concepts if not _is_combination(d)]
             concepts = single or concepts
         if strength:
