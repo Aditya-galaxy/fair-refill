@@ -8,7 +8,6 @@ touches three public APIs and a person is waiting on a spoken reply.
 
 from __future__ import annotations
 
-import os
 import re
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
@@ -20,6 +19,17 @@ from .costplus import LONG_SUPPLY_MONTHS, CostPlus
 from .http import Http, SourceUnavailable
 from .nadac import Nadac
 from .rxnorm import Drug, RxNorm
+
+
+def _shared_start(texts: list[str]) -> str:
+    """The characters every text starts with ("metformin 500 mg " from two names).
+    Spoken names, not paths: the caller trims it back to a whole word."""
+    start = min(texts, key=len) if texts else ""
+    for i, ch in enumerate(start):
+        if any(t[i] != ch for t in texts):
+            return start[:i]
+    return start
+
 
 MAX_CHOICES = 5          # Alexa+ voice guidance: offer at most five options at a time
 
@@ -69,7 +79,7 @@ class PriceCheck:
             said = [d.spoken for d in shown]
             # Speak only what differs: "10, 20 or 40 mg tablet" reads better as
             # the options themselves once the shared words are said once.
-            prefix = os.path.commonprefix(said)
+            prefix = _shared_start(said)
             prefix = prefix[: prefix.rfind(" ") + 1] if " " in prefix else ""
             # A strength stays whole: "0.05 mg tablet", never "0.05" and then "mg tablet".
             prefix = re.sub(r"\d[\d.]*\s*$", "", prefix)
