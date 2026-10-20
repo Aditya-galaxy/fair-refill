@@ -78,7 +78,15 @@ async def ask(request: Request) -> JSONResponse:
     text = str(body.get("text", ""))[:500]
     state = State.from_dict(body.get("state"))
     list_key = str(body.get("list") or "")[:64] or None
-    tool, args = route(text, state)
+    chosen = str(body.get("choice_id") or "")
+    picked = next((c for c in state.choices if c.get("choice_id") == chosen), None) if chosen else None
+    if picked:
+        # Tapped on the card: the option is known exactly, no words to interpret.
+        tool, args = "check_chosen_medicine", {"choice_id": picked["choice_id"], "monthly_quantity": state.quantity}
+        if state.you_pay is not None:
+            args["you_pay_per_month"] = state.you_pay
+    else:
+        tool, args = route(text, state)
     started = time.perf_counter()
     if tool == "say":
         result: dict[str, Any] = {"kind": "say", "speech": args["speech"]}

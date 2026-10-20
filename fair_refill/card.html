@@ -47,6 +47,15 @@
             background: var(--accent); color: #062521; font-weight: 650;
             font-size: max(12px, calc(var(--u) * 2.8)); }
   .sources { margin-top: calc(var(--u) * 2.6); color: var(--soft); font-size: max(10px, calc(var(--u) * 1.6)); }
+  .headline { color: var(--warn); font-weight: 650; margin: 0 0 calc(var(--u) * 1.6);
+              font-size: max(16px, calc(var(--u) * 4.6)); line-height: 1.1; }
+  .headline + .details li:first-child { color: var(--ink); }   /* one highlight per card: the saving */
+  .choices { display: flex; flex-direction: column; gap: calc(var(--u) * 1.2); margin: 0 0 calc(var(--u) * 3); }
+  .choices button { font: inherit; text-align: left; cursor: pointer; color: var(--ink);
+                    background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14);
+                    border-radius: calc(var(--u) * 1.4); padding: calc(var(--u) * 1.4) calc(var(--u) * 2.2);
+                    font-size: max(14px, calc(var(--u) * 3.4)); }
+  .choices button:hover, .choices button:focus-visible { border-color: var(--accent); outline: none; }
   .empty { color: var(--soft); font-size: max(14px, calc(var(--u) * 3.2)); text-align: center; }
 </style>
 </head>
@@ -56,6 +65,7 @@
   </main>
 <script>
   const card = document.getElementById("card");
+  let calls = 0;
 
   function text(tag, value, cls) {
     const el = document.createElement(tag);
@@ -73,6 +83,23 @@
       return;
     }
     card.append(text("h1", c.title));
+    if (c.headline) card.append(text("div", c.headline, "headline"));
+    if (c.choices && c.choices.length) {
+      // Tapping an option asks the host to call the add-on's tool for it: the
+      // MCP Apps way for a view to act, so the choice goes through the add-on.
+      const box = document.createElement("div");
+      box.className = "choices";
+      c.choices.slice(0, 5).forEach((choice) => {
+        const b = text("button", choice.name);
+        b.type = "button";
+        b.addEventListener("click", () => window.parent.postMessage({
+          jsonrpc: "2.0", id: ++calls, method: "tools/call",
+          params: { name: "check_chosen_medicine", arguments: { choice_id: choice.choice_id } },
+        }, "*"));
+        box.append(b);
+      });
+      card.append(box);
+    }
     const list = document.createElement("ul");
     list.className = "details";
     (c.details || []).slice(0, 2).forEach((d) => list.append(text("li", d)));

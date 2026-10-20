@@ -142,6 +142,20 @@ def test_lists_are_kept_apart_by_key(tmp_path):
     assert Cabinets(tmp_path).of(None) is not None
 
 
+def test_a_which_one_question_is_on_the_screen_too_with_options_to_tap(server):
+    r = call(server, "check_prescription_price", medicine="metformin 500")
+    assert r["kind"] == "choose"
+    assert r["card"]["title"] == "Which one do you take?"
+    assert r["card"]["choices"] == r["choices"] and len(r["choices"]) == 2
+
+
+def test_the_card_leads_with_what_could_be_saved(server):
+    r = call(server, "check_prescription_price", medicine="atorvastatin 20 mg", you_pay_per_month=40)
+    assert r["card"]["headline"] == "Could save about $29 a month"
+    fair = call(server, "check_prescription_price", medicine="atorvastatin 20 mg", you_pay_per_month=12)
+    assert "headline" not in fair["card"]                      # nothing to save, so nothing to lead with
+
+
 def test_empty_list_says_what_to_do(server):
     r = call(server, "check_all_my_medicines")
     assert r["kind"] == "empty" and "remember it" in r["speech"]
