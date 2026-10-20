@@ -14,8 +14,8 @@ they don't know to ask.
 >
 > "You may be paying about $29 a month more than you need to for atorvastatin 20 mg tablet. Cost Plus Drugs delivers it for about $11 a month, or $3.83 a month if your doctor prescribes three months at once, and Amazon RxPass covers it for $5 a month with Prime, outside insurance. Cash prices usually don't count toward your deductible or Medicare's yearly limit. Ask your pharmacist whether paying cash would cost less than your insurance. They're allowed to tell you."
 
-> **Status: in development, private.** Built for the Amazon Developer
-> Hackathon, Alexa+ track.
+> Built for the Amazon Developer Hackathon 2026, Alexa+ track: a self-hosted
+> MCP server over Streamable HTTP, with an MCP App card and an Agent Skill.
 
 ## What a month costs, measured
 
