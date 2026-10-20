@@ -17,6 +17,16 @@ they don't know to ask.
 > **Status: in development, private.** Built for the Amazon Developer
 > Hackathon, Alexa+ track.
 
+## What a month costs, measured
+
+On 20 October the add-on's own sources were asked about every tablet and capsule strength of the 37 common generics it keeps ready, 275 in all ([docs/savings.md](docs/savings.md), made by `tools/measure_savings.py`):
+
+- Cost Plus Drugs sells 35 of the 37 generics.
+- Where it sells a strength, a month delivered costs **$11.21 at the median**, and 88% cost under $15.
+- Three months in one fill comes to **$4.38 a month at the median**.
+
+These are prices, not what anyone pays: copays vary by plan, and no public source lists them. Anyone whose copay is above the delivered price for their medicine is who the add-on is for, and the add-on tells them which side of that line they're on.
+
 ## Run it
 
 ```bash

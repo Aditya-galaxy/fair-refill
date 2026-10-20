@@ -32,6 +32,16 @@ The people this affects most are the people a voice assistant suits best:
 older, on several medicines, and not likely to compare prices across three
 websites.
 
+### Measured, not anecdotal
+
+On 20 October the add-on's own sources were asked about every tablet and capsule strength of the 37 common generics it keeps ready, 275 in all ([docs/savings.md](docs/savings.md), made by `tools/measure_savings.py`):
+
+- Cost Plus Drugs sells 35 of the 37 generics.
+- Where it sells a strength, a month delivered costs **$11.21 at the median**, and 88% cost under $15.
+- Three months in one fill comes to **$4.38 a month at the median**.
+
+These are prices, not what anyone pays: copays vary by plan, and no public source lists them. Anyone whose copay is above the delivered price for their medicine is who the add-on is for, and the add-on tells them which side of that line they're on.
+
 ## What it does
 
 > **"Alexa, ask Fair Refill if I'm overpaying for my atorvastatin 20 milligrams. I pay forty dollars a month."**
@@ -67,7 +77,7 @@ and Cost Plus's price that day. It also:
   Amazon RxPass is mentioned where its list includes the medicine, with its conditions.
 - **A simulated Alexa+** that uses the add-on as an MCP client, speaks its answers, and hosts its card on an Echo Show-style screen. Alexa+'s own developer tools are not open to entrants (friction log, entry 1), so this stands in for them. The add-on is the real thing; only the front end is simulated.
 - **Pre-warming.** A first lookup touches three public APIs and took 6 to 12 seconds when measured on 6 Oct. The server looks up every strength of 53 commonly asked-about medicines when it starts and every five hours after, which made the same questions answer in under 100 ms through the simulator. A kept price is the source's own answer, at most 12 hours old.
-- **132 tests**, all offline: they replay 111 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
+- **139 tests**, all offline: they replay 156 responses recorded from the live APIs, so they test real data without the network. CI runs them on Python 3.11 and 3.13.
 
 Run it:
 
@@ -142,7 +152,7 @@ _To be answered by Aditya._
 
 Delete this section once every box is ticked.
 
-- [ ] Upload `video/out/fair-refill-demo.mp4` (2:41; built by `video/`, see the README) to YouTube or Vimeo as public, and put its link in the table at the top. Watch it once first: the words are machine-checked, the pacing and tone are not.
+- [ ] Upload `video/out/fair-refill-demo.mp4` (2:48; built by `video/`, see the README) to YouTube or Vimeo as public, and put its link in the table at the top. Watch it once first: every line's words are machine-checked against its text, the pacing and tone are not.
 - [ ] Answer "Would you build with these again" above.
 - [ ] Read the "Steps taken" lines in `FRICTION_LOG.md` and correct any that aren't what you did. Add anything else you hit; the log is worth up to 10%.
 - [ ] Make the repository public, or add `testing@devpost.com`, `chris-trag`, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth` and `emersonsklar` as collaborators. Invitations expire after 7 days.
@@ -153,11 +163,13 @@ Delete this section once every box is ticked.
 Built by `video/` from `video/script.json`; the assistant's lines are the add-on's answers on the day the frames were taken.
 
 1. (0:00) The problem, over a title card with its two sources.
-2. (0:25) "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month." Answer and card.
-3. (1:00) "Remember this."
-4. (1:08) "Check my metformin 500." It asks which one; "The extended release."
-5. (1:30) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap.
-6. (1:53) "Check all my medicines." The total.
-7. (2:14) How it's built, and that the front end is a stand-in.
+2. (0:21) "Am I overpaying for my atorvastatin 20 milligrams? I pay forty dollars a month." Answer, and a card that leads with the saving.
+3. (0:59) "Remember this."
+4. (1:07) "Check my metformin 500." It asks which one, with the options on the screen; "The extended release."
+5. (1:42) "Is my Eliquis too expensive?" Medicare's negotiated price and the yearly cap.
+6. (2:07) "Check all my medicines." The total.
+7. (2:27) How it's built, and that the front end is a stand-in.
+
+The voices are Google's Gemini voices through Cloud Text-to-Speech (`video/narrate.py --engine cloud`), one line at a time, and `video/verify.py` had a second model transcribe each line and compare it word for word with its text.
 
 Cut for time: the Lipitor brand-against-generic question, Ozempic's 2027 price, and the inhaler question that shows what it can't do. All three still work in the simulator.

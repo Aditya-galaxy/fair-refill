@@ -1,0 +1,2481 @@
+{
+ "measured": "2026-10-20",
+ "tablets_a_month": 30,
+ "rows": [
+  {
+   "generic": "atorvastatin",
+   "medicine": "atorvastatin 10 mg tablet",
+   "pharmacies_pay_month": 0.68,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.5,
+   "cost_plus_three_months_per_month": 3.67,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "atorvastatin",
+   "medicine": "atorvastatin 20 mg tablet",
+   "pharmacies_pay_month": 0.84,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.66,
+   "cost_plus_three_months_per_month": 3.83,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "atorvastatin",
+   "medicine": "atorvastatin 40 mg tablet",
+   "pharmacies_pay_month": 1.12,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.92,
+   "cost_plus_three_months_per_month": 4.09,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "atorvastatin",
+   "medicine": "atorvastatin 80 mg tablet",
+   "pharmacies_pay_month": 2.08,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.45,
+   "cost_plus_three_months_per_month": 4.61,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "lisinopril",
+   "medicine": "lisinopril 2.5 mg tablet",
+   "pharmacies_pay_month": 0.42,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.53,
+   "cost_plus_three_months_per_month": 3.69,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "lisinopril",
+   "medicine": "lisinopril 5 mg tablet",
+   "pharmacies_pay_month": 0.43,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.46,
+   "cost_plus_three_months_per_month": 3.62,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "lisinopril",
+   "medicine": "lisinopril 10 mg tablet",
+   "pharmacies_pay_month": 0.54,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.63,
+   "cost_plus_three_months_per_month": 3.8,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "lisinopril",
+   "medicine": "lisinopril 20 mg tablet",
+   "pharmacies_pay_month": 0.76,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.8,
+   "cost_plus_three_months_per_month": 3.97,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "lisinopril",
+   "medicine": "lisinopril 30 mg tablet",
+   "pharmacies_pay_month": 1.56,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.04,
+   "cost_plus_three_months_per_month": 4.21,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "lisinopril",
+   "medicine": "lisinopril 40 mg tablet",
+   "pharmacies_pay_month": 1.39,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.91,
+   "cost_plus_three_months_per_month": 4.07,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 500 mg extended-release tablet",
+   "pharmacies_pay_month": 0.85,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.94,
+   "cost_plus_three_months_per_month": 4.11,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 500 mg tablet",
+   "pharmacies_pay_month": 0.44,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.56,
+   "cost_plus_three_months_per_month": 3.73,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 625 mg tablet",
+   "pharmacies_pay_month": 375.8,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 750 mg tablet",
+   "pharmacies_pay_month": 438.15,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 750 mg extended-release tablet",
+   "pharmacies_pay_month": 1.58,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.32,
+   "cost_plus_three_months_per_month": 4.49,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 850 mg tablet",
+   "pharmacies_pay_month": 0.72,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.8,
+   "cost_plus_three_months_per_month": 3.97,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 1000 mg extended-release tablet",
+   "pharmacies_pay_month": 9.43,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 16.25,
+   "cost_plus_three_months_per_month": 9.42,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metformin",
+   "medicine": "metformin 1000 mg tablet",
+   "pharmacies_pay_month": 0.69,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.84,
+   "cost_plus_three_months_per_month": 4.0,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 1.25 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 2.5 mg tablet",
+   "pharmacies_pay_month": 0.32,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.35,
+   "cost_plus_three_months_per_month": 3.52,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 2.5 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 5 mg tablet",
+   "pharmacies_pay_month": 0.31,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.46,
+   "cost_plus_three_months_per_month": 3.62,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 5 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 10 mg tablet",
+   "pharmacies_pay_month": 0.44,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.56,
+   "cost_plus_three_months_per_month": 3.73,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "amlodipine",
+   "medicine": "amlodipine 10 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 12.5 mcg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 13 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 25 mcg tablet",
+   "pharmacies_pay_month": 1.05,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.15,
+   "cost_plus_three_months_per_month": 4.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 25 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 37.5 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 44 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 50 mcg tablet",
+   "pharmacies_pay_month": 1.22,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 50 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 62.5 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 75 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 75 mcg tablet",
+   "pharmacies_pay_month": 1.38,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 88 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 88 mcg tablet",
+   "pharmacies_pay_month": 1.48,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 100 mcg tablet",
+   "pharmacies_pay_month": 1.49,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.35,
+   "cost_plus_three_months_per_month": 4.52,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 100 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 112 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 112 mcg tablet",
+   "pharmacies_pay_month": 1.76,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.29,
+   "cost_plus_three_months_per_month": 4.45,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 125 mcg tablet",
+   "pharmacies_pay_month": 1.71,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.32,
+   "cost_plus_three_months_per_month": 4.49,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 125 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 137 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 137 mcg tablet",
+   "pharmacies_pay_month": 1.92,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.32,
+   "cost_plus_three_months_per_month": 4.49,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 150 mcg tablet",
+   "pharmacies_pay_month": 1.76,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.35,
+   "cost_plus_three_months_per_month": 4.52,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 150 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 175 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 175 mcg tablet",
+   "pharmacies_pay_month": 2.2,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.63,
+   "cost_plus_three_months_per_month": 4.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 200 mcg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 200 mcg tablet",
+   "pharmacies_pay_month": 2.43,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.66,
+   "cost_plus_three_months_per_month": 4.83,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 300 mcg tablet",
+   "pharmacies_pay_month": 3.13,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.22,
+   "cost_plus_three_months_per_month": 4.38,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 400 mcg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 500 mcg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 600 mcg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 700 mcg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 800 mcg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "levothyroxine",
+   "medicine": "levothyroxine 1 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 12.5 mg tablet",
+   "pharmacies_pay_month": 86.23,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 25 mg extended-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 25 mg extended-release tablet",
+   "pharmacies_pay_month": 1.43,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.68,
+   "cost_plus_three_months_per_month": 3.84,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 25 mg tablet",
+   "pharmacies_pay_month": 0.48,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.53,
+   "cost_plus_three_months_per_month": 3.7,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 37.5 mg tablet",
+   "pharmacies_pay_month": 2.28,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.7,
+   "cost_plus_three_months_per_month": 5.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 50 mg extended-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 50 mg extended-release tablet",
+   "pharmacies_pay_month": 1.55,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.77,
+   "cost_plus_three_months_per_month": 3.93,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 50 mg tablet",
+   "pharmacies_pay_month": 0.58,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.7,
+   "cost_plus_three_months_per_month": 3.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 75 mg tablet",
+   "pharmacies_pay_month": 4.62,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 13.67,
+   "cost_plus_three_months_per_month": 6.83,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 100 mg extended-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 100 mg extended-release tablet",
+   "pharmacies_pay_month": 2.55,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.2,
+   "cost_plus_three_months_per_month": 4.37,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 100 mg tablet",
+   "pharmacies_pay_month": 0.86,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.77,
+   "cost_plus_three_months_per_month": 3.93,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 200 mg extended-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "metoprolol",
+   "medicine": "metoprolol 200 mg extended-release tablet",
+   "pharmacies_pay_month": 5.64,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.77,
+   "cost_plus_three_months_per_month": 5.94,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "losartan",
+   "medicine": "losartan 25 mg tablet",
+   "pharmacies_pay_month": 0.65,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.66,
+   "cost_plus_three_months_per_month": 3.83,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "losartan",
+   "medicine": "losartan 50 mg tablet",
+   "pharmacies_pay_month": 0.98,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.77,
+   "cost_plus_three_months_per_month": 3.93,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "losartan",
+   "medicine": "losartan 100 mg tablet",
+   "pharmacies_pay_month": 1.34,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.04,
+   "cost_plus_three_months_per_month": 4.21,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 10 mg delayed-release capsule",
+   "pharmacies_pay_month": 2.3,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.42,
+   "cost_plus_three_months_per_month": 4.59,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 10 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 10 mg delayed-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 20 mg delayed-release capsule",
+   "pharmacies_pay_month": 0.88,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 20 mg dissolving tablet",
+   "pharmacies_pay_month": 14.05,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 20 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 20 mg delayed-release tablet",
+   "pharmacies_pay_month": 11.5,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 18.87,
+   "cost_plus_three_months_per_month": 12.04,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 40 mg delayed-release capsule",
+   "pharmacies_pay_month": 1.49,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.6,
+   "cost_plus_three_months_per_month": 4.76,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 40 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "omeprazole",
+   "medicine": "omeprazole 40 mg delayed-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 5 mg tablet",
+   "pharmacies_pay_month": 0.94,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.87,
+   "cost_plus_three_months_per_month": 4.04,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 10 mg tablet",
+   "pharmacies_pay_month": 0.84,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.59,
+   "cost_plus_three_months_per_month": 3.76,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 10 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 20 mg tablet",
+   "pharmacies_pay_month": 0.96,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.73,
+   "cost_plus_three_months_per_month": 3.9,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 20 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 40 mg tablet",
+   "pharmacies_pay_month": 1.61,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.01,
+   "cost_plus_three_months_per_month": 4.18,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 40 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 80 mg tablet",
+   "pharmacies_pay_month": 2.81,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.75,
+   "cost_plus_three_months_per_month": 4.92,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "simvastatin",
+   "medicine": "simvastatin 80 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 100 mg capsule",
+   "pharmacies_pay_month": 0.66,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 100 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 200 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin enacarbil 300 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "Once-Daily gabapentin 300 mg tablet",
+   "pharmacies_pay_month": 19.15,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 300 mg capsule",
+   "pharmacies_pay_month": 0.94,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 400 mg capsule",
+   "pharmacies_pay_month": 1.27,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 400 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "Once-Daily gabapentin 450 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin enacarbil 600 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "Once-Daily gabapentin 600 mg tablet",
+   "pharmacies_pay_month": 30.75,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 600 mg tablet",
+   "pharmacies_pay_month": 1.92,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "Once-Daily gabapentin 750 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "gabapentin 800 mg tablet",
+   "pharmacies_pay_month": 2.65,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "gabapentin",
+   "medicine": "Once-Daily gabapentin 900 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "hydrochlorothiazide",
+   "medicine": "hydrochlorothiazide 12.5 mg capsule",
+   "pharmacies_pay_month": 0.83,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.77,
+   "cost_plus_three_months_per_month": 3.93,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "hydrochlorothiazide",
+   "medicine": "hydrochlorothiazide 12.5 mg tablet",
+   "pharmacies_pay_month": 1.02,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.46,
+   "cost_plus_three_months_per_month": 4.62,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "hydrochlorothiazide",
+   "medicine": "hydrochlorothiazide 25 mg tablet",
+   "pharmacies_pay_month": 0.35,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.49,
+   "cost_plus_three_months_per_month": 3.66,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "hydrochlorothiazide",
+   "medicine": "hydrochlorothiazide 50 mg tablet",
+   "pharmacies_pay_month": 0.95,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.59,
+   "cost_plus_three_months_per_month": 3.76,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "sertraline",
+   "medicine": "sertraline 25 mg tablet",
+   "pharmacies_pay_month": 0.87,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.91,
+   "cost_plus_three_months_per_month": 4.07,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "sertraline",
+   "medicine": "sertraline 50 mg tablet",
+   "pharmacies_pay_month": 1.04,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.94,
+   "cost_plus_three_months_per_month": 4.11,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "sertraline",
+   "medicine": "sertraline 100 mg tablet",
+   "pharmacies_pay_month": 1.52,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.29,
+   "cost_plus_three_months_per_month": 4.45,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "sertraline",
+   "medicine": "sertraline 150 mg capsule",
+   "pharmacies_pay_month": 37.52,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 27.49,
+   "cost_plus_three_months_per_month": 20.66,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "sertraline",
+   "medicine": "sertraline 200 mg capsule",
+   "pharmacies_pay_month": 52.08,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 27.5,
+   "cost_plus_three_months_per_month": 20.67,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 5 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 5 mg tablet",
+   "pharmacies_pay_month": 0.96,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.7,
+   "cost_plus_three_months_per_month": 3.87,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 10 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 10 mg tablet",
+   "pharmacies_pay_month": 1.08,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.91,
+   "cost_plus_three_months_per_month": 4.07,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 20 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 20 mg tablet",
+   "pharmacies_pay_month": 1.36,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.22,
+   "cost_plus_three_months_per_month": 4.38,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 40 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "rosuvastatin",
+   "medicine": "rosuvastatin 40 mg tablet",
+   "pharmacies_pay_month": 2.08,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.08,
+   "cost_plus_three_months_per_month": 5.25,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "pantoprazole",
+   "medicine": "pantoprazole 20 mg delayed-release tablet",
+   "pharmacies_pay_month": 1.28,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.32,
+   "cost_plus_three_months_per_month": 4.49,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "pantoprazole",
+   "medicine": "pantoprazole 40 mg delayed-release tablet",
+   "pharmacies_pay_month": 1.07,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.63,
+   "cost_plus_three_months_per_month": 4.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "escitalopram",
+   "medicine": "escitalopram 5 mg tablet",
+   "pharmacies_pay_month": 1.25,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.04,
+   "cost_plus_three_months_per_month": 4.21,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "escitalopram",
+   "medicine": "escitalopram 10 mg tablet",
+   "pharmacies_pay_month": 1.18,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.49,
+   "cost_plus_three_months_per_month": 4.66,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "escitalopram",
+   "medicine": "escitalopram 15 mg capsule",
+   "pharmacies_pay_month": 163.6,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "escitalopram",
+   "medicine": "escitalopram 20 mg tablet",
+   "pharmacies_pay_month": 1.89,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.56,
+   "cost_plus_three_months_per_month": 4.73,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "furosemide",
+   "medicine": "furosemide 12.5 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "furosemide",
+   "medicine": "furosemide 20 mg tablet",
+   "pharmacies_pay_month": 0.78,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.84,
+   "cost_plus_three_months_per_month": 4.0,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "furosemide",
+   "medicine": "furosemide 40 mg tablet",
+   "pharmacies_pay_month": 0.87,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.91,
+   "cost_plus_three_months_per_month": 4.07,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "furosemide",
+   "medicine": "furosemide 50 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "furosemide",
+   "medicine": "furosemide 80 mg tablet",
+   "pharmacies_pay_month": 1.49,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.01,
+   "cost_plus_three_months_per_month": 4.18,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "furosemide",
+   "medicine": "furosemide 500 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "montelukast",
+   "medicine": "montelukast 4 mg chewable tablet",
+   "pharmacies_pay_month": 2.26,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.97,
+   "cost_plus_three_months_per_month": 5.14,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "montelukast",
+   "medicine": "montelukast 4 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "montelukast",
+   "medicine": "montelukast 5 mg chewable tablet",
+   "pharmacies_pay_month": 2.11,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 51.31,
+   "cost_plus_three_months_per_month": 44.47,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "montelukast",
+   "medicine": "montelukast 5 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "montelukast",
+   "medicine": "montelukast 10 mg tablet",
+   "pharmacies_pay_month": 1.26,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.96,
+   "cost_plus_three_months_per_month": 4.13,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 75 mg tablet",
+   "pharmacies_pay_month": 2.78,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.7,
+   "cost_plus_three_months_per_month": 4.87,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 100 mg extended-release tablet",
+   "pharmacies_pay_month": 2.04,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.08,
+   "cost_plus_three_months_per_month": 4.24,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 100 mg tablet",
+   "pharmacies_pay_month": 3.39,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.63,
+   "cost_plus_three_months_per_month": 5.8,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "Smoking Cessation 12 HR bupropion 150 mg extended-release tablet",
+   "pharmacies_pay_month": 7.57,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 16.74,
+   "cost_plus_three_months_per_month": 9.9,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 150 mg extended-release tablet",
+   "pharmacies_pay_month": 2.4,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion hydrobromide 174 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 200 mg extended-release tablet",
+   "pharmacies_pay_month": 3.11,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.73,
+   "cost_plus_three_months_per_month": 4.9,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 300 mg extended-release tablet",
+   "pharmacies_pay_month": 3.01,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.94,
+   "cost_plus_three_months_per_month": 5.11,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion hydrobromide 348 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion 450 mg extended-release tablet",
+   "pharmacies_pay_month": 239.87,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "bupropion",
+   "medicine": "bupropion hydrobromide 522 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 25 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 50 mg tablet",
+   "pharmacies_pay_month": 0.92,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.7,
+   "cost_plus_three_months_per_month": 3.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 50 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 75 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 100 mg tablet",
+   "pharmacies_pay_month": 1.54,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.08,
+   "cost_plus_three_months_per_month": 4.24,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 100 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 150 mg tablet",
+   "pharmacies_pay_month": 2.59,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.46,
+   "cost_plus_three_months_per_month": 4.62,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 150 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 300 mg tablet",
+   "pharmacies_pay_month": 14.93,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 17.56,
+   "cost_plus_three_months_per_month": 10.73,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "trazodone",
+   "medicine": "trazodone 300 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 8 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "PMDD fluoxetine 10 mg tablet",
+   "pharmacies_pay_month": 2.09,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 10 mg capsule",
+   "pharmacies_pay_month": 1.06,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.63,
+   "cost_plus_three_months_per_month": 3.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 10 mg tablet",
+   "pharmacies_pay_month": 2.09,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.46,
+   "cost_plus_three_months_per_month": 4.62,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 16 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 20 mg tablet",
+   "pharmacies_pay_month": 2.51,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.49,
+   "cost_plus_three_months_per_month": 4.66,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "PMDD fluoxetine 20 mg tablet",
+   "pharmacies_pay_month": 2.51,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 20 mg capsule",
+   "pharmacies_pay_month": 0.88,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.7,
+   "cost_plus_three_months_per_month": 3.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 32 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 40 mg capsule",
+   "pharmacies_pay_month": 1.56,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.01,
+   "cost_plus_three_months_per_month": 4.18,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 60 mg tablet",
+   "pharmacies_pay_month": 5.45,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.84,
+   "cost_plus_three_months_per_month": 6.0,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 60 mg capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 64 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "fluoxetine",
+   "medicine": "fluoxetine 90 mg delayed-release capsule",
+   "pharmacies_pay_month": 920.45,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 3270.5,
+   "cost_plus_three_months_per_month": 3263.67,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "tamsulosin",
+   "medicine": "tamsulosin 0.4 mg capsule",
+   "pharmacies_pay_month": 1.5,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.25,
+   "cost_plus_three_months_per_month": 4.42,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "tamsulosin",
+   "medicine": "tamsulosin 0.4 mg extended-release tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "pravastatin",
+   "medicine": "pravastatin 10 mg tablet",
+   "pharmacies_pay_month": 1.66,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.15,
+   "cost_plus_three_months_per_month": 4.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "pravastatin",
+   "medicine": "pravastatin 20 mg tablet",
+   "pharmacies_pay_month": 1.74,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.08,
+   "cost_plus_three_months_per_month": 4.24,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "pravastatin",
+   "medicine": "pravastatin 40 mg tablet",
+   "pharmacies_pay_month": 2.48,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.56,
+   "cost_plus_three_months_per_month": 4.73,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "pravastatin",
+   "medicine": "pravastatin 80 mg tablet",
+   "pharmacies_pay_month": 4.3,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.7,
+   "cost_plus_three_months_per_month": 5.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 3.125 mg tablet",
+   "pharmacies_pay_month": 0.5,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.46,
+   "cost_plus_three_months_per_month": 3.62,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 6.25 mg tablet",
+   "pharmacies_pay_month": 0.54,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.53,
+   "cost_plus_three_months_per_month": 3.69,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 10 mg extended-release capsule",
+   "pharmacies_pay_month": 195.61,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 164.26,
+   "cost_plus_three_months_per_month": 157.42,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 12.5 mg tablet",
+   "pharmacies_pay_month": 0.65,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.59,
+   "cost_plus_three_months_per_month": 3.76,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 20 mg extended-release capsule",
+   "pharmacies_pay_month": 202.1,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 105.88,
+   "cost_plus_three_months_per_month": 99.05,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 25 mg tablet",
+   "pharmacies_pay_month": 0.97,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.91,
+   "cost_plus_three_months_per_month": 4.07,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 40 mg extended-release capsule",
+   "pharmacies_pay_month": 191.36,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 113.06,
+   "cost_plus_three_months_per_month": 106.23,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "carvedilol",
+   "medicine": "carvedilol 80 mg extended-release capsule",
+   "pharmacies_pay_month": 173.75,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 164.25,
+   "cost_plus_three_months_per_month": 157.41,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 10 mg tablet",
+   "pharmacies_pay_month": 0.78,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.7,
+   "cost_plus_three_months_per_month": 3.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 10 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 20 mg tablet",
+   "pharmacies_pay_month": 0.89,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.77,
+   "cost_plus_three_months_per_month": 3.94,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 20 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 30 mg capsule",
+   "pharmacies_pay_month": 143.1,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 40 mg tablet",
+   "pharmacies_pay_month": 1.24,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.13,
+   "cost_plus_three_months_per_month": 4.3,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "citalopram",
+   "medicine": "citalopram 40 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "meloxicam",
+   "medicine": "meloxicam 5 mg capsule",
+   "pharmacies_pay_month": 267.68,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 263.79,
+   "cost_plus_three_months_per_month": 256.96,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "meloxicam",
+   "medicine": "meloxicam 7.5 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "meloxicam",
+   "medicine": "meloxicam 7.5 mg tablet",
+   "pharmacies_pay_month": 0.5,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.46,
+   "cost_plus_three_months_per_month": 3.62,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "meloxicam",
+   "medicine": "meloxicam 10 mg capsule",
+   "pharmacies_pay_month": 337.39,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 280.7,
+   "cost_plus_three_months_per_month": 273.86,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "meloxicam",
+   "medicine": "meloxicam 15 mg tablet",
+   "pharmacies_pay_month": 0.55,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.63,
+   "cost_plus_three_months_per_month": 3.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "meloxicam",
+   "medicine": "meloxicam 15 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "clopidogrel",
+   "medicine": "clopidogrel 75 mg tablet",
+   "pharmacies_pay_month": 1.42,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.11,
+   "cost_plus_three_months_per_month": 4.28,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "clopidogrel",
+   "medicine": "clopidogrel 300 mg tablet",
+   "pharmacies_pay_month": 158.73,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 206.69,
+   "cost_plus_three_months_per_month": 199.86,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "Sprinkle duloxetine 20 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 20 mg delayed-release capsule",
+   "pharmacies_pay_month": 3.56,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "Sprinkle duloxetine 30 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 30 mg delayed-release capsule",
+   "pharmacies_pay_month": 3.07,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.15,
+   "cost_plus_three_months_per_month": 4.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "Sprinkle duloxetine 40 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 40 mg delayed-release capsule",
+   "pharmacies_pay_month": 37.32,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 29.02,
+   "cost_plus_three_months_per_month": 22.18,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "Sprinkle duloxetine 60 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 60 mg delayed-release capsule",
+   "pharmacies_pay_month": 4.05,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.73,
+   "cost_plus_three_months_per_month": 4.9,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 80 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 90 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "duloxetine",
+   "medicine": "duloxetine 120 mg delayed-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 2.5 mg extended-release tablet",
+   "pharmacies_pay_month": 2.98,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 13.46,
+   "cost_plus_three_months_per_month": 6.63,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 2.5 mg tablet",
+   "pharmacies_pay_month": 38.02,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 5 mg tablet",
+   "pharmacies_pay_month": 1.02,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.7,
+   "cost_plus_three_months_per_month": 3.87,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 5 mg extended-release tablet",
+   "pharmacies_pay_month": 2.21,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.97,
+   "cost_plus_three_months_per_month": 5.14,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 10 mg tablet",
+   "pharmacies_pay_month": 1.34,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.05,
+   "cost_plus_three_months_per_month": 4.22,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 10 mg extended-release tablet",
+   "pharmacies_pay_month": 3.65,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.6,
+   "cost_plus_three_months_per_month": 5.76,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "glipizide",
+   "medicine": "glipizide 15 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 25 mg tablet",
+   "pharmacies_pay_month": 2.17,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.11,
+   "cost_plus_three_months_per_month": 4.28,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 37.5 mg extended-release capsule",
+   "pharmacies_pay_month": 2.37,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.35,
+   "cost_plus_three_months_per_month": 4.52,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 37.5 mg tablet",
+   "pharmacies_pay_month": 2.14,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.16,
+   "cost_plus_three_months_per_month": 4.32,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 37.5 mg extended-release tablet",
+   "pharmacies_pay_month": 10.74,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 14.02,
+   "cost_plus_three_months_per_month": 7.19,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 50 mg tablet",
+   "pharmacies_pay_month": 2.68,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.29,
+   "cost_plus_three_months_per_month": 4.45,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 75 mg extended-release capsule",
+   "pharmacies_pay_month": 2.4,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.25,
+   "cost_plus_three_months_per_month": 4.42,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 75 mg tablet",
+   "pharmacies_pay_month": 2.55,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.22,
+   "cost_plus_three_months_per_month": 5.38,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 75 mg extended-release tablet",
+   "pharmacies_pay_month": 8.56,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.15,
+   "cost_plus_three_months_per_month": 5.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 100 mg tablet",
+   "pharmacies_pay_month": 3.3,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.63,
+   "cost_plus_three_months_per_month": 4.8,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 100 mg extended-release capsule",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 112.5 mg extended-release tablet",
+   "pharmacies_pay_month": 186.9,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 150 mg extended-release capsule",
+   "pharmacies_pay_month": 3.57,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.15,
+   "cost_plus_three_months_per_month": 5.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 150 mg extended-release tablet",
+   "pharmacies_pay_month": 6.83,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 13.84,
+   "cost_plus_three_months_per_month": 7.0,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "venlafaxine",
+   "medicine": "venlafaxine 225 mg extended-release tablet",
+   "pharmacies_pay_month": 14.14,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 18.29,
+   "cost_plus_three_months_per_month": 11.46,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "allopurinol",
+   "medicine": "allopurinol 100 mg tablet",
+   "pharmacies_pay_month": 0.95,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.84,
+   "cost_plus_three_months_per_month": 4.0,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "allopurinol",
+   "medicine": "allopurinol 200 mg tablet",
+   "pharmacies_pay_month": 55.21,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "allopurinol",
+   "medicine": "allopurinol 300 mg tablet",
+   "pharmacies_pay_month": 1.57,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.18,
+   "cost_plus_three_months_per_month": 4.35,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 0.5 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 1 mg tablet",
+   "pharmacies_pay_month": 2.96,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.63,
+   "cost_plus_three_months_per_month": 4.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 2 mg tablet",
+   "pharmacies_pay_month": 2.79,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.72,
+   "cost_plus_three_months_per_month": 4.88,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 2.5 mg tablet",
+   "pharmacies_pay_month": 2.88,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.63,
+   "cost_plus_three_months_per_month": 4.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 3 mg tablet",
+   "pharmacies_pay_month": 2.96,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.7,
+   "cost_plus_three_months_per_month": 4.87,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 4 mg tablet",
+   "pharmacies_pay_month": 2.87,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.63,
+   "cost_plus_three_months_per_month": 4.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 5 mg tablet",
+   "pharmacies_pay_month": 2.66,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.49,
+   "cost_plus_three_months_per_month": 4.66,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 6 mg tablet",
+   "pharmacies_pay_month": 2.94,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.8,
+   "cost_plus_three_months_per_month": 4.97,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 7.5 mg tablet",
+   "pharmacies_pay_month": 2.67,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.97,
+   "cost_plus_three_months_per_month": 5.14,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "warfarin",
+   "medicine": "warfarin 10 mg tablet",
+   "pharmacies_pay_month": 3.19,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.87,
+   "cost_plus_three_months_per_month": 5.04,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "atenolol",
+   "medicine": "atenolol 25 mg tablet",
+   "pharmacies_pay_month": 0.65,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.58,
+   "cost_plus_three_months_per_month": 3.75,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "atenolol",
+   "medicine": "atenolol 50 mg tablet",
+   "pharmacies_pay_month": 0.71,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.63,
+   "cost_plus_three_months_per_month": 3.8,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "atenolol",
+   "medicine": "atenolol 100 mg tablet",
+   "pharmacies_pay_month": 1.08,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.85,
+   "cost_plus_three_months_per_month": 4.02,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 10 mg tablet",
+   "pharmacies_pay_month": 2.84,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.77,
+   "cost_plus_three_months_per_month": 4.93,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 10 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 20 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 20 mg tablet",
+   "pharmacies_pay_month": 0.87,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.56,
+   "cost_plus_three_months_per_month": 3.73,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 20 mg chewable tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 40 mg dissolving tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "famotidine",
+   "medicine": "famotidine 40 mg tablet",
+   "pharmacies_pay_month": 1.45,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.11,
+   "cost_plus_three_months_per_month": 4.28,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "finasteride",
+   "medicine": "finasteride 1 mg tablet",
+   "pharmacies_pay_month": 1.31,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.08,
+   "cost_plus_three_months_per_month": 4.24,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "finasteride",
+   "medicine": "finasteride 5 mg tablet",
+   "pharmacies_pay_month": 2.06,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.42,
+   "cost_plus_three_months_per_month": 4.59,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "donepezil",
+   "medicine": "donepezil 5 mg dissolving tablet",
+   "pharmacies_pay_month": 8.42,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 19.46,
+   "cost_plus_three_months_per_month": 12.63,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "donepezil",
+   "medicine": "donepezil 5 mg tablet",
+   "pharmacies_pay_month": 1.32,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.87,
+   "cost_plus_three_months_per_month": 4.04,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "donepezil",
+   "medicine": "donepezil 10 mg dissolving tablet",
+   "pharmacies_pay_month": 8.74,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 20.88,
+   "cost_plus_three_months_per_month": 14.04,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "donepezil",
+   "medicine": "donepezil 10 mg tablet",
+   "pharmacies_pay_month": 1.45,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 10.98,
+   "cost_plus_three_months_per_month": 4.14,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "donepezil",
+   "medicine": "donepezil 23 mg tablet",
+   "pharmacies_pay_month": 22.06,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 19.39,
+   "cost_plus_three_months_per_month": 12.56,
+   "rxpass_may_cover": true
+  },
+  {
+   "generic": "spironolactone",
+   "medicine": "spironolactone 25 mg tablet",
+   "pharmacies_pay_month": 1.28,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.15,
+   "cost_plus_three_months_per_month": 4.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "spironolactone",
+   "medicine": "spironolactone 50 mg tablet",
+   "pharmacies_pay_month": 2.5,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 11.25,
+   "cost_plus_three_months_per_month": 4.42,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "spironolactone",
+   "medicine": "spironolactone 100 mg tablet",
+   "pharmacies_pay_month": 5.03,
+   "nadac_as_of": "2026-10-14",
+   "cost_plus_month_delivered": 12.15,
+   "cost_plus_three_months_per_month": 5.31,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "apixaban",
+   "medicine": "apixaban 2.5 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  },
+  {
+   "generic": "apixaban",
+   "medicine": "apixaban 5 mg tablet",
+   "pharmacies_pay_month": null,
+   "nadac_as_of": null,
+   "cost_plus_month_delivered": null,
+   "cost_plus_three_months_per_month": null,
+   "rxpass_may_cover": false
+  }
+ ]
+}

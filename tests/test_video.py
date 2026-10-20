@@ -72,3 +72,11 @@ def test_a_dropped_phrase_fails_and_a_misheard_word_does_not():
 def test_the_page_can_carry_a_conversation_in_its_link():
     page = (ROOT / "fair_refill" / "simulator.html").read_text(encoding="utf-8")
     assert 'linked.getAll("ask")' in page and "document.body.dataset.asked" in page
+
+
+def test_a_word_heard_with_a_space_in_it_is_not_a_slip():
+    # The transcriber writes "a torvastatin" for "atorvastatin" and "co pay"
+    # for "copay": the same sounds, spaced differently.
+    assert not verify.serious(("replace", "atorvastatin", "a torvastatin"))
+    assert not verify.serious(("replace", "copay", "co pay"))
+    assert verify.serious(("replace", "they re allowed", "there are a lot"))
