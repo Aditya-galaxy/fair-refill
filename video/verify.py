@@ -2,6 +2,7 @@
 Check that the voices said what they were given to say.
 
     GEMINI_API_KEY=… python video/verify.py
+    FAIR_REFILL_GCP_PROJECT=<project> python video/verify.py    # for --engine cloud takes, via Vertex AI
 
 Hosted voice models slip: in two takes of one exchange, one said "three months
 at months" and the next dropped "your deductible or" from a sentence. Nobody
@@ -25,6 +26,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 import httpx
@@ -32,7 +34,7 @@ import httpx
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
-from narrate import AUDIO, OUT, RATE, lines_of  # noqa: E402
+from narrate import AUDIO, OUT, RATE, gcloud_token, lines_of  # noqa: E402
 
 sys.path.insert(0, str(HERE.parent))
 
@@ -53,7 +55,15 @@ def words(text: str) -> list[str]:
     return [w.strip(".") for w in text.split() if w.strip(".")]
 
 
-def transcribe(pcm: bytes, key: str) -> str:
+# Spelled for the transcriber, which otherwise writes "a torvastatin" for the
+# way a voice says the word's first vowel. It still has to hear the name said.
+NAMES = ("atorvastatin", "Lipitor", "metformin", "Eliquis", "Ozempic", "Cost Plus Drugs", "RxPass", "Medicare",
+         "Fair Refill", "Alexa Plus", "MCP")
+
+VERTEX_MODEL = os.environ.get("FAIR_REFILL_VERTEX_CHECK_MODEL", "gemini-2.5-flash")
+
+
+def transcribe(pcm: bytes, key: str, project: str = "") -> str:
     with tempfile.TemporaryDirectory() as tmp:
         raw, mp3 = Path(tmp) / "a.pcm", Path(tmp) / "a.mp3"
         raw.write_bytes(pcm)
@@ -61,9 +71,20 @@ def transcribe(pcm: bytes, key: str) -> str:
                         str(mp3)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         audio = base64.b64encode(mp3.read_bytes()).decode()
     body = {"contents": [{"parts": [
-        {"text": "Transcribe exactly what is said, word for word, with no speaker names and no corrections."},
+        {"text": "Transcribe exactly what is said, word for word, with no speaker names and no corrections. "
+                 "Medicine and product names that may be said: " + ", ".join(NAMES) + "."},
         {"inlineData": {"mimeType": "audio/mp3", "data": audio}}]}], "generationConfig": {"temperature": 0}}
-    r = httpx.post(ENDPOINT, headers={"x-goog-api-key": key}, json=body, timeout=300)
+    for attempt in range(6):
+        if project:
+            body["contents"][0]["role"] = "user"
+            url = (f"https://us-central1-aiplatform.googleapis.com/v1/projects/{project}/locations/us-central1/"
+                   f"publishers/google/models/{VERTEX_MODEL}:generateContent")
+            r = httpx.post(url, headers={"Authorization": f"Bearer {key}"}, json=body, timeout=300)
+        else:
+            r = httpx.post(ENDPOINT, headers={"x-goog-api-key": key}, json=body, timeout=300)
+        if r.status_code not in (429, 500, 502, 503, 504) or attempt == 5:
+            break
+        time.sleep(15 * (attempt + 1))                  # a shared quota: wait it out
     r.raise_for_status()
     return r.json()["candidates"][0]["content"]["parts"][0]["text"]
 
@@ -78,28 +99,33 @@ def differences(expected: str, heard: str) -> list[tuple[str, str, str]]:
 
 def serious(diff: tuple[str, str, str]) -> bool:
     _, written, heard = diff
+    if written.replace(" ", "") == heard.replace(" ", ""):
+        return False                                # "co pay" for "copay": the same sounds, spaced differently
     return max(len(written.split()), len(heard.split())) >= 2
 
 
 def main() -> int:
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    project = os.environ.get("FAIR_REFILL_GCP_PROJECT", "").strip()
+    key = gcloud_token() if project else os.environ.get("GEMINI_API_KEY", "").strip()
     if not key:
-        print("Set GEMINI_API_KEY.")
+        print("Set GEMINI_API_KEY, or FAIR_REFILL_GCP_PROJECT to check cloud takes through Vertex AI.")
         return 1
+    engine = "cloud" if project else "gemini"
     script = json.loads((HERE / "script.json").read_text(encoding="utf-8"))
     lines = lines_of(script, json.loads((OUT / "answers.json").read_text(encoding="utf-8")))
     groups: dict[str, list[dict]] = {}
     for line in lines:
-        groups.setdefault(line["group"], []).append(line)
+        # Cloud takes are one line each, so each is checked on its own.
+        groups.setdefault(line["id"] if engine == "cloud" else line["group"], []).append(line)
 
     failed = []
     for name, group in groups.items():
-        path = AUDIO / "gemini" / f"{name}.pcm"
+        path = AUDIO / engine / f"{name}.pcm"
         if not path.exists():
             print(f"  {name}: not rendered yet")
             failed.append(name)
             continue
-        found = differences(" ".join(line["text"] for line in group), transcribe(path.read_bytes(), key))
+        found = differences(" ".join(line["text"] for line in group), transcribe(path.read_bytes(), key, project))
         bad = [d for d in found if serious(d)]
         small = f" ({len(found) - len(bad)} one-word differences)" if found else ""
         print(f"  {name}: {'FAIL' if bad else 'ok'}{small}")
@@ -109,8 +135,8 @@ def main() -> int:
         if bad:
             failed.append(name)
     if failed:
-        print("\n  Render again: " + " ".join(f"rm video/out/audio/gemini/{n}.pcm;" for n in failed)
-              + " python video/narrate.py")
+        print("\n  Render again: " + " ".join(f"rm video/out/audio/{engine}/{n}.pcm;" for n in failed)
+              + f" python video/narrate.py --engine {engine}")
         return 1
     print("\n  Every group says what it was given.")
     return 0
