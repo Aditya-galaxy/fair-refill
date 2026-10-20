@@ -99,7 +99,11 @@ async def ask(request: Request) -> JSONResponse:
 
     # What the conversation carries into the next turn.
     new_state = {"choices": [], "medicine": state.medicine, "you_pay": state.you_pay, "quantity": state.quantity}
-    if "you_pay_per_month" in args:
+    if tool == "check_prescription_price":
+        # What someone pays belongs to the medicine they said it about: "$40"
+        # for atorvastatin says nothing about their metformin.
+        new_state["you_pay"] = args.get("you_pay_per_month")
+    elif "you_pay_per_month" in args:
         new_state["you_pay"] = args["you_pay_per_month"]
     if "monthly_quantity" in args:
         new_state["quantity"] = args["monthly_quantity"]
