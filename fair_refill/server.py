@@ -53,15 +53,28 @@ check_chosen_medicine with the `choice_id` they pick."""
 def _card(f: Finding | None) -> dict[str, Any] | None:
     if f is None:
         return None
-    return {"title": f.title, "details": list(f.details), "action": f.action, "sources": list(f.sources)}
+    card: dict[str, Any] = {"title": f.title, "details": list(f.details), "action": f.action,
+                            "sources": list(f.sources)}
+    if f.overpaying_by:
+        # The one thing to take in from across the room: what could be saved.
+        card["headline"] = f"Could save about {money(f.overpaying_by)} a month"
+    return card
+
+
+def _choice_card(choices: list[dict[str, str]]) -> dict[str, Any]:
+    """The question on the screen too, with the options to tap. A screen still
+    showing the last answer while Alexa asks "which one?" says two things at once."""
+    return {"title": "Which one do you take?", "details": [], "choices": choices, "action": "Say it, or tap one",
+            "sources": []}
 
 
 def _payload(r: Result) -> dict[str, Any]:
+    choices = [{"choice_id": d.rxcui, "name": d.spoken} for d in r.choices] if r.kind == "choose" else []
     return {
         "kind": r.kind,
         "speech": r.speech,
-        "card": _card(r.finding),
-        "choices": [{"choice_id": d.rxcui, "name": d.spoken} for d in r.choices] if r.kind == "choose" else [],
+        "card": _choice_card(choices) if choices else _card(r.finding),
+        "choices": choices,
         "medicine": ({"choice_id": r.choices[0].rxcui, "name": r.choices[0].spoken}
                      if r.kind == "answer" and r.choices else None),
     }
@@ -158,10 +171,11 @@ def build(check: PriceCheck | None = None, cabinet: Cabinet | None = None) -> MC
                       f"on {names}. {CASH_CAVEAT} Ask your pharmacist or plan which way costs you less "
                       "over the year.")
         return {"kind": "summary", "speech": speech, "medicines": rows,
-                "card": {"title": "Your medicines",
-                         "details": [f"{len(rows)} checked",
-                                     f"Could save: {money(total)}/mo" if flagged else "Nothing looks overpriced"],
-                         "action": "Ask about cash prices" if flagged else "No change needed", "sources": []}}
+                "card": ({"title": "Your medicines", "headline": f"Could save about {money(total)} a month",
+                          "details": [f"About {money(total * 12)} a year", f"{len(rows)} checked"],
+                          "action": "Ask about cash prices", "sources": []} if flagged else
+                         {"title": "Your medicines", "details": [f"{len(rows)} checked", "Nothing looks overpriced"],
+                          "action": "No change needed", "sources": []})}
 
     @apps.tool(resource_uri=CARD_URI, name="remove_my_medicine",
                description="Take a medicine off the person's saved list ('remove my lisinopril', "

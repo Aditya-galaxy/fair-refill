@@ -99,6 +99,7 @@ def test_my_medicines_saves_totals_and_forgets(server):
     # Each against Cost Plus delivered: $5.41 and $5.38 for a month, plus $5.25 shipping.
     assert total == pytest.approx((40 - 10.66) + (15 - 10.63), abs=0.05)
     assert "a year" in summary["speech"]
+    assert summary["card"]["headline"] == f"Could save about ${round(total)} a month"
 
     listed = call(server, "list_my_medicines")
     assert "atorvastatin 20 mg tablet" in listed["speech"]
@@ -140,6 +141,20 @@ def test_lists_are_kept_apart_by_key(tmp_path):
         assert cabinets.of(bad) is None
     # On someone's own machine there is one list, key or no key.
     assert Cabinets(tmp_path).of(None) is not None
+
+
+def test_a_which_one_question_is_on_the_screen_too_with_options_to_tap(server):
+    r = call(server, "check_prescription_price", medicine="metformin 500")
+    assert r["kind"] == "choose"
+    assert r["card"]["title"] == "Which one do you take?"
+    assert r["card"]["choices"] == r["choices"] and len(r["choices"]) == 2
+
+
+def test_the_card_leads_with_what_could_be_saved(server):
+    r = call(server, "check_prescription_price", medicine="atorvastatin 20 mg", you_pay_per_month=40)
+    assert r["card"]["headline"] == "Could save about $29 a month"
+    fair = call(server, "check_prescription_price", medicine="atorvastatin 20 mg", you_pay_per_month=12)
+    assert "headline" not in fair["card"]                      # nothing to save, so nothing to lead with
 
 
 def test_empty_list_says_what_to_do(server):

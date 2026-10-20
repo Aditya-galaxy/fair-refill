@@ -160,9 +160,14 @@
       { jsonrpc: "2.0", method: "ui/notifications/tool-result", params: { structuredContent: result } }, "*");
   }
 
-  async function ask(text) {
+  // Only the latest question may change the page: a slow answer to an earlier
+  // one (a first lookup can take seconds) must not land under a newer question.
+  let latest = 0;
+
+  async function ask(text, choiceId) {
     text = text.trim();
     if (!text) return;
+    const mine = ++latest;
     $("you").textContent = "“" + text + "”";
     $("alexa").textContent = "";
     bar.className = "bar on";
@@ -171,22 +176,26 @@
     const interim = setTimeout(() => { if (!answered) { $("alexa").textContent = "One moment…"; speak("One moment."); } }, 1100);
     try {
       const r = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" },
-                                          body: JSON.stringify({ text, state, list: listKey }) });
+                                          body: JSON.stringify({ text, state, list: listKey, choice_id: choiceId || null }) });
       const data = await r.json();
+      if (mine !== latest) { clearTimeout(interim); return; }
       answered = true; clearTimeout(interim);
       state = data.state || {};
       $("alexa").textContent = data.speech;
-      if (data.card) show(data.result);
+      // Every turn updates the screen, so it never shows an old answer under
+      // a new question; without a card the view shows what was said.
+      show(data.result);
       $("call").textContent = data.tool
         ? data.tool + "(" + JSON.stringify(data.arguments, null, 1) + ")\n\n→ " + JSON.stringify(data.result, null, 1)
         : "No tool needed: Alexa+ answers directly.";
       $("meta").textContent = data.tool ? `${data.ms} ms over MCP` : "";
       await speak(data.speech);
     } catch (e) {
+      if (mine !== latest) { clearTimeout(interim); return; }
       answered = true; clearTimeout(interim);
       $("alexa").textContent = "Sorry, I couldn't reach Fair Refill. Try again in a moment.";
     } finally {
-      bar.className = "bar";
+      if (mine === latest) bar.className = "bar";
     }
   }
 
@@ -202,6 +211,16 @@
       document.body.dataset.asked = "done";
     })();
   }
+
+  // The card is an MCP App: when someone taps an option on it, it asks the host
+  // (this page) to call the add-on's tool for that option.
+  window.addEventListener("message", (event) => {
+    const m = event.data || {};
+    if (event.source !== card.contentWindow || m.method !== "tools/call" || !m.params) return;
+    const choiceId = m.params.arguments && m.params.arguments.choice_id;
+    const offered = (state.choices || []).find((c) => c.choice_id === choiceId);
+    if (m.params.name === "check_chosen_medicine" && offered) ask(offered.name, choiceId);
+  });
 
   $("form").addEventListener("submit", (e) => { e.preventDefault(); const t = $("text").value; $("text").value = ""; ask(t); });
   $("chips").addEventListener("click", (e) => { if (e.target.tagName === "BUTTON") ask(e.target.textContent); });
