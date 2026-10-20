@@ -3,6 +3,9 @@ Give the film its voices.
 
     python video/narrate.py --engine say      # the Mac's own voices: free, for a timing draft
     GEMINI_API_KEY=… python video/narrate.py  # hosted voices, for the real cut
+    FAIR_REFILL_GCP_PROJECT=<project> python video/narrate.py --engine cloud
+                                              # the same Gemini voices through Google Cloud
+                                              # Text-to-Speech, signed in with gcloud
 
 Three voices: a narrator over the title cards, the person asking, and the
 assistant. The assistant only ever reads video/out/answers.json, which
@@ -15,6 +18,9 @@ and each cut is moved to the nearest real pause, so a picture changes
 between two speakers. A group
 already rendered is kept unless --force is given, so a run cut off by the
 quota resumes.
+
+The cloud engine has no daily cap, so it renders one line at a time: each
+line's audio is exactly that line, with nothing to share out between speakers.
 
 Writes video/out/narration.wav and video/out/timeline.json (what build.py
 needs: each line's picture and how long it stays).
@@ -43,6 +49,21 @@ MODEL = os.environ.get("FAIR_REFILL_TTS_MODEL", "gemini-2.5-flash-preview-tts")
 ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 RATE, WIDTH = 24_000, 2            # Gemini returns 16-bit mono PCM at 24 kHz
 GAP = 0.35                         # between a question and its answer
+CLOUD_TTS = "https://texttospeech.googleapis.com/v1/text:synthesize"
+CLOUD_MODEL = os.environ.get("FAIR_REFILL_CLOUD_TTS_MODEL", "gemini-2.5-flash-tts")
+# How each voice is asked to read, on the cloud engine (one line at a time).
+# A natural pace, not a slow one: the film has three minutes, and the
+# assistant's answers are long because they carry their conditions.
+STYLE = {"narrator": "Read this clearly, at a natural conversational pace.",
+         "person": "Ask this plainly, as an older adult speaking to a voice assistant, at a natural pace.",
+         "assistant": "Answer warmly and clearly, as a voice assistant, at a natural conversational pace."}
+SPEAKING_RATE = float(os.environ.get("FAIR_REFILL_SPEAKING_RATE", "1.1"))
+
+
+def gcloud_token() -> str:
+    """An access token for the signed-in gcloud account. Never printed."""
+    return subprocess.run(["gcloud", "auth", "print-access-token"], check=True, capture_output=True,
+                          text=True).stdout.strip()
 
 
 def spoken(text: str) -> str:
@@ -156,9 +177,26 @@ def gemini(group: list[dict], voices: dict[str, str], key: str) -> bytes:
     raise AssertionError("unreachable")
 
 
+def cloud(line: dict, voices: dict[str, str], project: str, token: str) -> bytes:
+    """One line, in that speaker's Gemini voice, through Cloud Text-to-Speech."""
+    body = {"input": {"prompt": STYLE[line["who"]], "text": line["text"]},
+            "voice": {"languageCode": "en-US", "name": voices[line["who"]], "modelName": CLOUD_MODEL},
+            "audioConfig": {"audioEncoding": "LINEAR16", "sampleRateHertz": RATE, "speakingRate": SPEAKING_RATE}}
+    for attempt in range(4):
+        r = httpx.post(CLOUD_TTS, json=body, timeout=180,
+                       headers={"Authorization": f"Bearer {token}", "x-goog-user-project": project})
+        if r.status_code == 200:
+            audio = base64.b64decode(r.json()["audioContent"])
+            return audio[44:] if audio[:4] == b"RIFF" else audio      # LINEAR16 comes as a WAV file
+        if r.status_code not in (429, 500, 502, 503, 504) or attempt == 3:
+            raise SystemExit(f"  Text-to-Speech answered {r.status_code}.")
+        time.sleep(10 * (attempt + 1))
+    raise AssertionError("unreachable")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--engine", choices=("gemini", "say"), default="gemini")
+    ap.add_argument("--engine", choices=("gemini", "cloud", "say"), default="gemini")
     ap.add_argument("--force", action="store_true", help="render groups again even if their audio exists")
     args = ap.parse_args()
 
@@ -170,8 +208,13 @@ def main() -> int:
     lines = lines_of(script, json.loads(answers_path.read_text(encoding="utf-8")))
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     if args.engine == "gemini" and not key:
-        print("Set GEMINI_API_KEY, or use --engine say for a draft in the Mac's own voices.")
+        print("Set GEMINI_API_KEY, or use --engine cloud or --engine say.")
         return 1
+    project = os.environ.get("FAIR_REFILL_GCP_PROJECT", "").strip()
+    if args.engine == "cloud" and not project:
+        print("Set FAIR_REFILL_GCP_PROJECT to the Google Cloud project to bill the voices to.")
+        return 1
+    token = gcloud_token() if args.engine == "cloud" else ""
     audio = AUDIO / args.engine
     audio.mkdir(parents=True, exist_ok=True)
 
@@ -183,6 +226,18 @@ def main() -> int:
     for name, group in groups.items():
         if args.engine == "say":
             pieces = [say(line["text"], script["say_voices"][line["who"]]) for line in group]
+        elif args.engine == "cloud":
+            pieces = []
+            for line in group:
+                path, fingerprint = audio / f"{line['id']}.pcm", audio / f"{line['id']}.txt"
+                said = json.dumps([line["who"], line["text"], CLOUD_MODEL, STYLE[line["who"]], SPEAKING_RATE])
+                if path.exists() and not args.force and fingerprint.exists() and fingerprint.read_text() == said:
+                    print(f"  {line['id']}: kept")
+                else:
+                    print(f"  {line['id']}: asking the voice model…", flush=True)
+                    path.write_bytes(cloud(line, script["voices"], project, token))
+                    fingerprint.write_text(said)
+                pieces.append(path.read_bytes())
         else:
             path = audio / f"{name}.pcm"
             fingerprint = audio / f"{name}.txt"
@@ -205,7 +260,7 @@ def main() -> int:
             pieces = [*cuts, whole[start:]]
         for line, pcm in zip(group, pieces, strict=True):
             # In a hosted group the pause between lines is already in the audio.
-            pad = line["pause"] if args.engine == "say" or line is group[-1] else 0.0
+            pad = line["pause"] if args.engine != "gemini" or line is group[-1] else 0.0
             pcm += silence(pad)
             timeline.append({"id": line["id"], "who": line["who"], "frame": line["frame"],
                              "start": round(at, 2), "duration": round(seconds(pcm), 3)})
