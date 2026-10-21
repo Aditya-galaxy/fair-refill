@@ -5,6 +5,8 @@ Solo entry by Aditya (GitHub `Aditya-galaxy`).
 
 | | |
 |---|---|
+| Try it | https://fair-refill-761390104675.us-central1.run.app/ (the simulated Alexa+; type or speak a question) |
+| MCP endpoint | https://fair-refill-761390104675.us-central1.run.app/mcp (Streamable HTTP; point any MCP client at it) |
 | Repository | https://github.com/Aditya-galaxy/fair-refill (Apache-2.0) |
 | Demo video | _link to be added_ |
 | Friction log | [FRICTION_LOG.md](FRICTION_LOG.md) |

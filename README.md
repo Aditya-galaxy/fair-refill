@@ -17,6 +17,13 @@ they don't know to ask.
 > Built for the Amazon Developer Hackathon 2026, Alexa+ track: a self-hosted
 > MCP server over Streamable HTTP, with an MCP App card and an Agent Skill.
 
+## Try it
+
+- **Simulated Alexa+:** https://fair-refill-761390104675.us-central1.run.app/ . Type or speak a question, or tap a suggestion.
+- **The add-on itself:** https://fair-refill-761390104675.us-central1.run.app/mcp , an MCP server over Streamable HTTP. Point any MCP client at it.
+
+Each browser keeps its own list of medicines. The first question about a medicine can take several seconds while three public sources are asked; after that it's answered from a local copy.
+
 ## What a month costs, measured
 
 On 20 October the add-on's own sources were asked about every tablet and capsule strength of the 37 common generics it keeps ready, 275 in all ([docs/savings.md](docs/savings.md), made by `tools/measure_savings.py`):
