@@ -9,6 +9,11 @@ Streamable HTTP, picks a tool from what was said (brain.py), calls it, speaks
 the `speech` it gets back, and renders the add-on's own MCP App card — fetched
 from the add-on with resources/read, not bundled here.
 
+When it's hosted somewhere that only gives a process CPU while it answers a
+request, the background pre-warming can't run. Set FAIR_REFILL_PREWARM_TOKEN
+and have a scheduler POST /api/prewarm with that token in X-Prewarm-Token
+every few hours: each call runs one round inside its own request.
+
 By default one process serves both, on one port. Point FAIR_REFILL_MCP_URL
 elsewhere to use the simulator against an add-on running somewhere else.
 
@@ -20,6 +25,7 @@ FAIR_REFILL_STATELESS=1 lets any copy of the server answer any request.
 
 from __future__ import annotations
 
+import hmac
 import os
 import re
 import time
@@ -28,6 +34,7 @@ from typing import Any
 
 from mcp import Client
 from mcp.client.streamable_http import create_mcp_http_client, streamable_http_client
+from starlette.concurrency import run_in_threadpool
 from starlette.requests import Request
 from starlette.responses import HTMLResponse, JSONResponse, PlainTextResponse
 from starlette.routing import Route
@@ -135,10 +142,27 @@ async def health(_: Request) -> PlainTextResponse:
     return PlainTextResponse("ok")
 
 
+async def prewarm_now(request: Request) -> JSONResponse:
+    """One pre-warm round, for a scheduler. Only with the token it was given:
+    a round asks the public price sources a few thousand questions, so it is
+    not something anyone on the internet should be able to start."""
+    token = os.environ.get("FAIR_REFILL_PREWARM_TOKEN", "")
+    if not token:
+        return JSONResponse({"error": "not found"}, status_code=404)
+    if not hmac.compare_digest(request.headers.get("x-prewarm-token", ""), token):
+        return JSONResponse({"error": "forbidden"}, status_code=403)
+    done = await run_in_threadpool(prewarm.one_round)
+    if done is None:
+        return JSONResponse({"error": "a round is already running"}, status_code=409)
+    return JSONResponse({"medicines": done.medicines, "priced": done.priced, "failed": list(done.failed),
+                         "seconds": round(done.seconds)})
+
+
 def app():
     starlette = build().streamable_http_app(host=HOST, stateless_http=STATELESS)
     starlette.router.routes[0:0] = [Route("/", page), Route("/api/ask", ask, methods=["POST"]),
-                                    Route("/api/card", card), Route("/health", health)]
+                                    Route("/api/card", card), Route("/health", health),
+                                    Route("/api/prewarm", prewarm_now, methods=["POST"])]
     return starlette
 
 
