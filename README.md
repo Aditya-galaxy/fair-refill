@@ -22,7 +22,35 @@ they don't know to ask.
 - **Simulated Alexa+:** https://fair-refill-761390104675.us-central1.run.app/ . Type or speak a question, or tap a suggestion.
 - **The add-on itself:** https://fair-refill-761390104675.us-central1.run.app/mcp , an MCP server over Streamable HTTP. Point any MCP client at it.
 
-Each browser keeps its own list of medicines. The first question about a medicine can take several seconds while three public sources are asked; after that it's answered from a local copy.
+Each browser keeps its own list of medicines. About 50 commonly asked-about medicines are kept ready, refreshed every few hours; the first question about any other can take several seconds while three public sources are asked.
+
+## Use the add-on from your own MCP client
+
+The live add-on is an ordinary MCP server over Streamable HTTP, with no sign-in: `https://fair-refill-761390104675.us-central1.run.app/mcp`. Any client that speaks MCP can use it, not only the simulated Alexa+.
+
+**Tested: the MCP Python SDK.**
+
+```python
+import asyncio
+from mcp import Client
+
+async def main():
+    async with Client("https://fair-refill-761390104675.us-central1.run.app/mcp") as fair_refill:
+        result = await fair_refill.call_tool("check_prescription_price",
+                                             {"medicine": "atorvastatin 20 mg", "you_pay_per_month": 40})
+        print(result.structured_content["speech"])
+
+asyncio.run(main())
+```
+
+**Other clients**, configured as their own documentation describes (not tested here):
+
+- **VS Code** (`.vscode/mcp.json`): `{"servers": {"fair-refill": {"type": "http", "url": "https://fair-refill-761390104675.us-central1.run.app/mcp"}}}`
+- **Cursor** (`~/.cursor/mcp.json`): `{"mcpServers": {"fair-refill": {"url": "https://fair-refill-761390104675.us-central1.run.app/mcp"}}}`
+- **Claude**: add a custom connector with the URL above, where your plan allows custom connectors.
+- **MCP Inspector**: `npx @modelcontextprotocol/inspector`, then connect to the URL above with transport "Streamable HTTP".
+
+Ask it about a medicine and it answers as it would on Alexa+: one short spoken answer, a card, and the next step. The Agent Skill (`skill://fair-refill/SKILL.md`, also in `skills/fair-refill/`) tells an agent how to hold the conversation. A saved list of medicines needs a key in the `X-Fair-Refill-List` header (20 to 64 letters, digits, `-` or `_`): on a shared server there is no list without one.
 
 ## What a month costs, measured
 
