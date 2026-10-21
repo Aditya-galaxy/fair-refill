@@ -170,6 +170,6 @@ Built by `video/` from `video/script.json`; the assistant's lines are the add-on
 6. (2:07) "Check all my medicines." The total.
 7. (2:27) How it's built, and that the front end is a stand-in.
 
-The voices are Google's Gemini voices through Cloud Text-to-Speech (`video/narrate.py --engine cloud`), one line at a time, and `video/verify.py` had a second model transcribe each line and compare it word for word with its text.
+The voices are Gemini voices (`video/narrate.py --engine cloud`), one line at a time, and `video/verify.py` had a second model transcribe each line and compare it word for word with its text.
 
 Cut for time: the Lipitor brand-against-generic question, Ozempic's 2027 price, and the inhaler question that shows what it can't do. All three still work in the simulator.
