@@ -106,3 +106,25 @@ def test_a_second_round_fetches_only_what_is_getting_old(warmed):
 def test_it_can_be_switched_off(monkeypatch):
     monkeypatch.setenv("FAIR_REFILL_PREWARM", "0")
     assert prewarm.in_background() is None
+
+
+def test_a_scheduled_round_needs_its_token_and_runs_one_at_a_time(monkeypatch):
+    from starlette.testclient import TestClient
+
+    from fair_refill import simulator
+    ran = []
+    monkeypatch.setattr(prewarm, "warm", lambda check, *a, **k: ran.append(1) or prewarm.Round(2, 5, (), 1.0))
+    monkeypatch.setattr(prewarm, "_fresh_check", lambda: None)
+    client = TestClient(simulator.app())
+
+    monkeypatch.delenv("FAIR_REFILL_PREWARM_TOKEN", raising=False)
+    assert client.post("/api/prewarm").status_code == 404           # no token set: the route isn't there
+    monkeypatch.setenv("FAIR_REFILL_PREWARM_TOKEN", "s3cret-value")
+    assert client.post("/api/prewarm").status_code == 403
+    assert client.post("/api/prewarm", headers={"x-prewarm-token": "wrong"}).status_code == 403
+    r = client.post("/api/prewarm", headers={"x-prewarm-token": "s3cret-value"})
+    assert r.status_code == 200 and r.json() == {"medicines": 2, "priced": 5, "failed": [], "seconds": 1}
+    assert ran == [1]
+
+    with prewarm._one_at_a_time:                                     # a round already running
+        assert client.post("/api/prewarm", headers={"x-prewarm-token": "s3cret-value"}).status_code == 409

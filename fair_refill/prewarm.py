@@ -108,6 +108,21 @@ def _fresh_check() -> PriceCheck:
     return PriceCheck(Http(cache_dir=cache_dir(), refresh_after=REFRESH_AFTER))
 
 
+_one_at_a_time = threading.Lock()
+
+
+def one_round() -> Round | None:
+    """One round, now, for a caller that schedules them itself (a hosted
+    server that only has CPU while answering a request). None if a round is
+    already running: two at once would ask every source twice."""
+    if not _one_at_a_time.acquire(blocking=False):
+        return None
+    try:
+        return warm(_fresh_check())
+    finally:
+        _one_at_a_time.release()
+
+
 def _keep_warm() -> None:
     while True:
         done = warm(_fresh_check())
