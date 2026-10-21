@@ -2,7 +2,7 @@
 Check that the voices said what they were given to say.
 
     GEMINI_API_KEY=… python video/verify.py
-    FAIR_REFILL_GCP_PROJECT=<project> python video/verify.py    # for --engine cloud takes, via Vertex AI
+    FAIR_REFILL_VOICE_PROJECT=<project> python video/verify.py    # for --engine cloud takes
 
 Hosted voice models slip: in two takes of one exchange, one said "three months
 at months" and the next dropped "your deductible or" from a sentence. Nobody
@@ -34,7 +34,7 @@ import httpx
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
-from narrate import AUDIO, OUT, RATE, gcloud_token, lines_of  # noqa: E402
+from narrate import AUDIO, OUT, RATE, account_token, lines_of  # noqa: E402
 
 sys.path.insert(0, str(HERE.parent))
 
@@ -60,7 +60,7 @@ def words(text: str) -> list[str]:
 NAMES = ("atorvastatin", "Lipitor", "metformin", "Eliquis", "Ozempic", "Cost Plus Drugs", "RxPass", "Medicare",
          "Fair Refill", "Alexa Plus", "MCP")
 
-VERTEX_MODEL = os.environ.get("FAIR_REFILL_VERTEX_CHECK_MODEL", "gemini-2.5-flash")
+CHECK_MODEL_HOSTED = os.environ.get("FAIR_REFILL_HOSTED_CHECK_MODEL", "gemini-2.5-flash")
 
 
 def transcribe(pcm: bytes, key: str, project: str = "") -> str:
@@ -78,7 +78,7 @@ def transcribe(pcm: bytes, key: str, project: str = "") -> str:
         if project:
             body["contents"][0]["role"] = "user"
             url = (f"https://us-central1-aiplatform.googleapis.com/v1/projects/{project}/locations/us-central1/"
-                   f"publishers/google/models/{VERTEX_MODEL}:generateContent")
+                   f"publishers/google/models/{CHECK_MODEL_HOSTED}:generateContent")
             r = httpx.post(url, headers={"Authorization": f"Bearer {key}"}, json=body, timeout=300)
         else:
             r = httpx.post(ENDPOINT, headers={"x-goog-api-key": key}, json=body, timeout=300)
@@ -105,10 +105,10 @@ def serious(diff: tuple[str, str, str]) -> bool:
 
 
 def main() -> int:
-    project = os.environ.get("FAIR_REFILL_GCP_PROJECT", "").strip()
-    key = gcloud_token() if project else os.environ.get("GEMINI_API_KEY", "").strip()
+    project = os.environ.get("FAIR_REFILL_VOICE_PROJECT", "").strip()
+    key = account_token() if project else os.environ.get("GEMINI_API_KEY", "").strip()
     if not key:
-        print("Set GEMINI_API_KEY, or FAIR_REFILL_GCP_PROJECT to check cloud takes through Vertex AI.")
+        print("Set GEMINI_API_KEY, or FAIR_REFILL_VOICE_PROJECT to check cloud takes.")
         return 1
     engine = "cloud" if project else "gemini"
     script = json.loads((HERE / "script.json").read_text(encoding="utf-8"))

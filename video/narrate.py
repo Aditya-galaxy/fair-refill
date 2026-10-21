@@ -3,9 +3,9 @@ Give the film its voices.
 
     python video/narrate.py --engine say      # the Mac's own voices: free, for a timing draft
     GEMINI_API_KEY=… python video/narrate.py  # hosted voices, for the real cut
-    FAIR_REFILL_GCP_PROJECT=<project> python video/narrate.py --engine cloud
-                                              # the same Gemini voices through Google Cloud
-                                              # Text-to-Speech, signed in with gcloud
+    FAIR_REFILL_VOICE_PROJECT=<project> python video/narrate.py --engine cloud
+                                              # the same Gemini voices from a hosted
+                                              # speech service, with your signed-in account
 
 Three voices: a narrator over the title cards, the person asking, and the
 assistant. The assistant only ever reads video/out/answers.json, which
@@ -60,8 +60,8 @@ STYLE = {"narrator": "Read this clearly, at a natural conversational pace.",
 SPEAKING_RATE = float(os.environ.get("FAIR_REFILL_SPEAKING_RATE", "1.1"))
 
 
-def gcloud_token() -> str:
-    """An access token for the signed-in gcloud account. Never printed."""
+def account_token() -> str:
+    """An access token for the signed-in account. Never printed."""
     return subprocess.run(["gcloud", "auth", "print-access-token"], check=True, capture_output=True,
                           text=True).stdout.strip()
 
@@ -178,7 +178,7 @@ def gemini(group: list[dict], voices: dict[str, str], key: str) -> bytes:
 
 
 def cloud(line: dict, voices: dict[str, str], project: str, token: str) -> bytes:
-    """One line, in that speaker's Gemini voice, through Cloud Text-to-Speech."""
+    """One line, in that speaker's Gemini voice, from the hosted speech service."""
     body = {"input": {"prompt": STYLE[line["who"]], "text": line["text"]},
             "voice": {"languageCode": "en-US", "name": voices[line["who"]], "modelName": CLOUD_MODEL},
             "audioConfig": {"audioEncoding": "LINEAR16", "sampleRateHertz": RATE, "speakingRate": SPEAKING_RATE}}
@@ -210,11 +210,11 @@ def main() -> int:
     if args.engine == "gemini" and not key:
         print("Set GEMINI_API_KEY, or use --engine cloud or --engine say.")
         return 1
-    project = os.environ.get("FAIR_REFILL_GCP_PROJECT", "").strip()
+    project = os.environ.get("FAIR_REFILL_VOICE_PROJECT", "").strip()
     if args.engine == "cloud" and not project:
-        print("Set FAIR_REFILL_GCP_PROJECT to the Google Cloud project to bill the voices to.")
+        print("Set FAIR_REFILL_VOICE_PROJECT to the project to bill the voices to.")
         return 1
-    token = gcloud_token() if args.engine == "cloud" else ""
+    token = account_token() if args.engine == "cloud" else ""
     audio = AUDIO / args.engine
     audio.mkdir(parents=True, exist_ok=True)
 
